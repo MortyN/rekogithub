@@ -9,6 +9,7 @@ where users.userID = $userID
 ORDER BY RAND();";
 $result = mysqli_query($db,$sql) or die ("kan ikke laste feed");
 $xRows = mysqli_num_rows($result);
+print("<div class='dashboard_content'>");
 print("<div class='feed_container'>");
  
 for($i=1;$i <= $xRows; $i++ ){
@@ -46,4 +47,5 @@ for($i=1;$i <= $xRows; $i++ ){
 <?php
 }
 ?>
+</div>
 </div>
