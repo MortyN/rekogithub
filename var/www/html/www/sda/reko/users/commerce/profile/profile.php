@@ -33,7 +33,7 @@
       <input type="text" id="lastName" name="lastName" value="<?php print($lastName); ?>"><br>
       <label for="lname">Email:</label><br>
       <input type="text" id="email" name="email" value="<?php print($email); ?>"><br>
-      <img src="../img/users/<?php print($userID.'/'.$image);?>" height="100px"/>
+      <img src="/www/sda/reko/img/users/<?php print($userID.'/'.$image);?>" height="100px"/>
       <input type="file" name="newImg"/><br>
       <input type="submit"  value="Endre" name="editProfile" id="editProfile">
 
