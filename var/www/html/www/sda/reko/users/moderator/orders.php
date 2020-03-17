@@ -1,5 +1,5 @@
 <?php
-include("../control.php");
+include("control.php");
 ?>
 
 <div class="dashboard_content">
@@ -45,7 +45,7 @@ include("../control.php");
                 $date = $part["date"];
                 $status = $part["status"];
 
-                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td>$status</td> <td><a href='/www/sda/reko/users/customer/profile/showOrder.php?orderID=$orderID'>Se ordre</a></td></tr>");
+                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td>$status</td> <td><a href='/www/sda/reko/users/moderator/showOrder.php?orderID=$orderID'>Se ordre</a></td></tr>");
             }
             ?>
         </table>
