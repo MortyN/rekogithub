@@ -77,7 +77,7 @@
                 @unlink($path.$image);
                 move_uploaded_file($tmpName, $newPath) or die ("<br><p>Kunne ikke laste opp bilde til serveren!</p>"); 
 
-                $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName1',email='$email1',image='$fileName1',phoneNumber='$phone1' WHERE userID='$userID';";
+                $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',image='$fileName1',phoneNumber='$phone1' WHERE userID='$userID';";
                 if(mysqli_query($db,$sql)){
                   print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
 				        }
@@ -88,13 +88,13 @@
             }
             if($profileIMG == $fileName)
             {
-                $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName1',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
+                $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
                 mysqli_query($db,$sql) or die ("<br><p>Kunne ikke oppdatere databasen!</p>");
                 print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
             }
           else
             {
-              $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName1',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
+              $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
               mysqli_query($db,$sql) or die ("ikke mulig &aring; endre data i databasen");
               print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
             }
