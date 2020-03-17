@@ -31,13 +31,14 @@ for($i=1;$i <= $xRows; $i++ ){
             <div class="ad_shortInfo">
                 <p><?php print($shortText);?></p>
             </div>
-</div>
     </div>
+
 
     
 <?php
 }
 ?>
+</div>
 
 
 
