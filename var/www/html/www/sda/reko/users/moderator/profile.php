@@ -1,5 +1,5 @@
 <?php
-  include ('../control.php');
+  include ('control.php');
   $sql = "SELECT * FROM users WHERE userID='$userID';";
   $sqlQuery = mysqli_query($db,$sql) or die ("Kan ikke hente data fra databasen (#100)");
   $del = mysqli_fetch_array($sqlQuery);

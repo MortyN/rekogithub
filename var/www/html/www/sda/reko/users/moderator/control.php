@@ -65,7 +65,6 @@ $del = mysqli_fetch_array($sqlQuery);
   </button>
   <div class="dropdown-container">
     <a href="/www/sda/reko/users/moderator/profile.php">Din Profil</a>
-    <a href="/www/sda/reko/users/commerce/profile/editPassword.php">Endre passord</a>
     <a href="/www/sda/reko/access/logout.php">Logg ut</a>
     
   </div>
