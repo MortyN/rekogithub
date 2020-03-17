@@ -45,7 +45,6 @@
           $firstName=$_POST ["firstName"];
           $lastName=$_POST ["lastName"];
           $email=$_POST ["email"];
-          $profileIMG = $_POST["image"];
 
           $fileName=$_FILES ["file"]["name"];
 	        $fileType=$_FILES ["file"]["type"];
