@@ -31,12 +31,10 @@ for($i=1;$i <= $xRows; $i++ ){
             </div>
 <div class="content">
                 <div class="ad__pic">
-
+                <img src="../img/users/<?php print($userID.'/'.$postIMG);?>"/>
                 </div>
-                DIIIIIINOOOO????????
-                WHERE U AT????
                 <div class="ad_shortinfo">
-                
+                <p><?php print($shortText);?></p>
                 </div>
 
             </div>
