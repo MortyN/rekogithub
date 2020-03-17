@@ -230,9 +230,13 @@ body {
     }
     .profileInfo img
     {
-      width:20vw;
+      width:7vw;
       margin: 0 auto;
-      border-radius: 50% solid black;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      position:relative;
+      left:43vw;
+      
     }
     
     .content
