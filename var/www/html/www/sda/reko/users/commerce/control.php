@@ -48,9 +48,8 @@ $del = mysqli_fetch_array($sqlQuery);
         <div class="profileWLC">
             <button class="dropdownBTN"><?php print(" Velkommen $userLastName, $userFirstName !");?></button>
             <div class="profile-content">
-            <a href="#">Endre profil</a>
-            <a href="#">Endre passord</a>
-            <a href="#">Logg ut</a>
+            <a href="/www/sda/reko/users/commerce/profile/profile.php">Endre profil</a>
+            <a href="/www/sda/reko/access/logout.php">Logg ut</a>
             </div>
         </div>
     </div>
@@ -89,7 +88,6 @@ $del = mysqli_fetch_array($sqlQuery);
   </button>
   <div class="dropdown-container">
     <a href="/www/sda/reko/users/commerce/profile/profile.php">Din Profil</a>
-    <a href="/www/sda/reko/users/commerce/profile/editPassword.php">Endre passord</a>
     <a href="/www/sda/reko/access/logout.php">Logg ut</a>
     
   </div>
