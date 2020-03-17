@@ -54,6 +54,13 @@
 
          $path = "/var/www/html/www/sda/reko/img/users/".$userID.'/';
 
+         if (!is_dir($path)) {
+          $oldmask = umask(0);
+          mkdir($path, 0777);   
+          umask($oldmask);
+              
+      }
+
         if($fileName){
             
         $newPath="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
