@@ -47,7 +47,7 @@
           $firstName1=$_POST ["firstName"];
           $lastName1=$_POST ["lastName"];
           $email1=$_POST ["email"];
-          $phone1=$_POST ["phoneNumber"];
+          $phone1=$_POST ["phone"];
 
           $fileName=$_FILES ["file"]["name"];
 	        $fileType=$_FILES ["file"]["type"];
