@@ -228,7 +228,7 @@ body {
       text-align: center;
       margin-bottom: 10px;
     }
-    .profilInfo img
+    .profileInfo img
     {
       width:20vw;
       margin: 0 auto;
@@ -260,6 +260,8 @@ body {
     {
       grid-area: info;
       font-size: 20px;
+      position: relative;
+      left: 10%;
     }
 
 
