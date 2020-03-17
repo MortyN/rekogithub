@@ -20,18 +20,44 @@ for($i=1;$i <= $xRows; $i++ ){
         $userID = $part["userID"];
         
         ?>
+
+
+
+<div class="post">
+            
+<div class="profileInfo">
+        <img src="../img/users/<?php print($userID.'/'.$profileIMG);?>
+        <p> <?php print($firstName." ".$lastName); ?> </p>
+            </div>
+<div class="content">
+                <div class="ad__pic">
+
+                </div>
+                DIIIIIINOOOO????????
+                WHERE U AT????
+                <div class="ad_shortinfo">
+                
+                </div>
+
+            </div>
+            
+
+
+</div>
+
+<!-- Her Skal vi lage en grid. 
         <div class="feed_post">
             <div class="profileInfo">
-                <a href="#linkTilProfil"><img src="../img/users/<?php print($userID.'/'.$profileIMG);?>" /></a><br>
+                <a href="#linkTilProfil"><img src="../img/users/<?php /*print($userID.'/'.$profileIMG);?>" /></a><br>
                 <p> <?php print($firstName." ".$lastName); ?> </p>
             </div>
             <div class="ad_pic">
                 <img src="../img/users/<?php print($userID.'/'.$postIMG);?>"/>
             </div>
             <div class="ad_shortInfo">
-                <p><?php print($shortText);?></p>
+                <p><?php print($shortText);*/?></p>
             </div>
-    </div>
+    </div>-->
 
 
     
@@ -40,8 +66,12 @@ for($i=1;$i <= $xRows; $i++ ){
 ?>
 </div>
 
-
-
+<!--
+    Profilbilde
+    <img src="../img/users/<?php /* print($userID.'/'.$profileIMG);?>
+    Postbilde
+    <img src="../img/users/<?php print($userID.'/'.$postIMG);?>
+ -->
 
 
 

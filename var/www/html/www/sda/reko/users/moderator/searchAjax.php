@@ -35,11 +35,12 @@ else{
 		$email=$row["email"];
 		$userName=$row["userName"];
 		$role=$row["role"];
-        $status=$row["status"];
+		$status=$row["status"];
+		$userUserID = $row["userID"];
         
     
 
-		print("<tr><td>$firstName</td> <td>$lastName</td> <td>$email</td> <td>$userName</td> <td>$role</td> <td>$status</td></tr>");
+		print("<tr><td>$firstName</td> <td>$lastName</td> <td>$email</td> <td>$userName</td> <td>$role</td> <td>$status</td> <td><a href='/www/sda/reko/users/commerce/products/editUser.php?userID=$userUserID'>Endre Bruker</a>'</tr>");
 
 	}
 	print("</table>");

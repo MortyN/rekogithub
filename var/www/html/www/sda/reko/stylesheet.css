@@ -204,7 +204,7 @@ body {
       position:relative;
       margin: 20px auto;
     }
-    .feed_post{
+    .post{
       position:relative;
       width:100%;
       background-color: white;
@@ -216,17 +216,9 @@ body {
       margin-top: 50px;
     }
 
-    .profileInfo img{
 
-      width:75px;
-      border-radius: 50%;
-      margin-top: 30px;
-      margin-bottom: 0;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
 
-    }
+    
     .profileInfo p{
       min-width: 300px;
       margin-top: 0px;
@@ -235,26 +227,44 @@ body {
       margin-right: auto;
       text-align: center;
       margin-bottom: 10px;
-      
-
     }
-    .ad_pic{
-      position: relative;
-      width: 100%;
-
+    .profilInfo img
+    {
+      width:20vw;
+      border-radius: 50% solid black;
     }
-    .ad_pic img{
-      position: relative;
-      margin: 0 auto;
+    
+    .content
+    {
+      display: grid;
+      grid-gap: 10px;
       width: 80%;
-      display: block;
+      background-color: lavender;
+      grid-template-areas:
+      "bilde bilde bilde bilde"
+      "info info info info"
+      "info info info info";
     }
-    .ad_shortInfo{
-      position: relative;
-      width: 90%;
-      margin: 0 auto;
+    .ad_pic
+    {
+      grid-area:bilde;
 
     }
+    .ad_pic img
+    {
+      width: 90%;
+    }
+    .ad_shortinfo
+    {
+      grid-area: info;
+      font-size: 20px;
+    }
+
+
+
+
+    
+
   /* Overview commerce*/
   .overview_info{
     width:60%;
