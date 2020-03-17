@@ -16,14 +16,14 @@ $xRows = mysqli_num_rows($query);
 if($xRows == 0){
 	print("<h3>Registrerte Brukere:</h3>");
 	print("<table class='prdOverview' border=1>");
-	print("<tr><th>Fornavn</th> <th>Etternavn</th> <th>E-post</th> <th>Brukernavn</th> <th>Brukerrolle</th> <th>BrukerStatus</th></tr>");
+	print("<tr><th>Fornavn</th> <th>Etternavn</th> <th>E-post</th> <th>Brukernavn</th> <th>Brukerrolle</th> <th>BrukerStatus</th> <th>#</th> </tr>");
 	print("</table>");
 }
 
 else{
 	print("<h3>Registrerte brukere:</h3>");
 	print("<table class='prdOverview' border=1>");
-	print("<tr><th>Fornavn</th> <th>Etternavn</th> <th>E-post</th> <th>Brukernavn</th> <th>Brukerrolle</th> <th>BrukerStatus</th></tr>");
+	print("<tr><th>Fornavn</th> <th>Etternavn</th> <th>E-post</th> <th>Brukernavn</th> <th>Brukerrolle</th> <th>BrukerStatus</th> <th>#</th> /tr>");
 
 
 
@@ -40,7 +40,7 @@ else{
         
     
 
-		print("<tr><td>$firstName</td> <td>$lastName</td> <td>$email</td> <td>$userName</td> <td>$role</td> <td>$status</td> <td><a href='/www/sda/reko/users/commerce/products/editUser.php?userID=$userUserID'>Endre Bruker</a>'</tr>");
+		print("<tr><td>$firstName</td> <td>$lastName</td> <td>$email</td> <td>$userName</td> <td>$role</td> <td>$status</td> <td><a href='/www/sda/reko/users/commerce/products/editUser.php?userID=$userUserID'>Endre Bruker</a></tr>");
 
 	}
 	print("</table>");
