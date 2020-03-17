@@ -8,7 +8,7 @@ $db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med da
 
 $keyword = $_GET["search"];
 
-$sql = "SELECT * FROM users WHERE firstName LIKE '%$keyword%' OR lastName LIKE '%$keyword%' OR email LIKE '%$keyword%' OR userName LIKE '%$keyword%' OR role LIKE '%$keyword%' OR status LIKE '%$keyword%';";
+$sql = "SELECT * FROM users WHERE firstName LIKE '%$keyword%' OR lastName LIKE '%$keyword%' OR email LIKE '%$keyword%' OR userName LIKE '%$keyword%' OR role LIKE '%$keyword%' OR status LIKE '%$keyword%' order by lastName,firstName;";
 $query = mysqli_query($db,$sql) or die ("Mislykkes å oppnå kontakt med database.");
 $xRows = mysqli_num_rows($query);
 
@@ -23,7 +23,7 @@ if($xRows == 0){
 else{
 	print("<h3>Registrerte brukere:</h3>");
 	print("<table class='prdOverview' border=1>");
-	print("<tr><th>Fornavn</th> <th>Etternavn</th> <th>E-post</th> <th>Brukernavn</th> <th>Brukerrolle</th> <th>BrukerStatus</th> <th>#</th> /tr>");
+	print("<tr><th>Fornavn</th> <th>Etternavn</th> <th>E-post</th> <th>Brukernavn</th> <th>Brukerrolle</th> <th>BrukerStatus</th> <th>#</th> </tr>");
 
 
 
