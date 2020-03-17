@@ -27,7 +27,7 @@ for($i=1;$i <= $xRows; $i++ ){
 
 <div class="post">
             
-<div class="profileInfo">
+<div class="profileInfo_backend">
 <a href="profile.php?ID=<?php print($userID);?>"><img src="/www/sda/reko/img/users/<?php print($userID.'/'.$profileIMG);?>"/> </a>     
           <p> <?php print($firstName." ".$lastName); ?> </p>
             </div>

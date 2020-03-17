@@ -235,6 +235,25 @@ body {
       left:26vw;
       
     }
+
+    .profileInfo_backend img {
+      width:7vw;
+      margin: 0 auto;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      position:relative;
+      left:19vw;
+
+    }
+    .profileInfo_backend p{
+      min-width: 300px;
+      margin-top: 0px;
+      margin-bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-bottom: 10px;
+    }
     
     .content
     {
