@@ -48,9 +48,8 @@ $del = mysqli_fetch_array($sqlQuery);
         <div class="profileWLC">
             <button class="dropdownBTN"><?php print(" Velkommen $userLastName, $userFirstName !");?></button>
             <div class="profile-content">
-            <a href="#">Endre profil</a>
-            <a href="#">Endre passord</a>
-            <a href="#">Logg ut</a>
+            <a href="/www/sda/reko/users/moderator/profile.php">Endre profil</a>
+            <a href="/www/sda/reko/access/logout.php">Logg ut</a>
             </div>
         </div>
     </div>
