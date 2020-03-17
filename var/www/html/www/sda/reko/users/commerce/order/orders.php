@@ -8,7 +8,7 @@ include("../control.php");
     <h2> Dine bestillinger</h2>
         <p>Under har du en oversikt over alle dine bestillinger. Dem er sortert etter dato bestillingen er foretatt- <br>
         Det er også her du må følge med etthvert som leverandører godkjenner dine ordre eller ikke<br>
-        Dersom du ønsker å avbestille dine ordre kan du gjøre dette ved å klikke "se ordre" til høyre. Dette er kun mulig å gjøre<br>
+        Dersom du ønsker å avbestille dine ordre kan du gjøre dette ved å klikke kanseler til høyre. Dette er kun mulig å gjøre<br>
         senest 5 dager før REKO samlingen. </p>
     </div>
     <div class="prdOverview_container">
