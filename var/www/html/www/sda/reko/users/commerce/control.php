@@ -80,7 +80,7 @@ $del = mysqli_fetch_array($sqlQuery);
   </button>
   <div class="dropdown-container">
     <a href="/www/sda/reko/users/commerce/order/orderOverview.php">Mottatt bestillinger</a>
-    <a href="#">Dine bestillinger?</a>
+    <a href="/www/sda/reko/users/commerce/order/orders.php">Dine bestillinger</a>
     
   </div>
 
