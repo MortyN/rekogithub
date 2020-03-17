@@ -26,8 +26,8 @@ for($i=1;$i <= $xRows; $i++ ){
 <div class="post">
             
 <div class="profileInfo">
-        <img src="../img/users/<?php print($userID.'/'.$profileIMG);?>
-        <p> <?php print($firstName." ".$lastName); ?> </p>
+        <img src="../img/users/<?php print($userID.'/'.$profileIMG);?>"/>      
+          <p> <?php print($firstName." ".$lastName); ?> </p>
             </div>
 <div class="content">
                 <div class="ad__pic">
