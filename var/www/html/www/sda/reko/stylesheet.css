@@ -231,6 +231,7 @@ body {
     .profilInfo img
     {
       width:20vw;
+      margin: 0 auto;
       border-radius: 50% solid black;
     }
     
