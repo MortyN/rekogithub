@@ -82,11 +82,11 @@
                     $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',image='$fileName',phoneNumber='$phone1' WHERE userID='$userID';";
                     if(mysqli_query($db,$sql))
                         {
-                          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
+                          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?status=1'/>");
                         }
                     else
                         {
-                          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=0'/>");
+                          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?status=0'/>");
                           unlink($newPath) or die ("<br><p>Ikke mulig å slette bilde på serveren igjen</p>");
                         }
                 }
@@ -94,7 +94,7 @@
                   {
                       $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
                       mysqli_query($db,$sql) or die ("<br><p>Kunne ikke oppdatere databasen!</p>");
-                      print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
+                      print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?status=1'/>");
                   }
                 
           }
@@ -102,7 +102,7 @@
               {
                 $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
                 mysqli_query($db,$sql) or die ("ikke mulig &aring; endre data i databasen");
-                print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
+                print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?status=1'/>");
               }
         }
           ?>
