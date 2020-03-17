@@ -9,7 +9,7 @@ ORDER BY RAND();";
 $result = mysqli_query($db,$sql) or die ("kan ikke laste feed");
 $xRows = mysqli_num_rows($result);
 print("<div class='feed_container'>");
-
+ 
 for($i=1;$i <= $xRows; $i++ ){
     $part = mysqli_fetch_array($result);
         $firstName = $part["firstName"];

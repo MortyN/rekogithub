@@ -238,12 +238,14 @@ body {
 
     }
     .ad_pic{
+      position: relative;
       width: 100%;
 
     }
     .ad_pic img{
-
+      position: relative;
       margin: 0 auto;
+      width: 80%;
       display: block;
 
     }
