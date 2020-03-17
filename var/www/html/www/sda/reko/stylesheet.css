@@ -239,7 +239,6 @@ body {
       display: grid;
       grid-gap: 10px;
       width: 80%;
-      background-color: lavender;
       grid-template-areas:
       "bilde bilde bilde bilde"
       "info info info info"
@@ -248,11 +247,13 @@ body {
     .ad__pic
     {
       grid-area:bilde;
+      position: relative;
+      left:10%;
 
     }
     .ad__pic img
     {
-      width: 90%;
+      width: 100%;
     }
     .ad_shortinfo
     {
