@@ -43,7 +43,7 @@ $xRows = mysqli_num_rows($query);
                     $status1=$row["status"];
                     $userUserID1 = $row["userID"];
                     
-                    switch ($status){
+                    switch ($status1){
                         case "1":
                             $status1 = "Aktiv";
                         break;
