@@ -63,7 +63,7 @@ $del = mysqli_fetch_array($sqlQuery);
   </button>
   <div class="dropdown-container">
     <a href="/www/sda/reko/users/commerce/feed/editFeed.php">Rediger din annonse</a>
-    <a href="#">Se annonse</a>
+    <a href="/www/sda/reko/users/commerce/feed/showFeed.php">Se annonse</a>
 
   </div>
 
