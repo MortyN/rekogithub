@@ -58,6 +58,7 @@
         if($fileName){
             
         $newPath="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
+        
 
             if($fileType != "image/gif" && $fileType != "image/jpeg" && $fileType != "image/jpg" && $fileType != "image/png" ){
                 print("<br><p>Filen må være et bilde.</p>");
@@ -67,7 +68,7 @@
                 @unlink($path.$profileIMG);
                 move_uploaded_file($tmpName, $newPath) or die ("<br><p>Kunne ikke laste opp bilde til serveren!</p>"); 
 
-                $sql= "UPDATE users SET firstName ='$firstName',lastName ='$lastName',email='$email',image='$profileIMG' WHERE userID='$userID';";
+                $sql= "UPDATE users SET firstName ='$firstName',lastName ='$lastName',email='$email',image='$fileName' WHERE userID='$userID';";
                 if(mysqli_query($db,$sql)){
                   print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?status=1'/>");
 				        }
