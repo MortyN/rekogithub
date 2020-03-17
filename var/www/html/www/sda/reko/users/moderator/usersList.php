@@ -51,7 +51,17 @@ $xRows = mysqli_num_rows($query);
                             $status1 = "Innaktiv";
                         break;
                     }
-                
+                    switch ($role1){
+                        case "moderator":
+                            $role1 = "Moderator";
+                        break;
+                        case "commerce":
+                            $role1 = "Leverandør";
+                        break;
+                        case "customer":
+                            $role1 = "Kunde";
+                        break;
+                    }
 
                     print("<tr><td>$firstName1</td> <td>$lastName1</td> <td>$email1</td> <td>$userName1</td> <td>$role1</td> <td>$status1</td> <td><a href='/www/sda/reko/users/commerce/products/editUser.php?userID=$userUserID1'>Endre Bruker</a></tr>");
                 }?>
