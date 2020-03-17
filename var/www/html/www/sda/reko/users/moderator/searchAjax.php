@@ -22,7 +22,7 @@ if($xRows == 0){
 
 else{
 	print("<h3>Registrerte brukere:</h3>");
-	print("<table id='prdOverview' border=1>");
+	print("<table class='prdOverview' border=1>");
 	print("<tr><th>Fornavn</th> <th>Etternavn</th> <th>E-post</th> <th>Brukernavn</th> <th>Brukerrolle</th> <th>BrukerStatus</th></tr>");
 
 
