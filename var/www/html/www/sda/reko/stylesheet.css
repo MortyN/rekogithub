@@ -244,11 +244,11 @@ body {
       background-color: white;
       display: grid;
       grid-gap: 10px;
-      width: 80%;
+      width: 100%;
       grid-template-areas:
-      "bilde bilde bilde bilde"
-      "info info info info"
-      "info info info info";
+      "bilde bilde bilde"
+      "info info info"
+      "info info info";
     }
     .ad__pic
     {
@@ -259,7 +259,8 @@ body {
     }
     .ad__pic img
     {
-      width: 80%;
+      width: 100%;
+      margin-top: 20px;
     }
     .ad_shortinfo
     {
