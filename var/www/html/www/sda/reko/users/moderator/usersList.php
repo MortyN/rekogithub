@@ -46,12 +46,11 @@ $xRows = mysqli_num_rows($query);
                 
 
                     print("<tr><td>$firstName</td> <td>$lastName</td> <td>$email</td> <td>$userName</td> <td>$role</td> <td>$status</td> <td><a href='/www/sda/reko/users/commerce/products/editUser.php?userID=$userUserID'>Endre Bruker</a></tr>");
-                ?>
+                }?>
                   </div>
 
         </form>
     </div>
 
-</div>
+</div></div>
     
-</div>
