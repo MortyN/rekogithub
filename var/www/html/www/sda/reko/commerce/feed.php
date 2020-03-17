@@ -42,39 +42,7 @@ for($i=1;$i <= $xRows; $i++ ){
 
 
 </div>
-
-<!-- Her Skal vi lage en grid. 
-        <div class="feed_post">
-            <div class="profileInfo">
-                <a href="#linkTilProfil"><img src="../img/users/<?php /*print($userID.'/'.$profileIMG);?>" /></a><br>
-                <p> <?php print($firstName." ".$lastName); ?> </p>
-            </div>
-            <div class="ad_pic">
-                <img src="../img/users/<?php print($userID.'/'.$postIMG);?>"/>
-            </div>
-            <div class="ad_shortInfo">
-                <p><?php print($shortText);*/?></p>
-            </div>
-    </div>-->
-
-
-    
 <?php
 }
 ?>
 </div>
-
-<!--
-    Profilbilde
-    <img src="../img/users/<?php /* print($userID.'/'.$profileIMG);?>
-    Postbilde
-    <img src="../img/users/<?php print($userID.'/'.$postIMG);?>
- -->
-
-
-
-
-
-
-
-<?php /*include("../footer.php"); */?> 
