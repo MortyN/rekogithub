@@ -1,3 +1,3 @@
 <html>
-    <?php include("index.php"); ?> 
+    <?php include("/reko/index.php"); ?> 
 </html>
