@@ -66,39 +66,44 @@
 
         if($fileName){
             
-        $newPath="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
+                $newPath="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
         
 
-            if($fileType != "image/gif" && $fileType != "image/jpeg" && $fileType != "image/jpg" && $fileType != "image/png" ){
-                print("<br><p>Filen må være et bilde.</p>");
-            }
-            if($profileIMG != $fileName){
+                if($fileType != "image/gif" && $fileType != "image/jpeg" && $fileType != "image/jpg" && $fileType != "image/png" )
+                {
+                    print("<br><p>Filen må være et bilde.</p>");
+                }
+                if($profileIMG != $fileName)
+                {
 
-                @unlink($path.$image);
-                move_uploaded_file($tmpName, $newPath) or die ("<br><p>Kunne ikke laste opp bilde til serveren!</p>"); 
+                    @unlink($path.$image);
+                    move_uploaded_file($tmpName, $newPath) or die ("<br><p>Kunne ikke laste opp bilde til serveren!</p>"); 
 
-                $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',image='$fileName',phoneNumber='$phone1' WHERE userID='$userID';";
-                if(mysqli_query($db,$sql)){
-                  print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
-				        }
-				        else{
-                  print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=0'/>");
-					        unlink($newPath) or die ("<br><p>Ikke mulig å slette bilde på serveren igjen</p>");
-				        }
-            }
-            if($profileIMG == $fileName)
-            {
-                $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
-                mysqli_query($db,$sql) or die ("<br><p>Kunne ikke oppdatere databasen!</p>");
-                print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
-            }
-          else
-            {
-              $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
-              mysqli_query($db,$sql) or die ("ikke mulig &aring; endre data i databasen");
-              print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
-            }
+                    $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',image='$fileName',phoneNumber='$phone1' WHERE userID='$userID';";
+                    if(mysqli_query($db,$sql))
+                        {
+                          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
+                        }
+                    else
+                        {
+                          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=0'/>");
+                          unlink($newPath) or die ("<br><p>Ikke mulig å slette bilde på serveren igjen</p>");
+                        }
+                }
+                if($profileIMG == $fileName)
+                  {
+                      $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
+                      mysqli_query($db,$sql) or die ("<br><p>Kunne ikke oppdatere databasen!</p>");
+                      print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
+                  }
+                
           }
+          else
+              {
+                $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
+                mysqli_query($db,$sql) or die ("ikke mulig &aring; endre data i databasen");
+                print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
+              }
         }
           ?>
   </div>
