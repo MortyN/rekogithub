@@ -64,7 +64,7 @@
             }
             if($profileIMG != $fileName){
 
-                @unlink($path.$profileIMG);
+                @unlink($path.$image);
                 move_uploaded_file($tmpName, $newPath) or die ("<br><p>Kunne ikke laste opp bilde til serveren!</p>"); 
 
                 $sql= "UPDATE users SET firstName ='$firstName',lastName ='$lastName',email='$email',image='$fileName' WHERE userID='$userID';";
