@@ -245,12 +245,12 @@ body {
       "info info info info"
       "info info info info";
     }
-    .ad_pic
+    .ad__pic
     {
       grid-area:bilde;
 
     }
-    .ad_pic img
+    .ad__pic img
     {
       width: 90%;
     }
