@@ -21,16 +21,17 @@ for($i=1;$i <= $xRows; $i++ ){
         
         ?>
         <div class="feed_post">
-        <div class="profileInfo">
-            <a href="#linkTilProfil"><img src="../img/users/<?php print($userID.'/'.$profileIMG);?>" /></a><br>
-            <p> <?php print($firstName." ".$lastName); ?> </p>
-        </div>
-        <div class="ad_pic">
-            <img src="../img/users/<?php print($userID.'/'.$postIMG);?>"/>
-        </div>
-        <div class="ad_shortInfo">
-            <p><?php print($shortText);?></p>
-        </div>
+            <div class="profileInfo">
+                <a href="#linkTilProfil"><img src="../img/users/<?php print($userID.'/'.$profileIMG);?>" /></a><br>
+                <p> <?php print($firstName." ".$lastName); ?> </p>
+            </div>
+            <div class="ad_pic">
+                <img src="../img/users/<?php print($userID.'/'.$postIMG);?>"/>
+            </div>
+            <div class="ad_shortInfo">
+                <p><?php print($shortText);?></p>
+            </div>
+</div>
     </div>
 
     
@@ -39,7 +40,7 @@ for($i=1;$i <= $xRows; $i++ ){
 ?>
 
 
-        
+
 
 
 
