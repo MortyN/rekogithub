@@ -35,17 +35,25 @@ $xRows = mysqli_num_rows($query);
                 for($i=1 ; $i <= $xRows ; $i++){
                     $row = mysqli_fetch_array($query);
 
-                    $firstName=$row["firstName"];
-                    $lastName=$row["lastName"];
-                    $email=$row["email"];
-                    $userName=$row["userName"];
-                    $role=$row["role"];
-                    $status=$row["status"];
-                    $userUserID = $row["userID"];
+                    $firstName1=$row["firstName"];
+                    $lastName1=$row["lastName"];
+                    $email1=$row["email"];
+                    $userName1=$row["userName"];
+                    $role1=$row["role"];
+                    $status1=$row["status"];
+                    $userUserID1 = $row["userID"];
                     
+                    switch ($status){
+                        case "1":
+                            $status1 = "Aktiv";
+                        break;
+                        case "0":
+                            $status1 = "Innaktiv";
+                        break;
+                    }
                 
 
-                    print("<tr><td>$firstName</td> <td>$lastName</td> <td>$email</td> <td>$userName</td> <td>$role</td> <td>$status</td> <td><a href='/www/sda/reko/users/commerce/products/editUser.php?userID=$userUserID'>Endre Bruker</a></tr>");
+                    print("<tr><td>$firstName1</td> <td>$lastName1</td> <td>$email1</td> <td>$userName1</td> <td>$role1</td> <td>$status1</td> <td><a href='/www/sda/reko/users/commerce/products/editUser.php?userID=$userUserID1'>Endre Bruker</a></tr>");
                 }?>
                   </div>
 
