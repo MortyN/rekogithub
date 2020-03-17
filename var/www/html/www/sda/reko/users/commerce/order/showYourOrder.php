@@ -51,10 +51,9 @@ $orderID = $_GET["orderID"];
         </form>
         <?php 
         if(isset($_POST["submit"])){
-        $status1 = $_POST["status"];
-        $sql2 = "UPDATE orders WHERE orderID = '$orderID';";
-        mysqli_query($db,$sql2) or die ("Kan ikke oppdatere status");
-        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showYourOrder.php?orderID=$orderID&status=success'/>");
+        
+
+            /*SLETTE ORDRE OG PRODUKTER I ORDRE*/
         
         }
         ?>
