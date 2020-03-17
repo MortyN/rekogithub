@@ -200,16 +200,16 @@ body {
     .feed_container{
       width:70%;
       min-height: 1000px;
-      background-color: white;
+      background-color: whitesmoke;
       position:relative;
       margin: 20px auto;
     }
     .feed_post{
       position:relative;
       width:100%;
-      background-color: whitesmoke;
+      background-color: white;
       border:1px;
-      border-color: whitesmoke;
+      border-color: white;
       border-style:solid;
       border-radius: 10px;
       min-height: 100px;
@@ -235,6 +235,7 @@ body {
       margin-right: auto;
       text-align: center;
       margin-bottom: 10px;
+      
 
     }
     .ad_pic{
@@ -247,7 +248,6 @@ body {
       margin: 0 auto;
       width: 80%;
       display: block;
-
     }
     .ad_shortInfo{
       position: relative;
