@@ -1,7 +1,7 @@
 <?php
 
 include ('control.php');
-include('userFuntion.php');
+include ('userFunction.php');
 $selectedUserID = $_GET['userID'];
 
   $sql = "SELECT * FROM users WHERE userID='$selectedUserID';";
