@@ -31,14 +31,14 @@ $selectedUserID = $_GET['userID'];
 
 <div class="messageBox">
             <?php
-            if (isset($_GET['error'])) {
-                if ($_GET['error'] == "01") {
+            if (isset($_GET['success'])) {
+                if ($_GET['success'] == "1") {
                     echo "<p><strong style='color: red'> * When changing image information<br>all fields needs to be filled in!<br><br>Try again &#128540</strong></p>";
                 }
-                elseif ($_GET['error'] == "02") {
+                elseif ($_GET['success'] == "1") {
                     echo "<p><strong style='color: mediumpurple'> * Image updated! &#128077</strong></p>";
                 }
-                elseif ($_GET['error'] == "1") {
+                elseif ($_GET['success'] == "1") {
                     echo "<p><strong style='color: mediumpurple'> * Image updated! &#128077</strong></p>";
                 }
             }
