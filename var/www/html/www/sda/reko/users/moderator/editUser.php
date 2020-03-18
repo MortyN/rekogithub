@@ -31,14 +31,14 @@ $selectedUserID = $_GET['userID'];
 
   <div class="messageBox">
               <?php
-              if (isset($_GET['success'])) {
-                  if ($_GET['success'] == "1") {
+              if (isset($_GET['error'])) {
+                  if ($_GET['error'] == "test") {
                       echo "<p><strong style='color: red'> * When changing image information<br>all fields needs to be filled in!<br><br>Try again &#128540</strong></p>";
                   }
-                  elseif ($_GET['success'] == "1") {
+                  elseif ($_GET['error'] == "test") {
                       echo "<p><strong style='color: mediumpurple'> * Image updated! &#128077</strong></p>";
                   }
-                  elseif ($_GET['success'] == "1") {
+                  elseif ($_GET['error'] == "test") {
                       echo "<p><strong style='color: mediumpurple'> * Image updated! &#128077</strong></p>";
                   }
               }
@@ -109,15 +109,17 @@ $selectedUserID = $_GET['userID'];
             // Oppdater alle felt i database, samt slette fil fra server
             $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='' WHERE userID = '$selectedUserID';";
 
-            mysqli_query($db,$query) or ("location: http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1") and die;
+            mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=test'>") and die;
 
-            header('location: http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1');
+            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=test'>";
+
+
             
             
 
             $path="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$image;
-            unlink($path) or ("location: http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1") and die;
-            header('location: http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1');
+            unlink($path) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=test'>") and die;
+
             
 
 
@@ -125,9 +127,10 @@ $selectedUserID = $_GET['userID'];
           if(!$delIMG){
             $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', userID = '$selectedUserID' WHERE userID = '$selectedUserID';";      
             
-            mysqli_query($db,$query) or ("location: http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1") and die;
+            mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=test'>") and die;
+                 
             
-            header('location: http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1');            
+            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=test'>";
             
           }
         }
