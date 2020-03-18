@@ -20,6 +20,7 @@ $selectedUserID = $_GET['userID'];
     $userName1=$del["userName"];
     $role1=$del["role"];
     $status1=$del["status"];
+    $image = $del['image'];
     $userUserID = $del["userID"];
 
 
