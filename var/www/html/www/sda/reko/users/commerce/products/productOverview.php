@@ -2,7 +2,7 @@
 include("../control.php");
 ?>
 <div class="dashboard_content">
-<div class="innerContainerPrdOverview">
+<div class="innerContainerPrdOverview"> 
     <div class="prdOverview_container">
         <p>Under er en oversikt over alle dine registrerte produkter, du kan klikke på "rediger" for å endre produkt eller status
         på produktet. </p>
