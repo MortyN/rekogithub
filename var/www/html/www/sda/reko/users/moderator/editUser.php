@@ -27,6 +27,7 @@ $selectedUserID = $_GET['userID'];
 ?>
 
 <html>
+<div class="dashboard_content">
 <div class="profileeditor">
     <form method="post" action="">
       <label for="fname">Brukernavn:</label><br>
@@ -77,4 +78,5 @@ $selectedUserID = $_GET['userID'];
       }
       ?>
 </div>
+    </div>
 </html>
