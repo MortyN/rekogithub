@@ -52,7 +52,7 @@ $selectedUserID = $_GET['userID'];
 <div class="profileeditor">
     <form method="post" name="editProfile" action="">
 
-      <label for="fname">Brukernavn:</label><br>
+      <label for="fname">Tissemann:</label><br>
       <input type="text" id="userName" name="userName" value="<?php print($userName1); ?>" ><br>
       <label for="fname">Fornavn:</label><br>
       <input type="text" id="firstName" name="firstName" value="<?php print($firstName1); ?>"><br>
@@ -114,7 +114,7 @@ $selectedUserID = $_GET['userID'];
           
 
           $path="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$image;
-          unlink($path) or die ("Kan ikke opdater på serveren");
+          unlink($path) or die ("Kan ikke slette fra server");
           print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1");
 
 
