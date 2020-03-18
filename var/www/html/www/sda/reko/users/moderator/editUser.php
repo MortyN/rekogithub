@@ -83,7 +83,6 @@ $selectedUserID = $_GET['userID'];
           
           // Oppdater alle felt i database, samt slette fil fra server
           $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='' WHERE userID = '$selectedUserID';";
-          print($query);
           mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
 
           $path="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$image;
@@ -93,8 +92,7 @@ $selectedUserID = $_GET['userID'];
 
         }
         if(!$delIMG){
-          $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', userID = '$selectedUserID' WHERE userID = '$selectedUserID';" ;
-          print($query);         
+          $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', userID = '$selectedUserID' WHERE userID = '$selectedUserID';";      
           mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
           print("Endringene er nå lagret");
         }
