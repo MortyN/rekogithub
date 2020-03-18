@@ -642,3 +642,23 @@ background-color: white;
   margin-left: 10%;
   margin-right: 10%;
 }
+.messageBox{
+  position: relative;
+  width:100%;
+  padding:20px;
+  margin:5px auto;
+  background-color: white;
+}
+.redColorBox{
+  background-color: red;
+  width: 5px;
+  margin-left:0;
+  
+
+}
+.greenColorBox{
+  background-color: green;
+  width: 5px;
+  margin-left:0;
+
+}
