@@ -93,7 +93,7 @@ $selectedUserID = $_GET['userID'];
 
         }
         if(!$delIMG){
-          $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus' userID = '$selectedUserID';";
+          $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus' userID = '$selectedUserID' WHERE userID = '$selectedUserID';" ;
           print($query);         
           mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
           print("Endringene er nå lagret");
