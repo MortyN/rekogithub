@@ -29,7 +29,7 @@ $selectedUserID = $_GET['userID'];
 <html>
 <div class="dashboard_content">
 <div class="profileeditor">
-    <form method="post" action="">
+    <form method="post" name="editProfile" action="">
       <label for="fname">Brukernavn:</label><br>
       <input type="text" id="userName" name="userName" value="<?php print($userName1); ?>" ><br>
       <label for="fname">Fornavn:</label><br>
@@ -83,6 +83,7 @@ $selectedUserID = $_GET['userID'];
           
           // Oppdater alle felt i database, samt slette fil fra server
           $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='';";
+          print($query);
           mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
 
           $path="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$image;
@@ -93,6 +94,7 @@ $selectedUserID = $_GET['userID'];
         }
         if(!$image){
           $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus';";
+          print($query);         
           mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
           print("Endringene er nå lagret");
         }
