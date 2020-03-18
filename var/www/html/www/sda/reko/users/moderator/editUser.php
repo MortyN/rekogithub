@@ -41,7 +41,7 @@ $selectedUserID = $_GET['userID'];
       <img src="../img/users/<?php print($userID.'/'.$image);?>" height="100px"/>
     <select id='image'>
         <option value="imagedel">Slett bilde</option>
-    </select>
+    </select><br>
       <input type="submit"  value="Endre" name="editProfile" id="editProfile">
       
 
