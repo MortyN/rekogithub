@@ -43,6 +43,7 @@ $selectedUserID = $_GET['userID'];
       <select name="role">
       <?php selectedRole($role) ?>
       </select>
+      <br><br>
 
       <label for="status">Status:</label><br>
       <select name="status">
@@ -62,7 +63,7 @@ $selectedUserID = $_GET['userID'];
     </form>
 
     <?php
-      if(ïsset($_POST['editProfile'])){
+      if(isset($_POST['editProfile'])){
         $newUserName=$_POST['userName'];
         $newFirstName=$_POST['firstName'];
         $newLastName=$_POST['lastName'];
