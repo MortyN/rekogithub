@@ -82,7 +82,7 @@ $selectedUserID = $_GET['userID'];
         if ($delIMG == "imagedel") {
           
           // Oppdater alle felt i database, samt slette fil fra server
-          $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='';";
+          $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='' WHERE userID = '$selectedUserID';";
           print($query);
           mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
 
@@ -93,7 +93,7 @@ $selectedUserID = $_GET['userID'];
 
         }
         if(!$delIMG){
-          $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus';";
+          $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus' userID = '$selectedUserID';";
           print($query);         
           mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
           print("Endringene er nå lagret");
