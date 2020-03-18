@@ -59,13 +59,13 @@ $selectedUserID = $_GET['userID'];
       </select><br>
 
 
-      <input type="submit"  value="Endre" name="editProfile" id="editProfile">
+      <input type="submit" value="Endre" name="submit" id="submit"/>
       
 
     </form>
 
     <?php
-      if(isset($_POST['editProfile'])){
+      if(isset($_POST['submit'])){
         $newUserName=$_POST['userName'];
         $newFirstName=$_POST['firstName'];
         $newLastName=$_POST['lastName'];
