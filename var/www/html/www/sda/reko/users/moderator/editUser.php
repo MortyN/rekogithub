@@ -52,7 +52,7 @@ $selectedUserID = $_GET['userID'];
       <?php status($status1);?> 
       </select><br>
       
-      <img src="../img/users/<?php print($userUserID.'/'.$image);?>" height="100px"/>
+      <img src="../../img/users/<?php print($userUserID.'/'.$image);?>" height="100px"/>
       <select name='image'>
           <option value="imagedel">Slett bilde</option>
           <option value="" selected> Behold bilde</option>
