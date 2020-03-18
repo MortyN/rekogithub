@@ -28,8 +28,38 @@ $selectedUserID = $_GET['userID'];
 
 <html>
 <div class="dashboard_content">
+
+<div class="messageBox">
+            <?php
+
+            if (isset($_GET['error'])) {
+                $error = $_GET['error'];
+                switch ($error)
+                {
+                  case "01":
+                    echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
+                  break;
+
+                  case "02":
+                    echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
+                  break;
+              }
+            }
+            if (isset($_GET['success'])) {
+                  $success = $_GET['success'];
+                  switch ($success)
+                  {
+                    case "1":
+                      echo "<p><strong>Endringen er oppdatert</strong></p>";
+                    break;
+                  }  
+            }
+            ?>
+        </div>
+
 <div class="profileeditor">
     <form method="post" name="editProfile" action="">
+
       <label for="fname">Brukernavn:</label><br>
       <input type="text" id="userName" name="userName" value="<?php print($userName1); ?>" ><br>
       <label for="fname">Fornavn:</label><br>
@@ -58,6 +88,9 @@ $selectedUserID = $_GET['userID'];
           <option value="" selected> Behold bilde</option>
       </select><br>
 
+      
+
+
 
       <input type="submit" value="Endre" name="submit" id="submit"/>
       
@@ -83,18 +116,22 @@ $selectedUserID = $_GET['userID'];
           
           // Oppdater alle felt i database, samt slette fil fra server
           $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='' WHERE userID = '$selectedUserID';";
-          mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
+          mysqli_query($db,$query) or die ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=01");
+          
+          
 
           $path="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$image;
-          unlink($path) or die ("Kan ikke slette fil fra server!");
-          print("Endringene er nå lagret");
+          unlink($path) or die ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=02");
+          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1");
 
 
         }
         if(!$delIMG){
           $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', userID = '$selectedUserID' WHERE userID = '$selectedUserID';";      
-          mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
-          print("Endringene er nå lagret");
+          mysqli_query($db,$query) or die ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=01");
+          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1");
+          
+          
         }
       }
       ?>
