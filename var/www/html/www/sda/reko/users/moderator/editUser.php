@@ -125,30 +125,28 @@ $selectedUserID = $_GET['userID'];
             
             // Oppdater alle felt i database, samt slette fil fra server
             $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='' WHERE userID = '$selectedUserID';";
-            $test = $selectedUserID;
-            mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=sql&userID='$test''>") and die;
+            mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=sql&userID=$selectedUserID'>") and die;
 
-            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=updateOK&userID='$test''>";
+            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=updateOK&userID=$selectedUserID'>";
 
 
             
             
 
             $path="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$image;
-            unlink($path) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=server&userID='$test''>") and die;
+            unlink($path) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=server&userID=$selectedUserID'>") and die;
 
             
 
 
           }
           if(!$delIMG){
-            $test = $selectedUserID;
             $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', userID = '$selectedUserID' WHERE userID = '$selectedUserID';";      
             
-            mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=sql&userID='$test''>") and die;
+            mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=sql&userID=$selectedUserID'>") and die;
                  
             
-            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=updateOK&userID='$test''>";
+            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=updateOK&userID=$selectedUserID'>";
             
           }
         }
