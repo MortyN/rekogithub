@@ -9,7 +9,7 @@ $selectedUserID = $_GET['userID'];
 
   $del = mysqli_fetch_array($sqlQuery);
   
-  Det er noe galt med databasen her
+  
   
  
     
@@ -21,7 +21,6 @@ $selectedUserID = $_GET['userID'];
     $role1=$del["role"];
     $status1=$del["status"];
     $userUserID = $del["userID"];
-
 
 
 ?>
