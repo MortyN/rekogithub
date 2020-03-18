@@ -72,9 +72,28 @@ $selectedUserID = $_GET['userID'];
         $newEmail=$_POST['email'];
 
         $newStatus=$_POST['status'];
+        $newRole=$_POST['role'];
+        
         $delIMG=$_POST['image'];
 
-        
+
+
+
+        if ($image == "imagedel") {
+          
+          // Oppdater alle felt i database, samt slette fil fra server
+          $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='';";
+          mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
+
+          $path="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$image;
+          unlink($path) or die ("Kan ikke slette fil fra server!");
+
+
+        }
+        if(!$image){
+          $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus';";
+          mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
+        }
       }
       ?>
 </div>
