@@ -41,7 +41,7 @@ $selectedUserID = $_GET['userID'];
      
       <label for="role">Rolle:</label><br>
       <select name="role">
-      <?php selectedRole($role) ?>
+      <?php selectedRole($role1) ?>
       </select>
       <br><br>
 
