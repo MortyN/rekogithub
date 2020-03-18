@@ -30,19 +30,34 @@ $selectedUserID = $_GET['userID'];
 <div class="dashboard_content">
 
   <div class="messageBox">
-              <?php
-              if (isset($_GET['error'])) {
-                  if ($_GET['error'] == "test") {
-                      echo "<p><strong style='color: red'> * When changing image information<br>all fields needs to be filled in!<br><br>Try again &#128540</strong></p>";
-                  }
-                  elseif ($_GET['error'] == "test") {
-                      echo "<p><strong style='color: mediumpurple'> * Image updated! &#128077</strong></p>";
-                  }
-                  elseif ($_GET['error'] == "test") {
-                      echo "<p><strong style='color: mediumpurple'> * Image updated! &#128077</strong></p>";
-                  }
-              }
-              ?>
+  <?php
+
+          if (isset($_GET['error'])) {
+              $error = $_GET['error'];
+              switch ($error)
+              {
+                case "sql":
+                  echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
+                break;
+
+                case "server":
+                  echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
+                break;
+            }
+          }
+          if (isset($_GET['success'])) {
+                $success = $_GET['success'];
+                switch ($success)
+                {
+                  case "updateOK":
+                    echo "<p><strong>Endringen er oppdatert</strong></p>";
+                  break;
+                }  
+          }
+?>
+
+
+              
           </div>
 
 
@@ -109,16 +124,16 @@ $selectedUserID = $_GET['userID'];
             // Oppdater alle felt i database, samt slette fil fra server
             $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='' WHERE userID = '$selectedUserID';";
 
-            mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=test'>") and die;
+            mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=sql&userID='$selectedUserID''>") and die;
 
-            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=test'>";
+            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=updateOK&userID='$selectedUserID''>";
 
 
             
             
 
             $path="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$image;
-            unlink($path) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=test'>") and die;
+            unlink($path) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=server&userID='$selectedUserID''>") and die;
 
             
 
@@ -127,10 +142,10 @@ $selectedUserID = $_GET['userID'];
           if(!$delIMG){
             $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', userID = '$selectedUserID' WHERE userID = '$selectedUserID';";      
             
-            mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=test'>") and die;
+            mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=sql&userID='$selectedUserID''>") and die;
                  
             
-            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=test'>";
+            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=updateOK&userID='$selectedUserID''>";
             
           }
         }
