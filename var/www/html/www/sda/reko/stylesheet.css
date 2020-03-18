@@ -651,9 +651,14 @@ background-color: white;
   margin:5px auto;
   background-color: white;
 }
+.messageBox p{
+  font-size: 0.6em;
+  text-align: center;
+}
 .redColorBox{
   background-color: red;
   width: 5px;
+  height:100%;
   margin-left:0;
   
 
@@ -661,6 +666,7 @@ background-color: white;
 .greenColorBox{
   background-color: green;
   width: 5px;
+  height:100%;
   margin-left:0;
 
 }
