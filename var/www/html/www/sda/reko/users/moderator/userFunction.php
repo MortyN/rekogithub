@@ -3,7 +3,7 @@
 
 function selectedRole($role)
 {
-    
+
    // moderator --> Moderator
    // commerce  --> Leverandør 
    // customer  --> Kunde

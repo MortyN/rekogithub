@@ -6,22 +6,23 @@ $selectedUserID = $_GET['userID'];
 
   $sql = "SELECT * FROM users WHERE userID='$selectedUserID';";
   $sqlQuery = mysqli_query($db,$sql) or die ("Kan ikke hente data fra databasen (#100)");
+
   $del = mysqli_fetch_array($sqlQuery);
-  print($sql);
   
+  Det er noe galt med databasen her
   
  
-    $row = mysqli_fetch_array($sqlQuery);
+    
 
-    $firstName1=$row["firstName"];
-    $lastName1=$row["lastName"];
-    $email1=$row["email"];
-    $userName1=$row["userName"];
-    $role1=$row["role"];
-    $status1=$row["status"];
-    $userUserID = $row["userID"];
+    $firstName1=$del["firstName"];
+    $lastName1=$del["lastName"];
+    $email1=$del["email"];
+    $userName1=$del["userName"];
+    $role1=$del["role"];
+    $status1=$del["status"];
+    $userUserID = $del["userID"];
 
-  
+
 
 ?>
 
