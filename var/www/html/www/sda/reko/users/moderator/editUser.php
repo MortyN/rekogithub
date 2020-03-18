@@ -87,12 +87,14 @@ $selectedUserID = $_GET['userID'];
 
           $path="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$image;
           unlink($path) or die ("Kan ikke slette fil fra server!");
+          print("Endringene er nå lagret");
 
 
         }
         if(!$image){
           $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus';";
           mysqli_query($db,$query) or die ("Kan ikke slette bilde fra databasen");
+          print("Endringene er nå lagret");
         }
       }
       ?>
