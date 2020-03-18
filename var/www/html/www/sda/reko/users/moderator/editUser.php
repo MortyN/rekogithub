@@ -7,7 +7,7 @@ $selectedUserID = $_GET['userID'];
   $sql = "SELECT * FROM users WHERE userID='$selectedUserID';";
   $sqlQuery = mysqli_query($db,$sql) or die ("Kan ikke hente data fra databasen (#100)");
   $del = mysqli_fetch_array($sqlQuery);
-
+  print($sql);
   
   
  
@@ -29,7 +29,7 @@ $selectedUserID = $_GET['userID'];
 <div class="profileeditor">
     <form method="post" action="">
       <label for="fname">Brukernavn:</label><br>
-      <input type="text" id="userName" name="userName" value="<?php print($userName1); ?>" readonly><br>
+      <input type="text" id="userName" name="userName" value="<?php print($userName1); ?>" ><br>
       <label for="fname">Fornavn:</label><br>
       <input type="text" id="firstName" name="firstName" value="<?php print($firstName1); ?>"><br>
       <label for="lname">Etternavn:</label><br>
