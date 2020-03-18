@@ -31,30 +31,22 @@ $selectedUserID = $_GET['userID'];
 
 <div class="messageBox">
             <?php
-/*
             if (isset($_GET['error'])) {
-                $error = $_GET['error'];
-                switch ($error)
-                {
-                  case "01":
-                    echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
-                  break;
-
-                  case "02":
-                    echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
-                  break;
-              }
+                if ($_GET['error'] == "01") {
+                    echo "<p><strong style='color: red'> * When changing image information<br>all fields needs to be filled in!<br><br>Try again &#128540</strong></p>";
+                }
+                elseif ($_GET['error'] == "02") {
+                    echo "<p><strong style='color: mediumpurple'> * Image updated! &#128077</strong></p>";
+                }
+                elseif ($_GET['error'] == "1") {
+                    echo "<p><strong style='color: mediumpurple'> * Image updated! &#128077</strong></p>";
+                }
             }
-            if (isset($_GET['success'])) {
-                  $success = $_GET['success'];
-                  switch ($success)
-                  {
-                    case "1":
-                      echo "<p><strong>Endringen er oppdatert</strong></p>";
-                    break;
-                  }  
-            }*/
             ?>
+        </div>
+
+
+
         </div>
 
 <div class="profileeditor">
@@ -116,19 +108,20 @@ $selectedUserID = $_GET['userID'];
           
           // Oppdater alle felt i database, samt slette fil fra server
           $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='' WHERE userID = '$selectedUserID';";
-          mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=01") and die;
+          mysqli_query($db,$query) or die ("Kan ikke oppdatere i databasen");
+          print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1");
           
           
 
           $path="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$image;
-          unlink($path) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=02") and die;
+          unlink($path) or die ("Kan ikke opdater på serveren");
           print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1");
 
 
         }
         if(!$delIMG){
           $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', userID = '$selectedUserID' WHERE userID = '$selectedUserID';";      
-          mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=01") and die;
+          mysqli_query($db,$query) or die ("Kan ikke endre database");
           print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=1");
           
           
