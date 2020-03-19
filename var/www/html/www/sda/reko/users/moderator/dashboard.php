@@ -5,6 +5,26 @@ include("control.php");
 
 <div class="dashboard_content">
 
-<!-- Innhold mellom her -->
+
+    <div class="dashboardContainer">
+    
+        <div class="dashboard_info">
+            Informasjon
+        </div>
+        
+        <div class="dashboard_orders">
+            Ordre
+        </div>
+        
+        <div class="dashboard_news">
+            Nyheter Editor
+        </div>
+
+    </div>
+
+
+
+
+
 
 </div>
