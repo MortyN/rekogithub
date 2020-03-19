@@ -13,14 +13,13 @@ include("control.php");
         </div>
         
         <div class="dashboard_orders">
+            <h3>Dine 5 siste ordre: </h3>
         <table class="prdOverview">
             <tr>
                 <th>Ordre nr.</th>
                 <th>Kunde</th>
-                <th>Antall produkter</th>
                 <th>Dato</th>
-                <th>Status</th>
-                <th>#</th> 
+                
             </tr>
 
             <?php 
@@ -46,10 +45,13 @@ include("control.php");
                 $date = $part["date"];
                 $status = $part["status"];
 
-                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td>$status</td> <td><a href='/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID'>Se ordre</a></td></tr>");
+                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$date</td>  </tr>");
             }
             ?>
         </table>
+        </br>
+        <a href=/www/sda/reko/users/commerce/order/orderOverview.php"><button>Se alle</button></a>
+
         </div>
         
         <div class="dashboard_news">
