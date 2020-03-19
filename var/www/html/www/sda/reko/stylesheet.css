@@ -349,6 +349,36 @@ body {
       margin-top: 30px;
     }
 
+    .dashboardContainer
+    {
+      display: grid;
+      grid-gap: 10vw;
+      width:80%;
+      margin:0 auto;
+      grid-template-areas:
+      "info info"
+      "orders news"
+      "orders news" ;  
+    }
+    .dashboard_info
+    {
+      grid-area:info;
+      border-style: solid;
+    }
+    .dashboard_orders
+    {
+      grid-area:orders;
+      border-style: solid;
+    }
+    .dashboard_news
+    {
+      grid-area:news;
+      border-style: solid;
+    }
+
+      
+      
+
     /*Sidebar*/
 
     .sidenav {
