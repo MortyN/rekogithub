@@ -352,9 +352,9 @@ body {
     .dashboardContainer
     {
       display: grid;
-      grid-gap: 10vw;
+      grid-gap: 5vw;
       width:80%;
-      margin:0 auto;
+      margin:100px auto;
       grid-template-areas:
       "info info"
       "orders news"
@@ -364,16 +364,28 @@ body {
     {
       grid-area:info;
       border-style: solid;
+      min-height: 200px;
+      border-radius: 15px;
+      padding:10px;
+      box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .dashboard_orders
     {
       grid-area:orders;
       border-style: solid;
+      min-height: 200px;
+      border-radius: 15px;
+      padding:10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .dashboard_news
     {
       grid-area:news;
       border-style: solid;
+      min-height: 200px;
+      border-radius: 15px;
+      padding:10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
       
