@@ -648,14 +648,16 @@ background-color: white;
   position: relative;
   width:25%;
   height: 25px;
-  padding:0 5px;
+  padding:0;
   margin:5px 0;
   background-color: white;
 }
+
 .messageBox p{
   font-size: 0.6em;
   text-align: center;
 }
+
 .redColorBox{
   background-color: red;
   width: 15px;
