@@ -64,6 +64,7 @@ include("control.php");
            <form action="" id="newsdash" title="newsdash">
                     <?php
                     $sql = "SELECT * FROM news;";
+                    $sql1 = "INSERT INTO news (news) VALUES ($news)";
 
                     $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
 

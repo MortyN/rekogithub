@@ -31,7 +31,7 @@ include("product_function.php");?>
             switch ($success)
             {
                 case "updateOK":
-                echo "<p><strong>Endringen er oppdatert</strong></p>";
+                echo "<p><strong>Produktet er lagret</strong></p>";
                 break;
             }  
             print("</div>");
