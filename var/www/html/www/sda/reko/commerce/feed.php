@@ -8,7 +8,7 @@ where post.category='Aktiv' and users.status='1'
 ORDER BY RAND();";
 $result = mysqli_query($db,$sql) or die ("kan ikke laste feed");
 $xRows = mysqli_num_rows($result);
-print("<div class='feed_container'>"); //1
+print("<div class='feed_container'>");
  
     for($i=1;$i <= $xRows; $i++ ){
         $part = mysqli_fetch_array($result);
@@ -23,30 +23,30 @@ print("<div class='feed_container'>"); //1
 
 
 
-            <div class="post"> //2
+            <div class="post">
                         
-                    <div class="profileInfo"> //3
+                    <div class="profileInfo">
                                 <a href="profile.php?ID=<?php print($userID);?>"><img src="../img/users/<?php print($userID.'/'.$profileIMG);?>"/> </a>     
                                  <p> <?php print($firstName." ".$lastName); ?> </p>
-                    </div>//1-
-                                <div class="content">//4
-                                    <div class="ad__pic">//5
+                    </div>
+                                <div class="content">
+                                    <div class="ad__pic">
                                         <img src="../img/users/<?php print($userID.'/'.$postIMG);?>"/>
-                                    </div>//-2
-                                    <div class="ad_shortinfo">//6
+                                    </div>
+                                    <div class="ad_shortinfo">
                                         <p><?php print($shortText);?></p>
-                                    </div>//-3
+                                    </div>
 
-                                </div>//-4
+                                </div>
                                 
 
 
-            </div>//-5
+            </div>
 
 <?php
 
 }
 ?>
-</div>//-6
+</div>
 
 <?php include("../footer.php"); ?>
