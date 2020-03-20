@@ -306,7 +306,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding: 5px;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
   }
   .grid-item {
@@ -379,6 +379,7 @@ body {
       padding:10px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       background-color: white;
+      width: 30vw;
     }
     .dashboardBTN
     {
@@ -395,6 +396,7 @@ body {
       padding:10px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       background-color: white;
+      width: 30vw;
     }
 
     
@@ -570,7 +572,7 @@ body {
   grid-gap: 10px;
   background-color: white;
   padding: 20px;
-  margin-top:40px;
+  margin-top:5px;
 }
 
 .grid-container > div {
