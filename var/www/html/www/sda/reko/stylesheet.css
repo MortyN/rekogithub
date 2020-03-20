@@ -21,6 +21,7 @@ body {
   .mainNav img
   {
     width: 4vw;
+    float: left;
     position:relative;
     top:1.5vh;
   }
