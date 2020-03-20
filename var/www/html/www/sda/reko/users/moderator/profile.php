@@ -1,4 +1,3 @@
-
 <?php
   include ('control.php');
   $sql = "SELECT * FROM users WHERE userID='$userID';";
@@ -15,6 +14,13 @@
 ?>
 
 <div class="dashboard_content">
+  <?php
+    if ($status==1) {
+      print ("<div class='messageDash'>");
+      print ("<p>endring er no lagret</p>");
+      print ("</div>");
+    }
+  ?>
   <div class="profileeditor">
 
   <h2> Din profil</h2>
@@ -101,6 +107,5 @@
         }
           ?>
   </div>
-  </div>
-
+</div>
 </html>
