@@ -6,7 +6,7 @@
 
 </div>
 <div class="nygrid_cont">
-<div class="grid-container"
+<div class="grid-container">
 
 <?php
 

@@ -343,7 +343,10 @@ body {
   }
   .overview_info h1{
     text-align: center;
-
+  }
+  .overview_info p
+  {
+    text-align: center;
   }
   .nygrid_cont
   {
