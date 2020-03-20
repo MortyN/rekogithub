@@ -48,7 +48,7 @@
       print("</div>");
   }
   ?>
-  ?>
+  
   <div class="profileeditor">
 
   <h2> Din profil</h2>
