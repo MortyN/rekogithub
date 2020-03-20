@@ -53,6 +53,7 @@ $orderID = $_GET["orderID"];
         if(isset($_POST["submit"])){
         $status1 = $_POST["status"];
         $sql2 = "DELETE FROM orders WHERE orderID = '$orderID';";
+        print($sql2);
         mysqli_query($db,$sql2) or die ("Kan ikke oppdatere status");
         print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/orders.php?orderID=$orderID&status=success'/>");
         
