@@ -64,7 +64,6 @@ include("control.php");
            <form action="" id="newsdash" title="newsdash">
                     <?php
                     $sql = "SELECT * FROM news;";
-                    $sql1 = "INSERT INTO news (news) VALUES ($news)";
 
                     $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
 
@@ -76,7 +75,17 @@ include("control.php");
         <form action="" method="post">
             <textarea class="modNews" name="news"> <?php print "$news" ?> </textarea>
             <input type="submit" name="submit" value="Legg Ut">
-            <input type="reset" name="reset" value="Fjern tekst">
+
+            <?php 
+        
+                if (isset($_POST['submit'])) {
+                
+                $sql = "UPDATE news SET news = '$newNews' WHERE news ='$news';";
+                mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
+                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/dashboard.php'>");
+                }
+
+            ?>
 
              </form>
         </div>
