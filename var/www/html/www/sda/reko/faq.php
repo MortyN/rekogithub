@@ -17,7 +17,7 @@
 
 <button class="accordion"><h2>Hvor henter jeg det jeg har bestilt?</h2>
 <div class="panel">
-<p>Hver andre uke samles kunder og leverandører i kjelleren til Per og koser seg</p> <br />
+<p>Hver andre uke samles kunder og leverandører i kjelleren til Per og koser seg</p>
 </div>
 
 </div>
