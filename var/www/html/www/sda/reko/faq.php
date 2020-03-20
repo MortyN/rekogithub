@@ -53,4 +53,4 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
-<?php include("../footer1.php"); ?>
+<?php include("footer1.php"); ?>
