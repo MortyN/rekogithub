@@ -719,6 +719,7 @@ body {
 width: 100%;
 min-height: 450px;
 background-color: white;
+padding: 15px;
 }
 .feedPost p
 {
@@ -726,12 +727,13 @@ background-color: white;
 }
 
 .productPost{
-  width: 100%;
+  width: 102%;
   min-height:450px;
   background-color: white;
 }
 .productPost h2
 {
+  padding-top: 15px;
   text-align: center;
 }
 .productPost p
