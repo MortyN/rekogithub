@@ -739,6 +739,7 @@ background-color: white;
   margin-top: 5px;
   width: 100%;
   padding-top: 10px;
+  padding-bottom: 10px;
 
 }
 
@@ -784,7 +785,7 @@ background-color: white;
 {
 float:left;
 margin-left:10px;
-font-size: 15px;
+font-size: 0.8vw;
 margin-top: 3;
 }
 
