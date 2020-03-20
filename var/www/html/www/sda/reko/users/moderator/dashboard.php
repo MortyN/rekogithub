@@ -80,7 +80,7 @@ include("control.php");
         
                 if (isset($_POST['submit'])) {
                 
-                $sql = "UPDATE news SET news = '$newNews' WHERE news ='$news';";
+                $sql = "UPDATE news SET news = '$newNews' WHERE news ='$news';";*
                 mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
                 print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/dashboard.php'>");
                 }
