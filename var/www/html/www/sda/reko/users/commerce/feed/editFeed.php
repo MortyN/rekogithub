@@ -158,6 +158,37 @@ if($xRows > 0){
 
     <div class="dashboard_content">
         <form class="grid-container" method="post" enctype="multipart/form-data" action="">
+        <?php
+
+if (isset($_GET['error'])) {
+  print("<div class='messageBox'>");
+  print("<div class='redColorBox'></div>");
+    $error = $_GET['error'];
+    switch ($error)
+    {
+      case "sql":
+        echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
+      break;
+
+      case "server":
+        echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
+      break;
+  }
+  print("</div>");
+}
+if (isset($_GET['success'])) {
+  print("<div class='messageBox'>");
+  print("<div class='greenColorBox'></div>");
+      $success = $_GET['success'];
+      switch ($success)
+      {
+        case "updateOK":
+          echo "<p><strong>Endringen er oppdatert</strong></p>";
+        break;
+      }  
+      print("</div>");
+}
+?>
 	        <div class="item1">
                 <h3>Her kan du redigere din annonse.</h3>
                 <p> Her kan du redigere din annonse. Informasjonen du skriver her er
