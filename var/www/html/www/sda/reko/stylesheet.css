@@ -353,6 +353,8 @@ body {
   .nycount
   {
     border-style: solid;
+    position: relative;
+    right: 6vw;
     border-radius: 20px;
     width: 60vw;
     min-height: 40vw;
@@ -360,10 +362,7 @@ body {
   }
   button.accordion
   {
-    background-color: #333;
-    color: white;
     width: 60vw;
-    border-radius: 15px;
     margin-top: 20px;
   }
   .panel
