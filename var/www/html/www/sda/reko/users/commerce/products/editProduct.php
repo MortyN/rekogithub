@@ -111,10 +111,10 @@ else{
             $status1 = $_POST["status1"];
 
             $sql = "UPDATE products SET title='$title1', description='$description1', price='$price1', unit='$unit1', status='$status1' WHERE productID='$clickedPrdID' and commerceID='$userID';";
-            $result=mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/editProduct.php?error=sql&prdID=$clickedPrdID'>") and die;
+            $result=mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/products/editProduct.php?error=sql&prdID=$clickedPrdID'>") and die;
 
             if($result){
-                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/editProduct.php?success=updateOK&prdID=$clickedPrdID'>");
+                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/products/editProduct.php?success=updateOK&prdID=$clickedPrdID'>");
             }
 
         }
