@@ -42,7 +42,9 @@ for($i=1;$i <= $xRows; $i++ ){
 
 
 </div>
+</div>
 <?php
+
 }
 ?>
 </div>
