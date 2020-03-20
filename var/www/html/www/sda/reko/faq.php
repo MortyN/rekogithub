@@ -1,4 +1,4 @@
-
+<?php include("meny.php"); ?>
 
 
 <div class="overview_info">
@@ -7,13 +7,14 @@
 
 <div class=nycount>
 <button class="accordion"><h2>Hvordan vet jeg hva jeg har bestilt?</h2></button>
+
 <div class="panel">
 <p>Dine bestillinger blir automatisk samlet sammen og sendt som èn ordre til din e-post. På denne måten blir det enkelt å se hva man har bestilt, og hvem man har bestilt fra</p> <br />
 </div>
 
 <button class="accordion"><h2>Hvor betaler jeg?</h2></button>
 <div class="panel">
-<p>All betaling foregår direkte mellom deg og din leverandør når du henter din bestilling</p> <br />
+<p>All betaling foregår direkte mellom deg og din leverandør når du henter din bestilling.</p>
 </div>
 
 <button class="accordion"><h2>Hvor henter jeg det jeg har bestilt?</h2>
