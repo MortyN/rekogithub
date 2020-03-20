@@ -1,5 +1,6 @@
 
 <?php include("meny.php"); ?>
+
 <div class="overview_info">
 <h1>Ofte stilte spørsmål</h1>
 <p>Under finner du ofte stilte spørsmål og svar, kanskje du finner svar på det du lurer på</p> <br /> <br />
@@ -35,19 +36,3 @@
 }
 </style>
 
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
-</script>
