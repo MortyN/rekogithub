@@ -720,6 +720,10 @@ width: 100%;
 min-height: 450px;
 background-color: white;
 }
+.feedPost p
+{
+  font-size: 1.3em;
+}
 
 .productPost{
   width: 100%;
