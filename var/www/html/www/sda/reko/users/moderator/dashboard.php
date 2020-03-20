@@ -73,9 +73,9 @@ include("control.php");
                         $date = $part["date"];
                     ?>
         <form action="" method="post">
-            <textarea class="modNews" name="news"> <?php print "$news" ?> </textarea></br>
+            <textarea class="modNews" name="news"> <?php print ("$news"); ?> </textarea></br>
             <input type="submit" name="submit" value="Legg Ut">
-
+            </form>
             <?php 
         
                 if (isset($_POST['submit'])) {
@@ -87,7 +87,7 @@ include("control.php");
 
             ?>
 
-             </form>
+             
         </div>
 
     </div>
