@@ -13,6 +13,37 @@ $xRows = mysqli_num_rows($result);
 if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
     <div class="dashboard_content">
     <form class="grid-container" enctype="multipart/form-data" method="post" action="">
+    <?php
+
+if (isset($_GET['error'])) {
+  print("<div class='messageBox'>");
+  print("<div class='redColorBox'></div>");
+    $error = $_GET['error'];
+    switch ($error)
+    {
+      case "sql":
+        echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
+      break;
+
+      case "server":
+        echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
+      break;
+  }
+  print("</div>");
+}
+if (isset($_GET['success'])) {
+  print("<div class='messageBox'>");
+  print("<div class='greenColorBox'></div>");
+      $success = $_GET['success'];
+      switch ($success)
+      {
+        case "updateOK":
+          echo "<p><strong>Endringen er oppdatert</strong></p>";
+        break;
+      }  
+      print("</div>");
+}
+?>
 	
         <div class="item1">
             <h3>Her kan du laste opp din annonse.</h3>

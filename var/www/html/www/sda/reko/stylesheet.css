@@ -570,6 +570,7 @@ body {
   grid-gap: 10px;
   background-color: white;
   padding: 20px;
+  margin-top:40px;
 }
 
 .grid-container > div {
