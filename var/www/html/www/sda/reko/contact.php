@@ -5,7 +5,9 @@
 <p>Under finner du kontaktinformasjonen til våre moderatorer som du kan ta kontakt med hvis det er noe du lurer på.</p>
 
 </div>
-<div class="grid-container">
+<div class="nygrid_cont">
+<div class="grid-container"
+
 <?php
 
 $sql= "SELECT * FROM users WHERE role='moderator' and status=1 order by RAND();";
@@ -32,4 +34,5 @@ for($x=1;$x <= $xRows; $x++){
 
 }
 ?>
+</div>
 </div>

@@ -345,6 +345,10 @@ body {
     text-align: center;
 
   }
+  .nygrid_cont
+  {
+    width: 80vw;
+  }
   .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
