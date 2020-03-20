@@ -55,7 +55,23 @@ include("control.php");
         </div>
         
         <div class="dashboard_news">
-            Nyheter
+           <h3> Nyheter </h3>
+            <?php
+            $sql = "SELECT * FROM news;";
+
+            $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
+
+            $part=mysqli_fetch_array($result);
+
+                $news = $part["news"];
+                $date = $part["date"];
+                
+                
+                print("<p>$news</p>");
+                ?>
+            
+
+
         </div>
 
     </div>

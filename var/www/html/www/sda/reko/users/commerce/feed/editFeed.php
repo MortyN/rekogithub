@@ -31,6 +31,12 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
         case "server":
             echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
         break;
+        case "pictureExist":
+            echo "<p><strong>Bilde finnes allerede. </strong></p>";
+        break;
+        case "picture":
+            echo "<p><strong>Filen må være ett bilde. </strong></p>";
+        break;
         }
       print("</div>");
     }
@@ -108,8 +114,8 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
         
         
         if($fileType != "image/gif" && $fileType != "image/jpeg" && $fileType != "image/jpg" && $fileType != "image/png" ){
-            print("<br><p>Filen må være et bilde.</p>");
-        }
+            print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=picture'>");
+         }
         else{
             
             if (!is_dir($path)) {
@@ -120,24 +126,24 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
             }
 
 			$sql="SELECT * FROM post WHERE picture='$fileName' and userID='$userID';";
-			$query = mysqli_query($db,$sql) or die ("<br><p>Ikke mulig å kontakte databasen.</p>");
+			$query = mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>") and die;;
             $xRows = mysqli_num_rows($query);
     
 			if($xRows != 0){
-				print("<br><p>Bildet er registrert fra før!</p>");
+				print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=pictureExist'>");
             }
             
             else{
-				move_uploaded_file($tmpName, $newName) or die ("<br><p>Kunne ikke laste opp bilde til serveren!</p>"); 
+				move_uploaded_file($tmpName, $newName) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=server'>") and die;; 
 
 				$sql = "INSERT INTO post (shortText,mainText,picture,userID,category,heading) VALUES('$shortText0','$mainText0','$fileName','$userID','$status0','$heading0');";
 				if(mysqli_query($db,$sql)){
-					print("<br><p>Innlegget er nå lagret</p>");
+					print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
 
 				}
 				else{
-					print("<br><p>Ikke mulig å registrer på databasen.</p>");
-					unlink($newName) or die ("<br><p>Ikke mulig å slette bilde på serveren igjen</p>");
+					print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>");
+					unlink($newName) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=server'>") and die;
 				}
 			}
 
