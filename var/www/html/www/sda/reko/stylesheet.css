@@ -358,6 +358,7 @@ body {
     border: 1px solid black;
     width: 80%;
     margin-bottom:10px;
+    border-radius: 20px;
 
   }
   .grid-item img{
