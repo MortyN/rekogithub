@@ -737,8 +737,9 @@ margin-top: 3;
 }
 
 .policy_container{
+  
   width: 70%;
-  margin: 0 auto;
+  margin: 30px auto;
   background-color: white;
   padding: 30px;
 }
