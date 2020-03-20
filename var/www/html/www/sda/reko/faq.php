@@ -30,7 +30,7 @@
 <style>
 .panel {
   padding: 0 18px;
-  background-color: grey;
+  background-color: whitesmoke;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
