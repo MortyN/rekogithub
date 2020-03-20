@@ -17,7 +17,7 @@
 <p>All betaling foregår direkte mellom deg og din leverandør når du henter din bestilling.</p>
 </div>
 
-<button class="accordion"><h2>Hvor henter jeg det jeg har bestilt?</h2>
+<button class="accordion"><h2>Hvor henter jeg det jeg har bestilt?</h2></button>
 <div class="panel">
 <p>Hver andre uke samles kunder og leverandører i kjelleren til Per og koser seg.</p>
 </div>
