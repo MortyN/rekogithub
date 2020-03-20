@@ -338,7 +338,7 @@ body {
 
   /* Overview commerce*/
   .overview_info{
-    width:60%;
+    width:45%;
     margin: 0 auto;
   }
   .overview_info h1{
@@ -347,6 +347,7 @@ body {
   .overview_info p
   {
     text-align: center;
+    font-size: 20px;
   }
   .nygrid_cont
   {

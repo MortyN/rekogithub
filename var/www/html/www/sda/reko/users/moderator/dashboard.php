@@ -72,7 +72,7 @@ include("control.php");
                         $news = $part["news"];
                         $date = $part["date"];
                     ?>
-             <input type="text" id="news" value="<?php echo $row['news']; ?>""
+             <input type="text" id="news" value="<?php echo $row['news']; ?>"
 
              </form>
         </div>
