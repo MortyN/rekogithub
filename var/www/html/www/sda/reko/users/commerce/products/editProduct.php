@@ -27,7 +27,7 @@ else{
     $status = $part["status"];
 ?>
     
-        
+    <div class="innerContainerPrdOverview">
         <form class="grid-container" method="post" action="">
         
             <div class="item1">
@@ -58,6 +58,7 @@ else{
                     <?php current_status($status); ?>
                 </select><br>
                 <input type="submit" value="Lagre" name="submit"/>
+                </div>
                 </div>
         
     
