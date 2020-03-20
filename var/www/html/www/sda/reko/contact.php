@@ -36,3 +36,4 @@ for($x=1;$x <= $xRows; $x++){
 ?>
 </div>
 </div>
+<?php include("../footer1.php"); ?>
