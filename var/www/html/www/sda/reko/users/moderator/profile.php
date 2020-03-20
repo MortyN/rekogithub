@@ -14,6 +14,7 @@
 ?>
 
 <div class="dashboard_content">
+<div class="innerContainerPrdOverview">
   <?php
     if ($status==1) {
       print ("<div class='messageDash'>");
@@ -107,5 +108,6 @@
         }
           ?>
   </div>
+</div>
 </div>
 </html>

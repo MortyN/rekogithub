@@ -38,6 +38,7 @@ $del = mysqli_fetch_array($sqlQuery);
 <html>
     <head>
         <title> Dashboard - Moderator</title>
+        <link rel="icon" href="/www/sda/reko/img/rekologo.png">
         <link rel="stylesheet" href="/www/sda/reko/stylesheet.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
