@@ -20,7 +20,9 @@ body {
   }
   .mainNav img
   {
-    width: 8vw;
+    width: 4vw;
+    position:relative;
+    top:1.5vh;
   }
   .mainNav a {
     float: left;
