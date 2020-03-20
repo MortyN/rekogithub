@@ -9,7 +9,7 @@ include("control.php");
     <div class="dashboardContainer">
     
         <div class="dashboard_info">
-           <h3> Velkommen til din kundeprofil<h3>
+           <h3> Velkommen til din kundeprofil</h3>
            <p> På denne siden vil du ved å navigere deg rundt i menyen til venstre, få muligheten til å se hvilkene varer du har bestilt til neste REKO ring. <br>
             Her inne kan du også redigere informasjon om profilen din. </p>
         </div>
