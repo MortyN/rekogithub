@@ -61,7 +61,7 @@ include("control.php");
         
         <div class="dashboard_news">
            <h3> Nyheter </h3>
-           <form action="" id="newsdash" title="newsdash">
+           
                     <?php
                     $sql = "SELECT * FROM news;";
 
