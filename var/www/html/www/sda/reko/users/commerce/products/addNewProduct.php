@@ -3,6 +3,7 @@ include("../control.php");
 include("product_function.php");?>
 
     <div class="dashboard_content">
+    <div class="innerContainerPrdOverview">
     <form class="grid-container" method="post" action="">
 	
         <div class="item1">
@@ -37,6 +38,7 @@ include("product_function.php");?>
             <input type="submit" value="Lagre" name="submit"/>
         </div>
     </form>
+    </div>
   
 <?php
    
