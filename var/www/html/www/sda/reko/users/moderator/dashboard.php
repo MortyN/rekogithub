@@ -61,21 +61,20 @@ include("control.php");
         
         <div class="dashboard_news">
            <h3> Nyheter </h3>
-            <?php
-            $sql = "SELECT * FROM news;";
+           <form action="" id="newsdash" title="newsdash">
+                    <?php
+                    $sql = "SELECT * FROM news;";
 
-            $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
+                    $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
 
-            $part=mysqli_fetch_array($result);
+                    $part=mysqli_fetch_array($result);
 
-                $news = $part["news"];
-                $date = $part["date"];
-                
-                
-                ?>
-            
+                        $news = $part["news"];
+                        $date = $part["date"];
+                    ?>
+             <input type="text" id="news" value="<?php echo $row['news']; ?>""
 
-
+             </form>
         </div>
 
     </div>

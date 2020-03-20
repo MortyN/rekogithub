@@ -351,6 +351,8 @@ body {
   .nygrid_cont
   {
     width: 80vw;
+    position: relative;
+    left: 10vw;
   }
   .grid-container {
     display: grid;
