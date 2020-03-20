@@ -72,9 +72,10 @@ include("control.php");
                         $news = $part["news"];
                         $date = $part["date"];
                     ?>
-            <textarea class="modNews"> <?php print="$news" ?> </textarea>
-
-            <?php $sql = "INSERT INTO news"
+        <form action="" method="post">
+            <textarea class="modNews" name="news"> <?php print "$news" ?> </textarea>
+            <input type="submit" name="submit" value="Legg Ut">
+            <input type="reset" name="reset" value="Fjern tekst">
 
              </form>
         </div>
