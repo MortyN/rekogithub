@@ -47,5 +47,5 @@ print("<div class='feed_container'>");
 }
 ?>
 </div>
-</body>
+
 <?php include("../footer.php"); ?>
