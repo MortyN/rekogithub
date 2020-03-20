@@ -12,6 +12,7 @@ $xRows = mysqli_num_rows($result);
 
 if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
     <div class="dashboard_content">
+    <div class="innerContainerPrdOverview">
     <?php
 
 
@@ -83,6 +84,7 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
     
             </div>
             </form>
+            </div>
   
 <?php
     
@@ -163,6 +165,7 @@ if($xRows > 0){
     ?>
 
     <div class="dashboard_content">
+    <div class="innerContainerPrdOverview">
     <?php
 
 if (isset($_GET['error'])) {
@@ -224,6 +227,7 @@ if (isset($_GET['success'])) {
             <input type="submit" value="Lagre endringer!" name="submit1"/>
         </div>
         </form>
+        </div>
      <?php   
 }
     if(isset($_POST['submit1'])){
