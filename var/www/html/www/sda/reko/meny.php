@@ -29,7 +29,7 @@ if($connectedUser){
     ?>
 
         <div class="mainNav">
-        <a href="/www/sda/reko/index.php"><img src="img/rekologo.png" alt="Logo"></a>          
+                <a href="/www/sda/reko/index.php"><img src="img/rekologo.png" alt="Logo"/></a>          
                 <a href="/www/sda/reko/index.php">HJEM</a>
                 <a href="/www/sda/reko/commerce/feed.php">FEED</a>
                 <a href="/www/sda/reko/commerce/overview.php">LEVERANDØRER</a>
