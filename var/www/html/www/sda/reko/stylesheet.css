@@ -367,6 +367,10 @@ body {
     width: 60vw;
     margin-top: 20px;
   }
+  button.accordion:hover
+  {
+    cursor: pointer;
+  }
   .nygrid_cont
   {
     width: 80vw;
