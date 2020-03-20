@@ -32,8 +32,8 @@ include("control.php");
                      INNER JOIN productsOrders
                      ON orders.orderID = productsOrders.orderID
                      WHERE orders.customerID = '$userID'
-                     ORDER BY orders.date
                      GROUP BY productsOrders.orderID
+                     ORDER BY orders.date DESC, orders.orderID DESC
                      LIMIT 5;";
 
 
