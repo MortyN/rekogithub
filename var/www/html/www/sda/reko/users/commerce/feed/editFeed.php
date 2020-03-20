@@ -38,7 +38,7 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
         print("<div class='greenColorBox'></div>");
 
         $success = $_GET['success'];
-        
+
         switch ($success)
         {
             case "updateOK":
@@ -163,8 +163,7 @@ if($xRows > 0){
     ?>
 
     <div class="dashboard_content">
-        <form class="grid-container" method="post" enctype="multipart/form-data" action="">
-        <?php
+    <?php
 
 if (isset($_GET['error'])) {
   print("<div class='messageBox'>");
@@ -195,6 +194,8 @@ if (isset($_GET['success'])) {
       print("</div>");
 }
 ?>
+        <form class="grid-container" method="post" enctype="multipart/form-data" action="">
+       
 	        <div class="item1">
                 <h3>Her kan du redigere din annonse.</h3>
                 <p> Her kan du redigere din annonse. Informasjonen du skriver her er
