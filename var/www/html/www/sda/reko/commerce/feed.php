@@ -44,9 +44,8 @@ print("<div class='feed_container'>");
             </div>
 
 <?php
-
 }
 ?>
 </div>
-
+</body>
 <?php include("../footer.php"); ?>
