@@ -72,8 +72,8 @@ include("control.php");
                         $news = $part["news"];
                         $date = $part["date"];
                     ?>
-        <form action="" method="post">
-            <textarea class="modNews" name="news"> <?php print ("$news"); ?> </textarea></br>
+        <form action="" method="post" class="editNews">
+            <textarea class="modNews" name="news"> <?php print("$news");?> </textarea></br>
             <input type="submit" name="submit" value="Legg Ut">
             </form>
             <?php 
