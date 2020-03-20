@@ -57,7 +57,7 @@ include("control.php");
         </table>
         </div>
         
-        </div>
+        
         
         <div class="dashboard_news">
            <h3> Nyheter </h3>
