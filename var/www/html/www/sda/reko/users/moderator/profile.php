@@ -1,3 +1,4 @@
+
 <?php
   include ('control.php');
   $sql = "SELECT * FROM users WHERE userID='$userID';";

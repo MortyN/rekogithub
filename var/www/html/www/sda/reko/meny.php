@@ -14,6 +14,7 @@ include("/var/www/html/www/sda/reko/db/connect.php");
 </head>
 <body>
 <?php
+//Innlogget bruker
 if($connectedUser){
     $sql404 = "SELECT * FROM users WHERE userName='$connectedUser' or email='$connectedUser';";
     $sqlQuery = mysqli_query($db,$sql404) or die ("Kan ikke hente data fra databasen (#100)");
@@ -48,10 +49,11 @@ if($connectedUser){
          <?php
     
 }
+//Ikke logget inn
 else{
     ?>
         <div class="mainNav">
-                
+                <a href="/www/sda/reko/index.php"><img src="img/rekologo.png" alt="LOGO"/></a>          
                 <a href="/www/sda/reko/index.php">HJEM</a>
                 <a href="/www/sda/reko/commerce/feed.php">FEED</a>
                 <a href="/www/sda/reko/commerce/overview.php">LEVERANDØRER</a>
