@@ -252,7 +252,7 @@ if (isset($_GET['success'])) {
         $newName1="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName1;
 
             if($fileType1 != "image/gif" && $fileType1 != "image/jpeg" && $fileType1 != "image/jpg" && $fileType1 != "image/png" ){
-                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editUser.php?error=picture'>");
+                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=picture'>");
             }
             if($postIMG != $fileName1){
 
@@ -260,24 +260,24 @@ if (isset($_GET['success'])) {
                 move_uploaded_file($tmpName1, $newName1) or die ("<br><p>Kunne ikke laste opp bilde til serveren!</p>"); 
                 $sql= "UPDATE post SET shortText ='$shortText1',mainText ='$mainText1',picture='$fileName1',category='$status1', heading='$heading1' WHERE userID='$userID';";
                 if(mysqli_query($db,$sql)){
-                    print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editUser.php?success=updateOK'>");
+                    print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
 				}
 				else{
-					print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editUser.php?error=sql'>");
-					unlink($newName1) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editUser.php?error=server'>") and die;
+					print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>");
+					unlink($newName1) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=server'>") and die;
 				}
             }
             if($postIMG == $fileName1)
             {
                 $sql= "UPDATE post SET shortText ='$shortText1',mainText ='$mainText1',category='$status1', heading='$heading1' WHERE userID='$userID';";
-                mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editUser.php?error=sql'>") and die;
-                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editUser.php?success=updateOK'>");
+                mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>") and die;
+                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
             }
     }
     if(!$fileName1){
             $sql= "UPDATE post SET shortText ='$shortText1',mainText ='$mainText1',category='$status1', heading='$heading1' WHERE userID='$userID';";
-            mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editUser.php?error=sql'>") and die;
-            print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editUser.php?success=updateOK'>");
+            mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>") and die;
+            print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
             
 
 
