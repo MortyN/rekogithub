@@ -730,6 +730,22 @@ background-color: white;
   min-height:450px;
   background-color: white;
 }
+.productPost h2
+{
+  text-align: center;
+}
+.productPost p
+{
+  padding-top: 1%;
+  text-align: center;
+}
+.productPost form
+{
+  padding-top: 1%;
+  position: relative;
+  left: 30%;
+  width:50%;
+}
 .profileeditor h2{
   margin-bottom: 40px;
 }
