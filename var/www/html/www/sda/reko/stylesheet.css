@@ -695,9 +695,9 @@ background-color: white;
 .profileeditor{
   text-align:center;
   background-color: white;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 100px;
+  margin-top: 5px;
+  width: 100%;
+
 }
 
 .messageDash{
