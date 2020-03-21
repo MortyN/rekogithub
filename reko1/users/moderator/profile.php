@@ -67,7 +67,7 @@ if (isset($_GET['success'])) {
       <input type="submit"  value="Endre" name="editProfile" id="editProfile">
 
     </form>
-    <button onclick="window.location.href = 'http://opheimpi.zapto.org/www/sda/reko/users/moderator/editPassword.php';">Click Here</button>
+    <button class="Passordchange" onclick="window.location.href = 'http://opheimpi.zapto.org/www/sda/reko/users/moderator/editPassword.php';">Endre passord</button>
     <?php
         if (isset($_POST ["editProfile"]))
         {

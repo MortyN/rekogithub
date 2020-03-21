@@ -31,6 +31,17 @@ body {
   height: 10vh;
   text-align: center;
 }
+button.Passordchange
+{
+  width: 30vw;
+  background-color: #94d3ac;
+  padding: 10px 8px;
+}
+button.Passordchange:hover
+{
+  background-color: green;
+  cursor:pointer;
+}
 .mainNav a.logoomrad
 {
   float: left;

@@ -73,6 +73,7 @@
       <input type="submit"  value="Endre" name="editProfile" id="editProfile">
 
     </form>
+    <button class="Passordchange" onclick="window.location.href = 'http://opheimpi.zapto.org/www/sda/reko/users/customer/editPassword.php';">Endre passord</button>
     <?php
         if (isset($_POST ["editProfile"]))
         {
