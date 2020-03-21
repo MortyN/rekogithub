@@ -35,6 +35,18 @@
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+.accordion:after {
+content: '\02795'; /* Unicode character for "plus" sign (+) */
+font-size: 13px;
+color: #777;
+float: right;
+margin-left: 5px;
+}
+
+.active:after {
+content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
 </style>
 
 <script>

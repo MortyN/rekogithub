@@ -551,10 +551,6 @@ button.accordion:hover
     cursor: pointer;
     outline: none;
   }
-  .active:after
-  {
-    display: "\2796";
-  }
   .sidenav a:hover, .dropdown-btn:hover {
     color: #f1f1f1;
   }
@@ -904,15 +900,4 @@ width: 70%;
 margin: 30px auto;
 background-color: white;
 padding: 30px;
-}
-.accordion:after {
-content: '\02795'; /* Unicode character for "plus" sign (+) */
-font-size: 13px;
-color: #777;
-float: right;
-margin-left: 5px;
-}
-
-.active:after {
-content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
