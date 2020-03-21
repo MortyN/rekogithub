@@ -64,7 +64,7 @@ if (isset($_GET['success'])) {
       <input type="text" id="phone" name="phone" value="<?php print($phone); ?>"><br>
       <img src="/www/sda/reko/img/users/<?php print($userID.'/'.$image);?>" height="100px"/>
       <input type="file" name="file"/><br>
-      <input type="submit"  value="Endre" name="editProfile" id="editProfile"> <a href="http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile/editPassword.php"> <button class="editPswBTN">Endre passord </button></a>
+      <input type="submit"  value="Endre" name="editProfile" id="editProfile"> <a href="http://opheimpi.zapto.org/www/sda/reko/users/moderator/editPassword.php"> <button class="editPswBTN">Endre passord </button></a>
 
     </form>
     <?php
