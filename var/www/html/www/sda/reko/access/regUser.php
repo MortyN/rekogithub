@@ -50,7 +50,6 @@
         
         if($password1 != $rePassword){
             print("Passordene er ikke like!");
-            print("$password1 og $rePassword");
         }
         else{
         $sql = "SELECT * FROM users WHERE userName='$userName';"; 
