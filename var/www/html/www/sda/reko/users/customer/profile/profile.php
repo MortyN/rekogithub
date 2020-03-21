@@ -98,7 +98,7 @@
         }
 
         if($fileName){
-          print("test");
+          print($fileType);
             
                 $newPath="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
         
