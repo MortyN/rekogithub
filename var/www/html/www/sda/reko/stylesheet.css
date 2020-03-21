@@ -545,6 +545,12 @@ button.accordion:hover
     margin: 0 auto;
     padding: 3.5px;
   }
+  .dashboardBTN:hover
+  {
+    transition: 0.3s;
+    background-color: green;
+    cursor:pointer;
+  }
   .dashboard_news
   {
     grid-area:news;
