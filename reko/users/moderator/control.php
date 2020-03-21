@@ -1,20 +1,17 @@
 <?php
 session_start();
 @$connectedUser=$_SESSION["userName"];
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 if(!$connectedUser ){
 	print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/access/login.php'/>");
 }
 else{
-$host="localhost";
-$user="hakonopheim";
-$password="5k0th31a1";
-$database="reko";
-
-$db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med database-server");
+  $host="localhost";
+  $user="opheimoc_reko";
+  $password="rekodev69";
+  $database="opheimoc_reko";
+  
+  $db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med database-server");
 
 $sql = "SELECT * FROM users WHERE userName='$connectedUser' or email='$connectedUser';";
 $sqlQuery = mysqli_query($db,$sql) or die ("Kan ikke hente data fra databasen (#100)");
