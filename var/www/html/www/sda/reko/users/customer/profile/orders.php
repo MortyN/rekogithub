@@ -4,6 +4,23 @@ include("../control.php");
 
 <div class="dashboard_content">
 <div class="innerContainerPrdOverview">
+<?php
+
+if (isset($_GET['success'])) {
+    print("<div class='messageBox'>");
+    print("<div class='greenColorBox'></div>");
+
+    $success = $_GET['success'];
+
+    switch ($success)
+    {
+        case "deleteOK":
+        echo "<p><strong>Ordren er nå slettet.</strong></p>";
+        break;
+    }  
+    print("</div>");
+}
+?>
     <div class="prdOverview_container">
     <h2> Dine bestillinger</h2>
         <p>Under har du en oversikt over alle dine bestillinger. Dem er sortert etter dato bestillingen er foretatt- <br>
