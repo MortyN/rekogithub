@@ -1,7 +1,7 @@
 <?php
 
 function control($logInUserName,$logInPassword){
-    include("/db/connect.php");
+    include("../db/connect.php");
     $result=true;
 
 
