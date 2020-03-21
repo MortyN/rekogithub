@@ -98,7 +98,7 @@ body {
 }
 
 .mainNav a:hover, .dropdown:hover .dropbtn {
-  background-color: #94d3ac;
+  background-color: green;
 }
 
 .dropdown-content {
