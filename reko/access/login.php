@@ -1,7 +1,7 @@
 <?php 
 session_start();
 @$connectedUser=$_SESSION["userName"];
-include("/var/www/html/db/connect.php");
+include("../db/connect.php");
 
 if($connectedUser ){
 	
