@@ -1,6 +1,9 @@
 <?php 
 session_start();
 @$connectedUser=$_SESSION["userName"];
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 if(!$connectedUser ){
 	print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/access/login.php'/>");
