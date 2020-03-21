@@ -102,7 +102,7 @@
                 $newPath="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
         
 
-                if($fileType != "image/gif" && $fileType != "image/jpeg" && $fileType != "image/jpg" && $fileType != "image/png" )
+                if($fileType != "image/gif" || $fileType != "image/jpeg" || $fileType != "image/jpg" || $fileType != "image/png" )
                 {
                   print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=picture'/>");
                 }

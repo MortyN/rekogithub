@@ -553,7 +553,7 @@ button.accordion:hover
   }
   .sidenav a, .dropdown-btn.active::after
   {
-    display: none;
+    /*we'll see*/
   }
   .sidenav a:hover, .dropdown-btn:hover {
     color: #f1f1f1;
