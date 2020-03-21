@@ -7,8 +7,8 @@ include ('control.php');
   <?php
 
           if (isset($_GET['error'])) {
-            print("<div class='messageBox'>");
-            print("<div class='redColorBox'></div>");
+            print("<div class='messageBox1'>");
+            print("<div class='redColorBox1'></div>");
               $error = $_GET['error'];
               switch ($error)
               {
@@ -29,8 +29,8 @@ include ('control.php');
             print("</div>");
           }
           if (isset($_GET['success'])) {
-            print("<div class='messageBox'>");
-            print("<div class='greenColorBox'></div>");
+            print("<div class='messageBox1'>");
+            print("<div class='greenColorBox1'></div>");
                 $success = $_GET['success'];
                 switch ($success)
                 {
