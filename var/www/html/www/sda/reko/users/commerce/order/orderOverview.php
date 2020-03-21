@@ -43,22 +43,7 @@ include("../control.php");
                 $date = $part["date"];
                 $status = $part["status"];
 
-                switch ($status){
-                    case "Bekreftet":
-                        $color = "green";
-                    break;
-                    case "Venter":
-                        $color = "orange";
-                    break;
-                    case "Kanselert":
-                        $color = "red";
-                    break;
-
-                }
-
-                
-
-                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td style='color:$color;'>$status</td> <td><a href='/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID'>Se ordre</a></td></tr>");
+                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td>$status</td> <td><a href='/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID'>Se ordre</a></td></tr>");
             }
             ?>
         </table>

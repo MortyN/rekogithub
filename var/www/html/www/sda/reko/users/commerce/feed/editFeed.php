@@ -12,51 +12,7 @@ $xRows = mysqli_num_rows($result);
 
 if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
     <div class="dashboard_content">
-    <div class="innerContainerPrdOverview">
-    <?php
-
-
-
-    if (isset($_GET['error'])) {
-        print("<div class='messageBox'>");
-        print("<div class='redColorBox'></div>");
-
-        $error = $_GET['error'];
-        switch ($error)
-        {
-        case "sql":
-            echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
-        break;
-
-        case "server":
-            echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
-        break;
-        case "pictureExist":
-            echo "<p><strong>Bilde finnes allerede. </strong></p>";
-        break;
-        case "picture":
-            echo "<p><strong>Filen må være ett bilde. </strong></p>";
-        break;
-        }
-      print("</div>");
-    }
-    if (isset($_GET['success'])) {
-        print("<div class='messageBox'>");
-        print("<div class='greenColorBox'></div>");
-
-        $success = $_GET['success'];
-
-        switch ($success)
-        {
-            case "updateOK":
-            echo "<p><strong>Endringen er oppdatert</strong></p>";
-            break;
-        }  
-        print("</div>");
-}
-?>
     <form class="grid-container" enctype="multipart/form-data" method="post" action="">
-   
 	
         <div class="item1">
             <h3>Her kan du laste opp din annonse.</h3>
@@ -90,7 +46,6 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
     
             </div>
             </form>
-            </div>
   
 <?php
     
@@ -114,8 +69,8 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
         
         
         if($fileType != "image/gif" && $fileType != "image/jpeg" && $fileType != "image/jpg" && $fileType != "image/png" ){
-            print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=picture'>");
-         }
+            print("<br><p>Filen må være et bilde.</p>");
+        }
         else{
             
             if (!is_dir($path)) {
@@ -126,24 +81,24 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
             }
 
 			$sql="SELECT * FROM post WHERE picture='$fileName' and userID='$userID';";
-			$query = mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>") and die;;
+			$query = mysqli_query($db,$sql) or die ("<br><p>Ikke mulig å kontakte databasen.</p>");
             $xRows = mysqli_num_rows($query);
     
 			if($xRows != 0){
-				print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=pictureExist'>");
+				print("<br><p>Bildet er registrert fra før!</p>");
             }
             
             else{
-				move_uploaded_file($tmpName, $newName) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=server'>") and die;; 
+				move_uploaded_file($tmpName, $newName) or die ("<br><p>Kunne ikke laste opp bilde til serveren!</p>"); 
 
 				$sql = "INSERT INTO post (shortText,mainText,picture,userID,category,heading) VALUES('$shortText0','$mainText0','$fileName','$userID','$status0','$heading0');";
 				if(mysqli_query($db,$sql)){
-					print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
+					print("<br><p>Innlegget er nå lagret</p>");
 
 				}
 				else{
-					print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>");
-					unlink($newName) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=server'>") and die;
+					print("<br><p>Ikke mulig å registrer på databasen.</p>");
+					unlink($newName) or die ("<br><p>Ikke mulig å slette bilde på serveren igjen</p>");
 				}
 			}
 
@@ -171,43 +126,7 @@ if($xRows > 0){
     ?>
 
     <div class="dashboard_content">
-    <div class="innerContainerPrdOverview">
-    <?php
-
-if (isset($_GET['error'])) {
-  print("<div class='messageBox'>");
-  print("<div class='redColorBox'></div>");
-    $error = $_GET['error'];
-    switch ($error)
-    {
-      case "sql":
-        echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
-      break;
-      case "image":
-        echo "<p><strong>Filen må være et bilde.</strong></p>";
-      break;
-
-      case "server":
-        echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
-      break;
-  }
-  print("</div>");
-}
-if (isset($_GET['success'])) {
-  print("<div class='messageBox'>");
-  print("<div class='greenColorBox'></div>");
-      $success = $_GET['success'];
-      switch ($success)
-      {
-        case "updateOK":
-          echo "<p><strong>Innlegget er nå oppdatert</strong></p>";
-        break;
-      }  
-      print("</div>");
-}
-?>
         <form class="grid-container" method="post" enctype="multipart/form-data" action="">
-       
 	        <div class="item1">
                 <h3>Her kan du redigere din annonse.</h3>
                 <p> Her kan du redigere din annonse. Informasjonen du skriver her er
@@ -236,7 +155,6 @@ if (isset($_GET['success'])) {
             <input type="submit" value="Lagre endringer!" name="submit1"/>
         </div>
         </form>
-        </div>
      <?php   
 }
     if(isset($_POST['submit1'])){
@@ -258,7 +176,7 @@ if (isset($_GET['success'])) {
         $newName1="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName1;
 
             if($fileType1 != "image/gif" && $fileType1 != "image/jpeg" && $fileType1 != "image/jpg" && $fileType1 != "image/png" ){
-                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=picture'>");
+                print("<br><p>Filen må være et bilde.</p>");
             }
             if($postIMG != $fileName1){
 
@@ -266,24 +184,24 @@ if (isset($_GET['success'])) {
                 move_uploaded_file($tmpName1, $newName1) or die ("<br><p>Kunne ikke laste opp bilde til serveren!</p>"); 
                 $sql= "UPDATE post SET shortText ='$shortText1',mainText ='$mainText1',picture='$fileName1',category='$status1', heading='$heading1' WHERE userID='$userID';";
                 if(mysqli_query($db,$sql)){
-                    print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
+                    print("<br><p>Innlegget er nå lagret. <br> Oppdater siden for å se/endre endringen.</p>");
 				}
 				else{
-					print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>");
-					unlink($newName1) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=server'>") and die;
+					print("<br><p>Ikke mulig å registrer på databasen.</p>");
+					unlink($newName1) or die ("<br><p>Ikke mulig å slette bilde på serveren igjen</p>");
 				}
             }
             if($postIMG == $fileName1)
             {
                 $sql= "UPDATE post SET shortText ='$shortText1',mainText ='$mainText1',category='$status1', heading='$heading1' WHERE userID='$userID';";
-                mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>") and die;
-                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
+                mysqli_query($db,$sql) or die ("<br><p>Kunne ikke oppdatere databasen!1</p>");
+                print("<br><p>Innlegget er nå lagret. <br> Oppdater siden for å se/endre endringen.</p>");
             }
     }
     if(!$fileName1){
             $sql= "UPDATE post SET shortText ='$shortText1',mainText ='$mainText1',category='$status1', heading='$heading1' WHERE userID='$userID';";
-            mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>") and die;
-            print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
+            mysqli_query($db,$sql) or die ("<br><p>Kunne ikke oppdatere databasen!2</p>");
+            print("<br><p>Innlegget er nå lagret. <br> Oppdater siden for å se/endre endringen.</p>");
             
 
 

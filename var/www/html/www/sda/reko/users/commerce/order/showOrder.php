@@ -6,49 +6,12 @@ $orderID = $_GET["orderID"];
 
 <div class="dashboard_content">
 <div class="innerContainerPrdOverview">
-<?php
-
-
-
-if (isset($_GET['error'])) {
-    print("<div class='messageBox'>");
-    print("<div class='redColorBox'></div>");
-
-    $error = $_GET['error'];
-    switch ($error)
-    {
-    case "sql":
-        echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
-    break;
-
-    case "server":
-        echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
-    break;
-    }
-  print("</div>");
-}
-if (isset($_GET['success'])) {
-    print("<div class='messageBox'>");
-    print("<div class='greenColorBox'></div>");
-
-    $success = $_GET['success'];
-
-    switch ($success)
-    {
-        case "updateOK":
-        echo "<p><strong>Statusen er nå oppdatert</strong></p>";
-        break;
-    }  
-    print("</div>");
-}
-?>
     <div class="prdOverview_container">
     <h2> Ordre nr: <?php print($orderID); ?> </h2>
         <p>Under er en oversikt over alle produkter som er bestilt av denne kunden. Det er viktig at du godkjenner eller <br>
         Kanselerer bestillingen slik at kunden er klar over om produktet kan hentes eller ikke.</p>
     </div>
     <div class="prdOverview_container">
-
         <table class="prdOverview">
             <tr>
                 <th>Produkt</th>
@@ -98,8 +61,8 @@ if (isset($_GET['success'])) {
         if(isset($_POST["submit"])){
         $status1 = $_POST["status"];
         $sql2 = "UPDATE orders SET status = '$status1' WHERE orderID = '$orderID';";
-        mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
-        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+        mysqli_query($db,$sql2) or die ("Kan ikke oppdatere status");
+        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&status=success'/>");
         
         }
         ?>

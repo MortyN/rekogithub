@@ -6,22 +6,6 @@ $orderID = $_GET["orderID"];
 
 <div class="dashboard_content">
 <div class="innerContainerPrdOverview">
-<?php
-if (isset($_GET['error'])) {
-    print("<div class='messageBox'>");
-    print("<div class='redColorBox'></div>");
-
-    $error = $_GET['error'];
-    switch ($error)
-    {
-    case "sql":
-        echo "<p><strong>Kan ikke slette ordre </strong></p>";
-    break;
-
-    }
-  print("</div>");
-}
-?>
     <div class="prdOverview_container">
     <h2> Ordre nr: <?php print($orderID); ?> </h2>
         <p>Under er en oversikt over alle produkter som du har bestilt av denne leverandøren.<br> Det er ikke mulig å endre produkter,
@@ -67,16 +51,11 @@ if (isset($_GET['error'])) {
         </form>
         <?php 
         if(isset($_POST["submit"])){
-
-            $sql1="DELETE FROM productsOrders where orderID=$orderID;";
-            $result1=mysqli_query($db,$sql1) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/showOrder.php?error=sql&orderID=$orderID'/>") and die;
-            $sql2= "DELETE FROM orders WHERE orderID = $orderID;";
-            $result2=mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/showOrder.php?error=sql&orderID=$orderID'/>") and die;
-
-            if($result1 && $result2){
-                print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/orders.php?success=deleteOK'/>");
-            }
-    
+        $status1 = $_POST["status"];
+        $sql2 = "UPDATE orders WHERE orderID = '$orderID';";
+        mysqli_query($db,$sql2) or die ("Kan ikke oppdatere status");
+        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/orders.php?orderID=$orderID&status=success'/>");
+        
         }
         ?>
     </div>

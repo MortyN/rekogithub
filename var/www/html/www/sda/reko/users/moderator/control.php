@@ -38,7 +38,6 @@ $del = mysqli_fetch_array($sqlQuery);
 <html>
     <head>
         <title> Dashboard - Moderator</title>
-        <link rel="icon" href="/www/sda/reko/img/rekologo.png">
         <link rel="stylesheet" href="/www/sda/reko/stylesheet.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
@@ -49,8 +48,9 @@ $del = mysqli_fetch_array($sqlQuery);
         <div class="profileWLC">
             <button class="dropdownBTN"><?php print(" Velkommen $userLastName, $userFirstName !");?></button>
             <div class="profile-content">
-            <a href="/www/sda/reko/users/moderator/profile.php">Endre profil</a>
-            <a href="/www/sda/reko/access/logout.php">Logg ut</a>
+            <a href="#">Endre profil</a>
+            <a href="#">Endre passord</a>
+            <a href="#">Logg ut</a>
             </div>
         </div>
     </div>
@@ -64,14 +64,10 @@ $del = mysqli_fetch_array($sqlQuery);
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="/www/sda/reko/users/moderator/profile.php">Din Profil</a>
+    <a href="/www/sda/reko/users/commerce/profile/profile.php">Din Profil</a>
+    <a href="/www/sda/reko/users/commerce/profile/editPassword.php">Endre passord</a>
     <a href="/www/sda/reko/access/logout.php">Logg ut</a>
     
   </div>
 </div>
 <script src="/www/sda/reko/users/commerce/sidebarfunction.js"></script>
-
-
-<div class="Footer_panel">
-<a> REKO © 2020</a>
-</div>

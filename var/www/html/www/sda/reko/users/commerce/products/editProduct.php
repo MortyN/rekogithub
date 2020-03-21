@@ -27,43 +27,7 @@ else{
     $status = $part["status"];
 ?>
     
-    <div class="innerContainerPrdOverview">
-    <?php
-
-
-
-    if (isset($_GET['error'])) {
-        print("<div class='messageBox'>");
-        print("<div class='redColorBox'></div>");
-
-        $error = $_GET['error'];
-        switch ($error)
-        {
-        case "sql":
-            echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
-        break;
-
-        case "server":
-            echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
-        break;
-        }
-      print("</div>");
-    }
-    if (isset($_GET['success'])) {
-        print("<div class='messageBox'>");
-        print("<div class='greenColorBox'></div>");
-
-        $success = $_GET['success'];
-
-        switch ($success)
-        {
-            case "updateOK":
-            echo "<p><strong>Endringen er oppdatert</strong></p>";
-            break;
-        }  
-        print("</div>");
-}
-?>
+        
         <form class="grid-container" method="post" action="">
         
             <div class="item1">
@@ -95,7 +59,6 @@ else{
                 </select><br>
                 <input type="submit" value="Lagre" name="submit"/>
                 </div>
-                </div>
         
     
     <?php
@@ -111,16 +74,16 @@ else{
             $status1 = $_POST["status1"];
 
             $sql = "UPDATE products SET title='$title1', description='$description1', price='$price1', unit='$unit1', status='$status1' WHERE productID='$clickedPrdID' and commerceID='$userID';";
-            $result=mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/products/editProduct.php?error=sql&prdID=$clickedPrdID'>") and die;
+            $result=mysqli_query($db,$sql) or die ("Kan ikke oppdatere produkt.");
 
             if($result){
-                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/products/editProduct.php?success=updateOK&prdID=$clickedPrdID'>");
+                print("<p>Produktet er nå endret.</p>");
             }
 
         }
     ?>
     
     </form>
-
+</div>
 <?php
 } ?>

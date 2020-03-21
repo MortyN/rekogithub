@@ -48,8 +48,9 @@ $del = mysqli_fetch_array($sqlQuery);
         <div class="profileWLC">
             <button class="dropdownBTN"><?php print(" Velkommen $userLastName, $userFirstName !");?></button>
             <div class="profile-content">
-            <a href="/www/sda/reko/users/commerce/profile/profile.php">Endre profil</a>
-            <a href="/www/sda/reko/access/logout.php">Logg ut</a>
+            <a href="#">Endre profil</a>
+            <a href="#">Endre passord</a>
+            <a href="#">Logg ut</a>
             </div>
         </div>
     </div>
@@ -62,7 +63,7 @@ $del = mysqli_fetch_array($sqlQuery);
   </button>
   <div class="dropdown-container">
     <a href="/www/sda/reko/users/commerce/feed/editFeed.php">Rediger din annonse</a>
-    <a href="/www/sda/reko/users/commerce/feed/showFeed.php">Se annonse</a>
+    <a href="#">Se annonse</a>
 
   </div>
 
@@ -79,7 +80,7 @@ $del = mysqli_fetch_array($sqlQuery);
   </button>
   <div class="dropdown-container">
     <a href="/www/sda/reko/users/commerce/order/orderOverview.php">Mottatt bestillinger</a>
-    <a href="/www/sda/reko/users/commerce/order/orders.php">Dine bestillinger</a>
+    <a href="#">Dine bestillinger?</a>
     
   </div>
 
@@ -88,12 +89,9 @@ $del = mysqli_fetch_array($sqlQuery);
   </button>
   <div class="dropdown-container">
     <a href="/www/sda/reko/users/commerce/profile/profile.php">Din Profil</a>
+    <a href="/www/sda/reko/users/commerce/profile/editPassword.php">Endre passord</a>
     <a href="/www/sda/reko/access/logout.php">Logg ut</a>
     
   </div>
 </div>
 <script src="/www/sda/reko/users/commerce/sidebarfunction.js"></script>
-
-<div class="Footer_panel">
-<a> COPYRIGHT © 2020</a>
-</div>

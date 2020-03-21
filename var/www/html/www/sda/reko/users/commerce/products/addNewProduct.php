@@ -3,40 +3,6 @@ include("../control.php");
 include("product_function.php");?>
 
     <div class="dashboard_content">
-    <div class="innerContainerPrdOverview">
-    <?php
-        if (isset($_GET['error'])) {
-            print("<div class='messageBox'>");
-            print("<div class='redColorBox'></div>");
-
-            $error = $_GET['error'];
-            switch ($error)
-            {
-            case "sql":
-                echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
-            break;
-
-            case "server":
-                echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
-            break;
-            }
-        print("</div>");
-        }
-        if (isset($_GET['success'])) {
-            print("<div class='messageBox'>");
-            print("<div class='greenColorBox'></div>");
-
-            $success = $_GET['success'];
-
-            switch ($success)
-            {
-                case "updateOK":
-                echo "<p><strong>Produktet er lagret</strong></p>";
-                break;
-            }  
-            print("</div>");
-        }
-?>
     <form class="grid-container" method="post" action="">
 	
         <div class="item1">
@@ -71,7 +37,6 @@ include("product_function.php");?>
             <input type="submit" value="Lagre" name="submit"/>
         </div>
     </form>
-    </div>
   
 <?php
    
@@ -86,7 +51,7 @@ include("product_function.php");?>
         $status = $_POST["status"];
 
         $sql = "SELECT * FROM products where commerceID='$userID' and title='$title';";
-        $result = mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/products/addNewProduct.php?error=sql'>") and die;
+        $result = mysqli_query($db,$sql) or die ("Kan ikke hente fra databasen.");
         $num = mysqli_num_rows($result);
 
         if($num !=0){
@@ -94,8 +59,8 @@ include("product_function.php");?>
         }
         else{
             $sql="INSERT INTO products (commerceID,title,description,price,unit,status) VALUES('$userID','$title','$description','$price','$unit','$status') ;";
-            mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/products/addNewProduct.php?error=sql'>") and die;
-            print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/products/addNewProduct.php?success=updateOK'>");
+            mysqli_query($db,$sql) or die ("Kan ikke registrere på databasen.");
+            print("<p>Produktet er registrert</p>");
         }
 
 

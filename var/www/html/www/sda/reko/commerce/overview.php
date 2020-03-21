@@ -6,7 +6,6 @@
     lese mere om leverandøren, gårdsbruk eller se på hva leverandøren tilbyr.</p>
 
 </div>
-<div class="nygrid_cont">
 <div class="grid-container">
 <?php
 
@@ -31,5 +30,3 @@ for($x=1;$x <= $xRows; $x++){
 }
 ?>
 </div>
-</div>
-<?php include("../footer1.php"); ?>

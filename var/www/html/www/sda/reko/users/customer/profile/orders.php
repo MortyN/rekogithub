@@ -4,23 +4,6 @@ include("../control.php");
 
 <div class="dashboard_content">
 <div class="innerContainerPrdOverview">
-<?php
-
-if (isset($_GET['success'])) {
-    print("<div class='messageBox'>");
-    print("<div class='greenColorBox'></div>");
-
-    $success = $_GET['success'];
-
-    switch ($success)
-    {
-        case "deleteOK":
-        echo "<p><strong>Ordren er nå slettet.</strong></p>";
-        break;
-    }  
-    print("</div>");
-}
-?>
     <div class="prdOverview_container">
     <h2> Dine bestillinger</h2>
         <p>Under har du en oversikt over alle dine bestillinger. Dem er sortert etter dato bestillingen er foretatt- <br>
@@ -62,20 +45,7 @@ if (isset($_GET['success'])) {
                 $date = $part["date"];
                 $status = $part["status"];
 
-                switch ($status){
-                    case "Bekreftet":
-                        $color = "green";
-                    break;
-                    case "Venter":
-                        $color = "orange";
-                    break;
-                    case "Kanselert":
-                        $color = "red";
-                    break;
-
-                }
-
-                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td style='color:$color;'>$status</td> <td><a href='/www/sda/reko/users/customer/profile/showOrder.php?orderID=$orderID'>Se ordre</a></td></tr>");
+                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td>$status</td> <td><a href='/www/sda/reko/users/customer/profile/showOrder.php?orderID=$orderID'>Se ordre</a></td></tr>");
             }
             ?>
         </table>

@@ -1,6 +1,6 @@
 <footer>
          
-                <a> REKO © 2020</a>
+                <a> COPYRIGHT © 2020</a>
             
 </footer>
 </body>
