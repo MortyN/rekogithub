@@ -929,5 +929,5 @@ padding: 30px;
   position: absolute;
   bottom: 0px;
   color: #979696;
-
+  z-index: 1;
 }
