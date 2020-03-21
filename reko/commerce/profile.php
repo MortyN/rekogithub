@@ -1,4 +1,4 @@
-<?php include("../meny.php"); 
+<?php include("../meny1.php"); 
 
 $userPostID = $_GET['ID'];
 

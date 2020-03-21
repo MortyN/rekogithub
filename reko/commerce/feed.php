@@ -1,4 +1,4 @@
-<?php include("../meny.php"); 
+<?php include("../meny1.php"); 
 
 $sql="SELECT users.userID, users.firstName, users.lastName, users.image AS profileIMG, post.shortText, post.picture AS postIMG
 from users

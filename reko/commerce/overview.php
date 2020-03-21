@@ -1,4 +1,4 @@
-<?php include("../meny.php"); ?>
+<?php include("../meny1.php"); ?>
 <div class="overview_info">
 <h1>Våre lokale leverandører</h1>
 
