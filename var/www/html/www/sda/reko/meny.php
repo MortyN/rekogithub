@@ -4,7 +4,7 @@ session_start();
 include("/var/www/html/www/sda/reko/db/connect.php");
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html lang="no">
 <head>
 <meta charset="UTF-8">
 <title>REKO - HORTEN</title>
