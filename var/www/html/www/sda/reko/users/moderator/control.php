@@ -70,3 +70,8 @@ $del = mysqli_fetch_array($sqlQuery);
   </div>
 </div>
 <script src="/www/sda/reko/users/commerce/sidebarfunction.js"></script>
+
+
+<div class="Footer_panel">
+<a> COPYRIGHT © 2020</a>
+</div>

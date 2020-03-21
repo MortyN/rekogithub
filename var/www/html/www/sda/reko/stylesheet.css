@@ -924,3 +924,10 @@ margin: 30px auto;
 background-color: white;
 padding: 30px;
 }
+.Footer_panel
+{
+  position: absolute;
+  bottom: 0px;
+  color: #979696;
+
+}
