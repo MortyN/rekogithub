@@ -51,7 +51,7 @@ include ('control.php');
             </div>
             <?php
                 if(isset($_POST['change'])){
-                    include("logInFunction.php");
+                    include("/www/sda/reko/access/login_function/loginFunction.php");
 
                     $password=$_POST['password'];
                     $newPassword=$_POST['newPassword'];
