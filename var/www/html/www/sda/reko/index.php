@@ -18,7 +18,7 @@
                 <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, laborum.</p>
             </div>
         </div>
-        
+
         <?php include("footer.php"); ?>
         </div>
    

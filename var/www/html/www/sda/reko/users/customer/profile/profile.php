@@ -14,13 +14,43 @@
 ?>
 
 <div class="dashboard_content">
-  <?php
-    if ($status==1) {
-      print ("<div class='messageDash'>");
-      print ("<p>endring er no lagret</p>");
-      print ("</div>");
+  <div class="innerContainerPrdOverview">
+    <?php
+
+
+
+    if (isset($_GET['error'])) {
+        print("<div class='messageBox'>");
+        print("<div class='redColorBox'></div>");
+
+        $error = $_GET['error'];
+        switch ($error)
+        {
+        case "sql":
+            echo "<p><strong>Kan ikke oppdatere i databasen. </strong></p>";
+        break;
+
+        case "server":
+            echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
+        break;
+        }
+      print("</div>");
     }
-  ?>
+    if (isset($_GET['success'])) {
+        print("<div class='messageBox'>");
+        print("<div class='greenColorBox'></div>");
+
+        $success = $_GET['success'];
+
+        switch ($success)
+        {
+            case "updateOK":
+            echo "<p><strong>Endringen er oppdatert</strong></p>";
+            break;
+        }  
+        print("</div>");
+}
+?>
   <div class="profileeditor">
 
   <h2> Din profil</h2>
@@ -82,7 +112,7 @@
                     $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',image='$fileName',phoneNumber='$phone1' WHERE userID='$userID';";
                     if(mysqli_query($db,$sql))
                         {
-                          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?status=1'/>");
+                          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?success=sql'/>");
                         }
                     else
                         {
@@ -106,6 +136,7 @@
               }
         }
           ?>
+  </div>
   </div>
 </div>
 </html>
