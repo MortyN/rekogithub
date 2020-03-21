@@ -84,11 +84,12 @@ if (isset($_GET['success'])) {
         </form>
         <?php 
         if(isset($_POST["submit"])){
-        $status1 = $_POST["status"];
-        $sql2 = "DELETE FROM orders WHERE orderID = '$orderID';";
-        mysqli_query($db,$sql2) or die ("Kan ikke oppdatere status");
-        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/orders.php?orderID=$orderID&status=success'/>");
-        
+
+            $sql1="DELETE FROM productsOrders where orderID=$orderID;";
+            mysqli_query($db,$sql1) or die("Kan ikke hente produkter akkurat nå.");
+            $sql2= "DELETE FROM orders WHERE orderID = $orderID;";
+            mysqli_query($db,$sql2) or die("Kan ikke hente produkter akkurat nå.");
+    
         }
         ?>
     </div>
