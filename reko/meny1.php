@@ -34,7 +34,7 @@ if($connectedUser){
     ?>
 
         <div class="mainNav">
-                <a class="logoomrad" href="/index.php"><img src="/img/rekologo.png" alt="LOGO"/></a>          
+                <a class="logoomrad" href="/index.php"><img src="../img/rekologo.png" alt="LOGO"/></a>          
                 <a href="../index.php">HJEM</a>
                 <a href="feed.php">FEED</a>
                 <a href="overview.php">LEVERANDØRER</a>
@@ -57,7 +57,7 @@ if($connectedUser){
 else{
     ?>
         <div class="mainNav">
-                <a class="logoomrad" href="index.php"><img src="img/rekologo.png" alt="LOGO"/></a>          
+                <a class="logoomrad" href="index.php"><img src="../img/rekologo.png" alt="LOGO"/></a>          
                 <a href="../index.php">HJEM</a>
                 <a href="feed.php">FEED</a>
                 <a href="overview.php">LEVERANDØRER</a>

@@ -1,7 +1,12 @@
 <?php
 session_start();
 @$connectedUser=$_SESSION["userName"];
-include("/db/connect.php");
+$host="localhost";
+$user="opheimoc_reko";
+$password="rekodev69";
+$database="opheimoc_reko";
+
+$db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med database-server");
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
