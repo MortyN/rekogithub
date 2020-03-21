@@ -20,7 +20,7 @@ body {
 {
   cursor: pointer;
   transition: 0.3s;
-  background-color: #94d3ac;
+  background-color: green;
   color: white;
 }
 
