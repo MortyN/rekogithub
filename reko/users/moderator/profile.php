@@ -62,7 +62,7 @@ if (isset($_GET['success'])) {
       <input type="text" id="email" name="email" value="<?php print($email); ?>"><br>
       <label for="lname">Telefon:</label><br>
       <input type="text" id="phone" name="phone" value="<?php print($phone); ?>"><br>
-      <img src="/www/sda/reko/img/users/<?php print($userID.'/'.$image);?>" height="100px"/>
+      <img src="/img/users/<?php print($userID.'/'.$image);?>" height="100px"/>
       <input type="file" name="file"/><br>
       <input type="submit"  value="Endre" name="editProfile" id="editProfile">      <button onclick="window.location.href = 'https://w3docs.com';">Click Here</button>
 
@@ -82,7 +82,7 @@ if (isset($_GET['success'])) {
 
 
 
-         $path = "/var/www/html/www/sda/reko/img/users/".$userID.'/';
+         $path = "/var/www/html/img/users/".$userID.'/';
          
          if (!is_dir($path)) {
             $oldmask = umask(0);
@@ -93,7 +93,7 @@ if (isset($_GET['success'])) {
 
         if($fileName){
             
-                $newPath="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
+                $newPath="/var/www/html/img/users/".$userID.'/'.$fileName;
         
 
                 if($fileType != "image/gif" && $fileType != "image/jpeg" && $fileType != "image/jpg" && $fileType != "image/png" )
@@ -109,11 +109,11 @@ if (isset($_GET['success'])) {
                     $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',image='$fileName',phoneNumber='$phone1' WHERE userID='$userID';";
                     if(mysqli_query($db,$sql))
                         {
-                          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
+                          print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/moderator/profile.php?status=1'/>");
                         }
                     else
                         {
-                          print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=0'/>");
+                          print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/moderator/profile.php?status=0'/>");
                           unlink($newPath) or die ("<br><p>Ikke mulig å slette bilde på serveren igjen</p>");
                         }
                 }
@@ -121,7 +121,7 @@ if (isset($_GET['success'])) {
                   {
                       $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
                       mysqli_query($db,$sql) or die ("<br><p>Kunne ikke oppdatere databasen!</p>");
-                      print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
+                      print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/moderator/profile.php?status=1'/>");
                   }
                 
           }
@@ -129,7 +129,7 @@ if (isset($_GET['success'])) {
               {
                 $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
                 mysqli_query($db,$sql) or die ("ikke mulig &aring; endre data i databasen");
-                print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
+                print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/moderator/profile.php?status=1'/>");
               }
         }
           ?>

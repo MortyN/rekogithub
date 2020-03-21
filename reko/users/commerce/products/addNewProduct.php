@@ -86,7 +86,7 @@ include("product_function.php");?>
         $status = $_POST["status"];
 
         $sql = "SELECT * FROM products where commerceID='$userID' and title='$title';";
-        $result = mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/products/addNewProduct.php?error=sql'>") and die;
+        $result = mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/products/addNewProduct.php?error=sql'>") and die;
         $num = mysqli_num_rows($result);
 
         if($num !=0){
@@ -94,8 +94,8 @@ include("product_function.php");?>
         }
         else{
             $sql="INSERT INTO products (commerceID,title,description,price,unit,status) VALUES('$userID','$title','$description','$price','$unit','$status') ;";
-            mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/products/addNewProduct.php?error=sql'>") and die;
-            print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/products/addNewProduct.php?success=updateOK'>");
+            mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/products/addNewProduct.php?error=sql'>") and die;
+            print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/products/addNewProduct.php?success=updateOK'>");
         }
 
 

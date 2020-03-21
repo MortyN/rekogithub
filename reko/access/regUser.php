@@ -42,7 +42,7 @@
         $userName = $_POST["userName"];
         $password1 = $_POST["password1"];
         $rePassword = $_POST["rePassword"];
-        include("/var/www/html/www/sda/reko/db/connect.php");
+        include("/var/www/html/db/connect.php");
 
         if(!$firstName || !$lastName || !$eMail || !$password1 || !$rePassword || !$userName ){
             print("Du må fylle inn alle felt!");

@@ -56,7 +56,7 @@ include("control.php");
             ?>
         </table>
         </br>
-        <a href=/www/sda/reko/users/moderator/orders.php><button class="dashboardBTN">Se alle</button></a>
+        <a href=/users/moderator/orders.php><button class="dashboardBTN">Se alle</button></a>
         </div>
         
         
@@ -86,7 +86,7 @@ include("control.php");
                 
                 $sql = "UPDATE news SET news = '$newNews' WHERE news ='$news';";
                 mysqli_query($db,$sql) or die("Kan ikke laste opp.");
-                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/dashboard.php'>");
+                print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/moderator/dashboard.php'>");
                 }
 
             ?>

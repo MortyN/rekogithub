@@ -1,7 +1,7 @@
 <?php 
 session_start();
 @$connectedUser=$_SESSION["userName"];
-include("/var/www/html/www/sda/reko/db/connect.php");
+include("/var/www/html/db/connect.php");
 
 if($connectedUser ){
 	
@@ -18,30 +18,30 @@ $del = mysqli_fetch_array($sqlQuery);
     $userRole = $del["role"];
     $userStatus = $del["status"];
 
-    $newURL = "http://opheimpi.zapto.org/www/sda/reko/users/";
+    $newURL = "http://reko.opheim.as/users/";
     $newFile = "/dashboard.php'";
 
     switch ($userRole){
         case "customer":
             
-            print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/'/>");
+            print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/'/>");
             break;
 
         case "admin":
-            print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/admin/dashboard.php'/>");
+            print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/admin/dashboard.php'/>");
             
             break;
 
         case "moderator":
           
 
-            print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/dashboard.php'/>");
+            print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/moderator/dashboard.php'/>");
             break;
 
         case "commerce":
             
 
-            print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/dashboard.php'/>");
+            print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/commerce/dashboard.php'/>");
             break;
         }
     }
@@ -90,7 +90,7 @@ $del = mysqli_fetch_array($sqlQuery);
                 $sqlQuery=mysqli_query($db,$sql) or die("Ikke mulig &aring; hente data fra databasen (#300)");
                 $xRows=mysqli_fetch_array($sqlQuery);
                      $userRole=$xRows["role"];
-                     $newURL = "http://opheimpi.zapto.org/www/sda/reko/users/";
+                     $newURL = "http://reko.opheim.as/users/";
                      $newFile = "/dashboard.php'";
 
                 switch ($userRole){
@@ -98,28 +98,28 @@ $del = mysqli_fetch_array($sqlQuery);
                       
                         @$_SESSION["userName"] = $logInUserName;
                         
-                        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/'/>");
+                        print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/'/>");
                         break;
 
                     case "admin":
                         
                         @$_SESSION["userName"] = $logInUserName;
 
-                        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/admin/dashboard.php'/>");
+                        print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/admin/dashboard.php'/>");
                         break;
 
                     case "moderator":
                         
                         @$_SESSION["userName"] = $logInUserName;
 
-                        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/dashboard.php'/>");
+                        print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/moderator/dashboard.php'/>");
                         break;
 
                     case "commerce":
                         
                         @$_SESSION["userName"] = $logInUserName;
 
-                        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/dashboard.php'/>");
+                        print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/commerce/dashboard.php'/>");
                         break;
 
                 }

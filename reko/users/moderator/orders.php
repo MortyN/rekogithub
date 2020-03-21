@@ -75,7 +75,7 @@ if (isset($_GET['success'])) {
 
                 }
 
-                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td style='color:$color;'>$status</td> <td><a href='/www/sda/reko/users/moderator/showOrder.php?orderID=$orderID'>Se ordre</a></td></tr>");
+                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td style='color:$color;'>$status</td> <td><a href='/users/moderator/showOrder.php?orderID=$orderID'>Se ordre</a></td></tr>");
             }
             ?>
         </table>

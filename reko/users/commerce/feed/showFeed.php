@@ -28,12 +28,12 @@ for($i=1;$i <= $xRows; $i++ ){
 <div class="post">
             
 <div class="profileInfo_backend">
-<a href="profile.php?ID=<?php print($userID);?>"><img src="/www/sda/reko/img/users/<?php print($userID.'/'.$profileIMG);?>"/> </a>     
+<a href="profile.php?ID=<?php print($userID);?>"><img src="/img/users/<?php print($userID.'/'.$profileIMG);?>"/> </a>     
           <p> <?php print($firstName." ".$lastName); ?> </p>
             </div>
 <div class="content">
                 <div class="ad__pic">
-                <img src="/www/sda/reko/img/users/<?php print($userID.'/'.$postIMG);?>"/>
+                <img src="/img/users/<?php print($userID.'/'.$postIMG);?>"/>
                 </div>
                 <div class="ad_shortinfo">
                 <p><?php print($shortText);?></p>
