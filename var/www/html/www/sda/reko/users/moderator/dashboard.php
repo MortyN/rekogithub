@@ -79,9 +79,11 @@ include("control.php");
             <?php 
         
                 if (isset($_POST['submit'])) {
+                    $newNews = $_POST['news'];
+                    
                 
                 $sql = "UPDATE news SET news = '$newNews' WHERE news ='$news';";
-                mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
+                mysqli_query($db,$sql) or die("Kan ikke laste opp.");
                 print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/dashboard.php'>");
                 }
 
