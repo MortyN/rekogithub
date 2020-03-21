@@ -13,7 +13,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
 
-<!DOCTYPE html lang="no">
+<!DOCTYPE html lang='NO'>
 <head>
 <meta charset="UTF-8">
 <title>REKO - HORTEN</title>
@@ -51,7 +51,7 @@ if($connectedUser){
                     <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                    <a href="/commerce/dashboard.php">KONTROLLPANEL</a>
+                    <a href="/users/commerce/dashboard.php">KONTROLLPANEL</a>
                     <a href="access/logout.php">LOGG UT</a>
                 </div> 
             </div>
