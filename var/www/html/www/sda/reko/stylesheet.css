@@ -551,6 +551,10 @@ button.accordion:hover
     cursor: pointer;
     outline: none;
   }
+  .sidenav a, .dropdown-btn.active::after
+  {
+    display: none;
+  }
   .sidenav a:hover, .dropdown-btn:hover {
     color: #f1f1f1;
   }
