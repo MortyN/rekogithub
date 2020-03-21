@@ -1,7 +1,7 @@
 <?php
 session_start();
 @$connectedUser=$_SESSION["userName"];
-include("/db/connect.php");
+include("../db/connect.php");
 ?>
 
 <!DOCTYPE html lang="no">
