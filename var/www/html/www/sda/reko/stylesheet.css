@@ -551,9 +551,9 @@ button.accordion:hover
     cursor: pointer;
     outline: none;
   }
-  .sidenav a, .dropdown-btn.active::after
+  button.dropdown-btn.active::after
   {
-    /*we'll see*/
+    display: "\2796";
   }
   .sidenav a:hover, .dropdown-btn:hover {
     color: #f1f1f1;
