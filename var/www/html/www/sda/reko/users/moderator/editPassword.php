@@ -2,6 +2,7 @@
 include ('control.php');
 ?>
 <div class="dashboard_content">
+<div class="container_editpassword">
 
   <?php
 
@@ -89,3 +90,4 @@ include ('control.php');
 
     
 </div>
+            </div>
