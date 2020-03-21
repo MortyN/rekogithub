@@ -54,6 +54,8 @@ include("control.php");
             }
             ?>
         </table>
+        </br>
+        <a href=/www/sda/reko/users/customer/profile/orders.php><button class="dashboardBTN">Se alle</button></a>
         </div>
         
        
