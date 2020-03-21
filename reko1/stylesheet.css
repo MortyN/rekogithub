@@ -36,6 +36,7 @@ button.Passordchange
   width: 30vw;
   background-color: #94d3ac;
   padding: 10px 8px;
+  border: none;
 }
 /*Hei*/
 button.Passordchange:hover

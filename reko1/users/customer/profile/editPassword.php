@@ -66,19 +66,19 @@ include ('control.php');
 
                     $result = control($userUserName,$password);
                     if(!$result){
-                        print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/editPassword.php?error=loginerror'>");
+                        print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/editPassword.php?error=loginerror'>");
                     }
                     if($newPassword != $renewPassword){
-                        print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/editPassword.php?error=wrong'>");
+                        print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/editPassword.php?error=wrong'>");
                     }
                     if($newPassword == $password){
-                        print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/editPassword.php?error=equals'>");
+                        print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/editPassword.php?error=equals'>");
                     }
                     else{
                         $cryptPassword = password_hash($newPassword,PASSWORD_DEFAULT);
                         $sql = "UPDATE users SET password='$cryptPassword' WHERE userID=$userID;";
-                        mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/editPassword.php?error=sql'>") and die;
-                        print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/editPassword.php?success=updateOK'>");
+                        mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/editPassword.php?error=sql'>") and die;
+                        print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/editPassword.php?success=updateOK'>");
                     }
                
                 }
