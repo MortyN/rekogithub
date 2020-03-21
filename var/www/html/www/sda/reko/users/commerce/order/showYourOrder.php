@@ -50,13 +50,20 @@ $orderID = $_GET["orderID"];
         <input type="submit" name="submit" value="Slett ordre"/>
         </form>
         <?php 
-        if(isset($_POST["submit"])){
-        
+       
+       if(isset($_POST["submit"])){
 
-            /*SLETTE ORDRE OG PRODUKTER I ORDRE*/
-        
-        }
-        ?>
+           $sql1="DELETE FROM productsOrders where orderID=$orderID;";
+           $result1=mysqli_query($db,$sql1) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showYourOrder.php?error=sql'/>") and die;
+           $sql2= "DELETE FROM orders WHERE orderID = $orderID;";
+           $result2=mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showYourOrder.php?error=sql'/>") and die;
+
+           if($result1 && $result2){
+               print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/orders.php?success=deleteOK'/>");
+           }
+   
+       }
+       ?>
     </div>
 </div>
 </div>
