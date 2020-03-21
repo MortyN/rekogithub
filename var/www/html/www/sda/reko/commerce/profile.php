@@ -118,4 +118,4 @@ for($i=1;$i <= $xRows; $i++ ){
     </div>
     <?php } ?>
 </div>
-<?php include("../footer1.php"); ?>
+<?php include("../footer.php"); ?>
