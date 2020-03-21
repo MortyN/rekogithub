@@ -70,12 +70,12 @@ if (isset($_GET['error'])) {
        if(isset($_POST["submit"])){
 
            $sql1="DELETE FROM productsOrders where orderID=$orderID;";
-           $result1=mysqli_query($db,$sql1) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showYourOrder.php?error=sql&orderID=$orderID'/>") and die;
+           $result1=mysqli_query($db,$sql1) or ("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/commerce/order/showYourOrder.php?error=sql&orderID=$orderID'/>") and die;
            $sql2= "DELETE FROM orders WHERE orderID = $orderID;";
-           $result2=mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showYourOrder.php?error=sql&orderID=$orderID'/>") and die;
+           $result2=mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/commerce/order/showYourOrder.php?error=sql&orderID=$orderID'/>") and die;
 
            if($result1 && $result2){
-               print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/orders.php?success=deleteOK'/>");
+               print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/commerce/order/orders.php?success=deleteOK'/>");
            }
    
        }

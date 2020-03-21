@@ -98,8 +98,8 @@ if (isset($_GET['success'])) {
         if(isset($_POST["submit"])){
         $status1 = $_POST["status"];
         $sql2 = "UPDATE orders SET status = '$status1' WHERE orderID = '$orderID';";
-        mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
-        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+        mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
+        print("<meta http-equiv='refresh' content='0;URL=http://reko.opheim.as/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
         
         }
         ?>

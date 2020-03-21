@@ -1,7 +1,7 @@
 <?php
 
 function control($logInUserName,$logInPassword){
-    include("/var/www/html/www/sda/reko/db/connect.php");
+    include("/var/www/html/db/connect.php");
     $result=true;
 
 

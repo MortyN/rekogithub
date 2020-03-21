@@ -32,7 +32,7 @@ include("../control.php");
                 $status = $part["status"];
                 $productID = $part["productID"];
 
-                print("<tr><td>$name</td> <td>$description</td> <td>$price</td> <td>$unit</td> <td>$status</td> <td><a href='/www/sda/reko/users/commerce/products/editProduct.php?prdID=$productID'>Rediger</a></td></tr>");
+                print("<tr><td>$name</td> <td>$description</td> <td>$price</td> <td>$unit</td> <td>$status</td> <td><a href='/users/commerce/products/editProduct.php?prdID=$productID'>Rediger</a></td></tr>");
             }
             ?>
         </table>

@@ -65,7 +65,7 @@ $xRows = mysqli_num_rows($query);
                         break;
                     }
 
-                    print("<tr><td>$firstName1</td> <td>$lastName1</td> <td>$email1</td> <td>$userName1</td> <td>$role1</td> <td style='color:$color;'>$status1</td> <td><a href='/www/sda/reko/users/moderator/editUser.php?userID=$userUserID1'>Endre Bruker</a></tr>");
+                    print("<tr><td>$firstName1</td> <td>$lastName1</td> <td>$email1</td> <td>$userName1</td> <td>$role1</td> <td style='color:$color;'>$status1</td> <td><a href='/users/moderator/editUser.php?userID=$userUserID1'>Endre Bruker</a></tr>");
                 }?>
                   </div>
 

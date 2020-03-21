@@ -108,13 +108,13 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
 
         
 
-        $newName="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
-        $path="/var/www/html/www/sda/reko/img/users/".$userID.'/';
+        $newName="/var/www/html/img/users/".$userID.'/'.$fileName;
+        $path="/var/www/html/img/users/".$userID.'/';
 
         
         
         if($fileType != "image/gif" && $fileType != "image/jpeg" && $fileType != "image/jpg" && $fileType != "image/png" ){
-            print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=picture'>");
+            print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=picture'>");
          }
         else{
             
@@ -126,24 +126,24 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
             }
 
 			$sql="SELECT * FROM post WHERE picture='$fileName' and userID='$userID';";
-			$query = mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>") and die;;
+			$query = mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=sql'>") and die;;
             $xRows = mysqli_num_rows($query);
     
 			if($xRows != 0){
-				print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=pictureExist'>");
+				print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=pictureExist'>");
             }
             
             else{
-				move_uploaded_file($tmpName, $newName) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=server'>") and die;; 
+				move_uploaded_file($tmpName, $newName) or ("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=server'>") and die;; 
 
 				$sql = "INSERT INTO post (shortText,mainText,picture,userID,category,heading) VALUES('$shortText0','$mainText0','$fileName','$userID','$status0','$heading0');";
 				if(mysqli_query($db,$sql)){
-					print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
+					print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?success=updateOK'>");
 
 				}
 				else{
-					print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>");
-					unlink($newName) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=server'>") and die;
+					print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=sql'>");
+					unlink($newName) or ("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=server'>") and die;
 				}
 			}
 
@@ -251,14 +251,14 @@ if (isset($_GET['success'])) {
         $tmpName1=$_FILES ["file"]["tmp_name"];
         
         
-        $path1 = "/var/www/html/www/sda/reko/img/users/".$userID.'/';
+        $path1 = "/var/www/html/img/users/".$userID.'/';
 
         if($fileName1){
             
-        $newName1="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName1;
+        $newName1="/var/www/html/img/users/".$userID.'/'.$fileName1;
 
             if($fileType1 != "image/gif" && $fileType1 != "image/jpeg" && $fileType1 != "image/jpg" && $fileType1 != "image/png" ){
-                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=picture'>");
+                print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=picture'>");
             }
             if($postIMG != $fileName1){
 
@@ -266,24 +266,24 @@ if (isset($_GET['success'])) {
                 move_uploaded_file($tmpName1, $newName1) or die ("<br><p>Kunne ikke laste opp bilde til serveren!</p>"); 
                 $sql= "UPDATE post SET shortText ='$shortText1',mainText ='$mainText1',picture='$fileName1',category='$status1', heading='$heading1' WHERE userID='$userID';";
                 if(mysqli_query($db,$sql)){
-                    print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
+                    print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?success=updateOK'>");
 				}
 				else{
-					print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>");
-					unlink($newName1) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=server'>") and die;
+					print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=sql'>");
+					unlink($newName1) or ("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=server'>") and die;
 				}
             }
             if($postIMG == $fileName1)
             {
                 $sql= "UPDATE post SET shortText ='$shortText1',mainText ='$mainText1',category='$status1', heading='$heading1' WHERE userID='$userID';";
-                mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>") and die;
-                print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
+                mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=sql'>") and die;
+                print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?success=updateOK'>");
             }
     }
     if(!$fileName1){
             $sql= "UPDATE post SET shortText ='$shortText1',mainText ='$mainText1',category='$status1', heading='$heading1' WHERE userID='$userID';";
-            mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?error=sql'>") and die;
-            print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/feed/editFeed.php?success=updateOK'>");
+            mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?error=sql'>") and die;
+            print("<meta http-equiv='refresh' content='0;url=http://reko.opheim.as/users/commerce/feed/editFeed.php?success=updateOK'>");
             
 
 
