@@ -930,4 +930,6 @@ padding: 30px;
   bottom: 0px;
   color: #979696;
   z-index: 1;
+  width: 12vw;
+  text-align: center;
 }
