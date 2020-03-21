@@ -968,7 +968,7 @@ padding: 30px;
 .Footer_panel
 {
   position: fixed;
-  bottom: 0px;
+  bottom: 15px;
   color: #979696;
   z-index: 1;
   width: 12vw;

@@ -73,5 +73,5 @@ $del = mysqli_fetch_array($sqlQuery);
 
 
 <div class="Footer_panel">
-<a> COPYRIGHT © 2020</a>
+<a> REKO © 2020</a>
 </div>
