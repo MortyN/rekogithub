@@ -551,7 +551,7 @@ button.accordion:hover
     cursor: pointer;
     outline: none;
   }
-  button.dropdown-btn.active::after
+  .active:after
   {
     display: "\2796";
   }
