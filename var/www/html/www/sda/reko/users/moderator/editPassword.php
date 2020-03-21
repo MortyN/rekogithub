@@ -2,7 +2,7 @@
 include ('control.php');
 ?>
 <div class="dashboard_content">
-<div class="innerContainerPrdOverview">
+
   <?php
 
           if (isset($_GET['error'])) {
@@ -18,6 +18,12 @@ include ('control.php');
                 case "sql":
                   echo "<p><strong>Kan ikke oppdatere passord. </strong></p>";
                 break;
+                case "wrong":
+                    echo "<p><strong>Passordene er ikke like.</strong></p>";
+                  break;
+                  case "equals":
+                    echo "<p><strong>Velg et nytt passord.</strong></p>";
+                  break;
             }
             print("</div>");
           }
@@ -61,6 +67,12 @@ include ('control.php');
                     if(!$result){
                         print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editPassword.php?error=loginerror'>");
                     }
+                    if($newPassword != $renewPassword){
+                        print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editPassword.php?error=wrong'>");
+                    }
+                    if($newPassword == $password){
+                        print("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editPassword.php?error=equals'>");
+                    }
                     else{
                         $cryptPassword = password_hash($newPassword,PASSWORD_DEFAULT);
                         $sql = "UPDATE users SET password='$cryptPassword' WHERE userID=$userID;";
@@ -75,5 +87,5 @@ include ('control.php');
 
                 ?>
 
-    </div>
+    
 </div>
