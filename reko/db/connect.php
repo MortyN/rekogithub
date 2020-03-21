@@ -1,5 +1,5 @@
 <?php
-$host="localhost";
+$host="213.162.240.26";
 $user="opheimoc_reko";
 $password="rekodev69";
 $database="opheimoc_reko";
