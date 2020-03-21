@@ -16,10 +16,6 @@
          <div class="section_content" contenteditable="true">
                 <h1> Hva er REKO? </h1>
                 <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, laborum.</p>
-                <p>  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime rem ipsum quo, sit et ut incidunt nemo nulla quidem hic?</p>
-                <p>  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, nam.</p>
-                <p>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos cumque cum a aliquam ipsa sequi assumenda ipsum eaque mollitia dolores!</p>
-                <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. A saepe nesciunt harum beatae. Explicabo, officia!</p>
             </div>
         </div>
             

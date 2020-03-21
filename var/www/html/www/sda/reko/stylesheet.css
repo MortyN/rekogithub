@@ -169,11 +169,19 @@ font-size: 3.5em;
 .section{
   height:400px;
   position: relative;
+  bottom: 2.6vw;
   width: 100%;
   background-color: white;
   margin-top: 1px;
-  margin-bottom: 1px;
-
+  margin-bottom: -2.6vw;
+}
+.section p
+{
+  font-size: 20px;
+  font-style: arial;
+  width: 40vw;
+  position: relative;
+  left: 30vw;
 }
 .section_content{
   vertical-align: auto;
