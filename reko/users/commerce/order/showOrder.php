@@ -7,6 +7,8 @@ $orderID = $_GET["orderID"];
 <div class="dashboard_content">
 <div class="innerContainerPrdOverview">
 <?php
+ print($userFirstName);
+ print($userLastName);
 
 
 
@@ -108,6 +110,7 @@ if (isset($_GET['success'])) {
             $result01=mysqli_query($db,$sql01) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
             $part01 = mysqli_fetch_array($result01);
             $customerEmail = $part01["email"];
+           
 
 
         switch ($status1){
