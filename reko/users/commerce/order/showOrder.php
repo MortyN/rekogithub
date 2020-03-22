@@ -75,13 +75,13 @@ if (isset($_GET['success'])) {
             for($i=1; $i<=$num; $i++){
                 $part2=mysqli_fetch_array($result);
 
-                $title = $part2["title"];
-                $price = $part2["price"];
-                $unit = $part2["unit"];
-                $quantity= $part2["quantity"];
-                $status = $part2["status"];
+                $title2 = $part2["title"];
+                $price2 = $part2["price"];
+                $unit2 = $part2["unit"];
+                $quantity2= $part2["quantity"];
+                $status2 = $part2["status"];
             
-                print("<tr><td>$title</td> <td>$price $unit</td> <td>$quantity</td></tr>");
+                print("<tr><td>$title2</td> <td>$price2 $unit2</td> <td>$quantity2</td></tr>");
             }
             
             ?>
@@ -89,7 +89,7 @@ if (isset($_GET['success'])) {
         <form method="POST" action="">
         <select name ="status">
         <option value="">Status<option>
-            <?php current_status($status); ?>
+            <?php current_status($status2); ?>
         </select>
         <input type="submit" name="submit" value="lagre"/>
         </form>
@@ -109,13 +109,13 @@ if (isset($_GET['success'])) {
                 for($i=1; $i<=$num; $i++){
                     $part4=mysqli_fetch_array($result);
     
-                    $title = $part4["title"];
-                    $price = $part4["price"];
-                    $unit = $part4["unit"];
-                    $quantity= $part4["quantity"];
+                    $title4 = $part4["title"];
+                    $price4 = $part4["price"];
+                    $unit4 = $part4["unit"];
+                    $quantity4= $part["quantity"];
                     
                 
-                   $yourOrder = $yourOrder."<tr><td>$title</td> <td>$price $unit</td> <td>$quantity</td></tr>";
+                   $yourOrder = $yourOrder."<tr><td>$title4</td> <td>$price4 $unit4</td> <td>$quantity4</td></tr>";
                 
                 }
                 $yourOrder = $yourOrder."</table>";
