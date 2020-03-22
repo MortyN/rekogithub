@@ -101,7 +101,7 @@ if (isset($_GET['success'])) {
         $sql2 = "UPDATE orders SET status = '$status1' WHERE orderID = '$orderID';";
         mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
         
-            $sql01 = "SELECT users.email, orders.orderID
+            $sql01 = "SELECT users.email,users.firstName,users.lastName, orders.orderID
             from users
             INNER JOIN orders
             ON users.userID = orders.customerID
@@ -110,6 +110,8 @@ if (isset($_GET['success'])) {
             $result01=mysqli_query($db,$sql01) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
             $part01 = mysqli_fetch_array($result01);
             $customerEmail = $part01["email"];
+            $customerFirstName = $part01["firstName"];
+            $customerLastName = $part01["lastName"];
 
             include ("../../mail-config.php");
            
@@ -121,16 +123,19 @@ if (isset($_GET['success'])) {
                 $mail->Body ="
                 <html>
                 <body>
+                <head>
+                <meta charset='UTF-8'/>
+                </head>
                 <div class='container'>
                 <div class='innerContainer'>
-                        <a href ='http://opheimpi.zapto.org'><img class='logo'src='http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png'/></a>
+                        <a href ='http://opheimpi.zapto.org'><img class='logo' src='cid:logo'/></a>
                         <hr>
                         <h1>Ordrebekreftelse</h1>
-                        <h2>Din ordre fra Gården Gård er nå bekreftet!</h2>
+                        <h2>Din ordre fra $userFirstName $userLastName er nå bekreftet!</h2>
                         <hr>
                         <h3>Ordresammendrag:</h3>
-                        <p><strong>Ordrenr:</strong> ORDRENRVARIABEL<br>
-                        <strong>Bestiller:</strong> Navn Navnesen</p>
+                        <p><strong>Ordrenr:</strong> $orderID<br>
+                        <strong>Bestiller:</strong> $customerFirstName $customerLastName</p>
                         <hr>
                         <h3>Din Ordre:</h3>
                         <tabell>
