@@ -70,16 +70,16 @@ if (isset($_GET['success'])) {
             $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
             $num = mysqli_num_rows($result);
             $part1=mysqli_fetch_array($result);
-            $customerEmail = $part["email"];
+            $customerEmail = $part1["email"];
 
             for($i=1; $i<=$num; $i++){
-                $part=mysqli_fetch_array($result);
+                $part2=mysqli_fetch_array($result);
 
-                $title = $part["title"];
-                $price = $part["price"];
-                $unit = $part["unit"];
-                $quantity= $part["quantity"];
-                $status = $part["status"];
+                $title = $part2["title"];
+                $price = $part2["price"];
+                $unit = $part2["unit"];
+                $quantity= $part2["quantity"];
+                $status = $part2["status"];
             
                 print("<tr><td>$title</td> <td>$price $unit</td> <td>$quantity</td></tr>");
             }
@@ -96,9 +96,44 @@ if (isset($_GET['success'])) {
         <?php 
         
         if(isset($_POST["submit"])){
+
         $status1 = $_POST["status"];
+
         $sql2 = "UPDATE orders SET status = '$status1' WHERE orderID = '$orderID';";
         mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
+        
+        switch ($status1){
+            case "Bekreft":
+                $yourOrder ="<table>";
+
+                for($i=1; $i<=$num; $i++){
+                    $part4=mysqli_fetch_array($result);
+    
+                    $title = $part4["title"];
+                    $price = $part4["price"];
+                    $unit = $part4["unit"];
+                    $quantity= $part4["quantity"];
+                    
+                
+                   $yourOrder = $yourOrder."<tr><td>$title</td> <td>$price $unit</td> <td>$quantity</td></tr>";
+                
+                }
+                $yourOrder = $yourOrder."</table>";
+
+                $mail->Subject = "$userFirstName $userLastName har bekreftet din ordre!";
+                $mail->Body = "$yourOrder";
+                $mail->AddAddress("hakonopheim@hotmail.com");
+            break;
+        }
+        if(!$mail->Send()) {
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        } else {
+            echo "Message has been sent";
+        }
+        $mail->ClearAddresses();
+
+
+
         print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
 
 
