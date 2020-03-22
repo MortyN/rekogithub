@@ -24,6 +24,7 @@ $del = mysqli_fetch_array($sqlQuery);
     $userRole = $del["role"];
     $userStatus = $del["status"];
     $userID = $del["userID"];
+    $userEmail = $del["email"];
 
     $newURL = "<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/".$userRole."/dashboard.php'/>";
     

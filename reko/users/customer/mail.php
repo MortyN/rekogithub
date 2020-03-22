@@ -17,7 +17,7 @@
     $mail->SetFrom("noreply@reko.opheim.as");
     $mail->Subject = "Test";
     $mail->Body = "God dag Geir Bjarvin2!";
-    $mail->Altbody = "Ren tekst"
+    $mail->Altbody = "Ren tekst";
     $mail->AddAddress("hakonopheim@hotmail.com");
 
      if(!$mail->Send()) {
