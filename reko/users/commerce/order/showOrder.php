@@ -110,21 +110,8 @@ if (isset($_GET['success'])) {
             $result01=mysqli_query($db,$sql01) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
             $part01 = mysqli_fetch_array($result01);
             $customerEmail = $part01["email"];
-            
-            require("/usr/share/php/libphp-phpmailer/src/PHPMailer.php");
-            require("/usr/share/php/libphp-phpmailer/src/SMTP.php");
-            $mail = new PHPMailer\PHPMailer\PHPMailer();
-            $mail->IsSMTP(); // enable SMTP
 
-            $mail->SMTPDebug = 2; // debugging: 1 = errors and messages, 2 = messages only
-            $mail->SMTPAuth = true; // authentication enabled
-            $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-            $mail->Host = "reko.opheim.as";
-            $mail->Port = 465; // or 587
-            $mail->IsHTML(true);
-            $mail->Username = "noreply@reko.opheim.as";
-            $mail->Password = "rekodev69";
-            $mail->SetFrom("noreply@reko.opheim.as");
+            include ("../../mail.config.php");
            
 
 
