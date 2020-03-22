@@ -16,9 +16,8 @@
     $mail->Password = "rekodev69";
     $mail->SetFrom("noreply@reko.opheim.as");
     $mail->Subject = "Test";
-    $mail->Body = "God dag Geir Bjarvin1!";
+    $mail->Body = "God dag Geir Bjarvin2!";
     $mail->AddAddress("hakonopheim@hotmail.com");
-    $mail->AddAddress("morten.neteland@hotmail.com");
 
      if(!$mail->Send()) {
         echo "Mailer Error: " . $mail->ErrorInfo;
