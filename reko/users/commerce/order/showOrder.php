@@ -319,14 +319,10 @@ if (isset($_GET['success'])) {
             break;
         }   
 
-        if(!$mail->Send()) {
-            echo "Mailer Error: " . $mail->ErrorInfo;
-         } else {
-            echo "Message has been sent";
-         }
-         $mail->ClearAddresses();
+        $mail->Send();
+        $mail->ClearAddresses();
 
-        //print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+        print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
         
         }
         ?>
