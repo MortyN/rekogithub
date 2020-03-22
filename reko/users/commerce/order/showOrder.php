@@ -77,7 +77,7 @@ if (isset($_GET['success'])) {
                 $quantity= $part["quantity"];
                 $status = $part["status"];
                 
-
+   
                 print("<tr><td>$title</td> <td>$price $unit</td> <td>$quantity</td></tr>");
             }
             
