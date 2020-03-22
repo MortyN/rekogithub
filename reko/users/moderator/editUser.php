@@ -126,14 +126,14 @@ $selectedUserID = $_GET['userID'];
 
             
 
-
+            if (!filter_var($eMail, FILTER_VALIDATE_EMAIL)) {
+              print("Ugyldig email!") and die; 
+          }
 
 
             if ($delIMG == "imagedel") {
 
-              if (!filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
-                echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=email&userID=$selectedUserID'>";
-              }
+              
               
               // Oppdater alle felt i database, samt slette fil fra server
               $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='' WHERE userID = '$selectedUserID';";
