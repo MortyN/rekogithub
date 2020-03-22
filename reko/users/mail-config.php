@@ -12,6 +12,8 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
    $mail->Host = "reko.opheim.as";
    $mail->Port = 465; // or 587
    $mail->IsHTML(true);
+   $mail->SetLanguage("en", 'includes/phpMailer/language/');
+
   
    $mail->Username = "noreply@reko.opheim.as";
    $mail->Password = "rekodev69";

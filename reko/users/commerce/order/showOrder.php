@@ -147,7 +147,7 @@ if (isset($_GET['success'])) {
                             </table>
                         </table>
 
-                        <p class='footerStrong'><strong>Takk for at du valgte å handle hos Navn Navnesen!</strong></p><br><br>
+                        <p class='footerStrong'><strong>Takk for at du valgte å handle hos $userFirstName $userLastName!</strong></p><br><br>
 
                         <p class='footerText'>Denne mailen kan ikke besvares. Ønsker du å ta kontakt,<br>
                         <a href='http://opheimpi.zapto.org/contact.php'>kontakt en av våres kontaktpersoner.</a></p>
