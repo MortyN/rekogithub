@@ -126,10 +126,8 @@ $selectedUserID = $_GET['userID'];
 
             
 
-            if (!filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
-              echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=email&userID=$selectedUserID'>";
-          }
-
+            filter_var($newEmail, FILTER_VALIDATE_EMAIL) or "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=email&userID=$selectedUserID'>" and die;
+         
 
             if ($delIMG == "imagedel") {
 
