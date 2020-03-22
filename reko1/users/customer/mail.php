@@ -1,5 +1,5 @@
 <?php
-require '.:/usr/share/php/libphp-phpmailer/PHPMailerAutoload.php';
+require '/usr/share/php/libphp-phpmailer/autoload.php';
 $mail = new PHPMailer;
 $mail->setFrom('rekodevtest@gmail.com');
 $mail->addAddress('macgeekfromapple@gmail.com');
