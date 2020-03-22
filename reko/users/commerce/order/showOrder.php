@@ -219,14 +219,102 @@ if (isset($_GET['success'])) {
 
                 
                 $mail->Altbody = "Ren tekst";
-                $mail->AddAddress("hakonopheim@hotmail.com"); 
+                $mail->AddAddress($customerEmail); 
             break;
 
             case "Kanselert":
                 $mail->Subject = $userFirstName." ".$userLastName." har kanselert orderen din!";
-                $mail->Body = "<strong>Testmail</strong>";
+                $mail->Body = "
+                <html>
+                <body>
+                    <div class='container'>
+                    <div class='innerContainer'>
+                            <a href ='http://opheimpi.zapto.org'><img class='logo'src='http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png'/></a>
+                            <hr>
+                            <h1>Din Ordre</h1>
+                            <h2>Din ordre fra $userFirstName $userLastName Gård er blitt kanselert!</h2>
+                            <hr>
+                        <h3>Ordresammendrag:</h3>
+                                <p><strong>Ordrenr:</strong> $orderID<br>
+                                <strong>Bestiller:</strong> $customerFirstName $customerLastName</p>
+                                <hr>
+                                <h3>Din Ordre:</h3>
+                                    <table>
+                                    <tr> <th>Produkt</th> <th>Pris</th> <th>Antall</th></tr>
+                                    ".$mailContent."
+                                    </table>
+                                <p class='footerStrong'><strong>Leverandøren kanselerer grunnet han ikke har mulighet til å levere denne bestillingen under førstkommende REKO-ring. <br> Prøv gjerne igjen ved neste anledning.</strong></p><br><br>
+
+                            <p class='footerText'>Denne mailen kan ikke besvares. Ønsker du å ta kontakt,<br>
+                            <a href='http://opheimpi.zapto.org/contact.php'>kontakt en av våres kontaktpersoner.</a></p>
+                                </div>
+                                </div>
+                            </body>
+                            <style>
+                                body{
+                                    background-color:lightgrey;
+                                }
+                                .container{
+                                    width:80vw;
+                                    margin:50px auto;
+                                    border: 3px solid green;
+                                    background-color:white;
+                                    padding:30px;
+                                    
+                                }
+                                .innerContainer{
+                                    width:90%;
+                                    margin:0 auto;
+                                }
+                                .logo{
+                                
+                                    display: block;
+                                    margin:0 auto;
+                                    height: 100px;
+                                    margin-bottom:20px;
+                                    
+                                }
+                                h1,h2{
+                                    text-align: center;
+                                font-size:;
+                                }
+                                table{
+                                text-align:center;
+                                margin:0 auto;
+                                width:95%;
+                                border-collapse: collapse;
+                                
+                                
+                                }
+                                td, th{
+                                border: 1px solid black;
+                                margin:0;
+                                padding-top: 12px;
+                                padding-bottom: 12px;
+                                }
+                                tr:nth-child(even)
+                                {
+                                background-color: #f2f2f2;
+                                }
+                                hr{
+                                height: 2px;
+                                border:none;
+                                background-color:lightgrey;
+                                }
+                                .footerStrong{
+                                    text-align:center;
+                                    margin-top:40px;
+                                }
+                                .footerText{
+                                text-align:center;
+                                }
+
+                            </style>
+                            </html>
+
+                "
+                ;
                 $mail->Altbody = "Ren tekst";
-                $mail->AddEmbeddedImage('../../img/rekologo.png', 'logo');
                 $mail->AddAddress("hakonopheim@hotmail.com"); 
             break;
         }   
