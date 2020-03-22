@@ -10,6 +10,8 @@ require("/usr/share/php/libphp-phpmailer/src/PHPMailer.php");
     $mail->SMTPAuth = true; // authentication enabled
     $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
     $mail->Host = "reko.opheim.as";
+    $mail->Username = "noreply@reko.opheim.as";
+    $mail->Password = "rekodev69";
     $mail->Port = 465; // or 587
     $mail->IsHTML(true);
     ?>
