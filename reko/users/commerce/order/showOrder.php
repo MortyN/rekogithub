@@ -118,7 +118,102 @@ if (isset($_GET['success'])) {
         switch ($status1){
             case "Bekreftet":
                 $mail->Subject = $userFirstName." ".$userLastName." har bekreftet orderen din!";
-                $mail->Body = "<strong>Testmail</strong>";
+                $mail->Body ="
+                <html>
+                <body>
+                <div class='container'>
+                <div class='innerContainer'>
+                        <a href ='http://opheimpi.zapto.org'><img class='logo'src='http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png'/></a>
+                        <hr>
+                        <h1>Ordrebekreftelse</h1>
+                        <h2>Din ordre fra Gården Gård er nå bekreftet!</h2>
+                        <hr>
+                        <h3>Ordresammendrag:</h3>
+                        <p><strong>Ordrenr:</strong> ORDRENRVARIABEL<br>
+                        <strong>Bestiller:</strong> Navn Navnesen</p>
+                        <hr>
+                        <h3>Din Ordre:</h3>
+                        <tabell>
+                            <table>
+                            <tr> <th>Produkt</th> <th>Pris</th> <th>Antall</th></tr>
+                            <tr> <td>Svinekam</td> <td>300 pr/kg</td> <td>3</td></tr>
+                            <tr> <td>Svinekam</td> <td>300 pr/kg</td> <td>3</td></tr>
+                            <tr> <td>Svinekam</td> <td>300 pr/kg</td> <td>3</td></tr>
+                            </table>
+                        </table>
+
+                        <p class='footerStrong'><strong>Takk for at du valgte å handle hos Navn Navnesen!</strong></p><br><br>
+
+                        <p class='footerText'>Denne mailen kan ikke besvares. Ønsker du å ta kontakt,<br>
+                        <a href='http://opheimpi.zapto.org/contact.php'>kontakt en av våres kontaktpersoner.</a></p>
+                </div>
+                </div>
+                </body>
+            <style>
+                body{
+                    background-color:lightgrey;
+                }
+                .container{
+                    width:80vw;
+                    margin:50px auto;
+                    border: 3px solid green;
+                    background-color:white;
+                    padding:30px;
+                    
+                }
+                .innerContainer{
+                    width:90%;
+                    margin:0 auto;
+                }
+                .logo{
+                
+                    display: block;
+                    margin:0 auto;
+                    height: 100px;
+                    margin-bottom:20px;
+                    
+                }
+                h1,h2{
+                    text-align: center;
+                font-size:;
+                }
+                table{
+                text-align:center;
+                margin:0 auto;
+                width:95%;
+                border-collapse: collapse;
+                
+                
+                }
+                td, th{
+                border: 1px solid black;
+                margin:0;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                }
+                tr:nth-child(even)
+                {
+                background-color: #f2f2f2;
+                }
+                hr{
+                height: 2px;
+                border:none;
+                background-color:lightgrey;
+                }
+                .footerStrong{
+                    text-align:center;
+                    margin-top:40px;
+                }
+                .footerText{
+                text-align:center;
+                }
+
+            </style>
+            </html>";
+
+
+
+                
                 $mail->Altbody = "Ren tekst";
                 $mail->AddAddress("hakonopheim@hotmail.com"); 
             break;
@@ -127,12 +222,16 @@ if (isset($_GET['success'])) {
                 $mail->Subject = $userFirstName." ".$userLastName." har kanselert orderen din!";
                 $mail->Body = "<strong>Testmail</strong>";
                 $mail->Altbody = "Ren tekst";
+                $mail->AddEmbeddedImage('../../img/rekologo.png', 'logo');
                 $mail->AddAddress("hakonopheim@hotmail.com"); 
             break;
         }   
 
-        $mail->Send();
-           
+        if(!$mail->Send()) {
+            echo "Mailer Error: " . $mail->ErrorInfo;
+         } else {
+            echo "Message has been sent";
+         }
          $mail->ClearAddresses();
 
         //print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
