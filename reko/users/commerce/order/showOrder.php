@@ -116,7 +116,7 @@ if (isset($_GET['success'])) {
             include ("../../mail-config.php");
            
 
-
+ 
         switch ($status1){
             case "Bekreftet":
                 $mail->Subject = $userFirstName." ".$userLastName." har bekreftet orderen din!";
