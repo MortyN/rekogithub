@@ -110,7 +110,9 @@ if (isset($_GET['success'])) {
             $result01=mysqli_query($db,$sql01) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
             $part01 = mysqli_fetch_array($result01);
             $customerEmail = $part01["email"];
-
+            
+            require("/usr/share/php/libphp-phpmailer/src/PHPMailer.php");
+            require("/usr/share/php/libphp-phpmailer/src/SMTP.php");
             $mail = new PHPMailer\PHPMailer\PHPMailer();
             $mail->IsSMTP(); // enable SMTP
 

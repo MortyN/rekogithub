@@ -13,8 +13,7 @@ $database="reko";
 
 $db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med database-server");
 
-require("/usr/share/php/libphp-phpmailer/src/PHPMailer.php");
-require("/usr/share/php/libphp-phpmailer/src/SMTP.php");
+
 
 
                             //MAIL DETAILS
