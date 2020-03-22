@@ -35,6 +35,11 @@
 
     if (isset($_POST["submit"]))
     {
+        function validateEmail($email) {
+            $v = "/[a-zA-Z0-9_-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/";
+        
+            return (bool)preg_match($v, $EMAIL);
+        }
         
         $firstName = $_POST["firstName"];
         $lastName = $_POST["lastName"];
@@ -47,9 +52,10 @@
         if(!$firstName || !$lastName || !$eMail || !$password1 || !$rePassword || !$userName ){
             print("Du må fylle inn alle felt!");
         }
-        if (!filter_var($eMail, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Ugyldig email!"; 
-          }
+        if (validateEmail($eMail)) {
+            print("Ugyldig email!"); 
+        }
+          
         
         if($password1 != $rePassword){
             print("Passordene er ikke like!");
