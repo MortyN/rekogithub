@@ -111,7 +111,7 @@ if (isset($_GET['success'])) {
             $part01 = mysqli_fetch_array($result01);
             $customerEmail = $part01["email"];
 
-            include ("../../mail.config.php");
+            include ("../../mail-config.php");
            
 
 
