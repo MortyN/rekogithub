@@ -135,7 +135,7 @@ if (isset($_GET['success'])) {
                         <hr>
                         <h3>Ordresammendrag:</h3>
                         <p><strong>Ordrenr:</strong> $orderID<br>
-                        <strong>Bestiller:</strong> $customerFirstName $customerName</p>
+                        <strong>Bestiller:</strong> $customerFirstName $customerLastName</p>
                         <hr>
                         <h3>Din Ordre:</h3>
                         <tabell>
