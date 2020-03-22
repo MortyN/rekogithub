@@ -128,14 +128,14 @@ if (isset($_GET['success'])) {
                 </head>
                 <div class='container'>
                 <div class='innerContainer'>
-                        <a href ='http://opheimpi.zapto.org'><img class='logo' src='cid:logo'/></a>
+                        <a href ='http://opheimpi.zapto.org'><img class='logo'src='http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png'/></a>
                         <hr>
                         <h1>Ordrebekreftelse</h1>
                         <h2>Din ordre fra $userFirstName $userLastName er nå bekreftet!</h2>
                         <hr>
                         <h3>Ordresammendrag:</h3>
                         <p><strong>Ordrenr:</strong> $orderID<br>
-                        <strong>Bestiller:</strong> $customerFirstName $customerLastName</p>
+                        <strong>Bestiller:</strong> $customerFirstName $customerName</p>
                         <hr>
                         <h3>Din Ordre:</h3>
                         <tabell>
