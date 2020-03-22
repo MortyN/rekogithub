@@ -153,7 +153,7 @@ if (isset($_GET['success'])) {
 
                                
                             print('<table>');
-                            <tr> <th>Produkt</th> <th>Pris</th> <th>Antall</th></tr>
+                            print('<tr> <th>Produkt</th> <th>Pris</th> <th>Antall</th></tr>');
                             for($i=1; $i<=$num; $i++){
                                 $part=mysqli_fetch_array($result);
 
