@@ -315,7 +315,7 @@ if (isset($_GET['success'])) {
                 "
                 ;
                 $mail->Altbody = "Ren tekst";
-                $mail->AddAddress("hakonopheim@hotmail.com"); 
+                $mail->AddAddress($customerEmail); 
             break;
         }   
 
