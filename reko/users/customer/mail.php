@@ -2,7 +2,7 @@
  require("/usr/share/php/libphp-phpmailer/src/PHPMailer.php");
  require("/usr/share/php/libphp-phpmailer/src/SMTP.php");
 
- $mail = new PHPMailer\PHPMailer\PHPMailer();
+ $mail = new PHPMailer();
     $mail->IsSMTP(); // enable SMTP
 
     $mail->SMTPDebug = 2; // debugging: 1 = errors and messages, 2 = messages only
@@ -18,7 +18,7 @@
     $mail->Subject = "Test";
     $mail->Body = "God dag Geir Bjarvin2!";
     $mail->AddAddress("hakonopheim@hotmail.com");
-
+ 
      if(!$mail->Send()) {
         echo "Mailer Error: " . $mail->ErrorInfo;
      } else {
