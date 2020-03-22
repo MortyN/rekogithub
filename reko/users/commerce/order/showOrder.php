@@ -116,14 +116,14 @@ if (isset($_GET['success'])) {
                 $mail->Body = "<strong>Testmail</strong>";
                 $mail->Altbody = "Ren tekst";
                 $mail->AddAddress("hakonopheim@hotmail.com"); 
-                break: 
+            break;
 
             case "Kanselert":
                 $mail->Subject = $userFirstName." ".$userLastName." har kanselert orderen din!";
                 $mail->Body = "<strong>Testmail</strong>";
                 $mail->Altbody = "Ren tekst";
                 $mail->AddAddress("hakonopheim@hotmail.com"); 
-                break: 
+            break;
         }   
 
         if(!$mail->Send()) {
@@ -132,7 +132,7 @@ if (isset($_GET['success'])) {
             echo "Message has been sent";
          }
          $mail->ClearAddresses();
-         
+
         //print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
         
         }
