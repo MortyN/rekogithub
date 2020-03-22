@@ -138,14 +138,36 @@ if (isset($_GET['success'])) {
                         <strong>Bestiller:</strong> $customerFirstName $customerLastName</p>
                         <hr>
                         <h3>Din Ordre:</h3>
-                        <tabell>
-                            <table>
+                        <?php
+                        
+                        $sql=   'SELECT products.title, products.price, products.unit, productsOrders.quantity, orders.status
+                                FROM products
+                                INNER JOIN productsOrders
+                                ON products.productID = productsOrders.productID
+                                INNER JOIN orders
+                                on productsOrders.orderID = orders.orderID
+                                where orders.orderID = $orderID;';
+
+                                $result = mysqli_query($db,$sql) or die('Kan ikke hente produkter akkurat nå.');
+                                $num = mysqli_num_rows($result);
+
+                               
+                            print('<table>');
                             <tr> <th>Produkt</th> <th>Pris</th> <th>Antall</th></tr>
-                            <tr> <td>Svinekam</td> <td>300 pr/kg</td> <td>3</td></tr>
-                            <tr> <td>Svinekam</td> <td>300 pr/kg</td> <td>3</td></tr>
-                            <tr> <td>Svinekam</td> <td>300 pr/kg</td> <td>3</td></tr>
+                            for($i=1; $i<=$num; $i++){
+                                $part=mysqli_fetch_array($result);
+
+                                $title = $part['title'];
+                                $price = $part['price'];
+                                $unit = $part['unit'];
+                                $quantity= $part['quantity'];
+                                $status = $part['status'];
+                                
+                
+                                print('<tr><td>$title</td> <td>$price $unit</td> <td>$quantity</td></tr>');
+                            }?>
                             </table>
-                        </table>
+                        
 
                         <p class='footerStrong'><strong>Takk for at du valgte å handle hos $userFirstName $userLastName!</strong></p><br><br>
 
