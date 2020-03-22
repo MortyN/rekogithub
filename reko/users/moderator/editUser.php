@@ -127,7 +127,7 @@ $selectedUserID = $_GET['userID'];
             
 
             if (!filter_var($eMail, FILTER_VALIDATE_EMAIL)) {
-              print("Ugyldig email!") and die; 
+              echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=email&userID=$selectedUserID'>";
           }
 
 
