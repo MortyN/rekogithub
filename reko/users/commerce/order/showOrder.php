@@ -131,7 +131,7 @@ if (isset($_GET['success'])) {
             break;
         }   
 
-        $mail->Send()
+        $mail->Send();
            
          $mail->ClearAddresses();
 
