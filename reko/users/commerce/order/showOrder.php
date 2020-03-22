@@ -91,10 +91,7 @@ if (isset($_GET['success'])) {
         <input type="submit" name="submit" value="lagre"/>
         </form>
         <?php 
-        $confirm = $_GET['status'];
-        if($confirm == 'success'){
-            print ("<p>Status er oppdatert.</p>");
-        }
+      
         if(isset($_POST["submit"])){
         $status1 = $_POST["status"];
         $sql2 = "UPDATE orders SET status = '$status1' WHERE orderID = '$orderID';";
