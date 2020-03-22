@@ -16,7 +16,7 @@
     $mail->Password = "rekodev69";
     $mail->SetFrom("noreply@reko.opheim.as");
     $mail->Subject = "Test";
-    $mail->Body = "God dag Geir Bjarvin!";
+    $mail->Body = "God dag Geir Bjarvin1!";
     $mail->AddAddress("hakonopheim@hotmail.com");
     $mail->AddAddress("morten.neteland@hotmail.com");
 
