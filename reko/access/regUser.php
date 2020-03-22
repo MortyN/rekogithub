@@ -49,7 +49,7 @@
             print("Du må fylle inn alle felt!");
         }
         if (!filter_var($eMail, FILTER_VALIDATE_EMAIL)) {
-            print("Ugyldig email!"); 
+            print("Ugyldig email!") and die; 
         }
           
         
