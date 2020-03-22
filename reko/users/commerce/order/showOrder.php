@@ -69,7 +69,7 @@ if (isset($_GET['success'])) {
 
             $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
             $num = mysqli_num_rows($result);
-
+            $mailContent ="";
             for($i=1; $i<=$num; $i++){
                 $part=mysqli_fetch_array($result);
 
@@ -81,6 +81,7 @@ if (isset($_GET['success'])) {
                 
    
                 print("<tr><td>$title</td> <td>$price $unit</td> <td>$quantity</td></tr>");
+                $mailContent = $mailContent."<tr><td>$title</td> <td>$price $unit</td> <td>$quantity</td></tr>";
             }
             
             ?>
@@ -109,6 +110,7 @@ if (isset($_GET['success'])) {
             
             $result01=mysqli_query($db,$sql01) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
             $part01 = mysqli_fetch_array($result01);
+
             $customerEmail = $part01["email"];
             $customerFirstName = $part01["firstName"];
             $customerLastName = $part01["lastName"];
@@ -138,34 +140,10 @@ if (isset($_GET['success'])) {
                         <strong>Bestiller:</strong> $customerFirstName $customerLastName</p>
                         <hr>
                         <h3>Din Ordre:</h3>
-                        <?php
+                            <table>"
+                            .$mailContent."
                         
-                        $sql=   'SELECT products.title, products.price, products.unit, productsOrders.quantity, orders.status
-                                FROM products
-                                INNER JOIN productsOrders
-                                ON products.productID = productsOrders.productID
-                                INNER JOIN orders
-                                on productsOrders.orderID = orders.orderID
-                                where orders.orderID = $orderID;';
-
-                                $result = mysqli_query($db,$sql) or die('Kan ikke hente produkter akkurat nå.');
-                                $num = mysqli_num_rows($result);
-
-                               
-                            print('<table>');
-                            print('<tr> <th>Produkt</th> <th>Pris</th> <th>Antall</th></tr>');
-                            for($i=1; $i<=$num; $i++){
-                                $part=mysqli_fetch_array($result);
-
-                                $title = $part['title'];
-                                $price = $part['price'];
-                                $unit = $part['unit'];
-                                $quantity= $part['quantity'];
-                                $status = $part['status'];
-                                
-                
-                                print('<tr><td>$title</td> <td>$price $unit</td> <td>$quantity</td></tr>');
-                            }?>
+                        
                             </table>
                         
 
