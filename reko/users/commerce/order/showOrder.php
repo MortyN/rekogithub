@@ -140,10 +140,9 @@ if (isset($_GET['success'])) {
                         <strong>Bestiller:</strong> $customerFirstName $customerLastName</p>
                         <hr>
                         <h3>Din Ordre:</h3>
-                            <table>"
-                            .$mailContent."
-                        
-                        
+                            <table>
+                            <tr> <th>Produkt</th> <th>Pris</th> <th>Antall</th></tr>
+                            ".$mailContent."
                             </table>
                         
 
