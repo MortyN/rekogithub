@@ -57,31 +57,28 @@ if (isset($_GET['success'])) {
             </tr>
 
             <?php 
-            $sql=   "SELECT products.title, products.price, users.email, products.unit, productsOrders.quantity, orders.status
+            $sql=   "SELECT products.title, products.price, products.unit, productsOrders.quantity, orders.status
             FROM products
             INNER JOIN productsOrders
             ON products.productID = productsOrders.productID
             INNER JOIN orders
             on productsOrders.orderID = orders.orderID
-            INNER JOIN users
-            ON orders.customerID = users.userID
-            where orders.orderID = $orderID ;";
+            where orders.orderID = $orderID;";
 
             $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
             $num = mysqli_num_rows($result);
-            $part1=mysqli_fetch_array($result);
-            $customerEmail = $part1["email"];
 
             for($i=1; $i<=$num; $i++){
-                $part2=mysqli_fetch_array($result);
+                $part=mysqli_fetch_array($result);
 
-                $title2 = $part2["title"];
-                $price2 = $part2["price"];
-                $unit2 = $part2["unit"];
-                $quantity2= $part2["quantity"];
-                $status2 = $part2["status"];
-            
-                print("<tr><td>$title2</td> <td>$price2 $unit2</td> <td>$quantity2</td></tr>");
+                $title = $part["title"];
+                $price = $part["price"];
+                $unit = $part["unit"];
+                $quantity= $part["quantity"];
+                $status = $part["status"];
+                
+
+                print("<tr><td>$title</td> <td>$price $unit</td> <td>$quantity</td></tr>");
             }
             
             ?>
@@ -89,54 +86,20 @@ if (isset($_GET['success'])) {
         <form method="POST" action="">
         <select name ="status">
         <option value="">Status<option>
-            <?php current_status($status2); ?>
+            <?php current_status($status); ?>
         </select>
         <input type="submit" name="submit" value="lagre"/>
         </form>
         <?php 
-        
+        $confirm = $_GET['status'];
+        if($confirm == 'success'){
+            print ("<p>Status er oppdatert.</p>");
+        }
         if(isset($_POST["submit"])){
-
         $status1 = $_POST["status"];
-
         $sql2 = "UPDATE orders SET status = '$status1' WHERE orderID = '$orderID';";
         mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
-        
-        switch ($status1){
-            case "Bekreft":
-                $yourOrder ="<table>";
-
-                for($i=1; $i<=$num; $i++){
-                    $part4=mysqli_fetch_array($result);
-    
-                    $title4 = $part4["title"];
-                    $price4 = $part4["price"];
-                    $unit4 = $part4["unit"];
-                    $quantity4= $part["quantity"];
-                    
-                
-                   $yourOrder = $yourOrder."<tr><td>$title4</td> <td>$price4 $unit4</td> <td>$quantity4</td></tr>";
-                
-                }
-                $yourOrder = $yourOrder."</table>";
-
-                $mail->Subject = "$userFirstName $userLastName har bekreftet din ordre!";
-                $mail->Body = "$yourOrder";
-                $mail->AddAddress("hakonopheim@hotmail.com");
-            break;
-        }
-        if(!$mail->Send()) {
-            echo "Mailer Error: " . $mail->ErrorInfo;
-        } else {
-            echo "Message has been sent";
-        }
-        $mail->ClearAddresses();
-
-
-
         print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
-
-
         
         }
         ?>
