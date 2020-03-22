@@ -94,9 +94,46 @@ if (isset($_GET['success'])) {
       
         if(isset($_POST["submit"])){
         $status1 = $_POST["status"];
+
+
         $sql2 = "UPDATE orders SET status = '$status1' WHERE orderID = '$orderID';";
         mysqli_query($db,$sql2) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
-        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+        
+            $sql01 = "SELECT users.email, orders.orderID
+            from users
+            INNER JOIN orders
+            ON users.userID = orders.customerID
+            where orders.orderID = $orderID;";
+            
+            $result01=mysqli_query($db,$sql01) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&error=sql'>") and die;
+            $part01 = mysqli_fetch_array($result01);
+            $customerEmail = $part01["email"];
+
+
+        switch ($status1){
+            case "Bekreftet":
+                $mail->Subject = $userFirstName." ".$userLastName." har bekreftet orderen din!";
+                $mail->Body = "<strong>Testmail</strong>";
+                $mail->Altbody = "Ren tekst";
+                $mail->AddAddress("hakonopheim@hotmail.com"); 
+                break: 
+
+            case "Kanselert":
+                $mail->Subject = $userFirstName." ".$userLastName." har kanselert orderen din!";
+                $mail->Body = "<strong>Testmail</strong>";
+                $mail->Altbody = "Ren tekst";
+                $mail->AddAddress("hakonopheim@hotmail.com"); 
+                break: 
+        }   
+
+        if(!$mail->Send()) {
+            echo "Mailer Error: " . $mail->ErrorInfo;
+         } else {
+            echo "Message has been sent";
+         }
+         $mail->ClearAddresses();
+         
+        //print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
         
         }
         ?>
