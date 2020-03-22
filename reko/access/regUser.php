@@ -47,6 +47,9 @@
         if(!$firstName || !$lastName || !$eMail || !$password1 || !$rePassword || !$userName ){
             print("Du må fylle inn alle felt!");
         }
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Ugyldig email!"; 
+          }
         
         if($password1 != $rePassword){
             print("Passordene er ikke like!");

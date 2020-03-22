@@ -45,6 +45,9 @@ $selectedUserID = $_GET['userID'];
                 case "server":
                   echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
                 break;
+                case "email":
+                  echo "<p><strong>Ugyldig e-post</strong></p>";
+                break;
             }
             print("</div>");
           }
@@ -127,6 +130,10 @@ $selectedUserID = $_GET['userID'];
 
 
             if ($delIMG == "imagedel") {
+
+              if (!filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
+                echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=email&userID=$selectedUserID'>";
+              }
               
               // Oppdater alle felt i database, samt slette fil fra server
               $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='' WHERE userID = '$selectedUserID';";
@@ -146,6 +153,9 @@ $selectedUserID = $_GET['userID'];
 
             }
             if(!$delIMG){
+              if (!filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
+                echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=email&userID=$selectedUserID'>";
+              }
               $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', userID = '$selectedUserID' WHERE userID = '$selectedUserID';";      
               
               mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=sql&userID=$selectedUserID'>") and die;
