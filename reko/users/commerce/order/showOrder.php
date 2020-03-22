@@ -319,10 +319,15 @@ if (isset($_GET['success'])) {
             break;
         }   
 
-        $mail->Send();
+        if(!$mail->Send()){
+            print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+        }
+        else{
+            print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+        }
         $mail->ClearAddresses();
 
-        print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+        
         
         }
         ?>
