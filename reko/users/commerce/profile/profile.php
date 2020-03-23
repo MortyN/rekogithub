@@ -95,9 +95,7 @@
             umask($oldmask);
                 
         }
-        if (!filter_var($email1, FILTER_VALIDATE_EMAIL)) {
-          echo "Ugyldig email!" and die;
-        } 
+        
         if($fileName){
           
           
@@ -107,8 +105,11 @@
 
                 if($fileType != "image/gif" && $fileType != "image/jpeg" && $fileType != "image/jpg" && $fileType != "image/png" )
                 {
-                  print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?error=picture'/>");
+                  print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?error=picture'/>") and die;
                 }
+                if (!filter_var($email1, FILTER_VALIDATE_EMAIL)) {
+                  echo "Ugyldig email!" and die;
+                } 
                 if($profileIMG != $fileName)
                 {
 
