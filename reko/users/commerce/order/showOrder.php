@@ -324,7 +324,8 @@ if (isset($_GET['success'])) {
            print("Funker ikke");
         }
         else{
-            print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+            //print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+            print("mail skal være sendt.");
         }
         $mail->ClearAddresses();
 
