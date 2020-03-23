@@ -96,7 +96,7 @@
                 
         }
         if (!filter_var($email1, FILTER_VALIDATE_EMAIL)) {
-          echo "<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?error=email'/>" and die;
+          echo "Ugyldig email!" and die;
         } 
         if($fileName){
           
