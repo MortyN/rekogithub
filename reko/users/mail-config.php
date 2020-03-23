@@ -8,7 +8,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 
    
    $mail->SMTPAuth = true; // authentication enabled
-   //$mail->SMTPDebug = 2;
+   $mail->SMTPDebug = 2;
    $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
    $mail->Host = "reko.opheim.as";
    $mail->Port = 465; // or 587
