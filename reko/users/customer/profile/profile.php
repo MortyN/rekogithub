@@ -33,7 +33,7 @@
         case "server":
             echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
         break;
-        case "server":
+        case "email":
           echo "<p><strong>Ugyldig epost.</strong></p>";
       break;
         case "picture":
