@@ -141,10 +141,12 @@
                 if (!filter_var($email1, FILTER_VALIDATE_EMAIL)) {
                   echo "Ugyldig email!" and die;
                 } 
+                else{
                 
                 $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
                 mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?error=sql'/>") and die;
                 print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?success=updateOK'/>");
+                }
               }
             
         }
