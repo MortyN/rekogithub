@@ -114,6 +114,10 @@ if (isset($_GET['success'])) {
             $customerFirstName = $part01["firstName"];
             $customerLastName = $part01["lastName"];
 
+           
+            if (filter_var($email1, FILTER_VALIDATE_EMAIL)) {
+                
+              
             include ("../../mail-config.php");
            
 
@@ -327,10 +331,10 @@ if (isset($_GET['success'])) {
           
         }
         $mail->ClearAddresses();
+    } 
 
         
-        
-        }
+ }
         ?>
     </div>
 </div>
