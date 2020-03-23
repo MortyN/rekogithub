@@ -16,7 +16,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 
   
    $mail->Username = "noreply@reko.opheim.as";
-   $mail->Password = "rekodev69";
+   $mail->Password = "^c,Mq3Gx!#$%t[9";
    $mail->SetFrom("noreply@reko.opheim.as");
    
     ?>
