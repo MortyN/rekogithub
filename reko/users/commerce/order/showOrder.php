@@ -115,7 +115,7 @@ if (isset($_GET['success'])) {
             $customerLastName = $part01["lastName"];
 
            
-            if (filter_var($email1, FILTER_VALIDATE_EMAIL)) {
+            if (filter_var($customerEmail, FILTER_VALIDATE_EMAIL)) {
                 
               
             include ("../../mail-config.php");
