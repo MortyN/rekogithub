@@ -7,8 +7,7 @@ $orderID = $_GET["orderID"];
 <div class="dashboard_content">
 <div class="innerContainerPrdOverview">
 <?php
- print($userFirstName);
- print($userLastName);
+
 
 
 
