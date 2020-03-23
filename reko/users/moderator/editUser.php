@@ -125,22 +125,23 @@ $selectedUserID = $_GET['userID'];
             $delIMG=$_POST['image'];
 
             
-            if (!filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
-              echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=email&userID=$selectedUserID'>" and die;
-            } 
+            
           
          
 
             if ($delIMG == "imagedel") {
 
               
-              
+              if (!filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
+                echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=email&userID=$selectedUserID'>" and die;
+              } 
+              else{
               // Oppdater alle felt i database, samt slette fil fra server
               $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', image='' WHERE userID = '$selectedUserID';";
               mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=sql&userID=$selectedUserID'>") and die;
 
               echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=updateOK&userID=$selectedUserID'>";
-
+              }
 
               
               
@@ -156,13 +157,14 @@ $selectedUserID = $_GET['userID'];
               if (!filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
                 echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=email&userID=$selectedUserID'>";
               }
+              else{
               $query = "UPDATE users SET firstName = '$newFirstName', lastName = '$newLastName', email = '$newEmail', userName = '$newUserName', role = '$newRole', status = '$newStatus', userID = '$selectedUserID' WHERE userID = '$selectedUserID';";      
               
               mysqli_query($db,$query) or ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=sql&userID=$selectedUserID'>") and die;
                   
               
               echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?success=updateOK&userID=$selectedUserID'>";
-              
+              }
             }
           }
           ?>
