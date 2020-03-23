@@ -332,6 +332,8 @@ if (isset($_GET['success'])) {
         }
         $mail->ClearAddresses();
     } 
+    print ("<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK>");
+
 
         
  }
