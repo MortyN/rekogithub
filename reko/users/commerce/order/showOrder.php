@@ -331,7 +331,7 @@ if (isset($_GET['success'])) {
           
         }
         $mail->ClearAddresses();
-    } ¨
+    } 
 
         
  }
