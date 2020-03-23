@@ -8,7 +8,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 
    
    $mail->SMTPAuth = true; // authentication enabled
-   $mail->SMTPDebug = 2;
+   
    $mail->SMTPSecure = 'tls';
    $mail->Host = 'smtp.gmail.com';
    $mail->Port = 587;
