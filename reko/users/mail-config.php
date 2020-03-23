@@ -10,14 +10,15 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
    $mail->SMTPAuth = true; // authentication enabled
    $mail->SMTPDebug = 2;
    $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-   $mail->Host = "reko.opheim.as";
-   $mail->Port = 465; // or 587
+   $mail->Host = 'smtp.gmail.com';
+   $mail->Port = 587;
+   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
    $mail->IsHTML(true);
    $mail->CharSet = 'UTF-8';
 
   
-   $mail->Username = "noreply@reko.opheim.as";
-   $mail->Password = "^c,Mq3Gx!#$%t[9";
-   $mail->SetFrom("noreply@reko.opheim.as");
+   $mail->Username = "rekodevtest@gmail.com";
+   $mail->Password = "Rekodevgruppe69!";
+   $mail->SetFrom("rekodevtest@gmail.com");
    
     ?>
