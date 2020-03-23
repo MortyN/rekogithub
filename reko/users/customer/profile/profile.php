@@ -33,6 +33,9 @@
         case "server":
             echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
         break;
+        case "server":
+          echo "<p><strong>Ugyldig epost.</strong></p>";
+      break;
         case "picture":
           echo "<p><strong>Filen må være et bilde.</strong></p>";
       break;
@@ -99,7 +102,11 @@
         }
 
         if($fileName){
-          print($fileType);
+          if (!filter_var($email1, FILTER_VALIDATE_EMAIL)) {
+            echo "<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=email'/>" and die;
+          } 
+          else{
+         
             
                 $newPath="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
         
@@ -124,6 +131,7 @@
                           print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=sql'/>");
                           unlink($newPath) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=server'/>") and die;
                         }
+                      
                 }
                 if($profileIMG == $fileName)
                   {
@@ -131,14 +139,20 @@
                       mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=sql'/>") and die;
                       print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?success=updateOK'/>");
                   }
+                }
                 
           }
           else
               {
+                if (!filter_var($email1, FILTER_VALIDATE_EMAIL)) {
+                  echo "<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=email'/>" and die;
+                } 
+                else{
                 $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
                 mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=sql'/>") and die;
                 print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?success=updateOK'/>");
               }
+            }
         }
           ?>
   </div>

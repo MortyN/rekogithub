@@ -30,6 +30,9 @@
       case "server":
           echo "<p><strong>Kan ikke oppdatere på serveren. </strong></p>";
       break;
+      case "email":
+        echo "<p><strong>Ugyldig email.</strong></p>";
+    break;
       }
     print("</div>");
   }
@@ -94,6 +97,10 @@
         }
 
         if($fileName){
+          if (!filter_var($email1, FILTER_VALIDATE_EMAIL)) {
+            echo "<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?error=email'/>" and die;
+          } 
+          else{
             
                 $newPath="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
         
@@ -125,14 +132,20 @@
                       mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?error=sql'/>") and die;
                       print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?success=updateOK'/>");
                   }
+                }
                 
           }
           else
               {
+                if (!filter_var($email1, FILTER_VALIDATE_EMAIL)) {
+                  echo "<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?error=email'/>" and die;
+                } 
+                else{
                 $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
                 mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?error=sql'/>") and die;
                 print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/profile.php?success=updateOK'/>");
               }
+            }
         }
           ?>
   </div>

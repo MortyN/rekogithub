@@ -93,6 +93,10 @@ if (isset($_GET['success'])) {
         }
 
         if($fileName){
+          if (!filter_var($email1, FILTER_VALIDATE_EMAIL)) {
+            echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/editUser.php?error=email&userID=$selectedUserID'>" and die;
+          } 
+          else{
             
                 $newPath="/var/www/html/www/sda/reko/img/users/".$userID.'/'.$fileName;
         
@@ -124,14 +128,20 @@ if (isset($_GET['success'])) {
                       mysqli_query($db,$sql) or die ("<br><p>Kunne ikke oppdatere databasen!</p>");
                       print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
                   }
+                }
                 
           }
           else
               {
+                if (!filter_var($email1, FILTER_VALIDATE_EMAIL)) {
+                  echo "<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=0'/>" and die;
+                } 
+                else{
                 $sql= "UPDATE users SET firstName ='$firstName1',lastName ='$lastName',email='$email1',phoneNumber='$phone1' WHERE userID='$userID';";
                 mysqli_query($db,$sql) or die ("ikke mulig &aring; endre data i databasen");
                 print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/moderator/profile.php?status=1'/>");
               }
+            }
         }
           ?>
   </div>
