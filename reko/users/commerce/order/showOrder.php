@@ -320,12 +320,12 @@ if (isset($_GET['success'])) {
         }   
 
         if(!$mail->Send()){
-           // print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID'/>");
-           print("Funker ikke");
+           print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+           
         }
         else{
-            //print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
-            print("mail skal være sendt.");
+            print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
+          
         }
         $mail->ClearAddresses();
 
