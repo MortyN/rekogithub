@@ -320,7 +320,8 @@ if (isset($_GET['success'])) {
         }   
 
         if(!$mail->Send()){
-            print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID'/>");
+           // print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID'/>");
+           print("Funker ikke");
         }
         else{
             print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID&success=updateOK'/>");
