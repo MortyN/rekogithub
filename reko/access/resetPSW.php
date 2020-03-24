@@ -23,7 +23,7 @@
 
 
         <?php
-        include("login_function/resetPassword.php");
+        
          
         if (isset($_POST["logInButtom"])){
             $token = $_GET['587'];
