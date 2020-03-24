@@ -28,7 +28,7 @@ for($x=1;$x <= $xRows; $x++){
             print("<a href='profile.php?ID=".$userID."'><img src='../img/default-profile.jpg'></a>");
         }
         else{
-            print("<a href='profile.php?ID=".$userID."'><img src='../img/".$userID.'/'.$image."'></a>");
+            print("<a href='profile.php?ID=".$userID."'><img src='../img/users/".$userID.'/'.$image."'></a>");
         }
 
     ?>
