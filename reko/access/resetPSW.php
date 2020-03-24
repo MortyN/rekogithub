@@ -12,11 +12,11 @@
         <a href="../index.php"><img class="login_logo" src="../img/rekologo.png" alt="Reko logo"></a>
             <div class="loginForm">
                 <form method="POST" action="" name="loginForm">
-                    <a>Brukernavn eller E-post:</a><br>
-                    <input type="text" name="userName-Email" id="userName-Email" required/><br><br>
-                    <a>Passord:</a><br>
+                    <a>Nytt passord:</a><br>
                     <input type="password" name="password" id="password" require/><br>
-                    <input type="submit" value="Logg inn!" name="logInButtom" /><br>
+                    <a>Gjenta nytt passord:</a><br>
+                    <input type="password" name="rePassword" id="rePassword" require/><br>
+                    <input type="submit" value="Tilbakestill" name="resetPassword" /><br>
 
 
             
@@ -26,6 +26,24 @@
         include("login_function/loginFunction.php");
          
         if (isset($_POST["logInButtom"])){
+            $token = $_GET['587'];
+
+            $password=$_POST["password"];
+            $rePassword=$_POST["rePassword"];
+
+            if ($password != $rePassword){
+                print("Passordene er ikke like.");
+            }
+            else{
+                $cryptPassword = password_hash($password,PASSWORD_DEFAULT);
+
+                $sql = "UPDATE users SET password ='$cryptPassword', token = '' WHERE token = '$token';";
+                mysqli_query($db,$sql) or die ("Kan ikke tilbakestille passord.");
+                print("Passordet er oppdatert");
+                print("<br><a href='login.php'>Klikk her for å logge inn!</a>");
+            }
+
+
            
         }
 
