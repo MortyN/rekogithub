@@ -48,7 +48,7 @@
                 $resetLink = "http://opheimpi.zapto.org/www/sda/reko/access/resetPSW.php?token=".$token;
                 
 
-                $mail->Subject = "Tilbakestilling av passord.";
+                $mail->Subject = "Tilbakestilling av passord";
                 $mail->Body ="
                 <html>
                 <body>
