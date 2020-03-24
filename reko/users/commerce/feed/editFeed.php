@@ -72,13 +72,13 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
             Da vil all teksten du skriver nå bli lagret, slik at du slepper å skrive alt på nytt.</p>
     </div>
         <input type="txt" placeholder="OVERSKRIFT" class="item2" name="heading0" required/>
-        <textarea class="item3" placeholder="Velkommen til vår gård! Her har vi 10 kuer ... Det du skriver her vil komme på din hovedside." rows="1" cols="50" wrap="physical" name="mainText0" required></textarea>
+        <textarea class="item3" white-space="nowrap" placeholder="Velkommen til vår gård! Her har vi 10 kuer ... Det du skriver her vil komme på din hovedside." rows="1" cols="50" wrap="physical" name="mainText0" required></textarea>
         <div class="item4">
             <h4> Innstillinger</h4> 
             <h5> Velg et bilde:</h5>
             <input type="file" id="file" class="postIMG" name="file" />
             <h5> Skriv en kort tekst:</h5>
-            <textarea required class="shortText" placeholder="Det du skriver her vil komme i nyhetsfeeden.  Skriv kort og enkelt!" rows="1" cols="50" wrap="physical" name="shortText0"></textarea>
+            <textarea required white-space="nowrap" class="shortText" placeholder="Det du skriver her vil komme i nyhetsfeeden.  Skriv kort og enkelt!" rows="1" cols="50" wrap="physical" name="shortText0"></textarea>
             <h5> Oppdater status:</h5>
             <select name="status0">
                 <option value="">Status</option>
