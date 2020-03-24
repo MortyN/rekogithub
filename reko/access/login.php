@@ -74,6 +74,13 @@ $del = mysqli_fetch_array($sqlQuery);
 
         <?php
         include("login_function/loginFunction.php");
+        if (isset($_GET['msg'])) {
+        $msg = $_GET['msg'];
+        if($msg == "mail"){
+            print("Sjekk mail for å tilbakestille passord.");
+        }
+        
+        }
          
         if (isset($_POST["logInButtom"])){
             $logInUserName=$_POST["userName-Email"];
