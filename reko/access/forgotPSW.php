@@ -35,7 +35,7 @@
             if($userExist){
 
                 $token = bin2hex(random_bytes(30));
-                $sql = "UPDATE users SET token = token WHERE userName = '$userName_Email' or email = '$userName_Email';";
+                $sql = "UPDATE users SET token = $token WHERE userName = '$userName_Email' or email = '$userName_Email';";
                 print($sql);
                 $sqlQuery = mysqli_query($db,$sql) or die("Ikke mulig &aring; hente data fra databasen ");
 
