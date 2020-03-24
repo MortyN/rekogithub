@@ -33,7 +33,25 @@ function control($logInUserName,$logInPassword){
 }
 return $result;
 
+}
+function emailUsernameExist($userName_Email){
+    include("/var/www/html/www/sda/reko/db/connect.php");
 
+    $sql="SELECT * FROM users WHERE userName='$logInUserName' or email='$logInUserName';";
+    $sqlQuery=mysqli_query($db,$sql) or die("Ikke mulig &aring; hente data fra databasen (#300)");
 
+    $rows = mysqli_num_rows($sqlQuery);
+    $result = true;
+
+    if(!$userName_Email){
+        $result=false;
+    }
+    if($rows <= 0){
+        $result = false;
+    }
+    else{
+        $result = true;
+    }
+    return $result;
 
 }

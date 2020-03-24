@@ -66,6 +66,7 @@ $del = mysqli_fetch_array($sqlQuery);
                     <a>Passord:</a><br>
                     <input type="password" name="password" id="password" require/><br>
                     <input type="submit" value="Logg inn!" name="logInButtom" /><br>
+                    <a href="forgotPSW.php">Glemt passord?</a>
 
 
             
