@@ -23,7 +23,15 @@ for($x=1;$x <= $xRows; $x++){
     $lastName = $part["lastName"];
     ?>
     <div class="grid-item">
-      <a href="profile.php?ID=<?php print($userID);?>"><img src="../img/users/<?php print($userID.'/'.$image);?>"></a>
+        <?php
+        if(!$image){
+            print("<a href='profile.php?ID=".$userID."'><img src='../img/default-profile.jpg'></a>");
+        }
+        else{
+            print("<a href='profile.php?ID=".$userID."'><img src='../img/".$userID.'/'.$image."'></a>");
+        }
+
+    ?>
         <h2><a href='profile.php?ID=<?php print($userID);?>'><?php print($firstName.' '.$lastName);?></a><h2>
     </div>
     <?php
