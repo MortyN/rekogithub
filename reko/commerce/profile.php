@@ -16,7 +16,7 @@ for($i=1;$i <= $xRows; $i++ ){
     $part = mysqli_fetch_array($result);
         $firstName = $part["firstName"];
         $lastName = $part["lastName"];
-        $mainText = $part["mainText"];
+        $mainText = nl2br($part["mainText"]);
         $postIMG = $part["picture"];
         $title = $part["title"];
 ?>
