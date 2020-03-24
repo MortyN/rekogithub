@@ -35,7 +35,7 @@
             if($userExist){
                 $sql01 = "SELECT email FROM users WHERE userName = '$userName_Email' or email = '$userName_Email';";
                 $result01 = mysqli_query($db,$sql01) or die ("Kan ikke hente epost");
-                $part = mysql_fetch_array($result01);
+                $part = mysqli_fetch_array($result01);
 
                 $email = $part["email"];
 
