@@ -68,7 +68,7 @@
       <input type="text" id="phone" name="phone" value="<?php print($phone); ?>"><br>
       <?php
       if(!$image){
-        print("<a href='profile.php?ID=".$userID."'><img src='/www/sda/reko/img/default-profile.jpg'></a>");
+        print("<img src='/www/sda/reko/img/default-profile.jpg'></a>");
       }
       else{
         print("<img src='/www/sda/reko/img/users/".$userID."/".$image."'/>");
