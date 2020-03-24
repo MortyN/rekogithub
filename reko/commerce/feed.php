@@ -28,15 +28,15 @@ print("<div class='feed_container'>");
                     <div class="profileInfo">
                     <?php
                             if(!$profileIMG){
-                                print("<a href='profile.php?ID=".$userID."><img src='../img/default-profile.jpg'/> </a>");
+                                print("<a href='profile.php?ID=".$userID."'><img src='../img/default-profile.jpg'/> </a>";
                                 
                             }
                             else{
-                                print("<a href='profile.php?ID=".$userID."><img src='../img/users/".$userID."/".$profileIMG."'/> </a>");
+                                print("<a href='profile.php?ID=".$userID."'><img src='../img/users/".$userID."/".$profileIMG."'/> </a>";
                             }
 
                             ?>
-                                   
+                                     
                                  <p> <?php print($firstName." ".$lastName); ?> </p>
                     </div>
                                 <div class="content">
