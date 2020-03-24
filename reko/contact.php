@@ -23,9 +23,17 @@ for($x=1;$x <= $xRows; $x++){
     $lastName = $part["lastName"];
     $email = $part["email"];
     $phoneNumber = $part["phoneNumber"];
+
+    
     ?>
     <div class="grid-item">
-      <img src="img/users/<?php print($userID.'/'.$image);?>"/>
+      <?php 
+      if(!$image){
+        print("<img src='img/default-profile.jpg'/>");
+      }
+      else{
+        print("<img src='img/users/".$userID."/".$image."'/>");
+      } ?>
         <h2><a><?php print($firstName.' '.$lastName);?></a><h2>
         <p>Email:<?php print($email);?></p>
         <p>Tlf:<?php print($phoneNumber);?></p>
