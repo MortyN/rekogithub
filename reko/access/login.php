@@ -77,7 +77,7 @@ $del = mysqli_fetch_array($sqlQuery);
         if (isset($_GET['msg'])) {
         $msg = $_GET['msg'];
         if($msg == "mail"){
-            print("Sjekk mail for å tilbakestille passord.");
+            print("<br>Sjekk mail for å tilbakestille passord.");
         }
         
         }
@@ -89,7 +89,7 @@ $del = mysqli_fetch_array($sqlQuery);
             $logInControl=control($logInUserName,$logInPassword);
     
             if(!$logInControl){
-                print("Ingen treff på epost/brukernavn eller passord!");
+                print("<br>Ingen treff på epost/brukernavn eller passord!");
             }
             
             else{
