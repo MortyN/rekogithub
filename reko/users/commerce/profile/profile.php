@@ -68,10 +68,10 @@
       <input type="text" id="phone" name="phone" value="<?php print($phone); ?>"><br>
       <?php
       if(!$image){
-        print("<img src='/www/sda/reko/img/default-profile.jpg'></a>");
+        print("<img src='/www/sda/reko/img/default-profile.jpg' height='100px'/></a>");
       }
       else{
-        print("<img src='/www/sda/reko/img/users/".$userID."/".$image."'/>");
+        print("<img src='/www/sda/reko/img/users/".$userID."/".$image."' height='100px'/>");
       }
 
       ?>
