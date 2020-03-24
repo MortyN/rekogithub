@@ -24,6 +24,7 @@
 
         <?php
         include("login_function/loginFunction.php");
+        include("../db/connect.php");
          
         if (isset($_POST["resetPassword"])){
             $userName_Email = $_POST['userName-Email'];
