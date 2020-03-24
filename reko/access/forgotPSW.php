@@ -33,6 +33,7 @@
             
 
             if($userExist){
+                include ("../users/mail-config.php");
                 $sql01 = "SELECT email FROM users WHERE userName = '$userName_Email' or email = '$userName_Email';";
                 $result01 = mysqli_query($db,$sql01) or die ("Kan ikke hente epost");
                 $part = mysqli_fetch_array($result01);
