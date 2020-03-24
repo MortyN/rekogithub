@@ -21,7 +21,7 @@ for($x=1;$x <= $xRows; $x++){
     $image = $part["image"];
     $firstName = $part["firstName"];
     $lastName = $part["lastName"];
-    ?>
+    ?> 
     <div class="grid-item">
         <?php
         if(!$image){
