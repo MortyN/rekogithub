@@ -30,13 +30,13 @@
             $userName_Email = $_POST['userName-Email'];
             
             $userExist = emailUsernameExist($userName_Email);
-            print("Test - Feil validering");
+            
 
             if($userExist){
 
                 $token = bin2hex(random_bytes(30));
-                $sql = "UPDATE users SET token = $token WHERE userName = '$userName_Email' or email = '$userName_Email';";
-                print($sql);
+                $sql = "UPDATE users SET token = '$token' WHERE userName = '$userName_Email' or email = '$userName_Email';";
+                
                 $sqlQuery = mysqli_query($db,$sql) or die("Ikke mulig &aring; hente data fra databasen ");
 
                 $resetLink = "http://opheimpi.zapto.org/www/sda/reko/access/resetPSW.php?".$token;
