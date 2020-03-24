@@ -15,7 +15,7 @@ print("<div class='feed_container'>");
             $firstName = $part["firstName"];
             $lastName = $part["lastName"];
             $profileIMG = $part["profileIMG"];
-            $shortText = $part["shortText"];
+            $shortText = nl2br($part["shortText"]);
             $postIMG = $part["postIMG"];
             $userID = $part["userID"];
             
