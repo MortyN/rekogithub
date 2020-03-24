@@ -49,9 +49,7 @@
 
 ?>
 </div>
-            <div class="login_footer">
-                <a href="regUser.php"> Har du ikke en bruker? - Registrer deg nå!</a>
-            </div>
+            
         </div>
     </body>
 </html>
