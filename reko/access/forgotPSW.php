@@ -33,6 +33,11 @@
             
 
             if($userExist){
+                $sql01 = "SELECT email FROM users WHERE userName = '$userName_Email' or email = '$userName_Email';";
+                $result01 = mysqli_query($db,$sql01) or die ("Kan ikke hente epost");
+                $part = mysql_fetch_array($result01);
+
+                $email = $part["email"];
 
                 $token = bin2hex(random_bytes(30));
                 $sql = "UPDATE users SET token = '$token' WHERE userName = '$userName_Email' or email = '$userName_Email';";
@@ -42,14 +47,114 @@
                 $resetLink = "http://opheimpi.zapto.org/www/sda/reko/access/resetPSW.php?".$token;
                 
 
-                //Generer token #
-                //Last opp token til db
-                //Generer link til resetPWS.php med token
-                //Lag og send mail med link. 
+                $mail->Subject = $userFirstName." ".$userLastName." har bekreftet orderen din!";
+                $mail->Body ="
+                <html>
+                <body>
+                <head>
+                <meta charset='UTF-8'/>
+                </head>
+                <div class='container'>
+                <div class='innerContainer'>
+                        <a href ='http://opheimpi.zapto.org'><img class='logo'src='http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png'/></a>
+                        <hr>
+                        <h1>Tilbakestilling av passord</h1>
+                        <h2>Trykk på linken under for å tilbakestille ditt passord:</h2>
+                        <hr>
+                        <a href='$resetLink'>$resetLink</a>
+                        <hr>
+                        
+                        
+
+                        <p class='footerStrong'><strong>Hvis du ikke har bedt om denne mailen, kan du bare se bort i fra denne.<br>
+                        Dersom du fortsatt har problemer med å logge in, ber vi deg ta kontakt med en av våres kontaktpersoner.</strong></p><br><br>
+
+                        <p class='footerText'>Denne mailen kan ikke besvares. Ønsker du å ta kontakt,<br>
+                        <a href='http://opheimpi.zapto.org/contact.php'>kontakt en av våres kontaktpersoner.</a></p>
+                </div>
+                </div>
+                </body>
+            <style>
+                body{
+                    background-color:lightgrey;
+                }
+                .container{
+                    width:80vw;
+                    margin:50px auto;
+                    border: 3px solid green;
+                    background-color:white;
+                    padding:30px;
+                    
+                }
+                .innerContainer{
+                    width:90%;
+                    margin:0 auto;
+                }
+                .logo{
+                
+                    display: block;
+                    margin:0 auto;
+                    height: 100px;
+                    margin-bottom:20px;
+                    
+                }
+                h1,h2{
+                    text-align: center;
+                font-size:;
+                }
+                table{
+                text-align:center;
+                margin:0 auto;
+                width:95%;
+                border-collapse: collapse;
+                
+                
+                }
+                td, th{
+                border: 1px solid black;
+                margin:0;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                }
+                tr:nth-child(even)
+                {
+                background-color: #f2f2f2;
+                }
+                hr{
+                height: 2px;
+                border:none;
+                background-color:lightgrey;
+                }
+                .footerStrong{
+                    text-align:center;
+                    margin-top:40px;
+                }
+                .footerText{
+                text-align:center;
+                }
+
+            </style>
+            </html>";
 
 
 
+                
+                $mail->Altbody = "Ren tekst";
+                $mail->AddAddress($email); 
+                if(!$mail->Send()){
+                    print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/access/login.php?msg=mail'/>");
+                    
+                 }
+                 else{
+                    print("<meta http-equiv='refresh' content='1;URL=http://opheimpi.zapto.org/www/sda/reko/access/login.php?msg=mail'/>");
+                   
+                 }
+                 $mail->ClearAddresses();
 
+
+            }
+            else{
+                print("Ingen treff på brukernavn/epost!");
             }
             
             
