@@ -29,6 +29,7 @@
             $userName_Email = $_POST['userName-Email'];
             
             $userExist = emailUsernameExist($userName_Email);
+            print("Test - Feil validering");
 
             if($userExist){
 
