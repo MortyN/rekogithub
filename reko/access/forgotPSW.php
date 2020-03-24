@@ -25,7 +25,7 @@
         <?php
         include("login_function/loginFunction.php");
          
-        if (isset($_POST["logInButton"])){
+        if (isset($_POST["resetPassword"])){
             $userName_Email = $_POST['userName-Email'];
             
             $userExist = emailUsernameExist($userName_Email);
