@@ -45,7 +45,7 @@
                 
                 $sqlQuery = mysqli_query($db,$sql) or die("Ikke mulig &aring; hente data fra databasen ");
 
-                $resetLink = "http://opheimpi.zapto.org/www/sda/reko/access/resetPSW.php?token=".$token;
+                $resetLink = "http://opheimpi.zapto.org/www/sda/reko/access/resetPSW.php?587=".$token;
                 
 
                 $mail->Subject = "Tilbakestilling av passord";
