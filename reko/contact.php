@@ -33,7 +33,8 @@ for($x=1;$x <= $xRows; $x++){
       }
       else{
         print("<img src='img/users/".$userID."/".$image."'/>");
-      } ?>
+      } 
+      ?>
         <h2><a><?php print($firstName.' '.$lastName);?></a><h2>
         <p>Email:<?php print($email);?></p>
         <p>Tlf:<?php print($phoneNumber);?></p>

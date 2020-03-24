@@ -66,7 +66,16 @@
       <input type="text" id="email" name="email" value="<?php print($email); ?>"><br>
       <label for="lname">Telefon:</label><br>
       <input type="text" id="phone" name="phone" value="<?php print($phone); ?>"><br>
-      <img src="/www/sda/reko/img/users/<?php print($userID.'/'.$image);?>" height="100px"/>
+      <?php
+      if(!$image){
+        print("<a href='profile.php?ID=".$userID."'><img src='/www/sda/reko/img/default-profile.jpg'></a>");
+      }
+      else{
+        print("<img src='/www/sda/reko/img/users/".$userID."/".$image."'/>");
+      }
+
+      ?>
+      
       <input type="file" name="file"/><br>
       <input type="submit"  value="Endre" name="editProfile" id="editProfile">
 
