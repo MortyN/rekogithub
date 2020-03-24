@@ -67,7 +67,7 @@
       <label for="lname">Telefon:</label><br>
       <input type="text" id="phone" name="phone" value="<?php print($phone); ?>"><br>
       <?php
-      if($image==""){
+      if(!$image){
         print("<img src='/www/sda/reko/img/default-profile.jpg' height='100px'/></a>");
       }
       else{
