@@ -26,7 +26,17 @@ print("<div class='feed_container'>");
             <div class="post">
                         
                     <div class="profileInfo">
-                                <a href="profile.php?ID=<?php print($userID);?>"><img src="../img/users/<?php print($userID.'/'.$profileIMG);?>"/> </a>     
+                    <?php
+                            if(!$profileIMG){
+                                print("<a href='profile.php?ID=".$userID."><img src='../img/default-profile.jpg'/> </a>");
+                                
+                            }
+                            else{
+                                print("<a href='profile.php?ID=".$userID."><img src='../img/users/".$userID."/".$profileIMG."'/> </a>");
+                            }
+
+                            ?>
+                                   
                                  <p> <?php print($firstName." ".$lastName); ?> </p>
                     </div>
                                 <div class="content">
