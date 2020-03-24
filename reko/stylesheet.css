@@ -30,9 +30,6 @@ body {
   background-color: #655c56;
   height: 10vh;
   text-align: center;
-  position: sticky;
-  top: 0px;
-  z-index: 3;
 }
 button.Passordchange
 {
