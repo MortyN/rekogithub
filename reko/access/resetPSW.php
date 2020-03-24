@@ -26,7 +26,9 @@
         
          
         if (isset($_POST["resetPassword"])){
+            include("/var/www/html/www/sda/reko/db/connect.php");
             $token = $_GET['587'];
+            
 
             $password=$_POST["password"];
             $rePassword=$_POST["rePassword"];
