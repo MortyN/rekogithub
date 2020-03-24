@@ -25,7 +25,7 @@
         <?php
         
          
-        if (isset($_POST["logInButtom"])){
+        if (isset($_POST["resetPassword"])){
             $token = $_GET['587'];
 
             $password=$_POST["password"];
@@ -35,6 +35,7 @@
                 print("Passordene er ikke like.");
             }
             else{
+
                 $cryptPassword = password_hash($password,PASSWORD_DEFAULT);
 
                 $sql = "UPDATE users SET password ='$cryptPassword', token = '' WHERE token = '$token';";
