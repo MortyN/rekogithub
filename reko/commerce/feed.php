@@ -48,7 +48,7 @@ print("<div class='feed_container'>");
                                     </div>
 
                                 </div>
-                                <a href='profile.php?ID=<?php print($userID); ?>'><button class="feedBTN">Bestill nå!</button>
+                                <a href='profile.php?ID=<?php print($userID); ?>'><button class="feedBTN">Bestill nå!</button> 
                                 
 
 
