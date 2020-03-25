@@ -46,9 +46,10 @@ print("<div class='feed_container'>");
                                     <div class="ad_shortinfo">
                                         <p><?php print($shortText);?></p>
                                     </div>
+                                    <a href='profile.php?ID=<?php print($userID); ?>'><button class="feedBTN">Bestill nå!</button> 
 
                                 </div>
-                                <a href='profile.php?ID=<?php print($userID); ?>'><button class="feedBTN">Bestill nå!</button> 
+                                
                                 
 
 
