@@ -18,6 +18,7 @@ function control($logInUserName,$logInPassword){
     $regUserName=$xRows["userName"];
     $regEmail=$xRows["email"];
     $regPassword=$xRows["password"];
+    $status = $xRows['status'];
     $check = false;
 
     
@@ -25,6 +26,9 @@ function control($logInUserName,$logInPassword){
     $checkPassword = password_verify($logInPassword,$regPassword);
     if($regUserName != $logInUserName || $regEmail != $logInUserName && $checkPassword == false){
         
+        $result = false;
+    }
+    if($status == 0){
         $result = false;
     }
     else{
