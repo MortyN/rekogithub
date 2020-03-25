@@ -31,8 +31,17 @@ include("../control.php");
                 $unit= $part["unit"];
                 $status = $part["status"];
                 $productID = $part["productID"];
+                
+                switch ($status){
+                    case "Aktiv":
+                        $color = "green";
+                    break;
+                    case "Innaktiv":
+                        $color = "red";
+                    break;
+                }
 
-                print("<tr><td>$name</td> <td>$description</td> <td>$price</td> <td>$unit</td> <td>$status</td> <td><a href='/www/sda/reko/users/commerce/products/editProduct.php?prdID=$productID'>Rediger</a></td></tr>");
+                print("<tr><td>$name</td> <td>$description</td> <td>$price</td> <td>$unit</td> <td style='color:$color;'>$status</td> <td><a href='/www/sda/reko/users/commerce/products/editProduct.php?prdID=$productID'>Rediger</a></td></tr>");
             }
             ?>
         </table>
