@@ -28,7 +28,7 @@ function control($logInUserName,$logInPassword){
         
         $result = false;
     }
-    if($status == 0){
+    if(!$status){
         $result = false;
     }
     else{
