@@ -33,10 +33,10 @@ if($connectedUser){
         <div class="mainNav">
                 <a class="logoomrad" href="/www/sda/reko/index.php"><img src="/www/sda/reko/img/rekologo.png" alt="LOGO"/></a>          
                 <a href="/www/sda/reko/index.php">HJEM</a>
-                <a href="/www/sda/reko/commerce/feed.php">FEED</a>
+                <a href="/www/sda/reko/commerce/feed.php">ANNONSER</a>
                 <a href="/www/sda/reko/commerce/overview.php">LEVERANDØRER</a>
                 <a href="/www/sda/reko/contact.php">KONTAKTER</a>
-                <a href="/www/sda/reko/faq.php">FAQ</a>
+                <a href="/www/sda/reko/faq.php">HJELP</a>
                 <div class="dropdown">
                     <button class="dropbtn">MIN SIDE 
                     <i class="fa fa-caret-down"></i>
@@ -56,10 +56,10 @@ else{
         <div class="mainNav">
                 <a class="logoomrad" href="/www/sda/reko/index.php"><img src="/www/sda/reko/img/rekologo.png" alt="LOGO"/></a>          
                 <a href="/www/sda/reko/index.php">HJEM</a>
-                <a href="/www/sda/reko/commerce/feed.php">FEED</a>
+                <a href="/www/sda/reko/commerce/feed.php">ANNONSER</a>
                 <a href="/www/sda/reko/commerce/overview.php">LEVERANDØRER</a>
                 <a href="/www/sda/reko/contact.php">KONTAKTER</a>
-                <a href="/www/sda/reko/faq.php">FAQ</a>
+                <a href="/www/sda/reko/faq.php">HJELP</a>
                 <div class="dropdown">
                     <button class="dropbtn">MIN SIDE 
                     <i class="fa fa-caret-down"></i>
