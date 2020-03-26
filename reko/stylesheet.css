@@ -504,8 +504,8 @@ button.accordion:hover
 
 }
 .grid-item img{
-  height: 200px;
-  width:200px;
+  height: 10vw;
+  width: 10vw;
   object-fit: cover;
 }
 .grid-item h2{
