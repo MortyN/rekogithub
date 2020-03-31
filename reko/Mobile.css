@@ -87,6 +87,7 @@ body {
   .dropdown {
     float: left;
     overflow: hidden;
+    position: static;
   }
   .dropbtn {
     height : 10vh;
@@ -473,7 +474,7 @@ body {
   }
   .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     padding: 5px;
     width: 100%;
     margin: 0 auto;
@@ -500,7 +501,7 @@ body {
   .grid-item h2{
     font-size: 16px;
   }
-  
+  /*cmon*/
   /*footer*/
     footer {
       bottom: 0;
