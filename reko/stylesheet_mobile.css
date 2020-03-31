@@ -10,17 +10,10 @@ body {
   }
   .container button
   {
-    background-color: rgba(38, 38, 38, 0.7);
-    height:3vw;
-    width: 7vw;
-    border: 0;
-    color: white;
-  }
-  .container button:hover
-  {
-    cursor: pointer;
-    transition: 0.3s;
     background-color: green;
+    height:5vw;
+    width: 15vw;
+    border: 0;
     color: white;
   }
   
