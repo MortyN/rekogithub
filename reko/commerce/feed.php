@@ -55,10 +55,10 @@ print("<div class='feed_container'>");
                                     </a>
                                     <?php 
                                     if ( $orderCount == 1){
-                                        print("<p>".$orderCount." bestilling</p>"); 
+                                        print("<br><br><br><p>".$orderCount." bestilling</p>"); 
                                     }
-                                    if ($orderCount > 1){
-                                        print("<p>".$orderCount." bestillinger</p>"); 
+                                    if ($orderCount >{
+                                        print("<br><br><br><p>".$orderCount." bestillinger</p>"); 
                                     }
                                     ?>
 
