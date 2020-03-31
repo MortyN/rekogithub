@@ -53,7 +53,14 @@ print("<div class='feed_container'>");
                                     </div>
                                     <a href='profile.php?ID=<?php print($userID); ?>'><button class="feedBTN">Bestill nå!</button>
                                     </a>
-                                    <?php print("<p>".$orderCount." person(er) har bestilt varer fra leverandøren</p>"); ?>
+                                    <?php 
+                                    if ( $orderCount == 1){
+                                        print("<p>".$orderCount." bestilling</p>"); 
+                                    }
+                                    if ($orderCount > 1){
+                                        print("<p>".$orderCount." bestillinger</p>"); 
+                                    }
+                                    ?>
 
                             
                                 </div>                                
