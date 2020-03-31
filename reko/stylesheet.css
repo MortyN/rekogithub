@@ -556,7 +556,8 @@ button.accordion:hover
     grid-template-areas:
     "info info"
     "orders news"
-    "orders news" ;
+    "orders news"
+    "reset reset" ;
        
   }
   .dashboard_info
@@ -569,6 +570,18 @@ button.accordion:hover
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
     font-family: sans-serif;
+  }
+  .dashboard_feedReset{
+    border-style: solid;
+    min-height: 200px;
+    border-radius: 15px;
+    padding:10px;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    font-family: sans-serif;
+    
+/*hva gjør du in mIN HULE!?
+Må lage en ny boks på dashboard moderator bare :P. *RARE villager thinking sound*** HEM LYDER**/
   }
   .dashboard_orders
   {
