@@ -94,9 +94,10 @@ include("control.php");
              
         </div>
         <div class="dashboard_feedReset">
+            <h3>Nullstill annonser</h3>
 
 
-        
+
         </div>
 
     </div>
