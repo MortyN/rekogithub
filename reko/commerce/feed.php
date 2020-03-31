@@ -1,6 +1,6 @@
 <?php include("../meny.php"); 
 
-$sql="SELECT COUNT(orders.commerceID) AS 'antallOrdre', users.userID, users.firstName, users.lastName, users.image AS profileIMG, post.shortText, post.picture AS postIMG
+$sql="SELECT COUNT(orders.commerceID) AS 'orderCount', users.userID, users.firstName, users.lastName, users.image AS profileIMG, post.shortText, post.picture AS postIMG
 FROM orders
 INNER JOIN users
 ON users.userID=orders.commerceID
@@ -21,6 +21,7 @@ print("<div class='feed_container'>");
             $shortText = nl2br($part["shortText"]);
             $postIMG = $part["postIMG"];
             $userID = $part["userID"];
+            $orderCount = $part["orderCount"]
             
             ?>
 
@@ -50,7 +51,9 @@ print("<div class='feed_container'>");
                                         <p><?php print($shortText);?></p>
                                         
                                     </div>
-                                    <a href='profile.php?ID=<?php print($userID); ?>'><button class="feedBTN">Bestill nå!</button> 
+                                    <a href='profile.php?ID=<?php print($userID); ?>'><button class="feedBTN">Bestill nå!</button>
+
+                                    <?php print($orderCount); ?>
                                     
 
                                 </div>
