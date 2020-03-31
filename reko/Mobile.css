@@ -301,7 +301,7 @@ body {
     }
     .post{
       position:relative;
-      width:60%;
+      width:100%;
       min-height: 100px;
       margin-top: 50px;
       left: 2vw;
@@ -310,16 +310,11 @@ body {
     {
       position: relative;
       width:10vw;
-      height:3vw;
-      left:11.7vw;
+      height:5vw;
+      left:26vw;
+      font-size: 20px;
       margin-bottom:15px;
-      background-color: #94d3ac;
-    }
-    button.feedBTN:hover
-    {
-      transition: 0.3s;
       background-color: green;
-      cursor: pointer;
     }
   
   
@@ -340,13 +335,13 @@ body {
     }
     .profileInfo img
     {
-      width:5vw;
+      width:10vw;
       margin: 0 auto;
       margin-bottom: 10px;
       position:relative;
-      left:28vw;
+      left:26vw;
       object-fit: cover;
-      height: 5vw;
+      height: 10vw;
       border-radius: 50%;
       
     }
@@ -378,7 +373,7 @@ body {
       background-color: white;
       display: grid;
       grid-gap: 10px;
-      width: 100%;
+      width: 60vw;
       grid-template-areas:
       "bilde bilde bilde"
       "info info info"
@@ -389,7 +384,7 @@ body {
   -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   position: relative;
-  left: 12vw;
+  left: 0vw;
     }
     .ad__pic
     {
@@ -509,7 +504,7 @@ body {
     footer {
       bottom: 0;
       left: 0;
-      position: absolute;
+      position: fixed;
       text-align: center;
       width: 100%;
       background-color: #38332f;

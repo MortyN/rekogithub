@@ -1,12 +1,12 @@
 <?php include("../meny.php"); 
 
-$sql="SELECT SUM(orders.commerceID = '69') AS 'antallOrdre', users.userID, users.firstName, users.lastName, users.image AS profileIMG, post.shortText, post.picture AS postIMG
+$sql="SELECT COUNT(orders.commerceID) AS 'antallOrdre', users.userID, users.firstName, users.lastName, users.image AS profileIMG, post.shortText, post.picture AS postIMG
 FROM orders
 INNER JOIN users
 ON users.userID=orders.commerceID
 INNER JOIN post
 ON users.userID=post.userID
-WHERE post.category='Aktiv' and users.status='1'
+WHERE post.category='Aktiv' AND users.status='1'
 GROUP BY orders.commerceID
 ORDER BY RAND();";
 $result = mysqli_query($db,$sql) or die ("kan ikke laste feed");
