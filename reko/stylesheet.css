@@ -572,6 +572,7 @@ button.accordion:hover
     font-family: sans-serif;
   }
   .dashboard_feedReset{
+    grid-area:reset;
     border-style: solid;
     min-height: 200px;
     border-radius: 15px;
