@@ -480,7 +480,7 @@ body {
   }
   .grid-container {
     display: grid;
-    grid-template-columns: 16vw 16vw 16vw 16vw /*auto auto /*auto auto*/;
+    grid-template-columns: 18vw 18vw 18vw 18vw /*auto auto /*auto auto*/;
     padding: 5px;
     width: 100%;
     margin: 0 auto;
