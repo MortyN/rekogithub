@@ -74,6 +74,7 @@ else{
                     <div class="dropdown-content">
                     <a href="/www/sda/reko/access/login.php">LOGG INN</a>
                     <a href="/www/sda/reko/access/regUser.php">REGISTRER DEG</a>
+                    
                 </div> 
             </div>
          </div>
