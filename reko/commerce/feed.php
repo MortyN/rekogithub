@@ -52,13 +52,11 @@ print("<div class='feed_container'>");
                                         
                                     </div>
                                     <a href='profile.php?ID=<?php print($userID); ?>'><button class="feedBTN">Bestill nå!</button>
+                                    </a>
+                                    <?php print($orderCount "personer har bestilt varer fra leverandøren"); ?>
 
-                                    <?php print($orderCount); ?>
-                                    
-
-                                </div>
-                                
-                                
+                            
+                                </div>                                
 
 
             </div>
