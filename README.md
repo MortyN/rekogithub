@@ -1,6 +1,4 @@
 # rekogithub
-    reko private repository
-    backup
-dsa
-y   sdaJyKylling
- 
+    reko private repository 
+    
+
