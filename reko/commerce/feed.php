@@ -57,7 +57,7 @@ print("<div class='feed_container'>");
                                     if ( $orderCount == 1){
                                         print("<br><br><br><p>".$orderCount." bestilling</p>"); 
                                     }
-                                    if ($orderCount >{
+                                    if ($orderCount > 1){
                                         print("<br><br><br><p>".$orderCount." bestillinger</p>"); 
                                     }
                                     ?>
