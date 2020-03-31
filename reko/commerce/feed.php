@@ -1,14 +1,14 @@
 <?php include("../meny.php"); 
 
-$sql="SELECT COUNT(orders.commerceID) AS 'orderCount', users.userID, users.firstName, users.lastName, users.image AS profileIMG, post.shortText, post.picture AS postIMG
+$sql="SELECT COUNT(CASE WHEN orders.status != 'Arkivert' THEN orders.commerceID END) AS 'orderCount', users.userID, users.firstName, users.lastName, users.image AS profileIMG, post.shortText, post.picture AS postIMG
 FROM orders
 INNER JOIN users
 ON users.userID=orders.commerceID
 INNER JOIN post
 ON users.userID=post.userID
 WHERE post.category='Aktiv' AND users.status='1'
-GROUP BY orders.commerceID
-ORDER BY RAND();";
+GROUP BY orders.commerceID;";
+
 $result = mysqli_query($db,$sql) or die ("kan ikke laste feed");
 $xRows = mysqli_num_rows($result);
 print("<div class='feed_container'>");
