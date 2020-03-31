@@ -474,6 +474,10 @@ body {
   .grid-container {
     display: grid;
     grid-template-columns: 20vw 20vw 20vw;
+    grid-template-areas: 
+    'info info info info'
+    'heading heading heading toolbar'
+    'maintext maintext maintext toolbar';
     padding: 5px;
     width: 100%;
     margin: 0 auto;
