@@ -95,7 +95,29 @@ include("control.php");
         </div>
         <div class="dashboard_feedReset">
             <h3>Nullstill annonser</h3>
+                <p>Etter hver REKO-ring anbefaler vi å nullstille annonse oversikten. 
+                    Ved å trykke på denne knappen, blir alle innleggene fra samtlige leverandører fjernet fra oversikten.
+                    Dette er lurt å gjøre etter hver REKO-samling, for å unngå at leverandører har publiserte annonser som ikke lenger er relevante.
+                    Etter du har trykket på knappen under, må leverandørene selv logge inn på deres profilside for å endre og aktivere innlegget sitt igjen. 
+                 </p>
+                 <form action="" method="post" class="editNews">
+                 <input type="submit" name="resetFeed" value="Nullstill Annonser">
+            </form>
 
+            <?php 
+            if(isset($_POST['resetFeed'])){
+                
+                $sql = "UPDATE post SET category = 'Innaktiv' WHERE category = 'Aktiv';";
+                mysqli_query($db,$sql) or die ("Kan ikke nullstille annonser");
+            
+
+                $sql2 = "UPDATE orders SET status = 'Arkivert' WHERE status != 'Arkivert';";
+                mysqli_query($db,$sql2) or die ("Kan ikke nullstille annonser");
+                print("Annonsene er nå innaktive.");
+
+
+
+            }
 
 
         </div>

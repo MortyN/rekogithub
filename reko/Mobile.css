@@ -445,9 +445,9 @@ body {
   {
     border-style: solid;
     position: relative;
-    right: 6vw;
+    right: 16vw;
     border-radius: 20px;
-    width: 60vw;
+    width: 80vw;
     min-height: 30vw;
     background-color: white;
     margin-bottom: 10px;
@@ -458,7 +458,7 @@ body {
   /* da endrer jeg dette*/
   button.accordion
   {
-    width: 60vw;
+    width: 80vw;
     margin-top: 20px;
   }
   button.accordion:hover
@@ -472,6 +472,12 @@ body {
     position: relative;
     left: 10vw;
   }
+  .panel
+  {
+    padding-bottom: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr /*auto auto /*auto auto*/;
@@ -484,7 +490,7 @@ body {
     -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   }
-  
+
   .grid-item {
     padding: 20px;
     text-align:center;
