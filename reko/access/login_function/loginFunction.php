@@ -26,16 +26,16 @@ function control($logInUserName,$logInPassword){
     $checkPassword = password_verify($logInPassword,$regPassword);
     if($regUserName != $logInUserName || $regEmail != $logInUserName && $checkPassword == false){
         
-        $result = false;
+        return false;
     }
     if(!$status){
-        $result = false;
+        return false;
     }
     else{
         return true;
     }
 }
-return $result;
+
 
 }
 function emailUsernameExist($userName_Email){
