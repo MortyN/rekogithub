@@ -1,3 +1,3 @@
 # rekogithub
     reko private repository
-    backu
+    backup
