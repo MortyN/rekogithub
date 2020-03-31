@@ -10,7 +10,7 @@ include("/var/www/html/www/sda/reko/db/connect.php");
 <title>REKO - HORTEN</title>
 <link rel="icon" href="/www/sda/reko/img/rekologo.png">
 <link rel="stylesheet" href="/www/sda/reko/stylesheet.css">
-<!--<link rel="stylesheet" media="screen and (orientation:portrait)" href="/www/sda/reko/stylesheet_mobile.css">-->
+<link rel="stylesheet" media="screen and (orientation:portrait)" href="/www/sda/reko/stylesheet_mobile.css">
 
 
 
