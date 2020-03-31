@@ -87,7 +87,7 @@ for($i=1;$i <= $xRows; $i++ ){
                    
 
                 $sql02 = "INSERT INTO orders (commerceID,customerID,status,date) VALUES ($userPostID,$userID,'Venter','$newDate');";
-                print($sql02);
+                
                 
                 mysqli_query($db,$sql02) or die("Kan ikke opprette ordrenr");
                 
