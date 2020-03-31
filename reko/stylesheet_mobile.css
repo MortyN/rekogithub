@@ -11,8 +11,8 @@ body {
   .container button
   {
     background-color: green;
-    height:5vw;
-    width: 15vw;
+    height: 10vw;
+    width: 25vw;
     border: 0;
     color: white;
   }
