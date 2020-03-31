@@ -11,6 +11,9 @@ include("/var/www/html/www/sda/reko/db/connect.php");
 <link rel="icon" href="/www/sda/reko/img/rekologo.png">
 <link rel="stylesheet" media="screen and (orientation:landscape)" href="/www/sda/reko/stylesheet.css">
 <link rel="stylesheet" media="screen and (orientation:portrait)" href="/www/sda/reko/stylesheet_mobile.css">
+
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=no&theme=flying&always=1&noGeoIp=1&refreshPage=1&showNoConsent=1&hideDetailsBtn=1&showPolicyLink=1&remember=30&privacyPage=http%3A%2F%2Fopheimpi.zapto.org%2Fwww%2Fsda%2Freko%2Fpolicy.php"></script>
 </head>
