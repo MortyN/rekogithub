@@ -119,7 +119,7 @@ include("control.php");
 
             }
 
-
+?>
         </div>
 
     </div>
