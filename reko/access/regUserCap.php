@@ -48,7 +48,7 @@
 
                     <input type="submit" value="Registrer!" name="submit" /><br>
 
-                  
+                  </form>
            
 
 <?php
@@ -74,7 +74,7 @@
         if($password1 != $rePassword){
             print("Passordene er ikke like!") and die; 
         }
-        
+
         if(isset($_POST['g-recaptcha-response'])){
             $captcha=$_POST['g-recaptcha-response'];
           }
