@@ -138,6 +138,7 @@ button.Passordchange:hover
     display: block;
     text-align: left;
     font-size: 1vw;
+    white-space: nowrap;
 }
 
 .dropdown-content a:hover {
