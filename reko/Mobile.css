@@ -640,6 +640,7 @@ button.accordion:hover
     background-color: green;
     position: relative;
     left: 20vw;
+    font-size: 3vw;
   }
   .dashboard_news
   {
