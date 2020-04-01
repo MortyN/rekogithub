@@ -62,7 +62,7 @@
 
         if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){ 
 
-                 
+               Print("Kjører captcha <br>");  
             // Verify the reCAPTCHA response 
             $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']); 
              
@@ -105,7 +105,7 @@
         }
         else{
             print("Du er en robot!! :O ");
-            //Feil melding//
+            //Feil melding//    
         }
     
     }
