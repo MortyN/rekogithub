@@ -179,7 +179,7 @@
           $sql_delete_post ="DELETE FROM post where userID = $userID;";
           mysqli_query($db,$sql_delete_post) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
           $sql_delete_user ="DELETE FROM users WHERE userID = $userID;";
-          mysqli_query($db,$sql_delete_user or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
+          mysqli_query($db,$sql_delete_user) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
           print("Brukeren er slettet.");
 
         }
