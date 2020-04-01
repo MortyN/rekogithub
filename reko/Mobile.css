@@ -24,6 +24,7 @@ body {
   background-color: #655c56;
   height: 10vh;
   text-align: center;
+  width: 100vw;
 }
 button.Passordchange
 {
@@ -66,10 +67,10 @@ button.Passordchange:hover
 }
 .mainNav img
 {
-  width: 4vw;
+  width: 10vw;
   float: left;
   position:relative;
-  bottom:2.7vh;
+  bottom:50px;
   margin: 0 1.5%;
 }
 .mainNav a {
@@ -80,7 +81,7 @@ button.Passordchange:hover
   padding: 4vh 16px;
   text-decoration: none;
   height : 10vh;
-  width: 10%;
+  width: 11vw;
 }
 
 
@@ -99,10 +100,11 @@ button.Passordchange:hover
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 4vh 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  width: 12vw;
 }
 
 .mainNav a:hover, .dropdown:hover .dropbtn {
@@ -129,6 +131,10 @@ button.Passordchange:hover
   text-decoration: none;
   display: block;
   text-align: left;
+  white-space: nowrap;
+  position: relative;
+  height: 2vh;
+  right: 10px;
 }
 
 .dropdown-content a:hover {
