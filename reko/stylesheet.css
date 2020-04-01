@@ -33,7 +33,7 @@ body {
 }
 button.Passordchange
 {
-  width: 30vw;
+  width: 50%;
   background-color: #94d3ac;
   padding: 10px 8px;
   border: none;
@@ -881,8 +881,48 @@ padding: 8px;
 width:80%;
 padding:20px;
 margin:0 auto;
-
 }
+input#editProfile
+{
+  background-color: #94d3ac;
+    width: 50%;
+    color: black;
+    padding: 10px 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+input#editProfile:hover
+{
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: green;
+  color: white;
+}
+
+input#delete
+{
+  background-color: #ff8080;
+    width: 50%;
+    color: black;
+    padding: 10px 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+input#delete:hover
+{
+  cursor: pointer;
+  transition: 0.3s;
+background-color: red;
+color:white
+}
+
+
 
 .prdOverview_container{
 position: relative;

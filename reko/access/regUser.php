@@ -5,7 +5,12 @@
     <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-   
+
+   <?php 
+   $sitekey = '6LdwzeUUAAAAALPDLyDOm1qRsZx-VWmPhgAwgFgt';
+   $secretkey = '6LdwzeUUAAAAAASNXh9LqUch-41b7jSmLE1ZgYco'; 
+   ?>
+
     <body class="loginBody">
         
         <div class="logInContainer">
@@ -27,6 +32,7 @@
                     <input type="password" name="rePassword" id="rePassword" required/><br><br>
                         
                     <input type="submit" value="Registrer!" name="submit" /><br>
+                    <div class="g-recaptcha" data-sitekey="<?php echo $sitekey;?>"></div>
 
                   
            
@@ -54,7 +60,19 @@
         if($password1 != $rePassword){
             print("Passordene er ikke like!") and die; 
         }
-        else{
+
+        if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){ 
+
+                 
+            // Verify the reCAPTCHA response 
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']); 
+             
+            // Decode json data 
+            $responseData = json_decode($verifyResponse); 
+             
+            // If reCAPTCHA response is valid 
+            if($responseData->success){
+
         $sql = "SELECT * FROM users WHERE userName='$userName';"; 
         $sqlQuery=mysqli_query($db,$sql) or die ("Ikke mulig &aring; hente data fra databasen! (#reg1)");
         $rows=mysqli_num_rows($sqlQuery); /*Returnerer antall ganger bruker er registrert fra før*/
