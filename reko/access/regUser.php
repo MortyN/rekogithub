@@ -69,7 +69,7 @@
              
             // If reCAPTCHA response is valid 
             if($responseData->success){
-
+                print("successsssss");
                 $sql = "SELECT * FROM users WHERE userName='$userName';"; 
                 $sqlQuery=mysqli_query($db,$sql) or die ("Ikke mulig &aring; hente data fra databasen! (#reg1)");
                 $rows=mysqli_num_rows($sqlQuery); /*Returnerer antall ganger bruker er registrert fra før*/
