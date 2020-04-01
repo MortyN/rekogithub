@@ -1,7 +1,7 @@
 <?php 
 
 $sitekey = '6LdwzeUUAAAAALPDLyDOm1qRsZx-VWmPhgAwgFgt';
-$secretkey = '6LdwzeUUAAAAAASNXh9LqUch-41b7jSmLE1ZgYco';
+$secretkey = '6LdwzeUUAAAAAASNXh9LqUch-41b7jSmLE1ZgYco'; 
 
 session_start();
 @$connectedUser=$_SESSION["userName"];
@@ -91,16 +91,29 @@ $del = mysqli_fetch_array($sqlQuery);
         }
          
         if (isset($_POST["logInButtom"])){
+
+
             $logInUserName=$_POST["userName-Email"];
             $logInPassword=$_POST["password"];
     
             $logInControl=control($logInUserName,$logInPassword);
+
+            
     
             if(!$logInControl){
                 print("<br>Ingen treff på epost/brukernavn eller passord!");
             }
-            
-            else{
+            if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){ 
+
+                 
+                // Verify the reCAPTCHA response 
+                $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']); 
+                 
+                // Decode json data 
+                $responseData = json_decode($verifyResponse); 
+                 
+                // If reCAPTCHA response is valid 
+                if($responseData->success){
 
                 $sql="SELECT * FROM users WHERE userName='$logInUserName' or email='$logInUserName';";
                 $sqlQuery=mysqli_query($db,$sql) or die("Ikke mulig &aring; hente data fra databasen (#300)");
