@@ -59,7 +59,7 @@
         if($password1 != $rePassword){
             print("Passordene er ikke like!") and die; 
         }
-
+            print("toffere enn toget");
         if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){ 
 
                Print("Kjører captcha <br>");  

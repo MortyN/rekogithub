@@ -170,7 +170,7 @@
 
           for($k = 1 ; $xOrders <= $k ; $k++){
            $orderID_array=mysqli_fetch_array($orders);
-           print($k);
+           print("<br>hei<br>");
 
            $orderID = $orderID_array['orderID'];
            $sql_delete_productsOrders = "DELETE FROM productsOrders WHERE orderID = $orderID;";
