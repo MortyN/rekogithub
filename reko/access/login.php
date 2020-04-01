@@ -154,6 +154,7 @@ $del = mysqli_fetch_array($sqlQuery);
                 }
             }
         }
+    }
 
 ?>
 </div>
