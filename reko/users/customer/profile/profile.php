@@ -174,10 +174,14 @@
             $sql_delete_productsOrders = "DELETE FROM productOrders WHERE orderID = $orderID;";
             mysqli_query($db,$sql_delete_productsOrders) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
           }
-
+          print("ffor loop ferdig");
           $sql_delete_orders = "DELETE FROM orders WHERE commerceID = $userID OR customerID= $userID;";
           mysqli_query($db,$sql_delete_orders) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
+          
+          
           print($sql_delete_orders);
+
+
           $sql_delete_products ="DELETE FROM products WHERE commerceID = $userID;";
           mysqli_query($db,$sql_delete_products) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
           $sql_delete_post ="DELETE FROM post where userID = $userID;";

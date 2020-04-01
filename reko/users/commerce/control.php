@@ -40,6 +40,7 @@ $del = mysqli_fetch_array($sqlQuery);
     <head>
         <title> Dashboard - Leverandør</title>
         <link rel="stylesheet" href="/www/sda/reko/stylesheet.css">
+        <link rel="stylesheet" media="screen and (max-width:1250px)" href="/www/sda/reko/Mobile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
 </head>

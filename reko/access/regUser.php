@@ -4,6 +4,7 @@
     <title>REKO - HORTEN</title>
     <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
 
    <?php 
@@ -34,8 +35,6 @@
                     <input type="submit" value="Registrer!" name="submit" /><br>
                   
            </form>
-           <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 <?php
     
     if (isset($_POST["submit"]))
