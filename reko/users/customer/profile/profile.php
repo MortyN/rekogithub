@@ -168,7 +168,7 @@
           print("<br>".$xOrders);
           print("<br>".$sql);
 
-          for($k = 1 ; $xOrders <= $k ; $k++){
+          for($k = 1 ; $k <= $xOrders ; $k++){
            $orderID_array=mysqli_fetch_array($orders);
            print("<br>hei<br>");
 
