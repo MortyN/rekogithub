@@ -82,7 +82,7 @@
       
       <input type="file" name="file"/><br>
       <input type="submit"  value="Endre" name="editProfile" id="editProfile"> <br>
-      <input type="submit" value="Slett bruker" name="delete" id="delete"/>
+      <input type="submit" value="Slett bruker" class="deleteUser" name="delete" id="delete"/>
  
     </form>
     <button class="Passordchange" onclick="window.location.href = 'http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/editPassword.php';">Endre passord</button>
