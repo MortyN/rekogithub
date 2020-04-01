@@ -37,6 +37,7 @@ button.Passordchange
   background-color: #94d3ac;
   padding: 10px 8px;
   border: none;
+  font-size: 25px;
 }
 /*Hei*/
 button.Passordchange:hover
@@ -893,6 +894,7 @@ input#editProfile
     border-radius: 4px;
     cursor: pointer;
     font-family: sans-serif;
+    font-size: 25px;
 }
 input#editProfile:hover
 {
@@ -901,6 +903,7 @@ input#editProfile:hover
   background-color: green;
   color: white;
 }
+
 
 input#delete
 {
@@ -913,6 +916,7 @@ input#delete
     border-radius: 4px;
     cursor: pointer;
     font-family: sans-serif;
+    font-size: 25px;
 }
 input#delete:hover
 {
@@ -921,7 +925,6 @@ input#delete:hover
 background-color: red;
 color:white
 }
-
 
 
 .prdOverview_container{
