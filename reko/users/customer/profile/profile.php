@@ -161,7 +161,7 @@
             }
         }
         if(isset($_POST['delete'])){
-          $sql = "SELECT orderID from orders where commerceID = $userID OR customerID = $userID;";
+          $sql = "SELECT orderID FROM orders where commerceID = $userID OR customerID = $userID;";
           $orders=mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
           $xOrders = mysqli_num_rows($orders);
 
@@ -172,6 +172,16 @@
            $sql_delete_productsOrders = "DELETE FROM productsOrders WHERE orderID = $orderID;";
            mysqli_query($db,$sql_delete_productsOrders) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
           }
+          $sql_delete_orders = "DELETE FROM orders WHERE commerceID = $userID OR customerID= $userID;";
+          mysqli_query($db,$sql_delete_orders) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
+          $sql_delete_products ="DELETE FROM products WHERE commerceID = $userID;";
+          mysqli_query($db,$sql_delete_products) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
+          $sql_delete_post ="DELETE FROM post where userID = $userID;";
+          mysqli_query($db,$sql_delete_post) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
+          $sql_delete_user ="DELETE FROM users WHERE userID = $userID;";
+          mysqli_query($db,$sql_delete_user or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
+          print("Brukeren er slettet.");
+
         }
           ?>
   </div>
