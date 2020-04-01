@@ -17,7 +17,7 @@
         <a href="../index.php"><img class="login_logo" src="../img/rekologo.png" alt="Reko logo"></a>
 
             <div class="loginForm">
-                <form method="POST" action="javascript:alert(grecaptcha.getResponse(widgetId1));" name="loginForm">
+                <form method="POST" action="" name="loginForm">
                     <a>Fornavn:</a><br>
                     <input type="text" name="firstName" id="firstName" required/><br><br>
                     <a>Etternavn:</a><br>
@@ -37,7 +37,7 @@
            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <?php
-
+    
     if (isset($_POST["submit"]))
     {
         
@@ -65,7 +65,7 @@
                Print("Kjører captcha <br>");  
             // Verify the reCAPTCHA response 
             $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']); 
-             
+             print($_POST);
             // Decode json data 
             $responseData = json_decode($verifyResponse); 
              

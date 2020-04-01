@@ -161,14 +161,14 @@
             }
         }
         if(isset($_POST['delete'])){
-          print("Starter isset");
+          
           $sql = "SELECT orderID FROM orders where commerceID = $userID OR customerID = $userID;";
           $orders=mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
           $xOrders = mysqli_num_rows($orders);
           print("<br>".$xOrders);
-          print("<br>".$sql);
+          
 
-          for($k = 1 ; $k <= $xOrders ; $k++){
+          for($k = 0 ; $k <= $xOrders ; $k++){
            $orderID_array=mysqli_fetch_array($orders);
            print("<br>hei<br>");
 
