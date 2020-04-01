@@ -103,6 +103,10 @@
                  }
             }
         }
+        else{
+            print("Du er en robot!! :O ");
+            //Feil melding//
+        }
     
     }
 }
