@@ -65,7 +65,6 @@
                Print("Kjører captcha <br>");  
             // Verify the reCAPTCHA response 
             $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']); 
-             print($_POST);
             // Decode json data 
             $responseData = json_decode($verifyResponse); 
              
@@ -75,7 +74,7 @@
                 $sql = "SELECT * FROM users WHERE userName='$userName';"; 
                 $sqlQuery=mysqli_query($db,$sql) or die ("Ikke mulig &aring; hente data fra databasen! (#reg1)");
                 $rows=mysqli_num_rows($sqlQuery); /*Returnerer antall ganger bruker er registrert fra før*/
-
+                    print=($sql);
             if($rows >= 1)
             {
                 print("Brukeren er allerede registrert!");
@@ -87,7 +86,7 @@
                 $sql = "SELECT * FROM users WHERE email='$eMail';"; 
                 $sqlQuery=mysqli_query($db,$sql) or die ("Ikke mulig &aring; hente data fra databasen! (#reg2)");
                 $rows=mysqli_num_rows($sqlQuery); /*Returnerer antall ganger classCode er registrert fra før*/
-            
+                print=($sql);
                 if($rows >= 1)
                 {
                     print("Eposten er allerede registrert!");
@@ -100,6 +99,7 @@
                     mysqli_query($db,$sql) or die ("Ikke mulig m&aring; å registrere bruker på databasen! (#200)");
                     print("Brukeren er registrert");
                     print("<br><a href='login.php'>Klikk her for å logge inn!</a>");
+                    print=($sql);
                  }
             }
         }

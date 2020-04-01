@@ -169,13 +169,17 @@
           
 
           for($k = 0 ; $k <= $xOrders ; $k++){
-           $orderID_array=mysqli_fetch_array($orders);
-           print($k);
+            $orderID_array=mysqli_fetch_array($orders);
+            
 
-           $orderID = $orderID_array['orderID'];
-           $sql_delete_productsOrders = "DELETE FROM productsOrders WHERE orderID = $orderID;";
-           mysqli_query($db,$sql_delete_productsOrders) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
+            $orderID = $orderID_array['orderID'];
+            $sql_delete_productsOrders = "DELETE FROM productsOrders WHERE orderID = $orderID;";
+            print($sql_delete_productsOrders);
+            mysqli_query($db,$sql_delete_productsOrders) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
           }
+
+
+
           print("sucess forloop");
           $sql_delete_orders = "DELETE FROM orders WHERE commerceID = $userID OR customerID= $userID;";
           mysqli_query($db,$sql_delete_orders) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
