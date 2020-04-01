@@ -1,7 +1,7 @@
 <?php 
 
-$sitekey = '6LdwzeUUAAAAALPDLyDOm1qRsZx-VWmPhgAwgFgt'
-$secretkey = '6LdwzeUUAAAAAASNXh9LqUch-41b7jSmLE1ZgYco'
+$sitekey = '6LdwzeUUAAAAALPDLyDOm1qRsZx-VWmPhgAwgFgt';
+$secretkey = '6LdwzeUUAAAAAASNXh9LqUch-41b7jSmLE1ZgYco';
 
 session_start();
 @$connectedUser=$_SESSION["userName"];
