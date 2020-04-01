@@ -37,7 +37,6 @@ function control($logInUserName,$logInPassword){
 }
 
 
-}
 function emailUsernameExist($userName_Email){
     include("/var/www/html/www/sda/reko/db/connect.php");
 

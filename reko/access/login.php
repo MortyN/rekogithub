@@ -1,4 +1,8 @@
 <?php 
+
+$sitekey = '6LdwzeUUAAAAALPDLyDOm1qRsZx-VWmPhgAwgFgt'
+$secretkey = '6LdwzeUUAAAAAASNXh9LqUch-41b7jSmLE1ZgYco'
+
 session_start();
 @$connectedUser=$_SESSION["userName"];
 include("/var/www/html/www/sda/reko/db/connect.php");
@@ -53,6 +57,7 @@ $del = mysqli_fetch_array($sqlQuery);
     <title>REKO - HORTEN</title>
     <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
 
     <body class="loginBody">
@@ -60,12 +65,13 @@ $del = mysqli_fetch_array($sqlQuery);
         <div class="logInContainer">
         <a href="../index.php"><img class="login_logo" src="../img/rekologo.png" alt="Reko logo"></a>
             <div class="loginForm">
-                <form method="POST" action="" name="loginForm">
+                <form class="g-recaptcha" data-sitekey="<?php echo $sitekey;?>" method="POST" action="" name="loginForm">
                     <a>Brukernavn eller E-post:</a><br>
                     <input type="text" name="userName-Email" id="userName-Email" required/><br><br>
                     <a>Passord:</a><br>
                     <input type="password" name="password" id="password" require/><br>
                     <input type="submit" value="Logg inn!" name="logInButtom" /><br>
+                        <div class="g-recaptcha" data-sitekey="<?php echo $sitekey;?>"></div>
                     <a href="forgotPSW.php">Glemt passord?</a>
 
 
@@ -73,6 +79,8 @@ $del = mysqli_fetch_array($sqlQuery);
 
 
         <?php
+
+
         include("login_function/loginFunction.php");
         if (isset($_GET['msg'])) {
         $msg = $_GET['msg'];
