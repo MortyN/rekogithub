@@ -21,7 +21,7 @@ function control($logInUserName,$logInPassword){
     $status = $xRows['status'];
     $check = false;
 
-    
+    }
 
     $checkPassword = password_verify($logInPassword,$regPassword);
     if($regUserName != $logInUserName || $regEmail != $logInUserName && $checkPassword == false){
@@ -35,7 +35,7 @@ function control($logInUserName,$logInPassword){
         return true;
     }
 }
-}
+
 
 function emailUsernameExist($userName_Email){
     include("/var/www/html/www/sda/reko/db/connect.php");
@@ -59,6 +59,7 @@ function emailUsernameExist($userName_Email){
         $result = true;
     }
     return $result;
+
 
 }
 
