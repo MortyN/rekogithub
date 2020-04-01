@@ -39,6 +39,9 @@
         case "picture":
           echo "<p><strong>Filen må være et bilde.</strong></p>";
       break;
+      case "delete":
+          echo "<p><strong>Kan ikke slette bruker.</strong></p>";
+      break;
         }
       print("</div>");
     }
@@ -156,6 +159,19 @@
                 print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?success=updateOK'/>");
               
             }
+        }
+        if(isset($_POST['delete'])){
+          $sql = "SELECT orderID from orders where commerceID = $userID OR customerID = $userID;";
+          $orders=mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
+          $xOrders = mysqli_num_rows($orders);
+
+          for($k = 1 ; $xOrders <= $k ; $k++){
+           $orderID_array=mysqli_fetch_array($orders);
+
+           $orderID = $orderID_array['orderID'];
+
+           $sql_delete 
+          }
         }
           ?>
   </div>
