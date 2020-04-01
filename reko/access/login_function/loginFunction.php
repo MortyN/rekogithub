@@ -35,7 +35,7 @@ function control($logInUserName,$logInPassword){
         return true;
     }
 }
-
+}
 
 function emailUsernameExist($userName_Email){
     include("/var/www/html/www/sda/reko/db/connect.php");
@@ -61,3 +61,5 @@ function emailUsernameExist($userName_Email){
     return $result;
 
 }
+
+?>
