@@ -632,15 +632,13 @@ button.accordion:hover
   }
   .dashboardBTN
   {
-    width: 18%;
+    width: 20vw;
     margin: 0 auto;
     padding: 3.5px;
-  }
-  .dashboardBTN:hover
-  {
-    transition: 0.3s;
+    height: 3vh;
     background-color: green;
-    cursor:pointer;
+    position: relative;
+    left: 20vw;
   }
   .dashboard_news
   {
@@ -654,7 +652,7 @@ button.accordion:hover
     width: 62vw;
     font-family: sans-serif;
     height: 25vh;
-    font-size: 25px;
+    font-size: 3vw;
   }
 
   textarea.modNews
@@ -921,6 +919,8 @@ background-color: #dddddd;
 table.prdOverview
 {
   font-family: sans-serif;
+  height: 10vh;
+  font-size: 2.5vw;
 }
 .profileContainer{
 margin:0 auto;
