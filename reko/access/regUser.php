@@ -103,7 +103,7 @@
                     print("<br><a href='login.php'>Klikk her for å logge inn!</a>");
                  }
             }
-
+        }
 
 
         

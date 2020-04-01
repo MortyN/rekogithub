@@ -170,7 +170,7 @@
 
            $orderID = $orderID_array['orderID'];
 
-           $sql_delete 
+           
           }
         }
           ?>
