@@ -4,6 +4,7 @@
     <title>REKO - HORTEN</title>
     <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
 
    <?php 
@@ -30,10 +31,8 @@
                     <input type="password" name="password1" id="password1" required/><br><br>
                     <a>Gjenta passord:</a><br>
                     <input type="password" name="rePassword" id="rePassword" required/><br><br>
-                        
-                    <input type="submit" value="Registrer!" name="submit" /><br>
                     <div class="g-recaptcha" data-sitekey="<?php echo $sitekey;?>"></div>
-
+                    <input type="submit" value="Registrer!" name="submit" /><br>
                   
            
 
