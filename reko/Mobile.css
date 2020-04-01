@@ -72,6 +72,8 @@ button.Passordchange:hover
   position:relative;
   bottom:50px;
   margin: 0 1.5%;
+  position: relative;
+  right: 30px;
 }
 .mainNav a {
   float: left;

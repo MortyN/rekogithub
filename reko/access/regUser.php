@@ -17,7 +17,7 @@
         <a href="../index.php"><img class="login_logo" src="../img/rekologo.png" alt="Reko logo"></a>
 
             <div class="loginForm">
-                <form method="POST" action="" name="loginForm">
+                <form method="POST" action="javascript:alert(grecaptcha.getResponse(widgetId1));" name="loginForm">
                     <a>Fornavn:</a><br>
                     <input type="text" name="firstName" id="firstName" required/><br><br>
                     <a>Etternavn:</a><br>
