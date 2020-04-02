@@ -14,7 +14,11 @@ $xRows = mysqli_num_rows($result);
 print("<div class='feed_container'>");
 
     if($xRows == 0){
-        print("Ikke noen innlegg i dag niet");
+        ?>
+        <div class="noneActivFeed">
+            <h3> Ingen aktive annonser enda </h3>
+        </div>
+        <?php
     }
     else{
  

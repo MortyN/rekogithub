@@ -85,7 +85,7 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
                 <option value='Aktiv'>Aktiv</option>
                 <option value='Innaktiv'>Innaktiv</option>
             </select><br>
-            <input type="submit" value="Last opp!" name="submit"/>
+            <input class="Lagreknapp" type="submit" value="Last opp!" name="submit"/>
         
     
             </div>
@@ -93,7 +93,7 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
             </div>
   
 <?php
-    
+    //hei
     if(isset($_POST["submit"])){
         
         $heading0 = $_POST["heading0"];
@@ -233,7 +233,7 @@ if (isset($_GET['success'])) {
                 <option value="">Status</option>
                 <?php current_status($status); ?>
             </select><br>
-            <input type="submit" value="Lagre endringer!" name="submit1"/>
+            <input class="Lagreknapp" type="submit" value="Lagre endringer!" name="submit1"/>
         </div>
         </form>
         </div>
