@@ -154,38 +154,6 @@ button.Passordchange:hover
   display: block;
 }
 
-@media screen and (max-width: 600px) {
-  .mainNav a:not(:first-child), .dropdown .dropbtn {
-      display: none;
-  }
-  .mainNav a.icon {
-      float: right;
-      display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .mainNav.responsive {position: relative;}
-  .mainNav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-  }
-}
-.mainNav.responsive a {
-  float: none;
-  display: block;
-  text-align: left;
-}
-
-.mainNav.responsive .dropdown {float: none;}
-.mainNav.responsive .dropdown-content {position: relative;}
-.mainNav.responsive .dropdown .dropbtn {
-  display: block;
-  width: 100%;
-  text-align: left;
-}
-
 
 /*Home page picture section*/
 
