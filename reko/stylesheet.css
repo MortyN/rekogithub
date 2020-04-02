@@ -828,6 +828,7 @@ input.Lagreknapp
   border-radius: 4px;
   cursor: pointer;
   font-family: sans-serif;
+  font-size: 1vw;
 }
 /*NUU*/
 input.Lagreknapp:hover
@@ -842,6 +843,7 @@ input.Lagreknapp:hover
   border-radius: 4px;
   cursor: pointer;
   font-family: sans-serif;
+  font-size: 1vw;
 }
 /*endret dette*/
 .grid-container {
