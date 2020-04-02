@@ -175,7 +175,7 @@
             $sql_delete_productsOrders = "DELETE FROM productOrders WHERE orderID = $orderID;";
 
             print($sql_delete_productsOrders."<br>");
-            mysqli_query($db,$sql_delete_productsOrders);
+            mysqli_query($db,$sql_delete_productsOrders) or ("Loop funker ikke");
 
           }
           print("ffor loop ferdig");
