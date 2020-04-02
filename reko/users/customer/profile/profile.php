@@ -172,7 +172,7 @@
             $orderID_array=mysqli_fetch_array($orders);
             $orderID = $orderID_array['orderID'];
 
-            $sql_delete_productsOrders = "DELETE FROM productOrders WHERE orderID = $orderID;";
+            $sql_delete_productsOrders = "DELETE FROM productsOrders WHERE orderID = $orderID;";
 
             print($sql_delete_productsOrders."<br>");
             mysqli_query($db,$sql_delete_productsOrders) or die ("Loop funker ikke");
