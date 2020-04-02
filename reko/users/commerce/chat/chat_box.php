@@ -10,7 +10,14 @@
             <div class="chat">
 
                 <div class="messages">
-                    <div class="msg msg-left">left</div>
+                    <div class="msgcontainer">
+
+                        <div class="msgName">Fornavn Etternavn</div>
+                        
+                    <div class="msg msg-left"></div>
+
+                    </div>
+                
                     <div class="msg msg-left">left</div>
                     <div class="msg msg-right">right</div>
                     <div class="msg msg-left">left</div>
@@ -20,6 +27,8 @@
                     <div class="msg msg-left">left</div>
                     <div class="msg msg-left">left</div>
                     <div class="msg msg-right">right</div>
+                    
+                    
                 </div>
                 <div class="inputMsg">
                 <form class="msgForm" method="POST">
@@ -29,3 +38,44 @@
                 </div>  
             </div>
             
+            <!--  --> 
+
+
+
+                    <?php /*
+                        $chatID = $_GET["chatID"];
+                        $sql ="SELECT users.userID, users.firstName,users.lastName, chat_message.message, chat_message.date
+                        FROM users
+                        INNER JOIN chat_message
+                        ON chat_message.msg_from = users.userID
+                        WHERE chatID = $chatID;";
+
+                        $result = mysqli_query($db,$sql) or die("kan ikke hente meldinger");
+                        $rows = mysqli_num_rows($result);
+
+                        for($k=1; $k<=$rows; $k++){
+                            $row = mysqli_fetch_array(result);
+
+                            $userUserID = $row['userID'];
+                            $firstName = $row['firstName'];
+                            $lastName = $row['lastName'];
+                            $message = $row['message'];
+                            $date = $row['date'];
+                            
+                            if($userUserID == $userID){
+                                $class = "msg-right";
+                            }
+                            else{
+                                $class = "msg-left";
+                            }
+
+                            print("<div class='msg $class'>");
+                            print("<div class='msgName'>");
+                            print("</div>")
+                            
+                            print("</div>");
+
+                        }
+
+                        
+                        */?>
