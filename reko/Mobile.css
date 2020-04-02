@@ -305,15 +305,15 @@ body {
       width:100%;
       min-height: 100px;
       margin-top: 50px;
-      left: 2vw;
+      left: 0px;
     }
     button.feedBTN
     {
       position: relative;
-      width:10vw;
-      height:5vw;
-      left:26vw;
-      font-size: 20px;
+      width:20vw;
+      height:8vw;
+      left:40vw;
+      font-size: 3vw;
       margin-bottom:15px;
       background-color: green;
     }
@@ -341,7 +341,7 @@ body {
       margin: 0 auto;
       margin-bottom: 10px;
       position:relative;
-      left:26vw;
+      left:45vw;
       object-fit: cover;
       height: 10vw;
       border-radius: 50%;
@@ -375,7 +375,7 @@ body {
       background-color: white;
       display: grid;
       grid-gap: 10px;
-      width: 60vw;
+      width: 96vw;
       grid-template-areas:
       "bilde bilde bilde"
       "info info info"
@@ -386,7 +386,7 @@ body {
   -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   position: relative;
-  left: 0vw;
+  left: 2vw;
     }
     .ad__pic
     {
