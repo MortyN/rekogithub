@@ -13,8 +13,16 @@
                     <div class="msgcontainer">
 
                         <div class="msgName">Fornavn Etternavn</div>
+
+                    <div class="msg msg-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laborum iure error officia ipsum autem unde tempora repellendus, dolorem quam, sed quas beatae! Blanditiis odit ducimus veritatis culpa est esse.</div>
+
+                    </div>
+                    <div class="messages">
+                    <div class="msgcontainer">
+
+                        <div class="msgName">Fornavn Etternavn</div>
                         
-                    <div class="msg msg-left"></div>
+                    <div class="msg msg-right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam amet eaque ipsum voluptatem quia? Voluptatum laborum ipsam nobis, delectus est odit explicabo! Ducimus aliquam alias illum est nam ab repudiandae?</div>
 
                     </div>
                 
