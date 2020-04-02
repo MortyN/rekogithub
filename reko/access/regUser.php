@@ -45,11 +45,11 @@
            
 
 <?php
-
+    $check = $_SESSION['check'];
+    print($check);
     if (isset($_POST["submit"]))
     {
-        $check = $_SESSION['check'];
-        print($check);
+        
         
         $firstName = $_POST["firstName"];
         $lastName = $_POST["lastName"];
