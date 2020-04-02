@@ -295,7 +295,7 @@ body {
       width:60%;
       min-height: 1000px;
       position:relative;
-      margin: 20px auto;
+      margin: 0px;
     }
     .post{
       position:relative;
@@ -939,7 +939,7 @@ body {
   padding-top: 1%;
   position: relative;
   left: 10vw;
-  widows: 80vw;
+  width: 80vw;
   }
   .profileeditor h2{
   margin-bottom: 40px;
