@@ -921,6 +921,7 @@ body {
   background-color: white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  margin-bottom: 10vw;
   }
   .productPost h2
   {
@@ -938,7 +939,7 @@ body {
   {
   padding-top: 1%;
   position: relative;
-  left: 10vw;
+  left: 15vw;
   width: 80vw;
   }
   .profileeditor h2{
