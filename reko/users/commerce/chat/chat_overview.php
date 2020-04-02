@@ -21,6 +21,7 @@
                 INNER JOIN chat_connection
                 ON users.userID = chat_connection.commerceID
                 WHERE chat_connection.customerID = $userID";
+                print(time());
 
                 print($sql);
 
