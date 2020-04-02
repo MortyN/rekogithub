@@ -820,7 +820,7 @@ input.Lagreknapp
 {
   background-color: #94d3ac;
   width: 50%;
-  height: 8vw;
+  height: 3vw;
   color: black;
   padding: 10px 14px;
   margin: 8px 0;
@@ -828,14 +828,13 @@ input.Lagreknapp
   border-radius: 4px;
   cursor: pointer;
   font-family: sans-serif;
-  font-size: 5vw;
 }
 /*NUU*/
 input.Lagreknapp:hover
 {
   background-color: green;
   width: 50%;
-  height: 8vw;
+  height: 3vw;
   color: black;
   padding: 10px 14px;
   margin: 8px 0;
@@ -843,9 +842,8 @@ input.Lagreknapp:hover
   border-radius: 4px;
   cursor: pointer;
   font-family: sans-serif;
-  font-size: 5vw;
 }
-
+/*endret dette*/
 .grid-container {
 display: grid;
 grid-template-areas:

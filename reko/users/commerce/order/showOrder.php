@@ -86,12 +86,13 @@ if (isset($_GET['success'])) {
             ?>
         </table>
         <form method="POST" action="">
-        <select name ="status">
+        
             <?php if($status == "Arkivert"){
                 print("<p><strong>Arkivert</strong>");
             }
             else{
                 ?>
+                <select name ="status">
                 <option value="">Status<option>
                 <?php current_status($status); ?>
             </select>
