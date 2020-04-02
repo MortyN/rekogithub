@@ -24,7 +24,7 @@
                 <div class="inputMsg">
                 <form class="msgForm" method="POST">
                     <input type="text" class="newMsg" name="newMsg"/>
-                    <input type="submit" class="sendMsg" name="sendMsg"/>
+                    <input type="submit" id="sendMsg" name="sendMsg"/>
                 </form>  
                 </div>  
             </div>
