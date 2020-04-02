@@ -17,7 +17,6 @@
                     <div class="msg msg-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laborum iure error officia ipsum autem unde tempora repellendus, dolorem quam, sed quas beatae! Blanditiis odit ducimus veritatis culpa est esse.</div>
 
                     </div>
-                    <div class="messages">
                     <div class="msgcontainer">
 
                         <div class="msgName">Fornavn Etternavn</div>
