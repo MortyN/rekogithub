@@ -1,10 +1,18 @@
 <?php
     session_start();
-    $num1 = rand(1,9);
-    $num2 = rand(1,9);
-    $numero = $num1 + $num2;
-    $display = $num1."+".$num2."=";
-    $_SESSION['captchaCheck'] =$numero;
+    $numOne = rand(1, 9);
+
+    // value2
+    $numTwo = rand(1, 9);
+
+    // total
+    $numero = $numOne + $numTwo;
+
+    // math string
+    $display = $numOne . ' + ' . $numTwo . ' =';
+
+    // set session variable to total
+    $_SESSION['check'] = $numero;
 
     $my_img = imagecreate( 130, 40 );
     $background = imagecolorallocate( $my_img, 54, 166, 61 );
