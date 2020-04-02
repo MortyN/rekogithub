@@ -22,6 +22,8 @@
                 ON users.userID = chat_connection.commerceID
                 WHERE chat_connection.customerID = $userID";
 
+                print($sql);
+
                 $result = mysqli_query($db,$sql) or die("Kan ikke hente samtaler akkurat nå.");
                 $num = mysqli_num_rows($result);
 
