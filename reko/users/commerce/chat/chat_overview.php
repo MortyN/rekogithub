@@ -85,7 +85,7 @@
                         break;
 
                     }
-                    print("<tr><td><a href='/chat_box.php?chatID=$chatID'$firstName $lastName</td> <td>$type</td>¨</tr>");
+                    print("<tr><td><a href='/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><tr><td><a href='/chat_box.php?chatID=$chatID'>$type</a></td>¨</tr>");
                 }
                 ?>
                 </table>
