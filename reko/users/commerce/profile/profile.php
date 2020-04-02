@@ -78,6 +78,7 @@
       
       <input type="file" name="file"/><br>
       <input type="submit"  value="Endre" name="editProfile" id="editProfile">
+      <input type="submit" value="Slett bruker" class="deleteUser" name="delete" id="delete"/>
 
     </form>
     <button class="Passordchange" onclick="window.location.href = 'http://opheimpi.zapto.org/www/sda/reko/users/commerce/profile/editPassword.php';">Endre passord</button>
@@ -154,6 +155,20 @@
                 
               }
             
+        }
+        if(isset($_POST['delete'])){
+          include("../../functions.php");
+
+          $result = delete_user($userID);
+
+          if($result){
+            print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/access/logout.php'/>");
+          }
+          else{
+            print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>");
+          }
+          
+
         }
           ?>
   </div>
