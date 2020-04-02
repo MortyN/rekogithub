@@ -24,7 +24,7 @@
 
                 print($sql);
 
-                $result = mysqli_query($db,$sql) or die("Kan ikke hente samtaler akkurat nå.");
+                $result = mysqli_query($db,$sql) or ("Kan ikke hente samtaler akkurat nå.");
                 $num = mysqli_num_rows($result);
 
                 for($i=1; $i<=$num; $i++){
