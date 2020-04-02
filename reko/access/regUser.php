@@ -51,7 +51,7 @@
         
         
         $check = $_SESSION['check'];
-        print($check);
+        
         $firstName = $_POST["firstName"];
         $lastName = $_POST["lastName"];
         $eMail = $_POST["eMail"];
@@ -70,7 +70,7 @@
         if($password1 != $rePassword){
             print("Passordene er ikke like!") and die; 
         }
-        if ($answer != $sumerio){
+        if ($answer != $check){
             print("feil svar.");
         }
         else{
