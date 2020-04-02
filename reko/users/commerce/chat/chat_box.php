@@ -57,58 +57,17 @@
                 </div>  
             </div>
             
-            <!--  <div class="msgcontainer">
-
-                        <div class="msgName msgName-left">Fornavn Etternavn</div>
-
-                        <div class="msg msg-left"> dolorem quam, sed quas beatae! Blanditiis odit ducimus veritatis culpa est esse.</div>
-                        <div class="msgDate msgDate-left">14:34 13/05/2020</div>
-                    </div>
-                    <div class="msgcontainer">
-
-                        <div class="msgName msgName-right">Fornavn Etternavn</div>
-                        
-                        <div class="msg msg-right">est odit explicabo! Ducimus aliquam alias illum est nam ab repudiandae?</div>
-                        <div class="msgDate msgDate-right">14:34 13/05/2020</div>
-
-                    </div> --> 
-
-
-
-                    <?php /*
-                        $chatID = $_GET["chatID"];
-                        $sql ="SELECT users.userID, users.firstName,users.lastName, chat_message.message, chat_message.date
-                        FROM users
-                        INNER JOIN chat_message
-                        ON chat_message.msg_from = users.userID
-                        WHERE chatID = $chatID;";
-
-                        $result = mysqli_query($db,$sql) or die("kan ikke hente meldinger");
-                        $rows = mysqli_num_rows($result);
-
-                        for($k=1; $k<=$rows; $k++){
-                            $row = mysqli_fetch_array(result);
-
-                            $userUserID = $row['userID'];
-                            $firstName = $row['firstName'];
-                            $lastName = $row['lastName'];
-                            $message = $row['message'];
-                            $date = $row['date'];
-                            
-                            if($userUserID == $userID){
-                                $class = "msg-right";
-                            }
-                            else{
-                                $class = "msg-left";
-                            }
-
-                            print("<div class='msg $class'>");
-                            print("<div class='msgName'>");
-                            print("</div>")
-                            
-                            print("</div>");
-
-                        }
-
-                        
-                        */?>
+           <?php
+           if(isset($_POST["sendMsg"])){
+               $newMessage = $_POST["newMsg"];
+               
+               $sql_newMsg = "INSERT INTO chat_message (message, date) VALUES ($newMessage, NOW());";
+               if(msqli_query($db,$sql_newMsg)){
+                echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>";
+               }
+               else{
+                   print("Kan ikke sende melding");
+                   
+                   
+               }
+            }
