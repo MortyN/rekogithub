@@ -11,7 +11,7 @@
             <div class="activeChat">
                 <table class="chatOverview">
                 <tr>
-                    <th>Fornavn Etternavn</th>
+                    <th>Navn</th>
                     <th>Type</th>
                     <th>Pålogget</th>
                 </tr>
