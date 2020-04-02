@@ -52,6 +52,43 @@
                 </table>
             </div>
             <div class="newChat">
+            <table class="chatOverview">
+                <tr>
+                    <th>Navn</th>
+                    <th>Type</th>
+                </tr>
+                <?php 
+                $sql= "SELECT firstName,lastName, role FROM users;";
+
+                $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
+                $num = mysqli_num_rows($result);
+
+                for($i=1; $i<=$num; $i++){
+                    $part=mysqli_fetch_array($result);
+
+                    $firstName = $part["firstName"];
+                    $lastName = $part["lastName"];
+                    $type = $part["role"];
+                    
+                    
+
+                    switch ($type){
+                        case "commerce":
+                            $type = "Leverandør";
+                        break;
+                        case "customer":
+                            $type = "Kunde";
+                        break;
+                        case "Moderator":
+                            $type = "Moderator";
+                        break;
+
+                    }
+                    print("<tr><td>$firstName $lastName</td> <td>$type</td></tr>");
+                }
+                ?>
+                </table>
+
 
             </div>
         </div>

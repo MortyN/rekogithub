@@ -1186,3 +1186,43 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   font-size: 0.8vw;
   margin-top: 3;
   }
+  .chatContainer{
+    display: grid;
+    grid-gap: 5vw;
+    width:80%;
+    margin:100px auto;
+    grid-template-areas:
+    "info info"
+    "active new"
+    "ative new" ;
+  }
+  .chatInfo{
+    grid-area:info;
+    border-style: solid;
+    min-height: 200px;
+    border-radius: 15px;
+    padding:10px;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    font-family: sans-serif;
+  }
+  .activeChat{
+    grid-area:active;
+    border-style: solid;
+    min-height: 200px;
+    border-radius: 15px;
+    padding:10px;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    font-family: sans-serif;
+  }
+  .new.chat{
+    grid-area:new;
+    border-style: solid;
+    min-height: 200px;
+    border-radius: 15px;
+    padding:10px;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    font-family: sans-serif;
+  }
