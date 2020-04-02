@@ -1,6 +1,7 @@
 <?php
 
     function delete_user($userID){
+        include("../db/connect.php");
         $result = true;
         $sql = "SELECT orderID FROM orders where commerceID = $userID OR customerID = $userID;";
             $orders=mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
