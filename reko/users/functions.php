@@ -13,7 +13,6 @@ $db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med da
         $database="reko";
 
         $db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med database-server");
-        $target = "../img/users/".$userID;
         $result = true;
         $sql = "SELECT orderID FROM orders where commerceID = $userID OR customerID = $userID;";
             $orders=mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
@@ -47,18 +46,6 @@ $db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med da
             $sql_delete_user ="DELETE FROM users WHERE userID = $userID;";
             if(!mysqli_query($db,$sql_delete_user)){
                 $result = false;
-            }
-
-            if(is_dir($target)){
-                $files = glob( $target . '*', GLOB_MARK ); 
-        
-                foreach( $files as $file ){
-                    delete_files( $file );      
-                }
-        
-                rmdir( $target );
-            } elseif(is_file($target)) {
-                unlink( $target );  
             }
             return $result;
             
