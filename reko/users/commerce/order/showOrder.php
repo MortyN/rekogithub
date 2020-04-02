@@ -87,10 +87,15 @@ if (isset($_GET['success'])) {
         </table>
         <form method="POST" action="">
         <select name ="status">
-        <option value="">Status<option>
-            <?php current_status($status); ?>
-        </select>
-        <input type="submit" name="submit" value="lagre"/>
+            <?php if($status == "Arkivert"){
+                print("<p><strong>Arkivert</strong>");
+            }
+            else{
+                ?>
+                <option value="">Status<option>
+                <?php current_status($status); ?>
+            </select>
+            <input type="submit" name="submit" value="lagre"/> <?php }  ?>
         </form>
         <?php 
       
