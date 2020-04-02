@@ -109,7 +109,6 @@ button.Passordchange:hover
 }
 
 
-
 .dropdown .dropbtn {
   font-size: 16px;
   border: none;
@@ -119,7 +118,6 @@ button.Passordchange:hover
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  font-size: 1vw;
 }
 
 .mainNav a:hover, .dropdown:hover .dropbtn {

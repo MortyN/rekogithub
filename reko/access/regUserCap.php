@@ -64,7 +64,7 @@ elseif (isset($_POST['g-recaptcha-response'])):
         <h2>Success!</h2>
         <kbd><pre><?php var_export($resp);?></pre></kbd>
         <p>That's it. Everything is working. Go integrate this into your real project.</p>
-        <p><a href="/recaptcha-v2-checkbox.php">⤴️ Try again</a></p>
+        <p><a href="/regUserCap.php.php">⤴️ Try again</a></p>
         <?php
     else:
         // If it's not successful, then one or more error codes will be returned.
@@ -73,14 +73,14 @@ elseif (isset($_POST['g-recaptcha-response'])):
         <kbd><pre><?php var_export($resp);?></pre></kbd>
         <p>Check the error code reference at <kbd><a href="https://developers.google.com/recaptcha/docs/verify#error-code-reference">https://developers.google.com/recaptcha/docs/verify#error-code-reference</a></kbd>.
         <p><strong>Note:</strong> Error code <kbd>missing-input-response</kbd> may mean the user just didn't complete the reCAPTCHA.</p>
-        <p><a href="/recaptcha-v2-checkbox.php">⤴️ Try again</a></p>
+        <p><a href="/regUserCap.php.php">⤴️ Try again</a></p>
         <?php
     endif;
 else:
     // Add the g-recaptcha tag to the form you want to include the reCAPTCHA element
     ?>
     <p>Complete the reCAPTCHA then submit the form.</p>
-    <form action="/recaptcha-v2-checkbox.php" method="post">
+    <form action="/regUserCap.php.php" method="post">
         <fieldset>
             <legend>An example form</legend>
             <label class="form-field">Example input A: <input type="text" name="ex-a" value="foo"></label>
