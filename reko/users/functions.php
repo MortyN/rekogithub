@@ -1,7 +1,18 @@
 <?php
+$host="localhost";
+$user="hakonopheim";
+$password="5k0th31a1";
+$database="reko";
+
+$db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med database-server");
 
     function delete_user($userID){
-        include("/www/sda/reko/db/connect.php");
+        $host="localhost";
+        $user="hakonopheim";
+        $password="5k0th31a1";
+        $database="reko";
+
+        $db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med database-server");
         $result = true;
         $sql = "SELECT orderID FROM orders where commerceID = $userID OR customerID = $userID;";
             $orders=mysqli_query($db,$sql) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
