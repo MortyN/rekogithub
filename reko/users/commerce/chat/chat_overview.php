@@ -16,13 +16,13 @@
                     <th>Pålogget</th> 
                 </tr>
                 <?php 
-                $sql= "SELECT chat_connection.chatID, users.firstName,users.lastName, users.role, last_timestamp AS time;
+                $sql= "SELECT chat_connection.chatID, users.firstName,users.lastName, users.role, users.last_timestamp AS time;
                 FROM users
                 INNER JOIN chat_connection
                 ON users.userID = chat_connection.commerceID
                 WHERE chat_connection.customerID = $userID";
 
-                $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
+                $result = mysqli_query($db,$sql) or die("Kan ikke hente samtaler akkurat nå.");
                 $num = mysqli_num_rows($result);
 
                 for($i=1; $i<=$num; $i++){
