@@ -168,9 +168,9 @@
           if($result){
             print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/'/>");
           }
-          else(
+          else{
             print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>");
-          )
+          }
           
 
         }
