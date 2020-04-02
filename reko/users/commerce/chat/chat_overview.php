@@ -16,7 +16,7 @@
                     <th>Pålogget</th> 
                 </tr>
                 <?php 
-                $sql= "SELECT chat_connection.chatID, users.firstName,users.lastName, users.role, users.onlineStatus
+                $sql= "SELECT chat_connection.chatID, users.firstName,users.lastName, users.role, last_timestamp AS time;
                 FROM users
                 INNER JOIN chat_connection
                 ON users.userID = chat_connection.commerceID
@@ -31,7 +31,7 @@
                     $firstName = $part["firstName"];
                     $lastName = $part["lastName"];
                     $type = $part["role"];
-                    $online = $part["onlineStatus"];
+                    $time = strtotime($part["time"]);
                     $chatID = $part['chatID'];
                     
 
@@ -47,6 +47,13 @@
                         break;
 
                     }
+                    if (time() - $time > 15 * 60 || date("Y-m-d", $time) != date("Y-m-d") )  {
+                             $online = "Frakoblet";   
+                        }
+                        else{
+                            $online = "Pålogget";
+                        }
+                    
                     print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$online</a></td></tr>");
                 }
                 ?>
