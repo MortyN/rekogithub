@@ -6,24 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
-   <?php    
-        $siteKey = '6LdwzeUUAAAAALPDLyDOm1qRsZx-VWmPhgAwgFgt';
-        $secret = '6LdwzeUUAAAAAASNXh9LqUch-41b7jSmLE1ZgYco';
-         
-       /* $recaptcha = new \ReCaptcha\ReCaptcha($secret);
-         
-        $gRecaptchaResponse = $_POST['g-recaptcha-response']; //google captcha post data
-        $remoteIp = $_SERVER['REMOTE_ADDR']; //to get user's ip
-         
-        $recaptchaErrors = ''; // blank varible to store error
-         
-        $resp = $recaptcha->verify($gRecaptchaResponse, $remoteIp); //method to verify captcha
-        if ($resp->isSuccess()) {
-           // send mail or insert in db or do whatver you wish to
-        } else {
-           $recaptchaErrors = $resp->getErrorCodes(); // set the error in varible
-        }*/
+
+   <?php 
+   $sitekey = '6LdwzeUUAAAAALPDLyDOm1qRsZx-VWmPhgAwgFgt';
+   $secretkey = '6LdwzeUUAAAAAASNXh9LqUch-41b7jSmLE1ZgYco'; 
    ?>
+
     <body class="loginBody">
         
         <div class="logInContainer">
@@ -43,16 +31,12 @@
                     <input type="password" name="password1" id="password1" required/><br><br>
                     <a>Gjenta passord:</a><br>
                     <input type="password" name="rePassword" id="rePassword" required/><br><br>
-                    
                     <div class="g-recaptcha" data-sitekey="<?php echo $sitekey;?>"></div>
-
                     <input type="submit" value="Registrer!" name="submit" /><br>
-
-                  </form>
-           
-
+                  
+           </form>
 <?php
-
+    
     if (isset($_POST["submit"]))
     {
         
@@ -74,29 +58,22 @@
         if($password1 != $rePassword){
             print("Passordene er ikke like!") and die; 
         }
+            print("toffere enn toget");
+        if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){ 
 
-        if(isset($_POST['g-recaptcha-response'])){
-            $captcha=$_POST['g-recaptcha-response'];
-          }
-        if(!$captcha){
-            echo '<h2>Please check the the captcha form.</h2>';
-            exit;
-          }
-          $secret = "Put your secret key here";
-          $ip = $_SERVER['REMOTE_ADDR'];
-          // post request to server
-          $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secret) .  '&response=' . urlencode($captcha);
-          $response = file_get_contents($url);
-          $responseKeys = json_decode($response);
-          // should return JSON with success as true
-          if($responseKeys->success == true) {
-
-                  echo '<h2>registrert bruker</h2>';
-
-        $sql = "SELECT * FROM users WHERE userName='$userName';"; 
-        $sqlQuery=mysqli_query($db,$sql) or die ("Ikke mulig &aring; hente data fra databasen! (#reg1)");
-        $rows=mysqli_num_rows($sqlQuery); /*Returnerer antall ganger bruker er registrert fra før*/
-
+               Print("Kjører captcha <br>");  
+            // Verify the reCAPTCHA response 
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']); 
+            // Decode json data 
+            $responseData = json_decode($verifyResponse); 
+             
+            // If reCAPTCHA response is valid 
+            if($responseData->success){
+                print("successsssss");
+                $sql = "SELECT * FROM users WHERE userName='$userName';"; 
+                $sqlQuery=mysqli_query($db,$sql) or die ("Ikke mulig &aring; hente data fra databasen! (#reg1)");
+                $rows=mysqli_num_rows($sqlQuery); /*Returnerer antall ganger bruker er registrert fra før*/
+                    print($sql);
             if($rows >= 1)
             {
                 print("Brukeren er allerede registrert!");
@@ -108,7 +85,7 @@
                 $sql = "SELECT * FROM users WHERE email='$eMail';"; 
                 $sqlQuery=mysqli_query($db,$sql) or die ("Ikke mulig &aring; hente data fra databasen! (#reg2)");
                 $rows=mysqli_num_rows($sqlQuery); /*Returnerer antall ganger classCode er registrert fra før*/
-            
+                print($sql);
                 if($rows >= 1)
                 {
                     print("Eposten er allerede registrert!");
@@ -121,15 +98,15 @@
                     mysqli_query($db,$sql) or die ("Ikke mulig m&aring; å registrere bruker på databasen! (#200)");
                     print("Brukeren er registrert");
                     print("<br><a href='login.php'>Klikk her for å logge inn!</a>");
+                    print($sql);
                  }
             }
-
-
-
-        
-            
-
-        
+        }
+        else{
+            print("Du er en robot!! :O ");
+            //Feil melding//    
+        }
+    
     }
 }
 ?>
