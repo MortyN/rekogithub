@@ -607,8 +607,8 @@ button.accordion:hover
     background-color: white;
     font-family: sans-serif;
     
-/*hva gjør du in mIN HULE!?
-Må lage en ny boks på dashboard moderator bare :P. *RARE villager thinking sound*** HEM LYDER**/
+/*hva gjÃ¸r du in mIN HULE!?
+MÃ¥ lage en ny boks pÃ¥ dashboard moderator bare :P. *RARE villager thinking sound*** HEM LYDER**/
   }
   .dashboard_orders
   {
@@ -1270,25 +1270,43 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
    border-top-right-radius:15px;
    border-top-left-radius:15px;
  }
+ .msgcontainer{
+    margin-bottom:15px;
+ }
  .msg{
    max-width:45%;
    min-height:30px;
    border-radius: 12px;
    padding: 10px;
-   margin-bottom:15px;
  }
+
  .msg-left{
    background-color:#F1EFF0;
-
-
  }
  .msg-right{
    background-color:#BEFABF;
    margin-left:50%
    
  }
+ .msgName-left{
+   margin-left:2%;
+   font-size: 0.9em;
+ }
+ .msgName-right{
+   margin-left:52%;
+   font-size: 0.9em;
+ }
+ .msgDate-left{
+   font-size:0.7em;
+   margin-left:30%;
+
+ }
+ .msgDate-right{
+   font-size:0.7em;
+    margin-left:80%;
+ }
  .inputMsg{
-   width:100%;
+   widht:100%;
    background-color:white;
    height:100%;
    margin-bottom:0;
