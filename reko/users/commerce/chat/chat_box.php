@@ -23,7 +23,7 @@
                         $rows = mysqli_num_rows($result);
 
                         for($k=1; $k<=$rows; $k++){
-                            $row = mysqli_fetch_array(result);
+                            $row = mysqli_fetch_array($result);
 
                             $userUserID = $row['userID'];
                             $firstName = $row['firstName'];
