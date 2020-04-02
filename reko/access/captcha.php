@@ -2,8 +2,8 @@
     session_start();
     $num1 = rand(1,9);
     $num2 = rand(1,9);
-    
-    $_SESSION['captchaCheck'] =$num1 + $num2;
+    $numero = $num1 + $num2;
+    $_SESSION['captchaCheck'] =$numero;
     $display = $num1."+".$num2."=";
 
     $my_img = imagecreate( 130, 40 );
