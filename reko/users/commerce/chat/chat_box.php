@@ -14,26 +14,62 @@
 
                         <div class="msgName msgName-left">Fornavn Etternavn</div>
 
-                    <div class="msg msg-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laborum iure error officia ipsum autem unde tempora repellendus, dolorem quam, sed quas beatae! Blanditiis odit ducimus veritatis culpa est esse.</div>
-
+                        <div class="msg msg-left"> dolorem quam, sed quas beatae! Blanditiis odit ducimus veritatis culpa est esse.</div>
+                        <div class="msgDate msgDate-left">14:34 13/05/2020</div>
                     </div>
                     <div class="msgcontainer">
 
                         <div class="msgName msgName-right">Fornavn Etternavn</div>
                         
-                    <div class="msg msg-right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam amet eaque ipsum voluptatem quia? Voluptatum laborum ipsam nobis, delectus est odit explicabo! Ducimus aliquam alias illum est nam ab repudiandae?</div>
+                        <div class="msg msg-right">est odit explicabo! Ducimus aliquam alias illum est nam ab repudiandae?</div>
+                        <div class="msgDate msgDate-right">14:34 13/05/2020</div>
 
                     </div>
-                
-                    <div class="msg msg-left">left</div>
-                    <div class="msg msg-right">right</div>
-                    <div class="msg msg-left">left</div>
-                    <div class="msg msg-right">right</div>
-                    <div class="msg msg-left">left</div>
-                    <div class="msg msg-right">right</div>
-                    <div class="msg msg-left">left</div>
-                    <div class="msg msg-left">left</div>
-                    <div class="msg msg-right">right</div>
+                    <div class="msgcontainer">
+
+                        <div class="msgName msgName-left">Fornavn Etternavn</div>
+
+                        <div class="msg msg-left"> dolorem quam, sed quas beatae! Blanditiis odit ducimus veritatis culpa est esse.</div>
+                        <div class="msgDate msgDate-left">14:34 13/05/2020</div>
+                    </div>
+                    <div class="msgcontainer">
+
+                        <div class="msgName msgName-right">Fornavn Etternavn</div>
+                        
+                        <div class="msg msg-right">est odit explicabo! Ducimus aliquam alias illum est nam ab repudiandae?</div>
+                        <div class="msgDate msgDate-right">14:34 13/05/2020</div>
+
+                    </div>
+                    <div class="msgcontainer">
+
+                        <div class="msgName msgName-left">Fornavn Etternavn</div>
+
+                        <div class="msg msg-left"> dolorem quam, sed quas beatae! Blanditiis odit ducimus veritatis culpa est esse.</div>
+                        <div class="msgDate msgDate-left">14:34 13/05/2020</div>
+                    </div>
+                    <div class="msgcontainer">
+
+                        <div class="msgName msgName-right">Fornavn Etternavn</div>
+                        
+                        <div class="msg msg-right">est odit explicabo! Ducimus aliquam alias illum est nam ab repudiandae?</div>
+                        <div class="msgDate msgDate-right">14:34 13/05/2020</div>
+
+                    </div>
+                    <div class="msgcontainer">
+
+                        <div class="msgName msgName-left">Fornavn Etternavn</div>
+
+                        <div class="msg msg-left"> dolorem quam, sed quas beatae! Blanditiis odit ducimus veritatis culpa est esse.</div>
+                        <div class="msgDate msgDate-left">14:34 13/05/2020</div>
+                    </div>
+                    <div class="msgcontainer">
+
+                        <div class="msgName msgName-right">Fornavn Etternavn</div>
+                        
+                        <div class="msg msg-right">est odit explicabo! Ducimus aliquam alias illum est nam ab repudiandae?</div>
+                        <div class="msgDate msgDate-right">14:34 13/05/2020</div>
+
+                    </div>
                     
                     
                 </div>
