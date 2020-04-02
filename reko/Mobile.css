@@ -555,8 +555,8 @@ body {
       margin:100px auto;
       grid-template-areas:
       "info info"
-      "orders news"
-      "orders news" ;
+      "orders orders"
+      "news news" ;
          
     }
     .dashboard_info
@@ -569,6 +569,7 @@ body {
       box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       background-color: white;
       font-family: sans-serif;
+      height: 25vh;
     }
     .dashboard_orders
     {
@@ -579,7 +580,8 @@ body {
       padding:10px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       background-color: white;
-      width: 30vw;
+      width: 62vw;
+      height: 25vh;
       font-family: sans-serif;
     }
     .dashboardBTN
@@ -603,7 +605,8 @@ body {
       padding:10px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       background-color: white;
-      width: 30vw;
+      width: 62vw;
+      height: 25vh;
       font-family: sans-serif;
     }
   
