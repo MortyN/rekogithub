@@ -47,7 +47,7 @@
                         break;
 
                     }
-                    print("<tr><td><a href='/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='/chat_box.php?chatID=$chatID'>$online</a></td></tr>");
+                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$online</a></td></tr>");
                 }
                 ?>
                 </table>
@@ -85,7 +85,7 @@
                         break;
 
                     }
-                    print("<tr><td><a href='/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='/chat_box.php?chatID=$chatID'>$type</a></td></tr>");
+                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$type</a></td></tr>");
                 }
                 ?>
                 </table>
