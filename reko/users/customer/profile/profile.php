@@ -168,14 +168,14 @@
           
           
           print("<br>$xOrders<br>");
-          for($k = 0 ; $k <= $xOrders ; $k++){
+          for($k = 1 ; $k <= $xOrders ; $k++){
             $orderID_array=mysqli_fetch_array($orders);
             $orderID = $orderID_array['orderID'];
 
             $sql_delete_productsOrders = "DELETE FROM productOrders WHERE orderID = $orderID;";
 
             print($sql_delete_productsOrders."<br>");
-            mysqli_query($db,$sql_delete_productsOrders) or ("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/profile/profile.php?error=delete'/>") and die;
+            mysqli_query($db,$sql_delete_productsOrders);
 
           }
           print("ffor loop ferdig");
