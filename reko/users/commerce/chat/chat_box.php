@@ -1,3 +1,4 @@
+<?php include("../control.php"); ?>
 <div class="dashboard_content">
         <div class="chatBoxContainer">
             <div class="chatBoxInfo">
