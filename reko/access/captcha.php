@@ -12,7 +12,7 @@
     $line_colour = imagecolorallocate( $my_img, 128, 255, 0 );
     imagestring( $my_img, 4, 30, 25, "$num1 + $num2 =", $text_colour );
     imagesetthickness ( $my_img, 5 );
-    imageline( $my_img, 30, 45, 165, 45, $line_colour );
+    imageline( $my_img, 0, 0, 0, 0, $line_colour );
 
     header( "Content-type: image/png" );
     imagepng( $my_img );
@@ -20,36 +20,5 @@
     imagecolordeallocate( $text_color );
     imagecolordeallocate( $background );
     imagedestroy( $my_img );
-
-    /*$img = imagecreate( 75, 38 );
-
-    // choose a bg color, you can play with the rgb values
-    // imagecolorallocate( [image], [red], [green], [blue] )
-    $background = imagecolorallocate( $img, 54, 166, 61 );
-
-    //chooses the text color
-    // imagecolorallocate( [image], [red], [green], [blue] )
-    $text_colour = imagecolorallocate( $img, 255, 255, 255);
-
-    //pulls the value passed in the URL
-    $text = $display;
-
-    // place the font file in the same dir level as the php file
-    $font = '/var/www/html/www/sda/reko/access/Vogue.ttf';
-    
-
-    //this function sets the font size, places to the co-ords
-    // imagettftext( [image], [size], [angle], [x], [y], [color], [fontfile], [text] )
-    imagettftext($img, 16, 0, 0, 26, $text_colour, $font, $text);
-
-    //alerts the browser abt the type of content i.e. png image
-    header( 'Content-type: image/png' );
-    //now creates the image
-    imagepng( $img );
-
-    //destroys used resources
-    imagecolordeallocate( $text_color );
-    imagecolordeallocate( $background );
-    imagedestroy( $img );*/
 ?>
 
