@@ -459,6 +459,8 @@ body {
   {
     width: 80vw;
     margin-top: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
   button.accordion:hover
   {
@@ -474,8 +476,8 @@ body {
   .panel
   {
     padding-bottom: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
   .grid-container {
     display: grid;
