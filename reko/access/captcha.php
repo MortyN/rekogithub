@@ -21,7 +21,7 @@
 
     // place the font file in the same dir level as the php file
     putenv('GDFONTPATH=' . realpath('.'));
-    $font = "Vogue.ttf";
+    $font = mb_convert_encoding($font, 'big5', 'utf-8');
     
 
     //this function sets the font size, places to the co-ords
