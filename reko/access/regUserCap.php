@@ -1,4 +1,6 @@
-<?php require_once __DIR__ . '/../access/src/autoload.php';
+<?php 
+require __DIR__ . '/appengine-https.php';
+require_once __DIR__ . '/../access/src/autoload.php';
 $siteKey = '6LdwzeUUAAAAALPDLyDOm1qRsZx-VWmPhgAwgFgt';
 $secret = '6LdwzeUUAAAAAASNXh9LqUch-41b7jSmLE1ZgYco';
 

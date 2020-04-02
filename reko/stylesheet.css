@@ -48,6 +48,10 @@ body {
   font-size: 1vw;
 }
 
+.mainNav .icon {
+  display: none;
+}
+
 button.Passordchange
 {
   width: 50%;
@@ -102,11 +106,8 @@ button.Passordchange:hover
 .dropdown {
   float: left;
   overflow: hidden;
-  font-size: 1vw;
 }
-.dropbtn {
-  height : 10vh;
-}
+
 
 
 .dropdown .dropbtn {
