@@ -31,7 +31,7 @@
                     <input type="password" name="rePassword" id="rePassword" required/><br><br>
                     <a>Regn ut:  </a><br>
                     <img src="captcha.php" id="captchaImage" alt="Captcha Image"/><br>
-                    <?php  $check = $_SESSION["captchaCheck"]; print($check); ?>
+                    
                     <input type="text" class="captcha" name="captcha_answer" id="captcha_answer" required/><br><br>
 
                     
@@ -45,7 +45,8 @@
            
 
 <?php
-
+$check = $_SESSION['check'];
+print($check);
     if (isset($_POST["submit"]))
     {
         
