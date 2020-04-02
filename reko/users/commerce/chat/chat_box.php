@@ -39,10 +39,10 @@
                             }?>
                             <div class="msgcontainer">
 
-                            <div class="msgName msgName-<?php print($class); ?> "><p><?php print($firstName." ".$lastName); ?> </p></div>
+                            <div class="msgName msgName-<?php print($class); ?> "><?php print($firstName." ".$lastName); ?> </div>
 
-                            <div class="msg msg-<?php print($class);?>"> <p><?php print($message); ?></p></div>
-                            <div class="msgDate msgDate-<?php print($class);?>"> <p><?php print($date); ?> </p></div>
+                            <div class="msg msg-<?php print($class);?>"> <?php print($message); ?></div>
+                            <div class="msgDate msgDate-<?php print($class);?>"> <?php print($date); ?> </div>
                             </div>
                             <?php
                         } ?>
