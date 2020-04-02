@@ -40,7 +40,7 @@ if($connectedUser){
     $userID = $del["userID"];
     ?>
 
-        <div class="mainNav">
+        <div class="mainNav" id="topNav">
                 <a class="logoomrad" href="/www/sda/reko/index.php"><img src="/www/sda/reko/img/rekologo.png" alt="LOGO"/></a>          
                 <a href="/www/sda/reko/index.php">HJEM</a>
                 <a href="/www/sda/reko/commerce/feed.php">ANNONSER</a>
@@ -56,8 +56,7 @@ if($connectedUser){
                     <a href="/www/sda/reko/access/logout.php">LOGG UT</a>
                 </div> 
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="navBar()">
-                <i class="fa fa-bars"></i>
+            <a href="javascript:void(0);" class="icon" onclick="navBar()">&#9776;</a>
             </a>
          </div>
          <?php
@@ -66,7 +65,7 @@ if($connectedUser){
 //Ikke logget inn
 else{
     ?>
-        <div class="mainNav">
+        <div class="mainNav" id="topNav">
                 <a class="logoomrad" href="/www/sda/reko/index.php"><img src="/www/sda/reko/img/rekologo.png" alt="LOGO"/></a>          
                 <a href="/www/sda/reko/index.php">HJEM</a>
                 <a href="/www/sda/reko/commerce/feed.php">ANNONSER</a>
@@ -83,8 +82,7 @@ else{
                     
                 </div> 
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="navBar()">
-                <i class="fa fa-bars"></i>
+            <a href="javascript:void(0);" class="icon" onclick="navBar()">&#9776;</a>
             </a>
          </div>
 <?php
