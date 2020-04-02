@@ -9,10 +9,50 @@
                 </p>
             </div>
             <div class="activeChat">
+                <table class="chatOverview">
+                <tr>
+                    <th>Fornavn Etternavn</th>
+                    <th>Type</th>
+                    <th>Pålogget</th>
+                </tr>
+                <?php 
+                $sql= "SELECT users.firstName,users.lastName, users.role, users.onlineStatus
+                FROM users
+                INNER JOIN chat_connection
+                ON users.userID = chat_connection.commerceID
+                WHERE chat_connection.customerID = $userID";
 
+                $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
+                $num = mysqli_num_rows($result);
+
+                for($i=1; $i<=$num; $i++){
+                    $part=mysqli_fetch_array($result);
+
+                    $firstName = $part["firstName"];
+                    $lastName = $part["lastName"];
+                    $type = $part["role"];
+                    $online = $part["onlineStatus"];
+                    
+
+                    switch ($type){
+                        case "commerce":
+                            $type = "Leverandør";
+                        break;
+                        case "customer":
+                            $type = "Kunde";
+                        break;
+                        case "Moderator":
+                            $type = "Moderator";
+                        break;
+
+                    }
+                    print("<tr><td>$firstName $lastName</td> <td>$type</td> <td>$online</td></tr>");
+                }
+                ?>
+                </table>
             </div>
             <div class="newChat">
-                
+
             </div>
         </div>
     </div>
