@@ -3,14 +3,14 @@
     $num1 = rand(1,9);
     $num2 = rand(1,9);
     $numero = $num1 + $num2;
-    $_SESSION['captchaCheck'] =$numero;
     $display = $num1."+".$num2."=";
+    $_SESSION['captchaCheck'] =$numero;
 
     $my_img = imagecreate( 130, 40 );
     $background = imagecolorallocate( $my_img, 54, 166, 61 );
     $text_colour = imagecolorallocate( $my_img, 255, 255, 255 );
     $line_colour = imagecolorallocate( $my_img, 128, 255, 0 );
-    imagestring( $my_img, 100, 30, 15, "$num1 + $num2 =", $text_colour );
+    imagestring( $my_img, 100, 30, 15, "$display", $text_colour );
     imagesetthickness ( $my_img, 5 );
     
 
