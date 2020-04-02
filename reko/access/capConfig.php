@@ -32,8 +32,8 @@
 
 return [
   'v2-standard' => [
-    'site' => '',
-    'secret' => '',
+    'site' => '6LdwzeUUAAAAALPDLyDOm1qRsZx-VWmPhgAwgFgt',
+    'secret' => '6LdwzeUUAAAAAASNXh9LqUch-41b7jSmLE1ZgYco',
   ],
   'v2-invisible' => [
     'site' => '',
