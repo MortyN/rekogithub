@@ -1,6 +1,8 @@
-<!DOCTYPE html>
 <?php  session_start();
-        $check = $_SESSION["captchaCheck"]; ?>
+        $check = $_SESSION["captchaCheck"]; 
+        ?>
+<!DOCTYPE html>
+
     <head>
     <meta charset="UTF-8">
     <title>REKO - HORTEN</title>
