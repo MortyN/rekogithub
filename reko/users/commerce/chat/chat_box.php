@@ -8,7 +8,7 @@
                 </p>
             </div>
             <div class="chat">
-                
+
                 <div class="messages">
                     <div class="msg msg-left">left</div>
                     <div class="msg msg-left">left</div>
@@ -20,11 +20,9 @@
                     <div class="msg msg-left">left</div>
                     <div class="msg msg-left">left</div>
                     <div class="msg msg-right">right</div>
-                </div>  
-
-                <form class="msgForm" method="POST">
+                </div>    
+            </div>
+            <form class="msgForm" method="POST">
                     <input type="text" class="newMsg" name="newMsg"/>
                     <input type="submit" class="sendMsg" name="sendMsg"/>
                 </form>
-                    
-            </div>
