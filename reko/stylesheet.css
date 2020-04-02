@@ -1196,7 +1196,7 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
     "active new"
     "ative new" ;
   }
-  .chatInfo{
+    .chatInfo{
     grid-area:info;
     border-style: solid;
     min-height: 200px;
@@ -1221,7 +1221,7 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
     text-decoration:none;
     color : black;
   }
-  .newChat{
+   .newChat{
     grid-area:new;
     border-style: solid;
     min-height: 200px;
@@ -1252,20 +1252,23 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
    background-color: white;
    font-family: sans-serif;
  }
+  .chat{
+    grid-area:chat;
+     border-radius: 15px;
+     border-style: solid;
+     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
- .chat{
-   grid-area:chat;
-   border-style: solid;
+  }
+ .messages{
    max-height: 400px;
-   border-radius: 15px;
    padding:10px;
-   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
    background-color: white;
    font-family: sans-serif;
    overflow:hidden;
    overflow-y:scroll;
-   
-
+   border-top-right-radius:15px;
+   border-top-left-radius:15px;
  }
  .msg{
    max-width:45%;
@@ -1283,4 +1286,38 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
    background-color:#BEFABF;
    margin-left:50%
    
+ }
+ .inputMsg{
+   widht:100%;
+   background-color:white;
+   height:100%;
+   margin-bottom:0;
+   border-bottom-right-radius:15px;
+   border-bottom-left-radius:15px;
+   border-top: solid 2px black;
+
+ }
+ .msgForm{
+   margin-bottom:0;
+ }
+ #newMsg{
+  margin:0;
+  height:100%;
+  width:90%;
+  padding:10px 10px;;
+  border:none;
+  border-radius:0px;
+  border-bottom-left-radius:15px;
+  outline: none;
+ }
+
+ #sendMsg{
+   
+   float:right;
+   margin:0;
+   width:10%;
+   height:100%;
+   padding:10px 10px;
+   border-radius:0px;
+   border-bottom-right-radius:12px;
  }
