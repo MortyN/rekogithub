@@ -21,9 +21,7 @@
                 INNER JOIN chat_connection
                 ON users.userID = chat_connection.commerceID
                 WHERE chat_connection.customerID = $userID";
-                print(time());
-
-                print($sql);
+                
 
                 $result = mysqli_query($db,$sql) or ("Kan ikke hente samtaler akkurat nå.");
                 $num = mysqli_num_rows($result);
@@ -56,6 +54,7 @@
                         else{
                             $online = "Pålogget";
                         }
+                        
                     
                     print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$online</a></td></tr>");
                 }

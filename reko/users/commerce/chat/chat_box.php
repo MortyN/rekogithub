@@ -8,6 +8,7 @@
                 </p>
             </div>
             <div class="chat">
+                
                 <div class="messages">
                     <div class="msg msg-left">left</div>
                     <div class="msg msg-left">left</div>
