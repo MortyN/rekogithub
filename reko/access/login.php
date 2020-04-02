@@ -93,7 +93,8 @@ $del = mysqli_fetch_array($sqlQuery);
             }
             
             else{
-
+                $sql_active = "UPDATE users SET onlineStatus = 'Online' where userName='$logInUserName or email='$logInUserName';";
+                mysqli_query($db,$sql_active) or die ("Kan ikke oppdatere");
                 $sql="SELECT * FROM users WHERE userName='$logInUserName' or email='$logInUserName';";
                 $sqlQuery=mysqli_query($db,$sql) or die("Ikke mulig &aring; hente data fra databasen (#300)");
                 $xRows=mysqli_fetch_array($sqlQuery);
