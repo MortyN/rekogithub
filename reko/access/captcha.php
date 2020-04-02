@@ -10,10 +10,9 @@
     $background = imagecolorallocate( $my_img, 54, 166, 61 );
     $text_colour = imagecolorallocate( $my_img, 255, 255, 255 );
     $line_colour = imagecolorallocate( $my_img, 128, 255, 0 );
-    imagestring( $my_img, 4, 30, 0, "$num1 + $num2 =", $text_colour );
+    imagestring( $my_img, 6, 30, 0, "$num1 + $num2 =", $text_colour );
     imagesetthickness ( $my_img, 5 );
     
-    //                  x1 y1 x2 y2
 
     header( "Content-type: image/png" );
     imagepng( $my_img );
