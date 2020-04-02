@@ -41,11 +41,19 @@ for($i=1;$i <= $xRows; $i++ ){
             </div>
     <div class="productPost">
     <?php  print("<h2>".$firstName." ".$lastName." sine produkter"."</h2>");
+
         $sql1 = "SELECT * FROM products WHERE commerceID = '$userPostID' and status='Aktiv';" ;
         $result1 = mysqli_query($db,$sql1) or die ("Kan ikke hente produkter");
         $rows = mysqli_num_rows($result1);
 
                 print("<p> Liste over produkter kommer under </p>");
+        $sql_innaktiv = "SELECT category FROM post WHERE userID = $userPostID;";
+        $sql_test = mysqli_query($db,$sql_innaktiv) or die ("Kan ikke hente produkter.");
+        $rowy = mysqli_fetch_array($sql_test);
+        $status = $rowy["category"];
+
+        if($status == "Aktiv"){
+
                 print("<form method='POST' name='order' action=''>");
                 print("<table>");
                 print("<th>Produkt</th><th>Beskrivelse</th><th>Pris</th><th>Bestill</th>");
@@ -77,6 +85,11 @@ for($i=1;$i <= $xRows; $i++ ){
            else{
            print("<input type='submit' name='submit' value='Bestill'/>");
         }
+
+}
+else{
+        print("Det er ikke mulig å bestille fra denne leverandøren for øyeblikket.");
+}
         ?>
            </form>
            <?php 
