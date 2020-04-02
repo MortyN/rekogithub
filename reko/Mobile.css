@@ -313,6 +313,13 @@ body {
       position:relative;
       margin: 0px;
     }
+    .noneActivFeed
+    {
+        width: 86vw;
+        position: relative;
+        left: 2vw;
+        font-size: 4vw;
+    }
     .post{
       position:relative;
       width:100%;
