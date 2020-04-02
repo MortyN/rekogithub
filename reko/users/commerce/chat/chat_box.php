@@ -20,9 +20,10 @@
                     <div class="msg msg-left">left</div>
                     <div class="msg msg-left">left</div>
                     <div class="msg msg-right">right</div>
-                </div>    
-            </div>
-            <form class="msgForm" method="POST">
+                </div>
+                <form class="msgForm" method="POST">
                     <input type="text" class="newMsg" name="newMsg"/>
                     <input type="submit" class="sendMsg" name="sendMsg"/>
-                </form>
+                </form>    
+            </div>
+            
