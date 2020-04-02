@@ -25,6 +25,7 @@ body {
   color: white;
 }
 
+
 /*Main navigation*/
 .mainNav {
   overflow: hidden;
@@ -33,6 +34,7 @@ body {
   text-align: center;
   width: 100vw;
 }
+
 button.Passordchange
 {
   width: 50%;
@@ -48,6 +50,7 @@ button.Passordchange:hover
   background-color: green;
   cursor:pointer;
 }
+
 .mainNav a.logoomrad
 {
   float: left;
