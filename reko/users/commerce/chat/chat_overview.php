@@ -16,7 +16,7 @@
                     <th>Pålogget</th> 
                 </tr>
                 <?php 
-                $sql= "SELECT chat_connection.chatID, users.firstName,users.lastName, users.role, users.last_timestamp AS time;
+                $sql= "SELECT chat_connection.chatID, users.firstName,users.lastName, users.role, users.last_timestamp AS time
                 FROM users
                 INNER JOIN chat_connection
                 ON users.userID = chat_connection.commerceID
