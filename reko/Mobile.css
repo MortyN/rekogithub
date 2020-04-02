@@ -319,7 +319,7 @@ body {
   
     
     .profileInfo p{
-      min-width: 300px;
+      min-width: 100vw;
       margin-top: 0px;
       margin-bottom: 30px;
       margin-left: auto;
