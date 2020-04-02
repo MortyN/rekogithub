@@ -779,7 +779,9 @@ body {
   }
   .item4 select{
   width: 95%;
+  height: 3vh;
   margin-bottom: 15px;
+  font-size: 2.8vw;
   }
   
   .grid-container {
