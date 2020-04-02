@@ -13,10 +13,10 @@
                 <tr>
                     <th>Navn</th>
                     <th>Type</th>
-                    <th>Pålogget</th>
+                    <th>Pålogget</th> 
                 </tr>
                 <?php 
-                $sql= "SELECT users.firstName,users.lastName, users.role, users.onlineStatus
+                $sql= "SELECT chat_connection.chatID, users.firstName,users.lastName, users.role, users.onlineStatus
                 FROM users
                 INNER JOIN chat_connection
                 ON users.userID = chat_connection.commerceID
@@ -32,6 +32,7 @@
                     $lastName = $part["lastName"];
                     $type = $part["role"];
                     $online = $part["onlineStatus"];
+                    $chatID = $part['chatID'];
                     
 
                     switch ($type){
@@ -46,7 +47,7 @@
                         break;
 
                     }
-                    print("<tr><td>$firstName $lastName</td> <td>$type</td> <td>$online</td></tr>");
+                    print("<tr><td><a href='/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='/chat_box.php?chatID=$chatID'$type</a></td> <td><a href='/chat_box.php?chatID=$chatID'$online</a></td></tr>");
                 }
                 ?>
                 </table>
@@ -84,7 +85,7 @@
                         break;
 
                     }
-                    print("<tr><td>$firstName $lastName</td> <td>$type</td></tr>");
+                    print("<tr><td><a href='/chat_box.php?chatID=$chatID'$firstName $lastName</td> <td>$type</td>¨</tr>");
                 }
                 ?>
                 </table>
