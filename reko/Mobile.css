@@ -257,8 +257,9 @@ body {
       color: black;
     }
     input[type=submit]{
-      background-color: #94d3ac;
-      width: 50%;
+      background-color: green;
+      width: 25vw;
+      height: 8vw;
       color: black;
       padding: 10px 14px;
       margin: 8px 0;
@@ -266,12 +267,8 @@ body {
       border-radius: 4px;
       cursor: pointer;
       font-family: sans-serif;
-        }
-        input[type=submit]:hover
-        {
-          transition: 0.3s;
-          background-color: green;
-        }
+      font-size: 5vw;
+}
   
     .login_logo{
         max-height:100px;
@@ -907,7 +904,7 @@ body {
   }
   
   .feedPost{
-  width: 96vw;
+  width: 95.5vw;
   min-height: 450px;
   background-color: white;
   padding: 15px;
@@ -941,8 +938,8 @@ body {
   {
   padding-top: 1%;
   position: relative;
-  left: 30%;
-  width:50%;
+  left: 10vw;
+  widows: 80vw;
   }
   .profileeditor h2{
   margin-bottom: 40px;

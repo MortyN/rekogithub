@@ -20,7 +20,9 @@
     $text = $display;
 
     // place the font file in the same dir level as the php file
-    $font = '/www/sda/reko/access/Vogue.ttf';
+    putenv('GDFONTPATH=' . realpath('.'));
+    $font = "Vogue.ttf";
+    
 
     //this function sets the font size, places to the co-ords
     // imagettftext( [image], [size], [angle], [x], [y], [color], [fontfile], [text] )
