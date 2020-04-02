@@ -88,7 +88,7 @@ for($i=1;$i <= $xRows; $i++ ){
 
 }
 else{
-        print("Det er ikke mulig å bestille fra denne leverandøren for øyeblikket.");
+        print("<p>Det er ikke mulig å bestille fra denne leverandøren for øyeblikket.</p>");
 }
         ?>
            </form>
