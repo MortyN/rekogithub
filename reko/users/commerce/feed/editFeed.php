@@ -86,7 +86,7 @@ if($xRows != 1){ /*Dersom det ikke er registrert et innlegg fra før*/?>
                 <option value='Innaktiv'>Innaktiv</option>
             </select><br>
             <input class="Lagreknapp" type="submit" value="Last opp!" name="submit"/>
-        
+        <!--hei-->
     
             </div>
             </form>

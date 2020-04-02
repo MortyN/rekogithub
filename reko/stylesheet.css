@@ -816,6 +816,35 @@ width:100px;
 width: 95%;
 margin-bottom: 15px;
 }
+input.Lagreknapp
+{
+  background-color: #94d3ac;
+  width: 25vw;
+  height: 8vw;
+  color: black;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 5vw;
+}
+/*NUU*/
+input.Lagreknapp:hover
+{
+  background-color: green;
+  width: 25vw;
+  height: 8vw;
+  color: black;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 5vw;
+}
 
 .grid-container {
 display: grid;
