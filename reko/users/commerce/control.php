@@ -13,6 +13,8 @@ $database="reko";
 
 $db=mysqli_connect($host,$user,$password,$database) or die ("ikke kontakt med database-server");
 
+
+
 $sql = "SELECT * FROM users WHERE userName='$connectedUser' or email='$connectedUser';";
 $sqlQuery = mysqli_query($db,$sql) or die ("Kan ikke hente data fra databasen (#100)");
 $del = mysqli_fetch_array($sqlQuery);
@@ -29,7 +31,8 @@ $del = mysqli_fetch_array($sqlQuery);
     $newURL = "<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/".$userRole."/dashboard.php'/>";
     
 
-
+    $timelog = "UPDATE users SET last_timestamp = now() WHERE userID = $userID;";
+    mysqli_query($db,$timelog) or die("Failed to log time");
     if($userRole != "commerce"){
         print($newURL);
     }

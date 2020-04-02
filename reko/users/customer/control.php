@@ -35,7 +35,8 @@ $del = mysqli_fetch_array($sqlQuery);
 
     $newURL = "<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/".$userRole."/dashboard.php'/>";
     
-
+    $timelog = "UPDATE users SET last_timestamp = now() WHERE userID = $userID;";
+    mysqli_query($db,$timelog) or die("Failed to log time");
 
     if($userRole != "customer"){
         print($newURL);

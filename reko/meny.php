@@ -38,6 +38,9 @@ if($connectedUser){
     $userRole = $del["role"];
     $userStatus = $del["status"];
     $userID = $del["userID"];
+
+    $timelog = "UPDATE users SET last_timestamp = now() WHERE userID = $userID;";
+    mysqli_query($db,$timelog) or die("Failed to log time");
     ?>
 
         <div class="mainNav" id="topNav">
