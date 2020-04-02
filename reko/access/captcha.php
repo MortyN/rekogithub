@@ -6,7 +6,7 @@
     $_SESSION['captchaCheck'] =$num1 + $num2;
     $display = $num1."+".$num2."=";
 
-    $my_img = imagecreate( 120, 80 );
+    $my_img = imagecreate( 120, 40 );
     $background = imagecolorallocate( $my_img, 54, 166, 61 );
     $text_colour = imagecolorallocate( $my_img, 255, 255, 255 );
     $line_colour = imagecolorallocate( $my_img, 128, 255, 0 );

@@ -30,7 +30,7 @@
                     <a>Gjenta passord:</a><br>
                     <input type="password" name="rePassword" id="rePassword" required/><br><br>
                     <a>Regn ut: <?php print($sumerio); ?> </a><br>
-                    <img src="captcha.php" id="captchaImage" alt="Captcha Image"/>
+                    <img src="captcha.php" id="captchaImage" alt="Captcha Image"/><br>
                     <input type="text" class="captcha" name="captcha_answer" id="captcha_answer" required/><br><br>
 
                     
