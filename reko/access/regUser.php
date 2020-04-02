@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<?php include("captcha.php"); // $num1,num2,$sumerio ?>
+<?php  session_start();
+        $check = $_SESSION["captchaCheck"]; ?>
     <head>
     <meta charset="UTF-8">
     <title>REKO - HORTEN</title>
