@@ -62,7 +62,7 @@
                $newMessage = $_POST["newMsg"];
                
                $sql_newMsg = "INSERT INTO chat_message (message, date) VALUES ($newMessage, NOW());";
-               if(msqli_query($db,$sql_newMsg)){
+               if(mysqli_query($db,$sql_newMsg)){
                 echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>";
                }
                else{
