@@ -55,8 +55,9 @@ if($connectedUser){
                     <a href="/www/sda/reko/access/logout.php">LOGG UT</a>
                 </div> 
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="navBar()">&#9776;</a>
-            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
          </div>
          <?php
     
@@ -81,8 +82,9 @@ else{
                     
                 </div> 
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="navBar()">&#9776;</a>
-            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
          </div>
 <?php
 }
