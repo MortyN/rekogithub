@@ -10,7 +10,7 @@
     $background = imagecolorallocate( $my_img, 54, 166, 61 );
     $text_colour = imagecolorallocate( $my_img, 255, 255, 255 );
     $line_colour = imagecolorallocate( $my_img, 128, 255, 0 );
-    imagestring( $my_img, 6, 30, 0, "$num1 + $num2 =", $text_colour );
+    imagestring( $my_img, 10, 30, 0, "$num1 + $num2 =", $text_colour );
     imagesetthickness ( $my_img, 5 );
     
 
