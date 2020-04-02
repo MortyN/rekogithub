@@ -872,9 +872,11 @@ body {
     font-family: sans-serif;
   }
   .profileContainer{
-  margin:0 auto;
-  width: 75%;
+  margin:0px;
+  width: 96vw;
   margin-top:40px;
+  position: relative;
+  left:1vw;
   
   
   }
@@ -905,7 +907,7 @@ body {
   }
   
   .feedPost{
-  width: 100%;
+  width: 96vw;
   min-height: 450px;
   background-color: white;
   padding: 15px;
@@ -916,7 +918,8 @@ body {
   }
   
   .productPost{
-  width: 102%;
+  min-width: 96vw;
+    max-width: 98vw;
   min-height:450px;
   background-color: white;
   border-bottom-left-radius: 20px;
