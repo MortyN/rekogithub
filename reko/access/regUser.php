@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include("captcha.php"); // $num1,num2,$sumerio ?>
     <head>
     <meta charset="UTF-8">
     <title>REKO - HORTEN</title>
@@ -25,8 +26,16 @@
                     <input type="password" name="password1" id="password1" required/><br><br>
                     <a>Gjenta passord:</a><br>
                     <input type="password" name="rePassword" id="rePassword" required/><br><br>
+                    <a>Regn ut: </a><br>
+                    <a> <?php print("$num1 + $num2 = "); ?></a>
+                    <input type="text" class="captcha" name="captcha_answer" id="captcha_answer" required/><br><br>
+
+                    
+
                         
                     <input type="submit" value="Registrer!" name="submit" /><br>
+
+
 
                   
            
@@ -43,6 +52,7 @@
         $userName = $_POST["userName"];
         $password1 = $_POST["password1"];
         $rePassword = $_POST["rePassword"];
+        $answer = $_POST["captcha_answer"];
         include("/var/www/html/www/sda/reko/db/connect.php");
 
         if(!$firstName || !$lastName || !$eMail || !$password1 || !$rePassword || !$userName ){
@@ -53,6 +63,9 @@
           } 
         if($password1 != $rePassword){
             print("Passordene er ikke like!") and die; 
+        }
+        if ($answer != $sumerio){
+            print("feil svar.");
         }
         else{
         $sql = "SELECT * FROM users WHERE userName='$userName';"; 
