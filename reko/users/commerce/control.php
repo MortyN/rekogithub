@@ -98,6 +98,7 @@ $del = mysqli_fetch_array($sqlQuery);
     <a href="/www/sda/reko/access/logout.php">Logg ut</a>
     
   </div>
+  <a href="/www/sda/reko/users/commerce/chat/chat_overview.php">Dine meldinger</a>
 </div>
 <script src="/www/sda/reko/users/commerce/sidebarfunction.js"></script>
 

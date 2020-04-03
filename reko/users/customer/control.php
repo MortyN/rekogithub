@@ -70,6 +70,7 @@ $del = mysqli_fetch_array($sqlQuery);
   <a href="/www/sda/reko/users/customer/dashboard.php">Info</a>
     <a href="/www/sda/reko/users/customer/profile/orders.php">Dine ordre</a>
     <a href="/www/sda/reko/users/customer/profile/profile.php">Endre profil</a>
+    <a href="/www/sda/reko/users/customer/chat/chat_overview.php">Dine meldinger</a>
     <a href="/www/sda/reko/access/logout.php">Logg ut</a>
 
 
