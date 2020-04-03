@@ -16,47 +16,58 @@
                     <th>Pålogget</th> 
                 </tr>
                 <?php 
-                $sql= "SELECT chat_connection.chatID, users.firstName,users.lastName, users.role, users.last_timestamp AS time
-                FROM users
-                INNER JOIN chat_connection
-                ON users.userID = chat_connection.commerceID
-                WHERE chat_connection.customerID = $userID OR chat_connection.commerceID = $userID";
-                
-
+                $sql= "SELECT * FROM chat_connection WHERE commerceID = $userID OR customerID = $userID;";
                 $result = mysqli_query($db,$sql) or ("Kan ikke hente samtaler akkurat nå.");
                 $num = mysqli_num_rows($result);
 
                 for($i=1; $i<=$num; $i++){
                     $part=mysqli_fetch_array($result);
 
-                    $firstName = $part["firstName"];
-                    $lastName = $part["lastName"];
-                    $type = $part["role"];
-                    $time = strtotime($part["time"]);
                     $chatID = $part['chatID'];
+                    $customerID = $part['customerID'];
+                    $commerceID = $part['commerceID'];
+
+                        switch ($userID){
+                            case $customerID:
+                                $chatPerson = $commerceID;
+                            break;
+                            case $commerceID:
+                                $chatPerson = $customerID;
+                            break;
+                        }
                     
+                    $findPerson ="SELECT * users where userID = $chatPerson;";
+                    $chatPersonInfo = mysqli_query($db,$findPerson) or ("kan ikke vise dine samtaler for øyeblikket.");
+                    $info = mysqli_fetch_array($chatPersonInfo);
+                        $firstName = $info["firstName"];
+                        $lastName = $info["lastName"];
+                        $type = $info["role"];
+                        $time = strtotime($info["last_timestamp"]);
+                        
 
-                    switch ($type){
-                        case "commerce":
-                            $type = "Leverandør";
-                        break;
-                        case "customer":
-                            $type = "Kunde";
-                        break;
-                        case "Moderator":
-                            $type = "Moderator";
-                        break;
+                        switch ($type){
+                            case "commerce":
+                                $type = "Leverandør";
+                            break;
+                            case "customer":
+                                $type = "Kunde";
+                            break;
+                            case "Moderator":
+                                $type = "Moderator";
+                            break;
 
-                    }
-                    if (time() - $time > 15 * 60 || date("Y-m-d", $time) != date("Y-m-d") )  {
-                             $online = "Frakoblet";   
+                        }
+                        if (time() - $time > 15 * 60 || date("Y-m-d", $time) != date("Y-m-d") )  {
+                             $online = "Frakoblet";
+                             $color="red";
                         }
                         else{
                             $online = "Pålogget";
+                            $color = "green";
                         }
 
                     
-                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$online</a></td></tr>");
+                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID' style='color:$color;'>$online</a></td></tr>");
                 }
                 ?>
                 </table>
