@@ -26,7 +26,7 @@
                             $userUserID = $row['userID'];
                             $firstName = $row['firstName'];
                             $lastName = $row['lastName'];
-                            $message = $row['message'];
+                            $message = base64_decode($row['message']);
                             $date = $row['date'];
                             
                             if($userUserID == $userID){
@@ -58,7 +58,7 @@
             
            <?php
            if(isset($_POST["sendMsg"])){
-               $newMessage = $_POST["newMsg"];
+               $newMessage = base64_encode($_POST["newMsg"]);
                
                $sql_newMsg = "INSERT INTO chat_message (chatID, msg_from, message, date) VALUES ('$chatID','$userID','$newMessage', NOW());";
                print("$sql_newMsg");
