@@ -100,7 +100,7 @@
                         case "customer":
                             $type = "Kunde";
                         break;
-                        case "Moderator":
+                        case "moderator":
                             $type = "Moderator";
                         break;
 
