@@ -597,6 +597,7 @@ body {
       font-family: sans-serif;
       height: 25vh;
       font-size: 3vw;
+      line-height: normal;
     }
     .dashboard_orders
     {
@@ -637,6 +638,7 @@ body {
       height: 25vh;
       font-family: sans-serif;
       font-size: 3vw;
+      line-height: normal;
     }
   
     textarea.modNews
