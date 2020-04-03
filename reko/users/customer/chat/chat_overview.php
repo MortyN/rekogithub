@@ -80,7 +80,7 @@
                     <th>Status</th>
                 </tr>
                 <?php 
-                $sql= "SELECT firstName,lastName, role, last_timestamp FROM users WHERE role='commerce' OR role = 'moderator' ORDER BY role DESC,lastName;";
+                $sql= "SELECT userID,firstName,lastName, role, last_timestamp FROM users WHERE role='commerce' OR role = 'moderator' ORDER BY role DESC,lastName;";
 
                 $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
                 $num = mysqli_num_rows($result);
@@ -92,6 +92,7 @@
                     $lastName = $part["lastName"];
                     $type = $part["role"];
                     $time = strtotime($part["last_timestamp"]);
+                    $usersUserID = $part["userID"];
                     
                 
 
@@ -115,7 +116,7 @@
                        $online = "Pålogget";
                        $color = "green";
                    }
-                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID' style='color:$color;'>$online</a></td> </tr>");
+                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID' style='color:$color;'>$online</a></td> </tr>");
                 }
                 ?>
                 </table>
