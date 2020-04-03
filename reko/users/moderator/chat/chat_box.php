@@ -51,9 +51,10 @@
                 </div>
                 <div class="inputMsg">
                 <form class="msgForm" method="POST">
-                    <input type="text" id="newMsg" name="newMsg"/>
-                    <a id="msgReload" href="http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=<?php print($chatID);?>"><i class="icon-repeat"></i></a> 
+                    <textarea id="newMsg" name="newMsg" autofocus ></textarea>
+                    <a id="msgReload" href="http://opheimpi.zapto.org/www/sda/reko/users/moderator/chat/chat_box.php?chatID=<?php print($chatID);?>"><i class="icon-repeat"></i></a> 
                     <input type="submit" id="sendMsg" name="sendMsg"/>
+                    
                 </form>  
                 </div>  
             </div>
@@ -62,8 +63,8 @@
            if(isset($_POST["sendMsg"])){
                $newMessage = base64_encode($_POST["newMsg"]);
                
-               $sql_newMsg = "INSERT INTO chat_message (chatID, msg_from, message, date) VALUES ('$chatID','$userID','$newMessage', NOW());";
-               
+               $sql_newMsg = "INSERT INTO chat_message (chatID, msg_from, message, date) VALUES ('$chatID','$userID','$newMessage', CONVERT_TZ(NOW(),'+00:00','+4:00'))";
+              
                if(mysqli_query($db,$sql_newMsg)){
                 echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/chat/chat_box.php?chatID=$chatID'>";
                }
