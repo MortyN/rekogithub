@@ -108,35 +108,16 @@
                     $type = $part["role"];
                     $time = strtotime($part["last_timestamp"]);
                     $usersUserID = $part["userID"];
-                    $bolean="false";
+                    
 
-                        $checkChatID= "SELECT * FROM chat_connection WHERE commerceID = $userID OR customerID = $userID;";
+                        $checkChatID= "SELECT * FROM chat_connection WHERE commerceID = $userID AND customerID = $usersUserID OR commerceID = $usersUserID AND customerID = $userID;";
                         $check = mysqli_query($db,$checkChatID) or die ("kan ikke validere");
                         $existChat = mysqli_num_rows($check);
-                            for($o = 1; $o<= $existChat; $O++){
-                                $check1=mysqli_fetch_array($check);
-                                $num1 = $check1["commerceID"];
-                                $num2 = $check1["customerID"];
-
-                                switch ($usersUserID){
-                                    case $num1:
-                                        $bolean = true;
-                                    break;
-                                    case $num2:
-                                        $bolean = true;
-                                    break;
-                                    default:
-                                    $bolean = false;
-                                     break;
-                                }
-                                if($bolean){
-                                break;
-                                }
-                            }
+                            
 
                             
 
-                            if ($bolean == false && $usersUserID != $userID){
+                            if ($existChat != 0 && $usersUserID != $userID){
                                 
 
                                 switch ($type){
