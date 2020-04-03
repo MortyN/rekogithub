@@ -94,14 +94,14 @@
                     $time = strtotime($part["last_timestamp"]);
                     $usersUserID = $part["userID"];
 
-                        $checkChatID= "SELECT * FROM chat_connection WHERE commerceID = $usersID OR customerID = $userID;";
+                        $checkChatID= "SELECT * FROM chat_connection WHERE commerceID = $userID OR customerID = $userID;";
                         $check = mysqli_query($db,$checkChatID) or die ("kan ikke validere");
                         $rowsy = mysqli_fetch_array($check);
 
                             $commerceID1 = $rowsy["commerceID"];
                             $customerID1 = $rowsy["customerID"];
 
-                            if ($usersUserID != $customerID1 && $usersUserID != $commerceID){
+                            if ($usersUserID != $customerID1 && $usersUserID != $commerceID1){
 
                                 switch ($type){
                                     case "commerce":
