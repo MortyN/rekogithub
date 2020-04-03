@@ -607,8 +607,8 @@ button.accordion:hover
     background-color: white;
     font-family: sans-serif;
     
-/*hva gjÃƒÂ¸r du in mIN HULE!?
-MÃƒÂ¥ lage en ny boks pÃƒÂ¥ dashboard moderator bare :P. *RARE villager thinking sound*** HEM LYDER**/
+/*hva gjÃƒÆ’Ã‚Â¸r du in mIN HULE!?
+MÃƒÆ’Ã‚Â¥ lage en ny boks pÃƒÆ’Ã‚Â¥ dashboard moderator bare :P. *RARE villager thinking sound*** HEM LYDER**/
   }
   .dashboard_orders
   {
@@ -1209,7 +1209,7 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   .activeChat{
     grid-area:active;
     border-style: solid;
-    min-height: 200px;
+    height: 350px;
     border-radius: 15px;
     padding:10px;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -1224,12 +1224,13 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
    .newChat{
     grid-area:new;
     border-style: solid;
-    min-height: 200px;
+    height: 350px;
     border-radius: 15px;
     padding:10px;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
     font-family: sans-serif;
+    overflow-y:scroll;
   }
   .chatBoxContainer{
     display: grid;
@@ -1355,3 +1356,18 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
    text-align:center;
    
  }
+ .chatOverview{
+   width:100%;
+ }
+ .chatOverview th{
+   border:none;
+   font-size:1.2em;
+   font-weight:bold;
+ }
+.chatOverview td{
+  heigth: 100px;
+  padding:15px 15px;
+}
+.chatOverview  tr:nth-child(even){background-color: #f2f2f2;}
+
+.chatOverview  tr:hover {background-color: #ddd;}
