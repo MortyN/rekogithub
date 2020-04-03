@@ -16,7 +16,10 @@
                     <th>Status</th> 
                 </tr>
                 <?php 
-                $sql= "SELECT * FROM chat_connection WHERE commerceID = $userID OR customerID = $userID;";
+                $sql= "SELECT * FROM chat_connection WHERE commerceID = $userID OR customerID = $userID
+                        INNER JOIN users
+                        ON users.userID = commerceID
+                        ORDER BY last_timestamp;";
                 $result = mysqli_query($db,$sql) or ("Kan ikke hente samtaler akkurat nå.");
                 $num = mysqli_num_rows($result);
 
