@@ -1035,6 +1035,13 @@ body {
   height: 4vh;
   font-size: 3.5vh;
 }
+.profileeditor input[type=text]
+{
+  width: 50%;
+  height: 4vh;
+  font-size: 3.5vh;
+  margin-bottom: 1vh;
+}
 input[type=file]
 {
   height: 200%;
