@@ -100,7 +100,7 @@
                         $commeceID1 = $_POST["commerceID"];
                         $customerID1 = $_post["customerID"];
 
-                        if ($usersUserID != $customerID || $usersUserID != $commerceID){
+                        if ($usersUserID != $customerID && $usersUserID != $commerceID){
 
                                 switch ($type){
                                     case "commerce":
