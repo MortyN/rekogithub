@@ -95,7 +95,7 @@
                     <th>Status</th>
                 </tr>
                 <?php 
-                $sql= "SELECT userID,firstName,lastName, role, last_timestamp FROM users WHERE role='commerce' OR role = 'moderator' ORDER BY role DESC,lastName;";
+                $sql= "SELECT userID,firstName,lastName, role, last_timestamp FROM users ORDER BY role DESC,lastName;";
 
                 $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
                 $num = mysqli_num_rows($result);
@@ -113,7 +113,8 @@
                         $check = mysqli_query($db,$checkChatID) or die ("kan ikke validere");
                         $existChat = mysqli_num_rows($check);
 
-                            if ($existChat == 0){
+                            if ($existChat == 0 && $usersUserID != $userID){
+                                
 
                                 switch ($type){
                                     case "commerce":
