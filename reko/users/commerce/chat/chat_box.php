@@ -7,9 +7,7 @@
                     Til høyre ser du en oversikt over alle Leverandører og Kunder som er registrert i din REKO-ring, klikke på en av dem for å starte en ny samtale.
                 </p>
             </div>
-            <div class="chat">
-
-                <div class="messages">
+            
                    
                 <?php 
                         $chatID = $_GET["chatID"];
