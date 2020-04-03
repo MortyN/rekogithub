@@ -95,7 +95,7 @@
                     <th>Status</th>
                 </tr>
                 <?php 
-                $sql= "SELECT userID,firstName,lastName, role, last_timestamp FROM users WHERE ORDER BY role DESC,lastName;";
+                $sql= "SELECT userID,firstName,lastName, role, last_timestamp FROM users ORDER BY role DESC,lastName;";
 
                 $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
                 $num = mysqli_num_rows($result);
