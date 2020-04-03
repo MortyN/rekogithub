@@ -26,7 +26,7 @@ body {
   }
   .container button
   {
-    background-color: green;
+    background-color: #94d3ac;
     height: 10vw;
     width: 25vw;
     border: 0;
@@ -52,7 +52,7 @@ body {
   button.Passordchange:hover
   {
     transition: 0.3s;
-    background-color: green;
+    background-color: #94d3ac;
     cursor:pointer;
   }
   .mainNav a.logoomrad
@@ -339,7 +339,7 @@ body {
       left:40vw;
       font-size: 3vw;
       margin-bottom:15px;
-      background-color: green;
+      background-color: #94d3ac;
     }
   
   
@@ -618,7 +618,7 @@ body {
       height: 8vw;
       margin: 0 auto;
       padding: 3.5px;
-      background-color: green;
+      background-color: #94d3ac;
       color: white;
       font-size: 4vw;
       position: relative;
@@ -812,7 +812,7 @@ body {
   }
   input.Lagreknapp
   {
-    background-color: green;
+    background-color: #94d3ac;
     width: 40vw;
     height: 12vw;
     color: black;
@@ -1048,7 +1048,7 @@ body {
   
   }
   .greenColorBox{
-  background-color: green;
+  background-color: #94d3ac;
   width: 15px;
   height:100%;
   margin:0;
@@ -1123,7 +1123,7 @@ body {
     float:left;
     }
     .greenColorBox1{
-    background-color: green;
+    background-color: #94d3ac;
     width: 15px;
     height:100%;
     margin:0;
