@@ -136,7 +136,7 @@
                         echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>";
                     }
                     else{
-                        print("kan ikke opprette forbindelse.");
+                        print("kan ikke opprette forbindelse1.");
                     }
 
                 }
