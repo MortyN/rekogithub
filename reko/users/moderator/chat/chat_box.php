@@ -6,7 +6,7 @@ $chatID = $_GET["chatID"];
     $control_array = mysqli_fetch_array($control_res);
     $ID_control1 = $control_array["commerceID"];
     $ID_control2 = $control_array["customerID"];
-    if($ID_control1 != $userID || $ID_control2 != $userID){
+    if($ID_control1 != $userID && $ID_control2 != $userID){
         print("<h3> #404 - Accsess denied!");
     }
     else{
