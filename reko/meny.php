@@ -39,7 +39,7 @@ if($connectedUser){
     $userStatus = $del["status"];
     $userID = $del["userID"];
 
-    $timelog = "UPDATE users SET last_timestamp = now() WHERE userID = $userID;";
+    $timelog = "UPDATE users SET last_timestamp = CONVERT_TZ(NOW(),'+00:00','+4:00') WHERE userID = $userID;";
     mysqli_query($db,$timelog) or die("Failed to log time");
     ?>
 
