@@ -118,7 +118,7 @@
 
                             
 
-                            if ($existChat != 0 && $usersUserID != $userID){
+                            if ($existChat == 0 && $usersUserID != $userID){
                                 
 
                                 switch ($type){
