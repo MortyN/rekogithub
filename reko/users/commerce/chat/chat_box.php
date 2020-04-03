@@ -1,5 +1,5 @@
 <?php include("../control.php"); 
-
+$chatID = $_GET["chatID"];
 $control_query="SELECT * FROM chat_connection WHERE chatID = $chatID;";
     print($control_query);
     $control_res = mysqli_query($db,$control_query) or die ("Du har ikke tilgang til denne meldingen.");
@@ -23,7 +23,7 @@ $control_query="SELECT * FROM chat_connection WHERE chatID = $chatID;";
                 <div class="messages">
                    
                 <?php 
-                        $chatID = $_GET["chatID"];
+                        
                         $sql ="SELECT users.userID, users.firstName,users.lastName, chat_message.message, chat_message.date
                         FROM users
                         INNER JOIN chat_message
