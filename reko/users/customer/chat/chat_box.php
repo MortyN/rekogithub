@@ -52,7 +52,7 @@
                 <div class="inputMsg">
                 <form class="msgForm" method="POST">
                     <input type="text" id="newMsg" name="newMsg"/>
-                    <i class='fas fa-sync-alt' onClick="window.location.reload();"></i>
+                    <i class='fas fa-sync-alt' onClick="window.location.reload();" id="msgReload"></i>
                     <input type="submit" id="sendMsg" name="sendMsg"/>
                     
                 </form>  
