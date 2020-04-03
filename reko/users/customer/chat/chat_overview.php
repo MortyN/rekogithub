@@ -84,7 +84,7 @@
 
                 $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
                 $num = mysqli_num_rows($result);
-
+                
                 for($i=1; $i<=$num; $i++){
                     $part=mysqli_fetch_array($result);
 
@@ -94,11 +94,12 @@
                     $time = strtotime($part["last_timestamp"]);
                     $usersUserID = $part["userID"];
 
-                    $checkChatID= "SELECT * FROM chat_connection WHERE commerceID = $usersUserID OR customerID = $usersUserID;";
+                        $checkChatID= "SELECT * FROM chat_connection WHERE commerceID = $userID OR customerID = $userID;";
                         $check = mysqli_query($db,$checkChatID) or die ("kan ikke validere");
                         $rowsy = mysqli_fetch_array($check);
-                            $commeceID1 = $_POST["commerceID"];
-                            $customerID1 = $_post["customerID"];
+
+                            $commeceID1 = $rowsy["commerceID"];
+                            $customerID1 = $rowsy["customerID"];
 
                             if ($usersUserID != $customerID && $usersUserID != $commerceID){
 
