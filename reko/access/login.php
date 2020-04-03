@@ -52,7 +52,11 @@ $del = mysqli_fetch_array($sqlQuery);
     <meta charset="UTF-8">
     <title>REKO - HORTEN</title>
     <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="stylesheet" media="screen and (max-width:1250px)" href="/www/sda/reko/Mobile.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen and (max-width:1250px)" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     </head>
 
     <body class="loginBody">
