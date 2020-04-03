@@ -376,7 +376,9 @@ body {
       background-color: #effcef;
     }
     .profileInfo_backend img {
-      width:7vw;
+      width:8vw;
+      object-fit: cover;
+      max-height: 4vh;
       margin: 0 auto;
       border-radius: 50%;
       margin-bottom: 10px;
