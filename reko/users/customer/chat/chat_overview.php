@@ -14,6 +14,7 @@
                     <th>Navn</th>
                     <th>Type</th>
                     <th>Status</th> 
+                    <th>Siste melding</th>
                 </tr>
                 <?php 
                 $sql= "SELECT * FROM chat_connection WHERE commerceID = $userID OR customerID = $userID;";
@@ -22,10 +23,21 @@
 
                 for($i=1; $i<=$num; $i++){
                     $part=mysqli_fetch_array($result);
-
+                    
                     $chatID = $part['chatID'];
                     $customerID = $part['customerID'];
                     $commerceID = $part['commerceID'];
+
+                    $lastMessage_query = "SELECT message 
+                                          FROM chat_message 
+                                          WHERE chatID = $chatID 
+                                          AND date=(
+                                              SELECT MAX(date) 
+                                              FROM chat_message 
+                                              WHERE chatID = $chatID);";
+                    $lastMessage_query_res = mysqli_query($db,$lastMessage_query_res) or ("kan ikke hente siste melding");
+                    $l = mysqli_fetch_array($lastMessage_query_res);
+                    $lastMessage = base64_decode($l['message']);
 
                         switch ($userID){
                             case $customerID:
@@ -67,7 +79,7 @@
                         }
 
                     
-                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID' style='color:$color;'>$online</a></td></tr>");
+                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID' style='color:$color;'>$online</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$lastMessage</a></td></tr>");
                 }
                 ?>
                 </table>
