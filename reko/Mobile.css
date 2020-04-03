@@ -47,6 +47,8 @@ body {
     background-color: #94d3ac;
     padding: 10px 8px;
     border: none;
+    font-size: 25px;
+    padding: 10px 14px;
   }
   /*Hei*/
   button.Passordchange:hover
