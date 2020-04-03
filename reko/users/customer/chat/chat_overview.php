@@ -13,7 +13,7 @@
                 <tr>
                     <th>Navn</th>
                     <th>Type</th>
-                    <th>Pålogget</th> 
+                    <th>Status</th> 
                 </tr>
                 <?php 
                 $sql= "SELECT * FROM chat_connection WHERE commerceID = $userID OR customerID = $userID;";
@@ -77,9 +77,10 @@
                 <tr>
                     <th>Navn</th>
                     <th>Type</th>
+                    <th>Status</th>
                 </tr>
                 <?php 
-                $sql= "SELECT firstName,lastName, role FROM users WHERE role='commerce' OR role = 'moderator' ORDER BY role DESC;";
+                $sql= "SELECT firstName,lastName, role, last_timestamp FROM users WHERE role='commerce' OR role = 'moderator' ORDER BY role DESC,lastName;";
 
                 $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
                 $num = mysqli_num_rows($result);
@@ -90,6 +91,7 @@
                     $firstName = $part["firstName"];
                     $lastName = $part["lastName"];
                     $type = $part["role"];
+                    $time = strtotime($part["last_timestamp"]);
                     
                 
 
@@ -105,7 +107,15 @@
                         break;
 
                     }
-                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$type</a></td></tr>");
+                    if (time() - $time > 15 * 60 || date("Y-m-d", $time) != date("Y-m-d") )  {
+                        $online = "Frakoblet";
+                        $color="red";
+                   }
+                   else{
+                       $online = "Pålogget";
+                       $color = "green";
+                   }
+                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID' style='color:$color;'>$online</a></td> </tr>");
                 }
                 ?>
                 </table>
