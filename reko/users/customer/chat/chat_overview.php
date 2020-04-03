@@ -93,31 +93,38 @@
                     $type = $part["role"];
                     $time = strtotime($part["last_timestamp"]);
                     $usersUserID = $part["userID"];
-                    
-                
 
-                    switch ($type){
-                        case "commerce":
-                            $type = "Leverandør";
-                        break;
-                        case "customer":
-                            $type = "Kunde";
-                        break;
-                        case "moderator":
-                            $type = "Moderator";
-                        break;
+                    $checkChatID= "SELECT * FROM chat_connection WHERE commerceID = $userID OR customerID = $userID;";
+                    $check = mysqli_query($db,$checkChatID) or die ("kan ikke validere");
+                    $rowsy = mysqli_fetch_array($check);
+                        $commeceID1 = $_POST["commerceID"];
+                        $customerID1 = $_post["customerID"];
 
-                    }
-                    if (time() - $time > 15 * 60 || date("Y-m-d", $time) != date("Y-m-d") )  {
-                        $online = "Frakoblet";
-                        $color="red";
-                   }
-                   else{
-                       $online = "Pålogget";
-                       $color = "green";
-                   }
-                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID' style='color:$color;'>$online</a></td> </tr>");
+                        if ($usersUserID != $customerID || $usersUserID != $commerceID){
+
+                                switch ($type){
+                                    case "commerce":
+                                        $type = "Leverandør";
+                                    break;
+                                    case "customer":
+                                        $type = "Kunde";
+                                    break;
+                                    case "moderator":
+                                        $type = "Moderator";
+                                    break;
+
+                                }
+                                if (time() - $time > 15 * 60 || date("Y-m-d", $time) != date("Y-m-d") )  {
+                                    $online = "Frakoblet";
+                                    $color="red";
+                                }
+                                else{
+                                    $online = "Pålogget";
+                                    $color = "green";
+                                }
+                     print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID' style='color:$color;'>$online</a></td> </tr>");
                 }
+            }
                 ?>
                 </table>
 
