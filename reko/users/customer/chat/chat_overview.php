@@ -79,7 +79,7 @@
                     <th>Type</th>
                 </tr>
                 <?php 
-                $sql= "SELECT firstName,lastName, role FROM users;";
+                $sql= "SELECT firstName,lastName, role FROM users WHERE role='commerce' OR role = 'moderator';";
 
                 $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
                 $num = mysqli_num_rows($result);
