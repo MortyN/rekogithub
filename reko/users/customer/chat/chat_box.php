@@ -61,7 +61,7 @@
             
            <?php
            if(isset($_POST["sendMsg"])){
-               $newMessage = $_POST["newMsg"];
+               $newMessage = base64_encode($_POST["newMsg"]);
                
                $sql_newMsg = "INSERT INTO chat_message (chatID, msg_from, message, date) VALUES ('$chatID','$userID','$newMessage', CONVERT_TZ(NOW(),'+00:00','+4:00'))";
                print("$sql_newMsg");
