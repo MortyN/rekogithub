@@ -38,7 +38,7 @@
                     $lastMessage_query_res = mysqli_query($db,$lastMessage_query) or ("kan ikke hente siste melding");
                     $l = mysqli_fetch_array($lastMessage_query_res);
                     $lastMessage1 = base64_decode($l['message']);
-                    $lastMessage = strlen($lastMessage1) > 30 ? substr($lastMessage1,0,50)."..." : $lastMessage1;
+                    $lastMessage = strlen($lastMessage1) > 20 ? substr($lastMessage1,0,20)."..." : $lastMessage1;
 
                         switch ($userID){
                             case $customerID:
