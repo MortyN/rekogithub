@@ -35,7 +35,7 @@
                                               SELECT MAX(date) 
                                               FROM chat_message 
                                               WHERE chatID = $chatID);";
-                    $lastMessage_query_res = mysqli_query($db,$lastMessage_query_res) or ("kan ikke hente siste melding");
+                    $lastMessage_query_res = mysqli_query($db,$lastMessage_query) or ("kan ikke hente siste melding");
                     $l = mysqli_fetch_array($lastMessage_query_res);
                     $lastMessage = base64_decode($l['message']);
 
