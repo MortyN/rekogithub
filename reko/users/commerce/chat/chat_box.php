@@ -50,8 +50,8 @@
                 <div class="inputMsg">
                 <form class="msgForm" method="POST">
                     <input type="text" id="newMsg" name="newMsg"/>
+                    <a id="msgReload" href="http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=<?php print($chatID);?>"><i class="icon-repeat"></i></a>
                     <input type="submit" id="sendMsg" name="sendMsg"/>
-                    <input type="submit" id="msgReload" name="reload"/>
                 </form>  
                 </div>  
             </div>
