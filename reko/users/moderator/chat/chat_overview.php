@@ -81,7 +81,7 @@
                         }
 
                     
-                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID' style='color:$color;'>$online</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$lastMessage</a></td></tr>");
+                    print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/moderator/chat/chat_box.php?chatID=$chatID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID' style='color:$color;'>$online</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>$lastMessage</a></td></tr>");
                 }
                 ?>
                 </table>
@@ -141,7 +141,7 @@
                                     $online = "Pålogget";
                                     $color = "green";
                                 }
-                     print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_overview.php?newChat=1&with=$usersUserID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID' style='color:$color;'>$online</a></td> </tr>");
+                     print("<tr><td><a href='http://opheimpi.zapto.org/www/sda/reko/users/moderator/chat/chat_overview.php?newChat=1&with=$usersUserID'>$firstName $lastName</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID'>$type</a></td> <td><a href='http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_overview.php?newChat=1&with=$usersUserID' style='color:$color;'>$online</a></td> </tr>");
                 }
             }
                 ?>
@@ -161,7 +161,7 @@
                         $newChatID_array=mysqli_fetch_array($newChatID_res);
                         $newChatID = $newChatID_array["chatID"];
                         
-                        echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/commerce/chat/chat_box.php?chatID=$newChatID'>";
+                        echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/moderator/chat/chat_box.php?chatID=$newChatID'>";
                     }
                     else{
                         print("kan ikke opprette forbindelse1.");
