@@ -277,7 +277,7 @@ body {
       margin-bottom: 1vh;
     }
     input[type=submit]{
-      background-color: green;
+      background-color: #94d3ac;
       width: 25vw;
       height: 8vw;
       color: black;
@@ -291,7 +291,7 @@ body {
 }
   
     .login_logo{
-        max-height:100px;
+        max-height:30vw;
         margin-bottom: 5%;
         border-radius: 200px 200px 200px 200px;
         -moz-border-radius: 200px 200px 200px 200px;
