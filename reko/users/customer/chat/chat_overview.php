@@ -101,7 +101,7 @@
                             $commeceID1 = $rowsy["commerceID"];
                             $customerID1 = $rowsy["customerID"];
 
-                            if ($usersUserID != $customerID && $usersUserID != $commerceID){
+                            if ($usersUserID != $customerID || $usersUserID != $commerceID){
 
                                 switch ($type){
                                     case "commerce":
