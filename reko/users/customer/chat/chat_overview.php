@@ -123,5 +123,27 @@
 
 
             </div>
+            <?php
+            if(isset($_GET["newChat"])){
+                if($_GET["newChat"] == 1){
+                    $newUserChat = $_GET["with"];
+
+                    $newChat = "INSERT INTO chat_connection (commerceID,customerID) VALUES ($newUserChat,$userID);";
+                    if(mysqli_query($db,$newChat)){
+                        $newChatID_query= "SELECT chatID FROM chat_connectijon WHERE commerceID  = $newUserChat AND customerID = $userID;";
+                        $newChatID = mysqli_query($db,$newChatID_query) or die ("kan ikke opprette forbindelse");
+                        mysqli_fetch_array($newChatID);
+                        echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$chatID'>";
+                    }
+                    else{
+                        print("kan ikke opprette forbindelse.");
+                    }
+
+                }
+            }
+            
+            
+            ?>
+
         </div>
     </div>
