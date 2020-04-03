@@ -98,7 +98,7 @@
                         $check = mysqli_query($db,$checkChatID) or die ("kan ikke validere");
                         $rowsy = mysqli_fetch_array($check);
 
-                            $commeceID1 = $rowsy["commerceID"];
+                            $commerceID1 = $rowsy["commerceID"];
                             $customerID1 = $rowsy["customerID"];
 
                             if ($usersUserID != $customerID && $usersUserID != $commerceID){
