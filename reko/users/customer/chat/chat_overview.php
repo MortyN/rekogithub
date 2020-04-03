@@ -151,8 +151,10 @@
                     $newChat = "INSERT INTO chat_connection (commerceID,customerID) VALUES ($newUserChat,$userID);";
                     if(mysqli_query($db,$newChat)){
                         $newChatID_query= "SELECT chatID FROM chat_connection WHERE commerceID  = $newUserChat AND customerID = $userID;";
-                        $newChatID = mysqli_query($db,$newChatID_query) or die ("kan ikke opprette forbindelse");
-                        mysqli_fetch_array($newChatID);
+                        $newChatID_res = mysqli_query($db,$newChatID_query) or die ("kan ikke opprette forbindelse");
+                        $newChatID_array=mysqli_fetch_array($newChatID_res);
+                        $newChatID = $newChatID_array["chatID"];
+                        
                         echo "<meta http-equiv='refresh' content='0;url=http://opheimpi.zapto.org/www/sda/reko/users/customer/chat/chat_box.php?chatID=$newChatID'>";
                     }
                     else{

@@ -1065,7 +1065,10 @@ border-style: solid;
 -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
 box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
 }
-
+.profileeditor img
+{
+  max-width: 5vw;
+}
 .messageDash{
 margin-left: 10%;
 margin-right: 10%;
