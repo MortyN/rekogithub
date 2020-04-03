@@ -1035,7 +1035,12 @@ body {
   height: 4vh;
   font-size: 3.5vh;
 }
-
+input[type=file]
+{
+  height: 200%;
+  font-size: 1vh;
+  height: 2vh;
+}
   table
   {
       font-size: 2vw;
