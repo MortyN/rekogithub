@@ -79,7 +79,7 @@
                     <th>Type</th>
                 </tr>
                 <?php 
-                $sql= "SELECT firstName,lastName, role FROM users WHERE role='commerce' OR role = 'moderator';";
+                $sql= "SELECT firstName,lastName, role FROM users WHERE role='commerce' OR role = 'moderator' ORDER BY role;";
 
                 $result = mysqli_query($db,$sql) or die("Kan ikke hente produkter akkurat nå.");
                 $num = mysqli_num_rows($result);
@@ -91,7 +91,7 @@
                     $lastName = $part["lastName"];
                     $type = $part["role"];
                     
-                    
+                
 
                     switch ($type){
                         case "commerce":
