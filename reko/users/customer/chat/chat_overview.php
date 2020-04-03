@@ -20,7 +20,7 @@
                 FROM users
                 INNER JOIN chat_connection
                 ON users.userID = chat_connection.commerceID
-                WHERE chat_connection.customerID = $userID";
+                WHERE chat_connection.customerID = $userID OR chat_connection.commerceID = $userID";
                 
 
                 $result = mysqli_query($db,$sql) or ("Kan ikke hente samtaler akkurat nå.");
