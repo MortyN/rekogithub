@@ -49,6 +49,7 @@ body {
     border: none;
     font-size: 25px;
     padding: 10px 14px;
+    min-height: 4vh;
   }
   /*Hei*/
   button.Passordchange:hover
@@ -1048,6 +1049,7 @@ input[type=file]
   font-size: 1vh;
   height: 2vh;
 }
+
   table
   {
       font-size: 2vw;
