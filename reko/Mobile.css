@@ -43,7 +43,7 @@ body {
   }
   button.Passordchange
   {
-    width: 30vw;
+    width: 50%;
     background-color: #94d3ac;
     padding: 10px 8px;
     border: none;
@@ -1003,12 +1003,13 @@ body {
   }
   .profileeditor h2{
   margin-bottom: 40px;
+  font-size: 5vw;
   }
   .profileeditor{
   text-align:center;
   background-color: white;
   margin-top: 5px;
-  width: 100%;
+  width: 76vw;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 20px;
@@ -1017,6 +1018,22 @@ body {
   -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   }
+  .profileeditor img
+{
+  max-width: 20vw;
+}
+.profileeditor label
+{
+  font-size: 3vw;
+  margin: 0px;
+}
+.profileeditor input
+{
+  width: 50%;
+  height: 4vh;
+  font-size: 3.5vh;
+}
+
   table
   {
       font-size: 2vw;
