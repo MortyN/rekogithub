@@ -113,7 +113,8 @@
                         $check = mysqli_query($db,$checkChatID) or die ("kan ikke validere");
                         $existChat = mysqli_num_rows($check);
 
-                            if ($existChat == 0){
+                            if ($existChat == 0 && $usersUserID =! $userID){
+                                
 
                                 switch ($type){
                                     case "commerce":
