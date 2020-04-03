@@ -53,6 +53,7 @@
                 <form class="msgForm" method="POST">
                     <input type="text" id="newMsg" name="newMsg"/>
                     <input type="submit" id="sendMsg" name="sendMsg"/>
+                    <input type="submit" id="msgReload" name="reload"/>
                 </form>  
                 </div>  
             </div>
