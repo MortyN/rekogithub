@@ -36,7 +36,7 @@
                             break;
                         }
                     
-                    $findPerson ="SELECT * users where userID = $chatPerson;";
+                    $findPerson ="SELECT * FROM users where userID = $chatPerson;";
                     $chatPersonInfo = mysqli_query($db,$findPerson) or ("kan ikke vise dine samtaler for øyeblikket.");
                     $info = mysqli_fetch_array($chatPersonInfo);
                         $firstName = $info["firstName"];
