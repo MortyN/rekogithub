@@ -110,7 +110,6 @@
                     $usersUserID = $part["userID"];
 
                         $checkChatID= "SELECT * FROM chat_connection WHERE commerceID = $userID OR customerID = $userID;";
-                        print("$checkChatID");
                         $check = mysqli_query($db,$checkChatID) or die ("kan ikke validere");
                         $existChat = mysqli_num_rows($check);
 
