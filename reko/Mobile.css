@@ -513,7 +513,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding: 5px;
-    width: 100%;
+    width: 80vw;
     margin: 0 auto;
     border-style: solid;
     border-radius: 20px;
@@ -529,7 +529,7 @@ body {
     width: 100%;
     margin-bottom:10px;
     border-radius: 20px;
-    min-height: 10vw;
+    height: 10vw;
     min-width: 12vw;
   
   }
