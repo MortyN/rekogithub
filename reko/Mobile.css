@@ -513,7 +513,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding: 5px;
-    width: 80vw;
+    width: 100%;
     margin: 0 auto;
     border-style: solid;
     border-radius: 20px;
@@ -843,7 +843,7 @@ body {
   padding: 20px;
   margin-top:5px;
   min-height: 80vh;
-  width: 70vw;
+  width: 80vw;
   margin-left: 1vw;
 
   
