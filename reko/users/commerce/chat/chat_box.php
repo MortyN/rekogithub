@@ -1,4 +1,15 @@
-<?php include("../control.php"); ?>
+<?php include("../control.php"); 
+
+$control_query="SELECT * FROM chat_connection WHERE chatID = $chatID;";
+    print($control_query);
+    $control_res = mysqli_query($db,$control_query) or die ("Du har ikke tilgang til denne meldingen.");
+    $control_array = mysqli_fetch_array($control_res);
+    $ID_control1 = $control_array["commerceID"];
+    $ID_control2 = $control_array["customerID"];
+    if($ID_control1 != $userID && $ID_control2 != $userID){
+        print("<h3> #404 - Accsess denied!");
+    }
+    else{?>
 <div class="dashboard_content">
         <div class="chatBoxContainer">
             <div class="chatBoxInfo">
@@ -74,3 +85,4 @@
                    
                }
             }
+        }?>
