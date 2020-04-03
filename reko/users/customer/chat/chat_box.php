@@ -28,7 +28,7 @@
                             $userUserID = $row['userID'];
                             $firstName = $row['firstName'];
                             $lastName = $row['lastName'];
-                            $message = $row['message'];
+                            $message = base64_decode($row['message']);
                             $date = $row['date'];
                             
                             if($userUserID == $userID){
