@@ -7,6 +7,7 @@ include("/var/www/html/www/sda/reko/db/connect.php");
 <!DOCTYPE html lang="no">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>REKO - HORTEN</title>
 <link rel="icon" href="/www/sda/reko/img/rekologo.png">
 <link rel="icon" media="screen and (max-width:1250px)" href="/www/sda/reko/img/rekologo.png">
