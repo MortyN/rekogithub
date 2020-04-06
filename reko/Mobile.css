@@ -105,6 +105,10 @@ body {
     overflow: hidden;
 }
 
+.mainNav .icon {
+  display: none;
+}
+
 /* Style the dropdown button to fit inside the topnav */
 .dropdown .dropbtn {
   font-size: 17px;
