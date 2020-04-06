@@ -1176,7 +1176,7 @@ input[type=file]
     .mainNav.responsive .icon {
         position: absolute;
         right: 0;
-        top: 0;
+        top: 100;
     }
     .mainNav.responsive a {
         float: none;
