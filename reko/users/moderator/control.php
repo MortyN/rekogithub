@@ -48,20 +48,7 @@ $del = mysqli_fetch_array($sqlQuery);
 </head>
 <body class="dashboard">
 <!-- Mobile menu start -->
-<div class="mobileNav">
-  <a href="#home" class="active"><img src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
-  <div id="mobileNavLinks">
-    <a href="#news">Anonnser</a>
-    <a href="#contact">Leverandører</a>
-    <a href="#about">Kontakter</a>
-     <a href="#news">Hjelp</a><br>
-    <a href="#contact">Logg inn</a>
-    <a href="#about">Registrer deg</a>
-  </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div> <!-- Mobile menu end -->
+ <!-- Mobile menu end -->
     <div class="top_header">
         
         <div class="profileWLC">
