@@ -57,19 +57,20 @@ $del = mysqli_fetch_array($sqlQuery);
         <a href="/www/sda/reko/users/commerce/dashboard.php">Info</a>
         <a href="/www/sda/reko/users/commerce/chat/chat_overview.php">Dine meldinger</a>
 
+        <h2>Annonse</h2>
         <a href="/www/sda/reko/users/commerce/feed/editFeed.php">Rediger din annonse</a>
         <a href="/www/sda/reko/users/commerce/feed/showFeed.php">Se annonse</a>
-
+        <h2>Produkter</h2>
         <a href="/www/sda/reko/users/commerce/products/addNewProduct.php">Legg til produkt</a>
         <a href="/www/sda/reko/users/commerce/products/productOverview.php">Dine produkter</a>
-
+        <h2>Ordre/h2>
         <a href="/www/sda/reko/users/commerce/order/orderOverview.php">Mottatt bestillinger</a>
         <a href="/www/sda/reko/users/commerce/order/orders.php">Dine bestillinger</a>
 
         
-
+        <h2>Profil</h2>
         <a href="/www/sda/reko/users/commerce/profile/profile.php">Din Profil</a>
-    <a href="/www/sda/reko/access/logout.php">Logg ut</a>
+        <a href="/www/sda/reko/access/logout.php">Logg ut</a>
 
 
         </div>
