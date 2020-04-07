@@ -51,15 +51,15 @@ $del = mysqli_fetch_array($sqlQuery);
 <div class="mobileNav">
         <a href="/www/sda/reko/users/commerce/dashboard.php" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
         <div id="mobileNavLinks">
-        <a href="/www/sda/reko/index.php">Til forsiden</a>
-        <a href="/www/sda/reko/users/moderator/dashboard.php">Info</a>
+        <a id="aMobile" href="/www/sda/reko/index.php">Til forsiden</a>
+        <a id="aMobile" href="/www/sda/reko/users/moderator/dashboard.php">Info</a>
         <a id="aMobile" href="/www/sda/reko/users/moderator/chat/chat_overview.php">Dine meldinger</a><br>
-        <a href="/www/sda/reko/users/moderator/usersList.php">Brukerlister</a>
-        <a href="/www/sda/reko/users/moderator/orders.php">Dine Ordre</a>
+        <a id="aMobile" href="/www/sda/reko/users/moderator/usersList.php">Brukerlister</a>
+        <a id="aMobile" href="/www/sda/reko/users/moderator/orders.php">Dine Ordre</a>
 
         <h2>Profil</h2>
-        <a href="/www/sda/reko/users/moderator/profile.php">Din Profil</a>
-        <a href="/www/sda/reko/access/logout.php">Logg ut</a>
+        <a id="aMobile" href="/www/sda/reko/users/moderator/profile.php">Din Profil</a>
+        <a id="aMobile" href="/www/sda/reko/access/logout.php">Logg ut</a>
         
 
 
