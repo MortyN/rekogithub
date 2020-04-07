@@ -7,6 +7,7 @@ include("/var/www/html/www/sda/reko/db/connect.php");
 <!DOCTYPE html lang="no">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>REKO - HORTEN</title>
 <link rel="icon" href="/www/sda/reko/img/rekologo.png">
 <link rel="icon" media="screen and (max-width:1250px)" href="/www/sda/reko/img/rekologo.png">
@@ -21,6 +22,7 @@ include("/var/www/html/www/sda/reko/db/connect.php");
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=no&theme=flying&always=1&noGeoIp=1&refreshPage=1&showNoConsent=1&hideDetailsBtn=1&showPolicyLink=1&remember=30&privacyPage=http%3A%2F%2Fopheimpi.zapto.org%2Fwww%2Fsda%2Freko%2Fpolicy.php"></script>
 <script type="text/javascript" src="functionsNavbar.js"></script>
 <script type="text/javascript" src="/www/sda/reko/functionsNavbar.js"></script>
+<script type="text/javascript" src="functionsNavbar.js"></script>
 
 </head>
 <body>
@@ -59,6 +61,7 @@ if($connectedUser){
                     <a href="/www/sda/reko/access/logout.php">LOGG UT</a>
                 </div> 
             </div>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="dropDown()">&#9776;</a>
          </div>
          <?php
     
@@ -83,6 +86,7 @@ else{
                     
                 </div> 
             </div>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="dropDown()">&#9776;</a>
          </div>
 <?php
 }
