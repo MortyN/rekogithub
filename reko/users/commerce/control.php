@@ -53,12 +53,25 @@ $del = mysqli_fetch_array($sqlQuery);
       <div class="mobileNav">
         <a href="#home" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
         <div id="mobileNavLinks">
-          <a href="#news">Anonnser</a>
-          <a href="#contact">Leverandører</a>
-          <a href="#about">Kontakter</a>
-          <a href="#news">Hjelp</a><br>
-          <a href="#contact">Logg inn</a>
-          <a href="#about">Registrer deg</a>
+        <a href="/www/sda/reko/index.php">Til forsiden</a>
+        <a href="/www/sda/reko/users/commerce/dashboard.php">Info</a>
+        <a href="/www/sda/reko/users/commerce/chat/chat_overview.php">Dine meldinger</a>
+
+        <a href="/www/sda/reko/users/commerce/feed/editFeed.php">Rediger din annonse</a>
+        <a href="/www/sda/reko/users/commerce/feed/showFeed.php">Se annonse</a>
+
+        <a href="/www/sda/reko/users/commerce/products/addNewProduct.php">Legg til produkt</a>
+        <a href="/www/sda/reko/users/commerce/products/productOverview.php">Dine produkter</a>
+
+        <a href="/www/sda/reko/users/commerce/order/orderOverview.php">Mottatt bestillinger</a>
+        <a href="/www/sda/reko/users/commerce/order/orders.php">Dine bestillinger</a>
+
+        
+
+        <a href="/www/sda/reko/users/commerce/profile/profile.php">Din Profil</a>
+    <a href="/www/sda/reko/access/logout.php">Logg ut</a>
+
+
         </div>
   <a href="javascript:void(0);" class="icon" onclick="mobileNavChange()">
     <i class="fa fa-bars"></i>
