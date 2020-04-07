@@ -55,7 +55,7 @@ $del = mysqli_fetch_array($sqlQuery);
         <div id="mobileNavLinks">
         <a id="aMobile" href="/www/sda/reko/index.php">Til forsiden</a>
         <a id="aMobile" href="/www/sda/reko/users/commerce/dashboard.php">Info</a>
-        <a id="aMobile" href="/www/sda/reko/users/commerce/chat/chat_overview.php">Dine meldinger</a>
+        <a id="aMobile" href="/www/sda/reko/users/commerce/chat/chat_overview.php">Dine meldinger</a><br>
 
         <h2>Annonse</h2>
         <a id="aMobile" href="/www/sda/reko/users/commerce/feed/editFeed.php">Rediger din annonse</a>

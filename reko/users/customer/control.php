@@ -47,7 +47,7 @@ $del = mysqli_fetch_array($sqlQuery);
 <html>
     <head>
         <title> Dashboard - Kunde</title>
-        <link rel="stylesheet" href="/www/sda/reko/stylesheet.css">
+        <link rel="stylesheet" media="screen and (min-width:1250px)"href="/www/sda/reko/stylesheet.css">
         <link rel="stylesheet" media="screen and (max-width:1250px)" href="/www/sda/reko/Mobile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -55,6 +55,28 @@ $del = mysqli_fetch_array($sqlQuery);
         <meta charset="UTF-8">
 </head>
 <body class="dashboard">
+<div class="mobileNav">
+        <a href="/www/sda/reko/users/commerce/dashboard.php" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
+        <div id="mobileNavLinks">
+        <a href="/www/sda/reko/index.php">Til forsiden</a>
+        <a href="/www/sda/reko/users/customer/dashboard.php">Info</a>
+        <a href="/www/sda/reko/users/customer/chat/chat_overview.php">Dine meldinger</a><br>
+        <a href="/www/sda/reko/users/customer/profile/orders.php">Dine ordre</a>
+            
+        
+            
+
+        
+        <h2>Profil</h2>
+        <a href="/www/sda/reko/users/customer/profile/profile.php">Endre profil</a>
+        <a id="aMobile" href="/www/sda/reko/access/logout.php">Logg ut</a>
+
+
+        </div>
+  <a href="javascript:void(0);" class="icon" onclick="mobileNavChange()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
     <div class="top_header">
         
         <div class="profileWLC">
@@ -80,4 +102,4 @@ $del = mysqli_fetch_array($sqlQuery);
 
 <div class="Footer_panel">
 <a> COPYRIGHT © 2020</a>
-</div>
+</div> 
