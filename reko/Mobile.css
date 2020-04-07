@@ -694,7 +694,7 @@ button.accordion:hover
   /*Sidebar*/
 
   .sidenav {
-    display:none;
+    visibility: hidden;
     height: 100%;
     width: 250px;
     position: fixed;
@@ -741,7 +741,7 @@ button.accordion:hover
 
 /*HEADER*/
   .top_header{
-    display:none;
+    visibility: hidden;
     background-color: #111;
     width: 100%;
     height:30px;
