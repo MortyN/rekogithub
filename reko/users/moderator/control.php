@@ -100,3 +100,15 @@ $del = mysqli_fetch_array($sqlQuery);
 <div class="Footer_panel">
 <a> REKO © 2020</a>
 </div>
+<script>
+function mobileNavChange() {
+  var x = document.getElementById("mobileNavLinks");
+
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  
+}
+</script>
