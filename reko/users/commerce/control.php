@@ -51,7 +51,7 @@ $del = mysqli_fetch_array($sqlQuery);
 </head>
 <body class="dashboard">
       <div class="mobileNav">
-        <a href="#home" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
+        <a href="/www/sda/reko/users/commerce/dashboard.php" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
         <div id="mobileNavLinks">
         <a id="aMobile" href="/www/sda/reko/index.php">Til forsiden</a>
         <a id="aMobile" href="/www/sda/reko/users/commerce/dashboard.php">Info</a>
