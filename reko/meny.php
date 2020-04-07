@@ -61,8 +61,23 @@ if($connectedUser){
                     <a href="/www/sda/reko/access/logout.php">LOGG UT</a>
                 </div> 
             </div>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="dropDown()">&#9776;</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
          </div>
+
+         <div class="mobileNav">
+        <a href="#home" class="active"><img src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
+        <div id="mobileNavLinks">
+            <a href="#news">Anonnser</a>
+            <a href="#contact">Leverandører</a>
+            <a href="#about">Kontakter</a>
+            <a href="#news">Hjelp</a><br>
+            <a href="#contact">Logg inn</a>
+            <a href="#about">Registrer deg</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        </div>
          <?php
     
 }
@@ -86,8 +101,9 @@ else{
                     
                 </div> 
             </div>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="dropDown()">&#9776;</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
          </div>
+         
 <?php
 }
     
