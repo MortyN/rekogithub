@@ -610,7 +610,7 @@ button.accordion:hover
 
   /* Backend*/
   .dashboard_content{
-    margin-left: 250px;
+    margin-left: 0px;
     margin-top: 30px;
   }
 
@@ -694,6 +694,7 @@ button.accordion:hover
   /*Sidebar*/
 
   .sidenav {
+    display:none;
     height: 100%;
     width: 250px;
     position: fixed;
@@ -740,6 +741,7 @@ button.accordion:hover
 
 /*HEADER*/
   .top_header{
+    display:none;
     background-color: #111;
     width: 100%;
     height:30px;
@@ -1208,4 +1210,60 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   margin-left:10px;
   font-size: 0.8vw;
   margin-top: 3;
+  }
+
+
+
+
+
+
+  .mobileNav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  .topnav #mobileNavLinks {
+    display: none;
+  }
+  
+  .mobileNav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    display: block;
+    text-align:center;
+  }
+  
+  .mobileNav a.icon {
+    background: black;
+    display: block;
+    height: 6vh;
+    width:6vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size:4vh;
+    text-align:center;
+    
+  }
+  img{
+      width: 5vh;
+      float: left;
+      position: relative;
+      top: 0.4vw;
+     
+      
+      }
+  
+  .mobileNav a:hover {
+    background-color: #598B35;
+    color: black;
+  }
+  
+  .active {
+    background-color: #655C56;
+    color: white;
+    height:6vh;
   }
