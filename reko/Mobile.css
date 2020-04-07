@@ -1222,15 +1222,26 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   .mobileNav #mobileNavLinks {
     display: none;
   }
+   #mobileNavLinks h2{
+    color:white;
+    text-align:center;
+    font-size:50px;  
+    margin-top:50px;
+    letter-spacing: 5px;
+
+  }
+  
   
   .mobileNav a {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 50px;
-    margin-top: 20px;
     display: block;
     text-align:center;
+    margin-bottom:10px;
+
+
   }
   
   .mobileNav a.icon {
@@ -1262,9 +1273,4 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
     color: white;
     height:6vh;
   }
-
-
-
-
-
  
