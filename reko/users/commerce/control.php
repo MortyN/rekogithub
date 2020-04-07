@@ -60,7 +60,7 @@ $del = mysqli_fetch_array($sqlQuery);
           <a href="#contact">Logg inn</a>
           <a href="#about">Registrer deg</a>
         </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <a href="javascript:void(0);" class="icon" onclick="mobileNavChange()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
@@ -119,3 +119,13 @@ $del = mysqli_fetch_array($sqlQuery);
 <div class="Footer_panel">
 <a> COPYRIGHT © 2020</a>
 </div>
+<script>
+function mobileNavChange() {
+  var x = document.getElementById("mobileNavLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
