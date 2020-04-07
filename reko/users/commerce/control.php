@@ -42,7 +42,7 @@ $del = mysqli_fetch_array($sqlQuery);
 <html>
     <head>
         <title> Dashboard - Leverandør</title>
-        <link rel="stylesheet" href="/www/sda/reko/stylesheet.css">
+        <link rel="stylesheet" media="screen and (min-width:1250px)"href="/www/sda/reko/stylesheet.css">
         <link rel="stylesheet" media="screen and (max-width:1250px)" href="/www/sda/reko/Mobile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
