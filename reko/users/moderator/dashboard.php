@@ -76,7 +76,7 @@ include("control.php");
                     ?>
         <form action="" method="post" class="editNews">
             <textarea class="modNews" name="news"> <?php print("$news");?> </textarea></br>
-            <input class="moderatorButtom" type="submit" name="submit" value="Legg Ut">
+            <input class="leggUt" type="submit" name="submit" value="Legg Ut">
             </form>
             <?php 
         
@@ -101,7 +101,7 @@ include("control.php");
                     Etter du har trykket på knappen under, må leverandørene selv logge inn på deres profilside for å endre og aktivere innlegget sitt igjen. 
                  </p>
                  <form action="" method="post" class="editNews">
-                 <input class="moderatorButtom" type="submit" name="resetFeed" value="Nullstill Annonser">
+                 <input class="NullstillAnn" type="submit" name="resetFeed" value="Nullstill Annonser">
             </form>
 
             <?php 
