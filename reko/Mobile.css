@@ -537,6 +537,9 @@ button.accordion:hover
   cursor: pointer;
 }
 /*siste*/
+.commerceContainer{
+  width: 100%;
+}
 .nygrid_cont
 {
   display: grid;

@@ -1,4 +1,5 @@
 <?php include("../meny.php"); ?>
+<div class="commerceContainer">
 <div class="overview_info">
 <h1>Våre lokale leverandører</h1>
 
@@ -38,6 +39,6 @@ for($x=1;$x <= $xRows; $x++){
 
 }
 ?>
-</div>
+</div></div>
 
 <?php include("../footer1.php"); ?>
