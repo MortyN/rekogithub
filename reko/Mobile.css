@@ -647,13 +647,13 @@ button.accordion:hover
   {
     grid-area:orders;
     border-style: solid;
-    min-height: 200px;
     border-radius: 15px;
     padding:10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
     width: 80vw;
-    height: 25vh;
+    min-height: 25vh;
+    max-height: 30vh;
     font-family: sans-serif;
     font-size: 3vw;
   }
