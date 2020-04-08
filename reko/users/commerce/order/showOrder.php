@@ -92,11 +92,11 @@ if (isset($_GET['success'])) {
             }
             else{
                 ?>
-                <select name ="status">
+                <select class ="statusSelect" name ="status">
                 <option value="">Status<option>
                 <?php current_status($status); ?>
             </select>
-            <input type="submit" name="submit" value="lagre"/> <?php }  ?>
+            <input type="submit" name="submit" value="Lagre"/> <?php }  ?>
         </form>
         <?php 
       
