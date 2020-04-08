@@ -1035,7 +1035,7 @@ table.prdOverview
   font-size: 1.5vw;
 }
 
-.prdOverview input[type=text]
+input#search
 {
 width: 60vw;
 height: 5vw;
