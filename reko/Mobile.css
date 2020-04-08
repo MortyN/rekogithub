@@ -1329,7 +1329,8 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
     font-family: sans-serif;
     font-size: 3vw;
     height: 15vh;
-    width: 90vw;
+    width: 80vw;
+    line-height: normal;
   }
   .activeChat{
     grid-area:active;
@@ -1344,7 +1345,7 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
     font-size: 3vw;
     min-height: 25vh;
     max-height: 28vh;
-    width: 90vw;
+    width: 80vw;
     line-height: normal;
   }
   .chatOverview a{
@@ -1365,7 +1366,7 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
     font-size: 3vw;
     min-height: 25vh;
     max-height: 28vh;
-    width: 90vw;
+    width: 80vw;
   }
   .chatBoxContainer{
     display: grid;
