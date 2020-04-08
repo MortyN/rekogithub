@@ -979,7 +979,7 @@ font-size: 3vw;
 border-collapse: collapse;
 width: 100%;
 }
-.prdOverview select
+.prdOverview input[type=select]
 {
   width: 30vw;
   height: 4vw;
