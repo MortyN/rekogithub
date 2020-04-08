@@ -693,15 +693,15 @@ button.accordion:hover
     font-size: 3vw;
     line-height: normal;
   }
-  input[type=submit].modNews
+  
+  .moderatorButtom
   {
     position: relative;
     left: 60vw;
     background-color: #94d3ac;
     font-size: 3vw;
-    width: 20vw;
+    width: 20vw;  
   }
-  
     
     
 
