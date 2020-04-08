@@ -1,6 +1,8 @@
 <?php include("../control.php"); 
 $chatID = $_GET["chatID"];
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 <script>
     $('.messages').scrollTop($('.messages')[0].scrollHeight);
 
