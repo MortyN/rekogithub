@@ -691,6 +691,7 @@ button.accordion:hover
     width: 90vw;
     height: 15vh;
     font-size: 3vw;
+    line-height: normal;
   }
   .modNews input[type=submit]
   {
@@ -930,6 +931,7 @@ background-color: white;
 border-style: solid;
 border-radius: 15px;
 line-height: normal;
+box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .dashboard_feedReset h3
 {
