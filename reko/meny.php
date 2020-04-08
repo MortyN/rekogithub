@@ -9,13 +9,13 @@ include("/var/www/html/www/sda/reko/db/connect.php");
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>REKO - HORTEN</title>
-<link rel="icon" media="screen and (min-width:1250px)"href="/www/sda/reko/img/rekologo.png">
+<link rel="icon" href="/www/sda/reko/img/rekologo.png">
 <link rel="icon" media="screen and (max-width:1250px)" href="/www/sda/reko/img/rekologo.png">
 
-<link rel="stylesheet" media="screen and (min-width:1250px)"href="/www/sda/reko/stylesheet.css">
+<link rel="stylesheet" href="/www/sda/reko/stylesheet.css">
 <link rel="stylesheet" media="screen and (max-width:1250px)" href="/www/sda/reko/Mobile.css">
 
-<link rel="stylesheet" media="screen and (min-width:1250px)"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" media="screen and (max-width:1250px)" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
