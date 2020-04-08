@@ -1034,7 +1034,13 @@ table.prdOverview
   width:90vw;
   font-size: 1.5vw;
 }
-
+input#delete
+{
+  background-color:#F86961;
+  width: auto;
+  height: 4vw;
+  font-size: 3vw;
+}
 input#search
 {
 width: 60vw;
