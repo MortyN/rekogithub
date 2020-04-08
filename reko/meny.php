@@ -57,20 +57,16 @@ if($connectedUser){
     mysqli_query($db,$timelog) or die("Failed to log time");
     ?>
         <div class="mobileNav">
-        <a href="/www/sda/reko/users/commerce/dashboard.php" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
+        <a href="/www/sda/reko/index.php" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
         <div id="mobileNavLinks">
-        <a id="aMobile" href="/www/sda/reko/index.php">Til forsiden</a>
-        <a id="aMobile" href="/www/sda/reko/users/customer/dashboard.php">Info</a>
-        <a id="aMobile" href="/www/sda/reko/users/customer/chat/chat_overview.php">Dine meldinger</a><br>
-        <a id="aMobile" href="/www/sda/reko/users/customer/profile/orders.php">Dine ordre</a>
-            
-        
-            
-
-        
-        <h2>Profil</h2>
-        <a id="aMobile" href="/www/sda/reko/users/customer/profile/profile.php">Endre profil</a>
-        <a id="aMobile" href="/www/sda/reko/access/logout.php">Logg ut</a>
+        <a id="aMobile" href="/www/sda/reko/index.php">HJEM</a>
+        <a id="aMobile" href="/www/sda/reko/commerce/feed.php">ANNONSER</a>
+        <a id="aMobile" href="/www/sda/reko/commerce/overview.php">LEVERANDØRER</a>
+        <a id="aMobile" href="/www/sda/reko/contact.php">KONTAKTER</a>
+        <a id="aMobile" href="/www/sda/reko/faq.php">HJELP</a>
+        <h2>Min Side</h2>
+        <a id="aMobile" href="/www/sda/reko/users/commerce/dashboard.php">KONTROLLPANEL</a>
+        <a id="aMobile" href="/www/sda/reko/access/logout.php">LOGG UT</a>
 
 
         </div>
@@ -102,20 +98,16 @@ if($connectedUser){
 else{
     ?>
     <div class="mobileNav">
-        <a href="/www/sda/reko/users/commerce/dashboard.php" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
+        <a href="/www/sda/reko/index.php" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
         <div id="mobileNavLinks">
-        <a id="aMobile" href="/www/sda/reko/index.php">Til forsiden</a>
-        <a id="aMobile" href="/www/sda/reko/users/customer/dashboard.php">Info</a>
-        <a id="aMobile" href="/www/sda/reko/users/customer/chat/chat_overview.php">Dine meldinger</a><br>
-        <a id="aMobile" href="/www/sda/reko/users/customer/profile/orders.php">Dine ordre</a>
-            
-        
-            
-
-        
-        <h2>Profil</h2>
-        <a id="aMobile" href="/www/sda/reko/users/customer/profile/profile.php">Endre profil</a>
-        <a id="aMobile" href="/www/sda/reko/access/logout.php">Logg ut</a>
+        <a id="aMobile" href="/www/sda/reko/index.php">HJEM</a>
+        <a id="aMobile" href="/www/sda/reko/commerce/feed.php">ANNONSER</a>
+        <a id="aMobile" href="/www/sda/reko/commerce/overview.php">LEVERANDØRER</a>
+        <a id="aMobile" href="/www/sda/reko/contact.php">KONTAKTER</a>
+        <a id="aMobile" href="/www/sda/reko/faq.php">HJELP</a>
+        <h2>Min Side</h2>
+        <a id="aMobile" href="/www/sda/reko/access/login.php">LOGG INN</a>
+        <a id="aMobile" href="/www/sda/reko/access/regUser.php">REGISTRER DEG</a>
 
 
         </div>
