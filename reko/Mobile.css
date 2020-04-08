@@ -979,6 +979,12 @@ font-size: 3vw;
 border-collapse: collapse;
 width: 100%;
 }
+.prdOverview select
+{
+  width: 30vw;
+  height: 4vw;
+  font-size: 2.5vw;
+}
 
 
 .prdOverview td, th {
