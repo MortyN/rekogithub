@@ -1,6 +1,12 @@
 <?php include("../control.php"); 
 $chatID = $_GET["chatID"];
 ?>
+<script>
+    var out = document.getElementById("messages");
+// allow 1px inaccuracy by adding 1
+var isScrolledToBottom = out.scrollHeight - out.clientHeight <= out.scrollTop + 1;
+
+</script>
 <div class="dashboard_content">
     <?php
     $control_query="SELECT * FROM chat_connection WHERE chatID = $chatID;";
