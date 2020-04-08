@@ -5,7 +5,7 @@
 
 <p>Under finner du kontaktinformasjonen til våre moderatorer som du kan ta kontakt med hvis det er noe du lurer på.</p>
 
-</div>
+</div> 
 <div class="nygrid_cont">
 
 
