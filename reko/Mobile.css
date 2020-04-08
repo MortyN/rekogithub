@@ -1040,6 +1040,7 @@ input#delete
   width: auto;
   height: 4vw;
   font-size: 3vw;
+  padding: 10px 14px;
 }
 input#search
 {
