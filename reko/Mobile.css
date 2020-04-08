@@ -538,43 +538,45 @@ button.accordion:hover
 }
 /*siste*/
 .commerceContainer{
-  width: 100%;
-}
-.nygrid_cont
-{
-  display: grid;
-  grid-template-columns: auto auto;
-  padding: 5px;
-  grid-gap:10px;
-  width: 80vw;
-  border-style: solid;
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
-  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
-  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
-}
-.profileItem{
-  
-    padding:20px;
-    text-align:center;
-    border: 1px solid black;
-    width: 33vw;
-    margin-bottom:10px;
-    border-radius: 20px;
-    height: 20vh;
-    min-width: 12vw;
-  
-  }
-  .profileItem img{
-    height: 15vh;
-    width: 15vh;
-    object-fit: cover;
-  }
-  .profileItem h2{
-    font-size: 16px;
-  }
   
 
+    width: 100vw;
+  }
+  .nygrid_cont
+  {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color:white;
+    padding:20px;
+    width:80vw;
+    left:7vw;
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
+    
+  }
+  .profileItem{
+    
+      padding:20px;
+      text-align:center;
+      border: 1px solid black;
+      width: 33vw;
+      margin-bottom:10px;
+      border-radius: 20px;
+      height: 20vh;
+      min-width: 12vw;
+    
+    }
+    .profileItem img{
+      height: 15vw;
+      width: 15vw;
+      object-fit: cover;
+    }
+    .profileItem a{
+      font-size: 1em;
+      text-decoration:none;
+      color:black;
+    }
 .panel
 {
   padding-bottom: 20px;
