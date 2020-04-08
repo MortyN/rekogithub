@@ -61,7 +61,6 @@ if($connectedUser){
                     <a href="/www/sda/reko/access/logout.php">LOGG UT</a>
                 </div> 
             </div>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="dropDown()">&#9776;</a>
          </div>
          <?php
     
@@ -86,7 +85,6 @@ else{
                     
                 </div> 
             </div>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="dropDown()">&#9776;</a>
          </div>
 <?php
 }
