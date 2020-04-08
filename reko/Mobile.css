@@ -953,9 +953,11 @@ font-family: sans-serif;
 .prdOverview{
 
 font-family: sans-serif;
+font-size: 3vw;
 border-collapse: collapse;
 width: 100%;
 }
+
 
 .prdOverview td, th {
 border: 1px solid #dddddd;
