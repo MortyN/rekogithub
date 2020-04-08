@@ -36,6 +36,7 @@ margin-top:10%;
 
 /*Main navigation*/
 .mainNav {
+  display:none;
   overflow: hidden;
   background-color: #655c56;
   height: 10vh;
