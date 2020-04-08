@@ -569,8 +569,8 @@ button.accordion:hover
     
     }
     .profileItem img{
-      height: 15vw;
-      width: 15vw;
+      height: 20vw;
+      width: 20vw;
       object-fit: cover;
     }
     .profileItem a{
