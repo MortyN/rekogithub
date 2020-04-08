@@ -558,26 +558,37 @@ button.accordion:hover
   }
   .profileItem{
     
-      padding:20px;
-      text-align:center;
-      border: 1px solid black;
-      width: 30vw;
-      margin-bottom:10px;
-      border-radius: 20px;
-      height: 20vh;
-      min-width: 12vw;
-    
-    }
-    .profileItem img{
-      height: 25vw;
-      width: 25vw;
-      object-fit: cover;
-    }
-    .profileItem a{
-      font-size: 0.5em;
-      text-decoration:none;
-      color:black;
-    }
+    padding:20px;
+    text-align:center;
+    border: 1px solid black;
+    width: 30vw;
+    margin-bottom:10px;
+    border-radius: 20px;
+    min-height: 20vh;
+    min-width: 12vw;
+  
+  }
+  .profileItem img{
+    height: 25vw;
+    width: 25vw;
+    object-fit: cover;
+  }
+  .profileItem a{
+    font-size: 0.5em;
+    text-decoration:none;
+    color:black;
+  }
+  .profileItem h2{
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+  .profileItem p{
+    font-size: 0.7em;
+    text-decoration:none;
+    color:black;
+    margin:2px;
+
+  }
 .panel
 {
   padding-bottom: 20px;
