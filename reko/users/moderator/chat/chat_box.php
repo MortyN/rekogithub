@@ -2,7 +2,7 @@
 $chatID = $_GET["chatID"];
 ?>
 <script>
-    $('#yourDiv').scrollTop($('.messages')[0].scrollHeight);
+    $('.messages').scrollTop($('.messages')[0].scrollHeight);
 
 </script>
 <div class="dashboard_content">
