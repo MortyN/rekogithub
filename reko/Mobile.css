@@ -1075,7 +1075,7 @@ font-size: 5vw;
 text-align:center;
 background-color: white;
 margin-top: 5px;
-width: 76vw;
+width: 90vw;
 padding-top: 10px;
 padding-bottom: 10px;
 border-radius: 20px;
@@ -1172,6 +1172,7 @@ padding: 30px;
 }
 .Footer_panel
 {
+  display:none;
   position: fixed;
   bottom: 15px;
   color: #979696;
