@@ -24,6 +24,7 @@
 </button>
 <div id="3" class="w3-container w3-hide qContent">
 <p>Hver andre uke samles kunder og leverandører i kjelleren til Per og koser seg.</p>
+
 </div>
 
 </div>
