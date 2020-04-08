@@ -542,7 +542,7 @@ button.accordion:hover
   display: grid;
   grid-template-columns: auto;
   padding: 5px;
-  width: 100%;
+  width: 80vw;
   margin: 0 auto;
   border-style: solid;
   border-radius: 20px;
