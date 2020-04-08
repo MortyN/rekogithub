@@ -45,20 +45,27 @@ if($connectedUser){
     mysqli_query($db,$timelog) or die("Failed to log time");
     ?>
         <div class="mobileNav">
-            <a href="/www/sda/reko/users/commerce/dashboard.php" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
-            <div id="mobileNavLinks">
-            <a id="aMobile" href="/www/sda/reko/index.php">Til forsiden</a>
-            <a id="aMobile" href="/www/sda/reko/users/customer/dashboard.php">Info</a>
-            <a id="aMobile" href="/www/sda/reko/users/customer/chat/chat_overview.php">Dine meldinger</a><br>
-            <a id="aMobile" href="/www/sda/reko/users/customer/profile/orders.php">Dine ordre</a>
-            <h2>Profil</h2>
-            <a id="aMobile" href="/www/sda/reko/users/customer/profile/profile.php">Endre profil</a>
-            <a id="aMobile" href="/www/sda/reko/access/logout.php">Logg ut</a>
-            </div>
-            <a href="javascript:void(0);" class="icon" onclick="mobileNavChange()">
-            <i class="fa fa-bars"></i>
-            </a>
+        <a href="/www/sda/reko/users/commerce/dashboard.php" class="active"><img class="mobileIMGBackend" src="http://opheimpi.zapto.org/www/sda/reko/img/rekologo.png"/></a>
+        <div id="mobileNavLinks">
+        <a id="aMobile" href="/www/sda/reko/index.php">Til forsiden</a>
+        <a id="aMobile" href="/www/sda/reko/users/customer/dashboard.php">Info</a>
+        <a id="aMobile" href="/www/sda/reko/users/customer/chat/chat_overview.php">Dine meldinger</a><br>
+        <a id="aMobile" href="/www/sda/reko/users/customer/profile/orders.php">Dine ordre</a>
+            
+        
+            
+
+        
+        <h2>Profil</h2>
+        <a id="aMobile" href="/www/sda/reko/users/customer/profile/profile.php">Endre profil</a>
+        <a id="aMobile" href="/www/sda/reko/access/logout.php">Logg ut</a>
+
+
         </div>
+  <a href="javascript:void(0);" class="icon" onclick="mobileNavChange()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
         <div class="mainNav" id="topNav">
                 <a class="logoomrad" href="/www/sda/reko/index.php"><img src="/www/sda/reko/img/rekologo.png" alt="LOGO"/></a>          
                 <a href="/www/sda/reko/index.php">HJEM</a>
