@@ -694,7 +694,7 @@ button.accordion:hover
     line-height: normal;
   }
   
-  input [type=submit].leggUt
+  .leggUt
   {
     position: relative;
     left: 60vw;
@@ -942,10 +942,11 @@ box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 {
   font-size: 3vw;
 }
-input[type=submit].NullstillAnn
+.NullstillAnn
 {
   width: auto;
   font-size: 3vw;
+  position: relative;
   left: 30vw;
   background-color: #94d3ac;
 }
