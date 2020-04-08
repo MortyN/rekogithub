@@ -262,7 +262,7 @@ font-size: 3.5em;
 }
 .section_content{
   vertical-align: auto;
-  margin-top:50px;
+  margin-top:0px;
   position: relative;
   text-align: center;
 }
