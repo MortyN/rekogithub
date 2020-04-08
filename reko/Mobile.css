@@ -666,7 +666,7 @@ button.accordion:hover
     margin: 0 auto;
     padding: 3.5px;
     background-color: #94d3ac;
-    color: white;
+    color: black;
     font-size: 4vw;
     position: relative;
     left: 65vw;
@@ -943,13 +943,13 @@ box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 {
   font-size: 3vw;
 }
-.NullstillAnn
+#NullstillAnn
 {
   width: auto;
   font-size: 3vw;
   position: relative;
   left: 30vw;
-  background-color: #94d3ac;
+  background-color: #F86961;
 }
 
 .settings{
@@ -1033,6 +1033,13 @@ table.prdOverview
   font-family: sans-serif;
   width:90vw;
   font-size: 1.5vw;
+}
+
+.prdOverview input[type=text]
+{
+width: 60vw;
+height: 5vw;
+font-size: 3.5vw;
 }
 .profileContainer{
 margin:0px;

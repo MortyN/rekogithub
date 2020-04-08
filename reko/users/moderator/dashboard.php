@@ -101,7 +101,7 @@ include("control.php");
                     Etter du har trykket på knappen under, må leverandørene selv logge inn på deres profilside for å endre og aktivere innlegget sitt igjen. 
                  </p>
                  <form action="" method="post" class="editNews">
-                 <input class="NullstillAnn" type="submit" name="resetFeed" value="Nullstill Annonser">
+                 <input id="NullstillAnn" type="submit" name="resetFeed" value="Nullstill Annonser">
             </form>
 
             <?php 
