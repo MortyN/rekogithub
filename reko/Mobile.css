@@ -894,10 +894,10 @@ input.Lagreknapp
 .grid-container {
 display: grid;
 grid-template-areas:
-  'info info info info info info'
-  'heading heading heading heading heading heading'
-  'maintext maintext maintext maintext maintext maintext'
-  'toolbar toolbar toolbar toolbar toolbar toolbar';
+  'info info'
+  'heading heading'
+  'maintext maintext'
+  'toolbar toolbar';
 grid-gap: 10px;
 background-color: white;
 padding: 20px;
