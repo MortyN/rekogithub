@@ -920,7 +920,7 @@ width: 100%;
 }
 
 .settings input[type=text]{
-width: 10vw;
+width: 30vw;
 height: 4vw;
 padding: 8px 12px;
 margin-left:30%;
@@ -932,10 +932,12 @@ font-size: 2.5vw;
 color: black;
 }
 .settings select{
-width: 10vw;
+width: 30vw;
 height: 4vw;
 font-size: 2.5vw;
 padding: 8px 12px;
+position: relative;
+top:0.6vw;
 
 }
 .settings td, th {
