@@ -3,10 +3,7 @@ $chatID = $_GET["chatID"];
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<script>
-    $('.messages').scrollTop($('.messages')[0].scrollHeight);
 
-</script>
 <div class="dashboard_content">
     <?php
     $control_query="SELECT * FROM chat_connection WHERE chatID = $chatID;";
@@ -76,6 +73,10 @@ $chatID = $_GET["chatID"];
                 </form>  
                 </div>  
             </div>
+            <script>
+    $('.messages').scrollTop($('.messages')[0].scrollHeight);
+
+</script>
             
            <?php
            if(isset($_POST["sendMsg"])){
