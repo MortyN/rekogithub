@@ -1,6 +1,6 @@
 <?php include("meny.php"); ?>
 
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="overview_info">
 <h1>Ofte stilte spørsmål</h1>
 <p>Under finner du ofte stilte spørsmål og svar, kanskje du finner svar på det du lurer på</p> <br /> <br />
