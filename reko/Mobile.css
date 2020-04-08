@@ -945,9 +945,10 @@ text-align: left;
 padding: 8px;
 }
 .innerContainerPrdOverview{
-width:80%;
+widows: 90vw;
 padding:20px;
 margin:0px;
+margin-left: 1vw;
 
 }
 
