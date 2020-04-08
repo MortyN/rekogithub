@@ -23,6 +23,18 @@ include("/var/www/html/www/sda/reko/db/connect.php");
 <script type="text/javascript" src="functionsNavbar.js"></script>
 <script type="text/javascript" src="/www/sda/reko/functionsNavbar.js"></script>
 <script type="text/javascript" src="functionsNavbar.js"></script>
+<script>
+function mobileNavChange() {
+  var x = document.getElementById("mobileNavLinks");
+
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  
+}
+</script>
 
 </head>
 <body>
