@@ -688,8 +688,17 @@ button.accordion:hover
 
   textarea.modNews
   {
-    width: 30vw;
-    height: 10vw;
+    width: 90vw;
+    height: 15vh;
+    font-size: 3vw;
+  }
+  .modNews input[type=submit]
+  {
+    position: relative;
+    left: 60vw;
+    background-color: #94d3ac;
+    font-size: 3vw;
+    width: 20vw;
   }
   
     
@@ -912,6 +921,26 @@ border: 2px solid black;
 
 .dashboard{
 background-color: #effcef;
+}
+
+.dashboard_feedReset
+{
+width: 90vw;
+}
+.dashboard_feedReset h3
+{
+  font-size: 3vw;
+}
+.dashboard_feedReset p
+{
+  font-size: 3vw;
+}
+.dashboard_feedReset input[type=submit]
+{
+  width: auto;
+  font-size: 3vw;
+  left: 30vw;
+  background-color: #94d3ac;
 }
 
 .settings{
