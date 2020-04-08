@@ -569,12 +569,12 @@ button.accordion:hover
     
     }
     .profileItem img{
-      height: 20vw;
-      width: 20vw;
+      height: 25vw;
+      width: 25vw;
       object-fit: cover;
     }
     .profileItem a{
-      font-size: 1em;
+      font-size: 0.5em;
       text-decoration:none;
       color:black;
     }
