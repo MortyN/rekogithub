@@ -1096,15 +1096,15 @@ margin: 0px;
 }
 .profileeditor input
 {
-width: 70%;
-height: 4vh;
-font-size: 3vw;
-}
-.profileeditor input[type=text]
-{
 width: 50%;
 height: 4vh;
 font-size: 3.5vh;
+}
+.profileeditor input[type=text]
+{
+width: 70%;
+height: 4vh;
+font-size: 3vw;
 margin-bottom: 1vh;
 }
 input[type=file]
