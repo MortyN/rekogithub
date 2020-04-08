@@ -7,7 +7,7 @@
 
 </div>
 <div class="nygrid_cont">
-<div class="grid-container">
+
 <?php
 
 $sql= "SELECT * FROM users WHERE role='commerce' and status='1' order by RAND();";
@@ -22,7 +22,7 @@ for($x=1;$x <= $xRows; $x++){
     $firstName = $part["firstName"];
     $lastName = $part["lastName"];
     ?> 
-    <div class="grid-item">
+    <div class="profileItem">
         <?php
         if(!$image){
             print("<a href='profile.php?ID=".$userID."'><img src='../img/default-profile.jpg'></a>");
@@ -39,5 +39,5 @@ for($x=1;$x <= $xRows; $x++){
 }
 ?>
 </div>
-</div>
+
 <?php include("../footer1.php"); ?>
