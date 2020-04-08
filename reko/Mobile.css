@@ -622,12 +622,13 @@ button.accordion:hover
   {
     display: grid;
     grid-gap: 5vw;
-    width:80%;
+    width: 90vw;;
     margin:100px auto;
     grid-template-areas:
     "info info"
     "orders orders"
     "news news" ;
+    margin-left: 4vw;
   }
   .dashboard_info
   {
@@ -651,7 +652,7 @@ button.accordion:hover
     padding:10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
-    width: 80vw;
+    width: 90vw;
     min-height: 25vh;
     max-height: 30vh;
     font-family: sans-serif;
@@ -677,7 +678,7 @@ button.accordion:hover
     padding:10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
-    width: 80vw;
+    width: 90vw;
     min-height: 25vh;
     max-height: 30vh;
     font-family: sans-serif;
