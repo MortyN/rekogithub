@@ -541,7 +541,7 @@ button.accordion:hover
 {
   width: 80vw;
   position: relative;
-  margin-left: -1vw;
+  left: 1vw;
 }
 .panel
 {
