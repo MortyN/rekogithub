@@ -494,6 +494,15 @@ margin-bottom: 80px;
 .overview_info{
   width:80vw;
   margin: 0 auto;
+  border-style: solid;
+  background-color: white;
+  margin-top: 10vw;
+  padding: 2vw;
+  border-radius: 32px;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
+-moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
+box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
+min-height: 20vh;
 }
 .overview_info h1{
   text-align: center;
@@ -1631,10 +1640,13 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   width:100%;
   background-color:#F8F9FA;
   border:solid 1px;
-  margin-bottom:5px;
+  margin-top:2vhx;
   }
   .qContent{
-  background-color: grey;
+  background-color: #94d3ac;
   margin-top:0;
-  
+  font-size: 4vw;
+  line-height: normal;
   }
+/*problem i mobil versjon. Må skru av box-sizing: inherit for stylesheet til w3schoosl*/
+
