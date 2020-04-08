@@ -1373,7 +1373,7 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
   .chatBoxContainer{
     display: grid;
    grid-gap: 2vw;
-   width:40%;
+   width:90vw;
    margin:100px auto;
    grid-template-areas:
    "info"
@@ -1399,9 +1399,8 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
 
   }
  .messages{
-   max-height: 400px;
    padding:10px;
-   height:20vw;
+   height:55vh;
    background-color: #f6feff;
    font-family: sans-serif;
    overflow:hidden;
@@ -1438,7 +1437,6 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
  .msgDate-left{
    font-size:0.7em;
    margin-left:30%;
-
  }
  .msgDate-right{
    font-size:0.7em;
@@ -1460,7 +1458,7 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
  #newMsg{
   margin:0;
   height:100%;
-  width: 80%;
+  width: 60%;
   padding:10px 10px;
   border:none;
   border-radius:0px;
@@ -1472,10 +1470,11 @@ box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.33);
  #sendMsg{
    float:right;
    margin:0;
-   width:10%;
+   width:20%;
    height:100%;
    padding:2vh 0; 
    border-radius:0px;
+   font-size: 2vw;
  }
 
   #msgReload{
