@@ -1,4 +1,5 @@
 <?php include("meny.php"); ?>
+<div class="commerceContainer">
 <div class="overview_info">
 <h1>Våre moderatorer</h1>
 
@@ -6,7 +7,7 @@
 
 </div>
 <div class="nygrid_cont">
-<div class="grid-container">
+
 
 <?php
 
@@ -26,7 +27,7 @@ for($x=1;$x <= $xRows; $x++){
 
     
     ?>
-    <div class="grid-item">
+    <div class="profileItem">
       <?php 
       if(!$image){
         print("<img src='img/default-profile.jpg'/>");
@@ -43,6 +44,5 @@ for($x=1;$x <= $xRows; $x++){
 
 }
 ?>
-</div>
-</div>
+</div></div>
 <?php include("footer1.php"); ?>
