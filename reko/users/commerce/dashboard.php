@@ -9,7 +9,11 @@ include("control.php");
     <div class="dashboardContainer">
     
         <div class="dashboard_info">
-            Informasjon
+        <h3>Leverandør kontrollpanel </h3>
+        <p> Velkommen til ditt kontrolpanel!<br> 
+        I menyen kan du navigere deg rundt for å gjøre en rekke valg, på annonser kan du legge ut eller endre din nåværende annonse. Det er også her du må reaktiver annonsen din for at den skal være synlig under neste REKO-ring også.  
+        Du vil også kunne legge til produkter, og velge om dem skal syntes eller ei, ift. sesong osv. Produktene vil automatisk komme opp på din profil side, slik at du slepper å leggge dem til automatisk for hver gang.
+        Her vil du også ha mulighet til å holde oversikt over alle dine bestillinger, og dine mottatte bestillinger fra kunder. 
         </div>
         
         <div class="dashboard_orders">
