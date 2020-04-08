@@ -5,7 +5,7 @@
             <div class="hero-text">
                 <h1>REKO</h1>
                 <p>Kjøp kortreist lokal mat!</p>
-                <button href="/www/sda/reko/access/regUser.php">Bli med i dag!</button>
+                <a  href="/www/sda/reko/access/regUser.php"><button>Bli med i dag!</button></a>
             </div>
         </div>
                 
