@@ -1,5 +1,5 @@
 <?php
-$host="opheimpi.zapto.org";
+$host="localhost";
 $user="hakonopheim";
 $password="5k0th31a1";
 $database="reko";
