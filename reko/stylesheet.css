@@ -995,6 +995,7 @@ background-color: #dddddd;
 table.prdOverview
 {
   font-family: sans-serif;
+  font-size: 1em;
 }
 .profileContainer{
 margin:0 auto;
