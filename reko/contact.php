@@ -1,7 +1,7 @@
 <?php include("meny.php"); ?>
 <div class="commerceContainer">
 <div class="overview_info">
-<h1>Våre moderatorer</h1>
+<h1>Våre kontakpersoner</h1>
 
 <p>Under finner du kontaktinformasjonen til våre moderatorer som du kan ta kontakt med hvis det er noe du lurer på.</p>
 
