@@ -31,12 +31,26 @@ if (isset($_GET['error'])) {
     switch ($error)
     {
     case "sql":
-        echo "<p><strong>Kan ikke slette ordre </strong></p>";
+        echo "<p><strong>Kan ikke bestille for øyeblikket</strong></p>";
     break;
 
     }
   print("</div>");
 }
+if (isset($_GET['success'])) {
+        print("<div class='messageBox'>");
+        print("<div class='redColorBox'></div>");
+    
+        $error = $_GET['success'];
+        switch ($error)
+        {
+        case "1":
+            echo "<p><strong>Bestilling fullført!</strong></p>";
+        break;
+    
+        }
+      print("</div>");
+    }
 ?>
 
     <div class="headerPicture">
@@ -62,7 +76,7 @@ if (isset($_GET['error'])) {
         $result1 = mysqli_query($db,$sql1) or die ("Kan ikke hente produkter");
         $rows = mysqli_num_rows($result1);
 
-                print("<p> Liste over produkter kommer under </p>");
+               
         $sql_innaktiv = "SELECT category FROM post WHERE userID = $userPostID;";
         $sql_test = mysqli_query($db,$sql_innaktiv) or die ("Kan ikke hente produkter.");
         $rowy = mysqli_fetch_array($sql_test);
@@ -136,9 +150,11 @@ else{
                             if($quantity != ""){
                            $sql01 = "INSERT INTO productsOrders (orderID,productID,quantity) VALUES (LAST_INSERT_ID(),$productID1,$quantity);";
                            mysqli_query($db,$sql01) or die ("Kan ikke registrere ordre #productsOrders");
+                           $validateTest = "completed";
                             }
                            
                    }
+                   print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/commerce/profile.php?success=1'/>");
                 
            }
            
