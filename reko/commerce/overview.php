@@ -11,7 +11,7 @@
 
 <?php
 
-$sql= "SELECT * FROM users WHERE role='commerce' and status='1' order by 'lastName';";
+$sql= "SELECT * FROM users WHERE role='commerce' and status='1' order by 'lastName' desc;";
 $result = mysqli_query($db,$sql) or die("ikke mulig å vise leverandørene");
 $xRows = mysqli_num_rows($result);
 
