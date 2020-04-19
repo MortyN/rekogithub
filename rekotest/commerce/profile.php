@@ -23,23 +23,6 @@ for($i=1;$i <= $xRows; $i++ ){
 
 <div class="profileContainer">
 
-<?php
-if (isset($_GET['error'])) {
-    print("<div class='messageBox'>");
-    print("<div class='redColorBox'></div>");
-
-    $error = $_GET['error'];
-    switch ($error)
-    {
-    case "sql":
-        echo "<p><strong>Kan ikke slette ordre </strong></p>";
-    break;
-
-    }
-  print("</div>");
-}
-?>
-
     <div class="headerPicture">
     
                 <img class="headerImg" src="../img/users/<?php print($userPostID.'/'.$postIMG);?>"/>
