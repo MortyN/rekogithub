@@ -39,13 +39,13 @@ if (isset($_GET['error'])) {
 }
 if (isset($_GET['success'])) {
         print("<div class='messageBox'>");
-        print("<div class='redColorBox'></div>");
+        print("<div class='greenColorBox'></div>");
     
         $error = $_GET['success'];
         switch ($error)
         {
         case "1":
-            echo "<p><strong>Bestilling fullført!</strong></p>";
+            echo "<p><strong>Bestilling vellykket!</strong></p>";
         break;
     
         }
