@@ -53,7 +53,8 @@ $del = mysqli_fetch_array($sqlQuery);
         <div id="mobileNavLinks">
         <a id="aMobile" href="/www/sda/reko/index.php">Til forsiden</a>
         <a id="aMobile" href="/www/sda/reko/users/moderator/dashboard.php">Info</a>
-        <a id="aMobile" href="/www/sda/reko/users/moderator/chat/chat_overview.php">Dine meldinger</a><br>
+        <a id="aMobile" href="/www/sda/reko/users/moderator/chat/chat_overview.php">Dine meldinger</a>
+        <a id="aMobile" href="/www/sda/reko/commerce/feed.php">Bestill nå</a><br>
         <a id="aMobile" href="/www/sda/reko/users/moderator/usersList.php">Brukerlister</a>
         <a id="aMobile" href="/www/sda/reko/users/moderator/orders.php">Dine Ordre</a>
 
@@ -93,6 +94,7 @@ $del = mysqli_fetch_array($sqlQuery);
     
   </div>
   <a href="/www/sda/reko/users/moderator/chat/chat_overview.php">Dine meldinger</a>
+  <a href="/www/sda/reko/commerce/feed.php">Bestill nå</a>
 </div>
 <script src="/www/sda/reko/users/commerce/sidebarfunction.js"></script>
 

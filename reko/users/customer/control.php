@@ -60,7 +60,8 @@ $del = mysqli_fetch_array($sqlQuery);
         <div id="mobileNavLinks">
         <a id="aMobile" href="/www/sda/reko/index.php">Til forsiden</a>
         <a id="aMobile" href="/www/sda/reko/users/customer/dashboard.php">Info</a>
-        <a id="aMobile" href="/www/sda/reko/users/customer/chat/chat_overview.php">Dine meldinger</a><br>
+        <a id="aMobile" href="/www/sda/reko/users/customer/chat/chat_overview.php">Dine meldinger</a>
+        <a id="aMobile" href="/www/sda/reko/commerce/feed.php">Bestill nå</a><br>
         <a id="aMobile" href="/www/sda/reko/users/customer/profile/orders.php">Dine ordre</a>
             
         
@@ -90,6 +91,7 @@ $del = mysqli_fetch_array($sqlQuery);
 <div class="sidenav">
   <a href="/www/sda/reko/index.php">Til forsiden</a>
   <a href="/www/sda/reko/users/customer/dashboard.php">Info</a>
+  <a href="/www/sda/reko/commerce/feed.php">Bestill nå</a>
     <a href="/www/sda/reko/users/customer/profile/orders.php">Dine ordre</a>
     <a href="/www/sda/reko/users/customer/profile/profile.php">Endre profil</a>
     <a href="/www/sda/reko/users/customer/chat/chat_overview.php">Dine meldinger</a>
