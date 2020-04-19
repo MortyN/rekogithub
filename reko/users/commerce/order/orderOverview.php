@@ -58,7 +58,7 @@ include("../control.php");
 
                 
 
-                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td style='color:$color;'>$status</td> <td><a href='/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID'>Se ordre</a></td></tr>");
+                print("<tr><td>$orderID</td> <td>$firstName $lastName</td> <td>$products</td> <td>$date</td><td style='color:$color;'>$status</td> <td><a href='/www/sda/reko/users/commerce/order/showOrder.php?orderID=$orderID'>Rediger ordre</a></td></tr>");
             }
             ?>
         </table>
