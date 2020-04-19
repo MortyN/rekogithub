@@ -24,7 +24,7 @@ $del = mysqli_fetch_array($sqlQuery);
     switch ($userRole){
         case "customer":
             
-            print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/'/>");
+            print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/dashboard.php'/>");
             break;
 
         case "admin":
@@ -110,7 +110,7 @@ $del = mysqli_fetch_array($sqlQuery);
                       
                         @$_SESSION["userName"] = $logInUserName;
                         
-                        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/'/>");
+                        print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/users/customer/dashboard.php'/>");
                         break;
 
                     case "admin":
