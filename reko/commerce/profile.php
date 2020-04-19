@@ -154,7 +154,7 @@ else{
                             }
                            
                    }
-                   print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/commerce/profile.php?success=1'/>");
+                   print("<meta http-equiv='refresh' content='0;URL=http://opheimpi.zapto.org/www/sda/reko/commerce/profile.php?success=1&ID=$userPostID'/>");
                 
            }
            
