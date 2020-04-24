@@ -689,7 +689,7 @@ MÃƒÆ’Ã‚Â¥ lage en ny boks pÃƒÆ’Ã‚Â¥ dashboard moderator bare
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #979696;
+    color: white;
     display: block;
     border: none;
     background: none;
@@ -699,7 +699,7 @@ MÃƒÆ’Ã‚Â¥ lage en ny boks pÃƒÆ’Ã‚Â¥ dashboard moderator bare
     outline: none;
   }
   .sidenav a:hover, .dropdown-btn:hover {
-    color: #f1f1f1;
+    color: green;
   }
   .active {
     background-color: green;
