@@ -699,7 +699,7 @@ MÃƒÆ’Ã‚Â¥ lage en ny boks pÃƒÆ’Ã‚Â¥ dashboard moderator bare
     outline: none;
   }
   .sidenav a:hover, .dropdown-btn:hover {
-    color: green;
+    color: #94d3ac;
   }
   .active {
     background-color: green;
