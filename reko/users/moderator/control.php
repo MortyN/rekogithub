@@ -57,6 +57,7 @@ $del = mysqli_fetch_array($sqlQuery);
         <a id="aMobile" href="/www/sda/reko/commerce/feed.php">Bestill nå</a><br>
         <a id="aMobile" href="/www/sda/reko/users/moderator/usersList.php">Brukerlister</a>
         <a id="aMobile" href="/www/sda/reko/users/moderator/orders.php">Dine Ordre</a>
+        <a id="aMobile" href="/www/sda/reko/users/moderator/pdf/brukerveiledningmoderator.pdf">Brukerveiledning</a>
 
         <h2>Profil</h2>
         <a id="aMobile" href="/www/sda/reko/users/moderator/profile.php">Din Profil</a>
@@ -95,6 +96,7 @@ $del = mysqli_fetch_array($sqlQuery);
   </div>
   <a href="/www/sda/reko/users/moderator/chat/chat_overview.php">Dine meldinger</a>
   <a href="/www/sda/reko/commerce/feed.php">Bestill nå</a>
+  <a href="/www/sda/reko/users/moderator/userguidance.php">Brukerveiledning</a>
 </div>
 <script src="/www/sda/reko/users/commerce/sidebarfunction.js"></script>
 

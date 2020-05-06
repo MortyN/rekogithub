@@ -73,6 +73,8 @@ $del = mysqli_fetch_array($sqlQuery);
         <a id="aMobile" href="/www/sda/reko/users/commerce/profile/profile.php">Din Profil</a>
         <a id="aMobile" href="/www/sda/reko/access/logout.php">Logg ut</a>
 
+        <a id="aMobile" href="/www/sda/reko/users/commerce/pdf/brukerveiledningleverandor.pdf">Brukerveiledning</a>
+
 
         </div>
   <a href="javascript:void(0);" class="icon" onclick="mobileNavChange()">
@@ -129,6 +131,7 @@ $del = mysqli_fetch_array($sqlQuery);
     
   </div>
   <a href="/www/sda/reko/users/commerce/chat/chat_overview.php">Dine meldinger</a>
+  <a href="/www/sda/reko/users/commerce/userguidance.php">Brukerveiledning</a>
 </div>
 <script src="/www/sda/reko/users/commerce/sidebarfunction.js"></script>
 
