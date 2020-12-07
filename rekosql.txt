@@ -1,0 +1,148 @@
+create table news
+(
+    news longtext not null,
+    date date     not null
+);
+
+create table units
+(
+    name        varchar(255) not null
+        primary key,
+    description varchar(255) not null
+);
+
+create table users
+(
+    userID         int auto_increment
+        primary key,
+    firstName      varchar(255) not null,
+    lastName       varchar(255) not null,
+    email          varchar(255) not null,
+    userName       varchar(255) not null,
+    password       varchar(255) not null,
+    role           varchar(255) not null,
+    status         int          not null,
+    image          varchar(255) null,
+    phoneNumber    char(8)      null,
+    token          longtext     null,
+    last_timestamp timestamp    null,
+    constraint email
+        unique (email),
+    constraint userName
+        unique (userName)
+);
+
+create table chat_connection
+(
+    chatID     int auto_increment
+        primary key,
+    commerceID int not null,
+    customerID int not null,
+    constraint chat_connection_ibfk_1
+        foreign key (commerceID) references users (userID),
+    constraint chat_connection_ibfk_2
+        foreign key (customerID) references users (userID)
+);
+
+create index commerceID
+    on chat_connection (commerceID);
+
+create index customerID
+    on chat_connection (customerID);
+
+create table chat_message
+(
+    messageID int auto_increment
+        primary key,
+    chatID    int      not null,
+    msg_from  int      not null,
+    message   longtext null,
+    date      datetime not null,
+    constraint chat_message_ibfk_1
+        foreign key (chatID) references chat_connection (chatID),
+    constraint chat_message_ibfk_2
+        foreign key (msg_from) references users (userID)
+);
+
+create index chatID
+    on chat_message (chatID);
+
+create index msg_from
+    on chat_message (msg_from);
+
+create table orders
+(
+    orderID    int auto_increment
+        primary key,
+    commerceID int         not null,
+    customerID int         not null,
+    status     varchar(40) null,
+    date       date        null,
+    constraint orders_ibfk_1
+        foreign key (commerceID) references users (userID),
+    constraint orders_ibfk_2
+        foreign key (customerID) references users (userID)
+);
+
+create index commerceID
+    on orders (commerceID);
+
+create index customerID
+    on orders (customerID);
+
+create table post
+(
+    postID    int auto_increment
+        primary key,
+    shortText longtext     not null,
+    mainText  longtext     not null,
+    picture   varchar(400) not null,
+    userID    int          not null,
+    category  varchar(15)  not null,
+    heading   varchar(255) not null,
+    constraint post_ibfk_1
+        foreign key (userID) references users (userID)
+);
+
+create index userID
+    on post (userID);
+
+create table products
+(
+    productID   int auto_increment
+        primary key,
+    commerceID  int          not null,
+    title       varchar(55)  not null,
+    description varchar(250) null,
+    price       varchar(10)  not null,
+    unit        varchar(255) not null,
+    status      varchar(10)  not null,
+    constraint products_ibfk_1
+        foreign key (commerceID) references users (userID),
+    constraint products_ibfk_2
+        foreign key (unit) references units (name)
+);
+
+create index commerceID
+    on products (commerceID);
+
+create index unit
+    on products (unit);
+
+create table productsOrders
+(
+    orderID   int not null,
+    productID int not null,
+    quantity  int not null,
+    constraint productsOrders_ibfk_1
+        foreign key (orderID) references orders (orderID),
+    constraint productsOrders_ibfk_2
+        foreign key (productID) references products (productID)
+);
+
+create index orderID
+    on productsOrders (orderID);
+
+create index productID
+    on productsOrders (productID);
+
